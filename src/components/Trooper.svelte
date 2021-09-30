@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getPortraitName } from "../parser";
+  import { getPortraitName } from "../utilities/parser";
   import type { Trooper } from "../types/Roster";
 
   export let current: Trooper;

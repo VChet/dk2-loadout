@@ -1,4 +1,4 @@
-import type { Roster } from "./types/Roster";
+import type { Roster } from "../types/Roster";
 
 export function parseXml(xml: string): Roster {
   if (!window.DOMParser) throw new Error("Cannot parse XML");

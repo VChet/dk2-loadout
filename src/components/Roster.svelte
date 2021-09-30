@@ -1,5 +1,7 @@
 <script lang="ts">
-  import { getPortraitName, parseXml } from "../parser";
+  import { onMount } from "svelte";
+  import { getPortraitName, parseXml } from "../utilities/parser";
+  import { deserialize, serialize } from "../utilities/serializer";
   import type { Roster, Trooper } from "../types/Roster";
 
   export let roster: Roster | null = null;
@@ -15,12 +17,25 @@
       console.log(roster);
     };
   }
+
+  function getUrl() {
+    const data = serialize(roster);
+    const url = new URL(window.location.href);
+    url.searchParams.set("code", data);
+    window.history.pushState({}, window.document.title, url);
+  }
+
+  onMount(() => {
+    const urlCode = new URLSearchParams(window.location.search).get("code");
+    if (urlCode) roster = deserialize(urlCode);
+  });
 </script>
 
 <section class="roster">
   <div class="file-input">
     <input type="file" accept=".xml" on:change={(e) => onFileSelected(e)} />
     <pre>[USER]/AppData/Local/KillHouseGames/DoorKickers2/roster.xml</pre>
+    <button on:click={getUrl}>Get URL</button>
   </div>
   {#if roster}
     <ul>
