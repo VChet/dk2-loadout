@@ -4,6 +4,24 @@
   --bg-main: rgba(72, 72, 72, 0.5);
   --accent: #ffc600;
 }
+
+@font-face {
+  font-family: Bebas-Neue;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('./fonts/Bebas-Neue-Regular.woff2') format('woff2'),
+    url('./fonts/Bebas-Neue-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: Noto-Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('./fonts/Noto-Sans-Regular.woff2') format('woff2'),
+    url('./fonts/Noto-Sans-Regular.woff') format('woff');
+}
+
 html, body {
   position: relative;
   width: 100%;
@@ -16,7 +34,6 @@ body {
   background-repeat: no-repeat;
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: bold;
 }
 ul {
   list-style: none;
@@ -30,7 +47,10 @@ img {
 .title {
   color: var(--title);
   text-transform: uppercase;
+  font-family: 'Bebas-Neue';
 }
 .subtitle {
   color: var(--text);
+  font-family: 'Noto-Sans';
+  font-weight: bold;
 }

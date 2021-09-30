@@ -62,17 +62,22 @@
       @mixin squad-title {
         padding: 5px;
         text-align: right;
+        font-family: "Bebas-Neue";
         text-transform: uppercase;
       }
       .squads__unit {
         @include squad-title;
         background-color: #322117;
         color: #f2e6d6;
+        font-size: 24px;
+        line-height: 1;
       }
       .squads__name {
         @include squad-title;
         background-color: #f0e4cc;
         color: #251e18;
+        font-size: 28px;
+        line-height: 1;
       }
 
       ul {

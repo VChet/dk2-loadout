@@ -7,7 +7,7 @@
 
 <section class="trooper">
   {#if current}
-    <div class="trooper__class">{current.Id.name}</div>
+    <div class="trooper__name">{current.Id.name}</div>
     <div class="trooper__wrapper">
       <div class="trooper__statistics">
         <img
@@ -138,11 +138,13 @@
     flex-basis: 850px;
     background-color: var(--bg-main);
     padding: 20px;
-    .trooper__class {
+    .trooper__name {
+      margin-bottom: 32px;
       text-transform: uppercase;
       color: var(--title);
-      font-size: 40px;
-      margin-bottom: 32px;
+      font-family: "Bebas-Neue";
+      font-size: 64px;
+      line-height: 1;
     }
     .trooper__wrapper {
       display: grid;
@@ -151,11 +153,12 @@
       .trooper__statistics {
         .title {
           font-size: 40px;
-          line-height: 40px;
+          line-height: 32px;
           border-bottom: 3px solid var(--title);
         }
         .trooper__image {
           max-width: 100%;
+          margin-bottom: 20px;
         }
         .trooper__ability {
           background-color: var(--bg-main);
