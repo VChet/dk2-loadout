@@ -195,6 +195,7 @@
           background-color: var(--bg-main);
           display: flex;
           flex-wrap: wrap;
+          min-height: 120px;
           .subtitle {
             flex: 1 1 100%;
             margin-top: auto;
