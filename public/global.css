@@ -1,0 +1,36 @@
+:root {
+  --title: #FE7A00;
+  --text: #ede4d5;
+  --bg-main: rgba(72, 72, 72, 0.5);
+  --accent: #ffc600;
+}
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  font-weight: normal;
+  font-size: 12px;
+}
+.title {
+  color: var(--title);
+  text-transform: uppercase;
+}
+.subtitle {
+  color: var(--text);
+}
