@@ -38,3 +38,7 @@ export function parseXml(xml: string): Roster {
 
   return result.Roster;
 }
+
+export function getPortraitName(filepath: string): string {
+  return filepath.split("\\").pop().split("/").pop().split(".").shift();
+}

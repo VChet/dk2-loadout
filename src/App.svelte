@@ -14,7 +14,5 @@
 <style lang="scss">
   .container {
     display: flex;
-    align-items: flex-start;
-    gap: 80px;
   }
 </style>

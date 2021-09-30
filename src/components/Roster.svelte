@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { parseXml } from "../parser";
+  import { getPortraitName, parseXml } from "../parser";
   import type { Roster, Trooper } from "../types/Roster";
 
   export let roster: Roster | null = null;
@@ -35,8 +35,12 @@
                 class:selected={current ? current.Id === trooper.Id : false}
                 on:click={() => (current = trooper)}
               >
-                <div>{trooper.Id.name}</div>
-                <div>{trooper.class}</div>
+                <img
+                  src={`images/portraits/${getPortraitName(
+                    trooper.Id.portrait
+                  )}.webp`}
+                  alt={getPortraitName(trooper.Id.portrait)}
+                />
               </li>
             {/each}
           </ul>
@@ -77,27 +81,25 @@
         gap: 8px;
         padding: 8px;
         background-color: var(--bg-main);
-
         .trooper {
           display: inline-flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          width: 75px;
-          height: 75px;
+          margin: auto;
           background-color: #261a0a;
           border: 3px solid #484232;
           border-radius: 50%;
+          overflow: hidden;
           cursor: pointer;
-          font-size: 10px;
-          color: var(--accent);
-          text-transform: uppercase;
-          word-break: break-all;
           &:hover {
             border-color: var(--accent);
           }
           &.selected {
             border: 3px dashed var(--accent);
+          }
+          img {
+            max-width: 80px;
+            max-height: 80px;
           }
         }
       }
