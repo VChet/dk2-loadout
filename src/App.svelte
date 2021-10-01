@@ -3,7 +3,7 @@
   import TrooperBlock from "./components/Trooper.svelte";
   import type { Trooper } from "./types/Roster";
 
-  export let current: Trooper;
+  let current: Trooper;
 </script>
 
 <main class="container">

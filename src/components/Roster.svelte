@@ -6,13 +6,14 @@
   import { downloadFile, readFile } from "../utilities/files";
   import type { Roster, Trooper } from "../types/Roster";
 
-  export let roster: Roster | null = null;
   export let current: Trooper | null = null;
+  let roster: Roster | null = null;
 
-  export async function onFileSelected(event: any) {
+  async function onFileSelected(event: any) {
     const content = await readFile(event.target.files[0]);
     if (content) {
       roster = parseXml(content.toString()).Roster;
+      if (!roster) alert("Wrong XML file");
     }
   }
 
