@@ -1,7 +1,11 @@
 <script lang="ts">
   import Equipment from "./Equipment.svelte";
 
-  import { getFileName } from "../utilities/getters";
+  import {
+    getClassImg,
+    getFileName,
+    getTrooperImg,
+  } from "../utilities/getters";
   import type { Trooper } from "../types/Roster";
 
   export let current: Trooper;
@@ -15,15 +19,13 @@
         <div class="trooper__image">
           <img
             class="trooper__image-portrait"
-            src={`images/portraits/${getFileName(
-              current.Id.portrait
-            )}_large.webp`}
+            src={getTrooperImg(current.Id.portrait, true)}
             alt={getFileName(current.Id.portrait)}
             draggable="false"
           />
           <img
             class="trooper__image-class"
-            src={`images/classes/${current.class.toLowerCase()}.webp`}
+            src={getClassImg(current.class)}
             alt={current.class}
             draggable="false"
           />

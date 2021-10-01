@@ -3,6 +3,7 @@
     getAttachmentImg,
     getEquipmentImg,
     getEquipmentQuantity,
+    getFileName,
     getWeaponImg,
   } from "../utilities/getters";
 
@@ -20,28 +21,24 @@
 <li class={className}>
   {#if weapon}
     <img
-      src={`images/weapons/${getWeaponImg(weapon.name)}.webp`}
-      alt={getWeaponImg(weapon.name)}
+      src={getWeaponImg(weapon.name)}
+      alt={getFileName(weapon.name)}
       draggable="false"
     />
     {#if ammo || scope}
       <div class="attachments">
         {#if ammo}
           <img
-            src={`images/weapons/attachments/${getAttachmentImg(
-              ammo.name
-            )}_small.webp`}
-            alt={getAttachmentImg(ammo.name)}
+            src={getAttachmentImg(ammo.name)}
+            alt={getFileName(ammo.name)}
             title={ammo.name}
             draggable="false"
           />
         {/if}
         {#if scope}
           <img
-            src={`images/weapons/attachments/${getAttachmentImg(
-              scope.name
-            )}_small.webp`}
-            alt={getAttachmentImg(scope.name)}
+            src={getAttachmentImg(scope.name)}
+            alt={getFileName(scope.name)}
             title={scope.name}
             draggable="false"
           />
@@ -51,16 +48,16 @@
     <div class="subtitle">{weapon.name}</div>
   {:else if armor}
     <img
-      src={`images/equipment/${getEquipmentImg(armor.name)}.webp`}
-      alt={getEquipmentImg(armor.name)}
+      src={getEquipmentImg(armor.name)}
+      alt={getFileName(armor.name)}
       title={armor.name}
       draggable="false"
     />
     <div class="subtitle">{armor.name}</div>
   {:else if utility}
     <img
-      src={`images/equipment/${getEquipmentImg(utility.name)}.webp`}
-      alt={getEquipmentImg(utility.name)}
+      src={getEquipmentImg(utility.name)}
+      alt={getFileName(utility.name)}
       title={utility.name}
       draggable="false"
     />
@@ -73,8 +70,8 @@
   {:else if support}
     {#if getEquipmentImg(support.name)}
       <img
-        src={`images/equipment/${getEquipmentImg(support.name)}.webp`}
-        alt={getEquipmentImg(support.name)}
+        src={getEquipmentImg(support.name)}
+        alt={getFileName(support.name)}
         title={support.name}
         draggable="false"
       />
