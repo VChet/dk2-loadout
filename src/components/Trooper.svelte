@@ -1,5 +1,9 @@
 <script lang="ts">
-  import { getPortraitName } from "../utilities/getters";
+  import {
+    getAttachmentImg,
+    getFileName,
+    getWeaponImg,
+  } from "../utilities/getters";
   import type { Trooper } from "../types/Roster";
 
   export let current: Trooper;
@@ -13,10 +17,10 @@
         <div class="trooper__image">
           <img
             class="trooper__image-portrait"
-            src={`images/portraits/${getPortraitName(
+            src={`images/portraits/${getFileName(
               current.Id.portrait
             )}_large.webp`}
-            alt={getPortraitName(current.Id.portrait)}
+            alt={getFileName(current.Id.portrait)}
             draggable="false"
           />
           <img
@@ -46,23 +50,37 @@
       <ul class="trooper__equipment">
         <li class="primary">
           {#if current.Equipment.PrimaryWeapon}
-            {#if false}<img alt="PrimaryWeapon" />{/if}
+            <img
+              src={`images/weapons/${getWeaponImg(
+                current.Equipment.PrimaryWeapon.name
+              )}.webp`}
+              alt={getWeaponImg(current.Equipment.PrimaryWeapon.name)}
+              draggable="false"
+            />
             <div class="trooper__equipment-attachments">
               {#if current.Equipment.PrimaryWeaponAmmo}
-                <div>
-                  {#if false}<img alt="PrimaryWeaponAmmo" />{/if}
-                  <div class="subtitle">
-                    {current.Equipment.PrimaryWeaponAmmo.name}
-                  </div>
-                </div>
+                <img
+                  src={`images/weapons/attachments/${getAttachmentImg(
+                    current.Equipment.PrimaryWeaponAmmo.name
+                  )}_small.webp`}
+                  alt={getAttachmentImg(
+                    current.Equipment.PrimaryWeaponAmmo.name
+                  )}
+                  title={current.Equipment.PrimaryWeaponAmmo.name}
+                  draggable="false"
+                />
               {/if}
               {#if current.Equipment.PrimaryWeaponScope}
-                <div>
-                  {#if false}<img alt="PrimaryWeaponScope" />{/if}
-                  <div class="subtitle">
-                    {current.Equipment.PrimaryWeaponScope.name}
-                  </div>
-                </div>
+                <img
+                  src={`images/weapons/attachments/${getAttachmentImg(
+                    current.Equipment.PrimaryWeaponScope.name
+                  )}_small.webp`}
+                  alt={getAttachmentImg(
+                    current.Equipment.PrimaryWeaponScope.name
+                  )}
+                  title={current.Equipment.PrimaryWeaponScope.name}
+                  draggable="false"
+                />
               {/if}
             </div>
             <div class="subtitle">{current.Equipment.PrimaryWeapon.name}</div>
@@ -72,23 +90,37 @@
         </li>
         <li class="secondary">
           {#if current.Equipment.SecondaryWeapon}
-            {#if false}<img alt="SecondaryWeapon" />{/if}
+            <img
+              src={`images/weapons/${getWeaponImg(
+                current.Equipment.SecondaryWeapon.name
+              )}.webp`}
+              alt={getWeaponImg(current.Equipment.SecondaryWeapon.name)}
+              draggable="false"
+            />
             <div class="trooper__equipment-attachments">
-              {#if current.Equipment.SecondaryWeaponScope}
-                <div>
-                  {#if false}<img alt="SecondaryWeaponScope" />{/if}
-                  <div class="subtitle">
-                    {current.Equipment.SecondaryWeaponScope.name}
-                  </div>
-                </div>
-              {/if}
               {#if current.Equipment.SecondaryWeaponAmmo}
-                <div>
-                  {#if false}<img alt="SecondaryWeaponAmmo" />{/if}
-                  <div class="subtitle">
-                    {current.Equipment.SecondaryWeaponAmmo.name}
-                  </div>
-                </div>
+                <img
+                  src={`images/weapons/attachments/${getAttachmentImg(
+                    current.Equipment.SecondaryWeaponAmmo.name
+                  )}_small.webp`}
+                  alt={getAttachmentImg(
+                    current.Equipment.SecondaryWeaponAmmo.name
+                  )}
+                  title={current.Equipment.SecondaryWeaponAmmo.name}
+                  draggable="false"
+                />
+              {/if}
+              {#if current.Equipment.SecondaryWeaponScope}
+                <img
+                  src={`images/weapons/attachments/${getAttachmentImg(
+                    current.Equipment.SecondaryWeaponScope.name
+                  )}_small.webp`}
+                  alt={getAttachmentImg(
+                    current.Equipment.SecondaryWeaponScope.name
+                  )}
+                  title={current.Equipment.SecondaryWeaponScope.name}
+                  draggable="false"
+                />
               {/if}
             </div>
             <div class="subtitle">{current.Equipment.SecondaryWeapon.name}</div>
@@ -210,12 +242,18 @@
           padding: 4px 8px;
         }
         li {
+          position: relative;
           background-color: var(--bg-main);
           display: flex;
-          flex-wrap: wrap;
+          flex-direction: column;
           min-height: 120px;
+          > img {
+            align-self: center;
+            box-sizing: border-box;
+            height: 130px;
+            padding: 20px;
+          }
           .subtitle {
-            flex: 1 1 100%;
             margin-top: auto;
           }
           &.primary,
@@ -226,16 +264,13 @@
           }
 
           .trooper__equipment-attachments {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
             display: flex;
             gap: 8px;
-            flex-wrap: wrap;
-            > div {
-              &:first-of-type {
-                margin-left: auto;
-              }
-              .subtitle {
-                background-color: #0d0b0c;
-              }
+            img {
+              max-height: 32px;
             }
           }
         }

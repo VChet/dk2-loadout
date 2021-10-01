@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { generateXml, parseXml } from "../utilities/parser";
-  import { getPortraitName } from "../utilities/getters";
+  import { getFileName } from "../utilities/getters";
   import { deserialize, serialize } from "../utilities/serializer";
   import { downloadFile, readFile } from "../utilities/files";
   import type { Roster, Trooper } from "../types/Roster";
@@ -62,10 +62,10 @@
                 on:click={() => (current = trooper)}
               >
                 <img
-                  src={`images/portraits/${getPortraitName(
+                  src={`images/portraits/${getFileName(
                     trooper.Id.portrait
                   )}.webp`}
-                  alt={getPortraitName(trooper.Id.portrait)}
+                  alt={getFileName(trooper.Id.portrait)}
                   draggable="false"
                 />
               </li>
