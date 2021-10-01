@@ -55,7 +55,13 @@
     <ul>
       {#each roster.Squad as squad}
         <li class="squad">
-          <div class="squads__unit">{squad.unit}</div>
+          <div
+            class="squads__unit"
+            class:squads__unit--ranger={squad.unit === "Rangers"}
+            class:squads__unit--cia={squad.unit === "CIA"}
+          >
+            {squad.unit}
+          </div>
           <div class="squads__name">{squad.name}</div>
           <ul>
             {#each squad.Trooper as trooper}
@@ -97,10 +103,16 @@
       }
       .squads__unit {
         @include squad-title;
-        background-color: #322117;
+        box-shadow: inset 0 0 0 50px var(--bg-main);
         color: #f2e6d6;
         font-size: 24px;
         line-height: 1;
+        &--ranger {
+          background-image: url("/images/rangers_bg.webp");
+        }
+        &--cia {
+          background-image: url("/images/cia_bg.webp");
+        }
       }
       .squads__name {
         @include squad-title;
