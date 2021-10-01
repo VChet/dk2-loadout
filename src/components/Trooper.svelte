@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getPortraitName } from "../utilities/parser";
+  import { getPortraitName } from "../utilities/getters";
   import type { Trooper } from "../types/Roster";
 
   export let current: Trooper;
@@ -10,14 +10,22 @@
     <div class="trooper__name">{current.Id.name}</div>
     <div class="trooper__wrapper">
       <div class="trooper__statistics">
-        <img
-          class="trooper__image"
-          src={`images/portraits/${getPortraitName(
-            current.Id.portrait
-          )}_large.webp`}
-          alt={getPortraitName(current.Id.portrait)}
-          draggable="false"
-        />
+        <div class="trooper__image">
+          <img
+            class="trooper__image-portrait"
+            src={`images/portraits/${getPortraitName(
+              current.Id.portrait
+            )}_large.webp`}
+            alt={getPortraitName(current.Id.portrait)}
+            draggable="false"
+          />
+          <img
+            class="trooper__image-class"
+            src={`images/classes/${current.class.toLowerCase()}.webp`}
+            alt={current.class}
+            draggable="false"
+          />
+        </div>
         <div class="title">Abilities</div>
         <ul>
           {#each current.InnateAbilities.InnateAbility as ability}
@@ -158,8 +166,17 @@
           border-bottom: 3px solid var(--title);
         }
         .trooper__image {
-          max-width: 100%;
+          position: relative;
           margin-bottom: 20px;
+          .trooper__image-portrait {
+            max-width: 100%;
+          }
+          .trooper__image-class {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 12px;
+          }
         }
         .trooper__ability {
           background-color: var(--bg-main);

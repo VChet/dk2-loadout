@@ -20,7 +20,3 @@ export function generateXml(object: object) {
   });
   return parser.parse(object);
 }
-
-export function getPortraitName(filepath: string): string {
-  return filepath.split("\\").pop().split("/").pop().split(".").shift();
-}

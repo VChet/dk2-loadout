@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { generateXml, getPortraitName, parseXml } from "../utilities/parser";
+  import { generateXml, parseXml } from "../utilities/parser";
+  import { getPortraitName } from "../utilities/getters";
   import { deserialize, serialize } from "../utilities/serializer";
   import type { Roster, Trooper } from "../types/Roster";
 
