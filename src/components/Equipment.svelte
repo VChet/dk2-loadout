@@ -104,8 +104,10 @@
     > img {
       align-self: center;
       box-sizing: border-box;
-      height: 130px;
       padding: 15px;
+      height: 130px;
+      max-width: 100%;
+      object-fit: contain;
     }
     .subtitle {
       margin-top: auto;
