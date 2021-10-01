@@ -3,19 +3,17 @@
   import { generateXml, parseXml } from "../utilities/parser";
   import { getPortraitName } from "../utilities/getters";
   import { deserialize, serialize } from "../utilities/serializer";
+  import { downloadFile, readFile } from "../utilities/files";
   import type { Roster, Trooper } from "../types/Roster";
 
   export let roster: Roster | null = null;
   export let current: Trooper | null = null;
 
-  export function onFileSelected(event: any) {
-    const reader = new FileReader();
-    reader.readAsText(event.target.files[0]);
-    reader.onload = (loadEvent: ProgressEvent<FileReader>) => {
-      if (typeof loadEvent.target.result !== "string")
-        throw new Error("Error parsing file");
-      roster = parseXml(loadEvent.target.result).Roster;
-    };
+  export async function onFileSelected(event: any) {
+    const content = await readFile(event.target.files[0]);
+    if (content) {
+      roster = parseXml(content.toString()).Roster;
+    }
   }
 
   function getUrl() {
@@ -26,14 +24,7 @@
   }
 
   function downloadXml() {
-    const data = generateXml({ Roster: roster });
-    const blob = new Blob([data], { type: "text/xml" });
-    const element = window.document.createElement("a");
-    element.href = window.URL.createObjectURL(blob);
-    element.download = "new_roster.xml";
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    downloadFile(generateXml({ Roster: roster }), "new_roster.xml");
   }
 
   onMount(() => {
