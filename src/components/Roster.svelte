@@ -66,6 +66,7 @@
                     trooper.Id.portrait
                   )}.webp`}
                   alt={getPortraitName(trooper.Id.portrait)}
+                  draggable="false"
                 />
               </li>
             {/each}

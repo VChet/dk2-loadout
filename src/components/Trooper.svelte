@@ -16,6 +16,7 @@
             current.Id.portrait
           )}_large.webp`}
           alt={getPortraitName(current.Id.portrait)}
+          draggable="false"
         />
         <div class="title">Abilities</div>
         <ul>

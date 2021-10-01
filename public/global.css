@@ -44,6 +44,7 @@ ul {
 img {
   font-weight: normal;
   font-size: 12px;
+  user-select: none;
 }
 .title {
   color: var(--title);
