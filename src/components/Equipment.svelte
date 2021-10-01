@@ -1,15 +1,20 @@
 <script lang="ts">
-  import { getAttachmentImg, getWeaponImg } from "../utilities/getters";
+  import {
+    getAttachmentImg,
+    getEquipmentImg,
+    getEquipmentQuantity,
+    getWeaponImg,
+  } from "../utilities/getters";
 
   export let className: string;
 
-  export let weapon: { name: string } | null;
-  export let ammo: { name: string } | null;
-  export let scope: { name: string } | null;
+  export let weapon: { name: string } | null = null;
+  export let ammo: { name: string } | null = null;
+  export let scope: { name: string } | null = null;
 
-  export let armor: { name: string } | null;
-  export let utility: { name: string } | null;
-  export let support: { name: string } | null;
+  export let armor: { name: string } | null = null;
+  export let utility: { name: string } | null = null;
+  export let support: { name: string } | null = null;
 </script>
 
 <li class={className}>
@@ -45,13 +50,35 @@
     {/if}
     <div class="subtitle">{weapon.name}</div>
   {:else if armor}
-    {#if false}<img alt="Armor" />{/if}
+    <img
+      src={`images/equipment/${getEquipmentImg(armor.name)}.webp`}
+      alt={getEquipmentImg(armor.name)}
+      title={armor.name}
+      draggable="false"
+    />
     <div class="subtitle">{armor.name}</div>
   {:else if utility}
-    {#if false}<img alt="Utility" />{/if}
-    <div class="subtitle">{utility.name}</div>
+    <img
+      src={`images/equipment/${getEquipmentImg(utility.name)}.webp`}
+      alt={getEquipmentImg(utility.name)}
+      title={utility.name}
+      draggable="false"
+    />
+    <div class="subtitle">
+      {#if getEquipmentQuantity(utility.name)}
+        {getEquipmentQuantity(utility.name)}x
+      {/if}
+      {utility.name}
+    </div>
   {:else if support}
-    {#if false}<img alt="Support" />{/if}
+    {#if getEquipmentImg(support.name)}
+      <img
+        src={`images/equipment/${getEquipmentImg(support.name)}.webp`}
+        alt={getEquipmentImg(support.name)}
+        title={support.name}
+        draggable="false"
+      />
+    {/if}
     <div class="subtitle">{support.name}</div>
   {:else}
     <div class="subtitle">Empty</div>
@@ -68,23 +95,24 @@
     background-color: var(--bg-main);
     display: flex;
     flex-direction: column;
-    min-height: 120px;
-    > img {
-      align-self: center;
-      box-sizing: border-box;
-      height: 130px;
-      padding: 20px;
-    }
-    .subtitle {
-      margin-top: auto;
-    }
     &.primary,
     &.secondary,
     &.armor,
     &[class^="support-"] {
       grid-column: 1 / -1;
     }
-
+    &:not(.support-2):not(.support-3) {
+      min-height: 120px;
+    }
+    > img {
+      align-self: center;
+      box-sizing: border-box;
+      height: 130px;
+      padding: 15px;
+    }
+    .subtitle {
+      margin-top: auto;
+    }
     .attachments {
       position: absolute;
       right: 40px;

@@ -97,12 +97,12 @@
     background-color: var(--bg-main);
     padding: 20px;
     .trooper__name {
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       text-transform: uppercase;
       color: var(--title);
       font-family: "Bebas-Neue";
       font-size: 64px;
-      line-height: 1;
+      line-height: 32px;
     }
     .trooper__wrapper {
       display: grid;
