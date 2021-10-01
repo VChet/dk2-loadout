@@ -1,42 +1,24 @@
-import type { Roster } from "../types/Roster";
+import { parse, j2xParser } from "fast-xml-parser";
 
-export function parseXml(xml: string): Roster {
-  if (!window.DOMParser) throw new Error("Cannot parse XML");
-  const dom: XMLDocument = new DOMParser().parseFromString(xml, "text/xml");
+export function parseXml(xml: string) {
+  const parsedObject = parse(xml, {
+    attributeNamePrefix: "",
+    ignoreAttributes: false,
+    parseAttributeValue: true,
+  });
+  return parsedObject;
+}
 
-  function parseNode(xmlNode, result: { [key: string]: any }) {
-    if (xmlNode.nodeName === "#text") {
-      const v = xmlNode.nodeValue;
-      if (v.trim()) result["#text"] = v;
-      return;
-    }
-
-    const jsonNode = {};
-    const existing = result[xmlNode.nodeName];
-
-    if (existing) {
-      if (!Array.isArray(existing)) {
-        result[xmlNode.nodeName] = [existing, jsonNode];
-      } else {
-        result[xmlNode.nodeName].push(jsonNode);
-      }
-    } else {
-      result[xmlNode.nodeName] = jsonNode;
-    }
-
-    if (xmlNode.attributes) {
-      for (let attribute of xmlNode.attributes) {
-        jsonNode[attribute.nodeName] = attribute.nodeValue;
-      }
-    }
-
-    for (let node of xmlNode.childNodes) parseNode(node, jsonNode);
-  }
-
-  const result: { Roster: Roster } = {} as { Roster: Roster };
-  for (let node of dom.childNodes) parseNode(node, result);
-
-  return result.Roster;
+export function generateXml(object: object) {
+  const parser = new j2xParser({
+    attributeNamePrefix: "",
+    attrNodeName: false,
+    ignoreAttributes: false,
+    format: true,
+    supressEmptyNode: true,
+    indentBy: "    ",
+  });
+  return parser.parse(object);
 }
 
 export function getPortraitName(filepath: string): string {

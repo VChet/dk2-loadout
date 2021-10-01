@@ -6,5 +6,5 @@ export enum RangerClass {
 }
 export enum CIAClass {
   "Undercover" = "Undercover",
-  "BlackOps" = "Black Ops",
+  "BlackOps" = "BlackOps",
 }

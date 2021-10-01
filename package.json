@@ -9,6 +9,7 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
+    "fast-xml-parser": "^3.20.3",
     "lz-string": "^1.4.4",
     "sirv-cli": "^1.0.14"
   },

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { getPortraitName, parseXml } from "../utilities/parser";
+  import { generateXml, getPortraitName, parseXml } from "../utilities/parser";
   import { deserialize, serialize } from "../utilities/serializer";
   import type { Roster, Trooper } from "../types/Roster";
 
@@ -13,8 +13,7 @@
     reader.onload = (loadEvent: ProgressEvent<FileReader>) => {
       if (typeof loadEvent.target.result !== "string")
         throw new Error("Error parsing file");
-      roster = parseXml(loadEvent.target.result);
-      console.log(roster);
+      roster = parseXml(loadEvent.target.result).Roster;
     };
   }
 
@@ -23,6 +22,17 @@
     const url = new URL(window.location.href);
     url.searchParams.set("code", data);
     window.history.pushState({}, window.document.title, url);
+  }
+
+  function downloadXml() {
+    const data = generateXml({ Roster: roster });
+    const blob = new Blob([data], { type: "text/xml" });
+    const element = window.document.createElement("a");
+    element.href = window.URL.createObjectURL(blob);
+    element.download = "new_roster.xml";
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
   }
 
   onMount(() => {
@@ -36,6 +46,7 @@
     <input type="file" accept=".xml" on:change={(e) => onFileSelected(e)} />
     <pre>[USER]/AppData/Local/KillHouseGames/DoorKickers2/roster.xml</pre>
     <button on:click={getUrl}>Get URL</button>
+    <button on:click={downloadXml}>Download XML</button>
   </div>
   {#if roster}
     <ul>
