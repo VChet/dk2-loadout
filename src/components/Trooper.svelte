@@ -1,9 +1,7 @@
 <script lang="ts">
-  import {
-    getAttachmentImg,
-    getFileName,
-    getWeaponImg,
-  } from "../utilities/getters";
+  import Equipment from "./Equipment.svelte";
+
+  import { getFileName } from "../utilities/getters";
   import type { Trooper } from "../types/Roster";
 
   export let current: Trooper;
@@ -48,125 +46,44 @@
         </ul>
       </div>
       <ul class="trooper__equipment">
-        <li class="primary">
-          {#if current.Equipment.PrimaryWeapon}
-            <img
-              src={`images/weapons/${getWeaponImg(
-                current.Equipment.PrimaryWeapon.name
-              )}.webp`}
-              alt={getWeaponImg(current.Equipment.PrimaryWeapon.name)}
-              draggable="false"
-            />
-            <div class="trooper__equipment-attachments">
-              {#if current.Equipment.PrimaryWeaponAmmo}
-                <img
-                  src={`images/weapons/attachments/${getAttachmentImg(
-                    current.Equipment.PrimaryWeaponAmmo.name
-                  )}_small.webp`}
-                  alt={getAttachmentImg(
-                    current.Equipment.PrimaryWeaponAmmo.name
-                  )}
-                  title={current.Equipment.PrimaryWeaponAmmo.name}
-                  draggable="false"
-                />
-              {/if}
-              {#if current.Equipment.PrimaryWeaponScope}
-                <img
-                  src={`images/weapons/attachments/${getAttachmentImg(
-                    current.Equipment.PrimaryWeaponScope.name
-                  )}_small.webp`}
-                  alt={getAttachmentImg(
-                    current.Equipment.PrimaryWeaponScope.name
-                  )}
-                  title={current.Equipment.PrimaryWeaponScope.name}
-                  draggable="false"
-                />
-              {/if}
-            </div>
-            <div class="subtitle">{current.Equipment.PrimaryWeapon.name}</div>
-          {:else}
-            <div class="subtitle">Empty</div>
-          {/if}
-        </li>
-        <li class="secondary">
-          {#if current.Equipment.SecondaryWeapon}
-            <img
-              src={`images/weapons/${getWeaponImg(
-                current.Equipment.SecondaryWeapon.name
-              )}.webp`}
-              alt={getWeaponImg(current.Equipment.SecondaryWeapon.name)}
-              draggable="false"
-            />
-            <div class="trooper__equipment-attachments">
-              {#if current.Equipment.SecondaryWeaponAmmo}
-                <img
-                  src={`images/weapons/attachments/${getAttachmentImg(
-                    current.Equipment.SecondaryWeaponAmmo.name
-                  )}_small.webp`}
-                  alt={getAttachmentImg(
-                    current.Equipment.SecondaryWeaponAmmo.name
-                  )}
-                  title={current.Equipment.SecondaryWeaponAmmo.name}
-                  draggable="false"
-                />
-              {/if}
-              {#if current.Equipment.SecondaryWeaponScope}
-                <img
-                  src={`images/weapons/attachments/${getAttachmentImg(
-                    current.Equipment.SecondaryWeaponScope.name
-                  )}_small.webp`}
-                  alt={getAttachmentImg(
-                    current.Equipment.SecondaryWeaponScope.name
-                  )}
-                  title={current.Equipment.SecondaryWeaponScope.name}
-                  draggable="false"
-                />
-              {/if}
-            </div>
-            <div class="subtitle">{current.Equipment.SecondaryWeapon.name}</div>
-          {:else}
-            <div class="subtitle">Empty</div>
-          {/if}
-        </li>
-        <li class="armor">
-          {#if current.Equipment.Armor}
-            {#if false}<img alt="Armor" />{/if}
-            <div class="subtitle">{current.Equipment.Armor.name}</div>
-          {/if}
-        </li>
-        <li class="utility-1">
-          {#if current.Equipment.UtilityPouch1}
-            {#if false}<img alt="UtilityPouch1" />{/if}
-            <div class="subtitle">{current.Equipment.UtilityPouch1.name}</div>
-          {:else}
-            <div class="subtitle">Empty</div>
-          {/if}
-        </li>
-        <li class="utility-2">
-          {#if current.Equipment.UtilityPouch2}
-            {#if false}<img alt="UtilityPouch2" />{/if}
-            <div class="subtitle">{current.Equipment.UtilityPouch2.name}</div>
-          {:else}
-            <div class="subtitle">Empty</div>
-          {/if}
-        </li>
+        <Equipment
+          className="primary"
+          weapon={current.Equipment.PrimaryWeapon}
+          ammo={current.Equipment.PrimaryWeaponAmmo}
+          scope={current.Equipment.PrimaryWeaponScope}
+        />
+        <Equipment
+          className="secondary"
+          weapon={current.Equipment.SecondaryWeapon}
+          ammo={current.Equipment.SecondaryWeaponAmmo}
+          scope={current.Equipment.SecondaryWeaponScope}
+        />
+        <Equipment className="armor" armor={current.Equipment.Armor} />
+        <Equipment
+          className="utility-1"
+          utility={current.Equipment.UtilityPouch1}
+        />
+        <Equipment
+          className="utility-2"
+          utility={current.Equipment.UtilityPouch2}
+        />
         {#if current.Equipment.SupportGear1}
-          <li class="support-1">
-            {#if false}<img alt="SupportGear1" />{/if}
-            <div class="subtitle">{current.Equipment.SupportGear1.name}</div>
-          </li>
+          <Equipment
+            className="support-1"
+            support={current.Equipment.SupportGear1}
+          />
         {/if}
         {#if current.Equipment.SupportGear2}
-          <li class="support-2">
-            {#if false}<img alt="SupportGear2" />{/if}
-            <div class="subtitle">{current.Equipment.SupportGear2.name}</div>
-          </li>
+          <Equipment
+            className="support-2"
+            support={current.Equipment.SupportGear2}
+          />
         {/if}
         {#if current.Equipment.SupportGear3}
-          <li class="support-3">
-            {#if false}<img alt="SupportGear3" />{/if}
-            <div class="subtitle">{current.Equipment.SupportGear3.name}</div>
-          </li>
+          <Equipment
+            className="support-3"
+            support={current.Equipment.SupportGear3}
+          />
         {/if}
       </ul>
     </div>
@@ -237,43 +154,6 @@
         display: grid;
         gap: 8px;
         grid-template-columns: 1fr 1fr;
-        .subtitle {
-          background-color: var(--bg-main);
-          padding: 4px 8px;
-        }
-        li {
-          position: relative;
-          background-color: var(--bg-main);
-          display: flex;
-          flex-direction: column;
-          min-height: 120px;
-          > img {
-            align-self: center;
-            box-sizing: border-box;
-            height: 130px;
-            padding: 20px;
-          }
-          .subtitle {
-            margin-top: auto;
-          }
-          &.primary,
-          &.secondary,
-          &.armor,
-          &[class^="support-"] {
-            grid-column: 1 / -1;
-          }
-
-          .trooper__equipment-attachments {
-            position: absolute;
-            right: 40px;
-            bottom: 40px;
-            display: flex;
-            gap: 8px;
-            img {
-              max-height: 32px;
-            }
-          }
-        }
       }
     }
   }
