@@ -45,8 +45,10 @@
   <div class="file-input">
     <input type="file" accept=".xml" on:change={(e) => onFileSelected(e)} />
     <pre>[USER]/AppData/Local/KillHouseGames/DoorKickers2/roster.xml</pre>
-    <button on:click={getUrl}>Get URL</button>
-    <button on:click={downloadXml}>Download XML</button>
+    {#if roster}
+      <button on:click={getUrl}>Get URL</button>
+      <button on:click={downloadXml}>Download XML</button>
+    {/if}
   </div>
   {#if roster}
     <ul>
