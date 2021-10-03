@@ -1,6 +1,6 @@
-import { weapons } from "../data/weapons";
-import { attachments } from "../data/attachments";
-import { equipment } from "../data/equipment";
+import equipmentData from "../data/equipmentData.json";
+
+const datamap = new Map(equipmentData.map((item) => [item.name, item]));
 
 export function getFileName(filepath: string): string {
   return filepath.split("\\").pop().split("/").pop().split(".").shift();
@@ -17,25 +17,25 @@ export function getClassImg(name: string): string {
 }
 
 export function getWeaponImg(name: string): string | null {
-  const weapon = weapons.find((weapon) => weapon.name === name);
+  const weapon = datamap.get(name);
   if (!weapon?.img) return null;
   return `images/weapons/${getFileName(weapon.img)}.webp`;
 }
 
 export function getAttachmentImg(name: string): string | null {
-  const attachment = attachments.find((attachment) => attachment.name === name);
+  const attachment = datamap.get(name);
   if (!attachment?.img) return null;
   return `images/weapons/attachments/${getFileName(attachment.img)}_small.webp`;
 }
 
 export function getEquipmentQuantity(name: string): number | null {
-  const equip = equipment.find((equip) => equip.name === name);
+  const equip = datamap.get(name);
   if (!equip?.quantity) return null;
   return equip.quantity;
 }
 
 export function getEquipmentImg(name: string): string | null {
-  const equip = equipment.find((equip) => equip.name === name);
+  const equip = datamap.get(name);
   if (!equip?.img) return null;
   return `images/equipment/${getFileName(equip.img)}.webp`;
 }

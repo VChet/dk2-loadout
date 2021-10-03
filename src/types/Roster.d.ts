@@ -1,5 +1,3 @@
-import type { CIAClass, RangerClass } from "../data/TrooperClass";
-
 interface Partial<Equipment> {
   PrimaryWeapon: { name: string };
   PrimaryWeaponScope: { name: string };
@@ -16,7 +14,7 @@ interface Partial<Equipment> {
 }
 
 export interface Trooper {
-  class: RangerClass | CIAClass;
+  class: string;
   Id: { name: string; portrait: string; gender: string; voicePack: string };
   Equipment: Equipment;
   InnateAbilities: {
