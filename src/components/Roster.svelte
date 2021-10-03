@@ -24,6 +24,7 @@
     const url = new URL(window.location.href);
     url.searchParams.set("code", data);
     window.history.pushState({}, window.document.title, url);
+    navigator.clipboard.writeText(window.location.href);
   }
 
   function downloadXml() {
@@ -41,7 +42,7 @@
     <input type="file" accept=".xml" on:change={(e) => onFileSelected(e)} />
     <pre>[USER]/AppData/Local/KillHouseGames/DoorKickers2/roster.xml</pre>
     {#if roster}
-      <button on:click={getUrl}>Get URL</button>
+      <button on:click={getUrl}>Copy URL</button>
       <button on:click={downloadXml}>Download XML</button>
     {/if}
   </div>
