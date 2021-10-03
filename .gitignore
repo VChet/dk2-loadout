@@ -3,4 +3,7 @@
 
 .DS_Store
 
-/src/data/xml/*.xml
+# Game Files
+**/*.xml
+**/*.dds
+**/*.tga
