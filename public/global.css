@@ -31,6 +31,8 @@ body {
 body {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
   background-image: url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;

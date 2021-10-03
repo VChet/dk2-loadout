@@ -28,6 +28,7 @@
   .container {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 20px;
     @media (max-width: 768px) {
       flex-wrap: wrap-reverse;
     }
@@ -37,7 +38,7 @@
     flex-wrap: wrap;
     gap: 25%;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: auto;
     padding: 5px;
     background-color: var(--bg-main);
     a {
