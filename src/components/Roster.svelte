@@ -38,8 +38,14 @@
 </script>
 
 <section class="roster">
-  <div class="file-input">
-    <input type="file" accept=".xml" on:change={(e) => onFileSelected(e)} />
+  <div class="file-input-wrap">
+    <label for="file-input" class="visually-hidden">Roster Upload</label>
+    <input
+      id="file-input"
+      type="file"
+      accept=".xml"
+      on:change={(e) => onFileSelected(e)}
+    />
     <pre>[USER]/AppData/Local/KillHouseGames/DoorKickers2/roster.xml</pre>
     {#if roster}
       <button on:click={getUrl}>Copy URL</button>
@@ -57,9 +63,19 @@
 
 <style lang="scss">
   .roster {
-    .file-input {
+    @media (max-width: 768px) {
+      flex: 1;
+      max-height: 300px;
+      overflow-y: auto;
+      margin-bottom: 20px;
+    }
+    .file-input-wrap {
       padding: 8px;
       background-color: var(--bg-main);
+      pre {
+        white-space: normal;
+        word-break: break-word;
+      }
     }
   }
 </style>

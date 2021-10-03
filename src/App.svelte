@@ -28,6 +28,9 @@
   .container {
     display: flex;
     align-items: flex-start;
+    @media (max-width: 768px) {
+      flex-wrap: wrap-reverse;
+    }
   }
   .footer {
     display: flex;

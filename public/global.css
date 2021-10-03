@@ -1,5 +1,5 @@
 :root {
-  --title: #FE7A00;
+  --title: #fe7a00;
   --text: #ede4d5;
   --bg-main: rgba(72, 72, 72, 0.5);
   --accent: #ffc600;
@@ -10,19 +10,20 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  src: url('./fonts/Bebas-Neue-Regular.woff2') format('woff2'),
-    url('./fonts/Bebas-Neue-Regular.woff') format('woff');
+  src: url("./fonts/Bebas-Neue-Regular.woff2") format("woff2"),
+    url("./fonts/Bebas-Neue-Regular.woff") format("woff");
 }
 @font-face {
   font-family: Noto-Sans;
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  src: url('./fonts/Noto-Sans-Regular.woff2') format('woff2'),
-    url('./fonts/Noto-Sans-Regular.woff') format('woff');
+  src: url("./fonts/Noto-Sans-Regular.woff2") format("woff2"),
+    url("./fonts/Noto-Sans-Regular.woff") format("woff");
 }
 
-html, body {
+html,
+body {
   position: relative;
   width: 100%;
   height: 100%;
@@ -34,7 +35,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 ul {
   list-style: none;
@@ -46,13 +48,20 @@ img {
   font-size: 12px;
   user-select: none;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
 .title {
   color: var(--title);
   text-transform: uppercase;
-  font-family: 'Bebas-Neue';
+  font-family: "Bebas-Neue", sans-serif;
 }
 .subtitle {
   color: var(--text);
-  font-family: 'Noto-Sans';
+  font-family: "Noto-Sans", sans-serif;
   font-weight: bold;
 }

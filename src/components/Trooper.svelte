@@ -110,6 +110,9 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
       .trooper__statistics {
         .title {
           font-size: 40px;
@@ -120,7 +123,7 @@
           position: relative;
           margin-bottom: 20px;
           .trooper__image-portrait {
-            max-width: 100%;
+            width: 100%;
           }
           .trooper__image-class {
             position: absolute;
