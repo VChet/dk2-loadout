@@ -14,5 +14,6 @@
 <style lang="scss">
   .container {
     display: flex;
+    align-items: flex-start;
   }
 </style>

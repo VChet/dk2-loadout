@@ -16,6 +16,10 @@ export function getClassImg(name: string): string {
   return `images/classes/${getFileName(name.toLowerCase())}.webp`;
 }
 
+export function getClassIcon(name: string): string {
+  return `images/classes/icon_${getFileName(name.toLowerCase())}.webp`;
+}
+
 export function getWeaponImg(name: string): string | null {
   const weapon = datamap.get(name);
   if (!weapon?.img) return null;
