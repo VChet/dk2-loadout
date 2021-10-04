@@ -1,4 +1,5 @@
 import equipmentData from "../data/equipmentData.json";
+import localization from "../data/localization.json";
 
 const datamap = new Map(equipmentData.map((item) => [item.name, item]));
 
@@ -32,14 +33,13 @@ export function getAttachmentImg(name: string): string | null {
   return `images/weapons/attachments/${getFileName(attachment.img)}_small.webp`;
 }
 
-export function getEquipmentQuantity(name: string): number | null {
-  const equip = datamap.get(name);
-  if (!equip?.quantity) return null;
-  return equip.quantity;
-}
-
 export function getEquipmentImg(name: string): string | null {
   const equip = datamap.get(name);
   if (!equip?.img) return null;
   return `images/equipment/${getFileName(equip.img)}.webp`;
+}
+
+export function getNameString(name: string): string {
+  const object = datamap.get(name);
+  return localization[object.tooltip] || name;
 }

@@ -2,8 +2,8 @@
   import {
     getAttachmentImg,
     getEquipmentImg,
-    getEquipmentQuantity,
     getFileName,
+    getNameString,
     getWeaponImg,
   } from "../utilities/getters";
 
@@ -31,7 +31,7 @@
           <img
             src={getAttachmentImg(ammo.name)}
             alt={getFileName(ammo.name)}
-            title={ammo.name}
+            title={getNameString(ammo.name)}
             draggable="false"
           />
         {/if}
@@ -39,44 +39,39 @@
           <img
             src={getAttachmentImg(scope.name)}
             alt={getFileName(scope.name)}
-            title={scope.name}
+            title={getNameString(scope.name)}
             draggable="false"
           />
         {/if}
       </div>
     {/if}
-    <div class="subtitle">{weapon.name}</div>
+    <div class="subtitle">{getNameString(weapon.name)}</div>
   {:else if armor}
     <img
       src={getEquipmentImg(armor.name)}
       alt={getFileName(armor.name)}
-      title={armor.name}
+      title={getNameString(armor.name)}
       draggable="false"
     />
-    <div class="subtitle">{armor.name}</div>
+    <div class="subtitle">{getNameString(armor.name)}</div>
   {:else if utility}
     <img
       src={getEquipmentImg(utility.name)}
       alt={getFileName(utility.name)}
-      title={utility.name}
+      title={getNameString(utility.name)}
       draggable="false"
     />
-    <div class="subtitle">
-      {#if getEquipmentQuantity(utility.name)}
-        {getEquipmentQuantity(utility.name)}x
-      {/if}
-      {utility.name}
-    </div>
+    <div class="subtitle">{getNameString(utility.name)}</div>
   {:else if support}
     {#if getEquipmentImg(support.name)}
       <img
         src={getEquipmentImg(support.name)}
         alt={getFileName(support.name)}
-        title={support.name}
+        title={getNameString(support.name)}
         draggable="false"
       />
     {/if}
-    <div class="subtitle">{support.name}</div>
+    <div class="subtitle">{getNameString(support.name)}</div>
   {:else}
     <div class="subtitle">Empty</div>
   {/if}
