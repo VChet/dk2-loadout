@@ -15,6 +15,7 @@
     All game resources and images belong to their respective owner —
     <a href="https://inthekillhouse.com" rel="noopener">KillHouse Games</a>
   </div>
+  <div>Tested on 0.19v</div>
   <a
     href="https://github.com/VChet/dk2-loadout/issues"
     target="_blank"
@@ -34,13 +35,16 @@
     }
   }
   .footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25%;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    gap: 8px;
     margin-top: auto;
     padding: 5px;
     background-color: var(--bg-main);
+    text-align: center;
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
     a {
       color: var(--accent);
       text-decoration: none;
