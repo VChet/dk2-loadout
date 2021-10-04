@@ -11,7 +11,7 @@
   export let current: Trooper;
 </script>
 
-<section class="trooper">
+<section class="trooper" class:active={!!current}>
   {#if current}
     <div class="trooper__name">{current.Id.name}</div>
     <div class="trooper__wrapper">
@@ -96,8 +96,10 @@
   .trooper {
     margin: 0 auto;
     flex-basis: 850px;
-    background-color: var(--bg-main);
     padding: 20px;
+    &.active {
+      background-color: var(--bg-main);
+    }
     .trooper__name {
       margin-bottom: 24px;
       text-transform: uppercase;
