@@ -32,18 +32,20 @@ readdir(`${__dirname}/xml`)
     const equipment = [];
     data.forEach((entry) => {
       if (typeof entry !== "object") return;
-      Object.values(entry.Equipment).forEach(
-        (value: EquipmentEntry | Array<EquipmentEntry>) => {
-          if (typeof value !== "object") return;
-          if (Array.isArray(value)) {
-            value.forEach((groupEntry: EquipmentEntry) => {
-              equipment.push(getEquipmentFields(groupEntry));
-            });
-          } else {
-            equipment.push(getEquipmentFields(value));
+      if ("Equipment" in entry) {
+        Object.values(entry.Equipment).forEach(
+          (value: EquipmentEntry | Array<EquipmentEntry>) => {
+            if (typeof value !== "object") return;
+            if (Array.isArray(value)) {
+              value.forEach((groupEntry) => {
+                equipment.push(getEquipmentFields(groupEntry));
+              });
+            } else {
+              equipment.push(getEquipmentFields(value));
+            }
           }
-        }
-      );
+        );
+      }
     });
     return writeFile(
       `${__dirname}/equipmentData.json`,
