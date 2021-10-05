@@ -15,7 +15,9 @@
     const content = await readFile(event.target.files[0]);
     if (content) {
       roster = parseXml(content.toString()).Roster;
-      if (!roster) alert("Wrong XML file");
+      if (!roster) return alert("Wrong XML file");
+      window.history.pushState({}, window.document.title, "/");
+      current = null;
     }
   }
 
