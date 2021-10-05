@@ -2,6 +2,7 @@
 /public/build/
 
 .DS_Store
+.env
 
 # Game Files
 **/*.xml

@@ -4,7 +4,7 @@
   import SquadBlock from "./Squad.svelte";
 
   import { generateXml, parseXml } from "../utilities/parser";
-  import { deserialize, serialize } from "../utilities/serializer";
+  import { createShortLink, getUrlParams } from "../utilities/shortenUrl";
   import { downloadFile, readFile } from "../utilities/files";
   import type { Roster, Trooper } from "../types/Roster";
 
@@ -19,10 +19,16 @@
     }
   }
 
-  function getUrl() {
-    const data = serialize(roster);
+  async function getUrl() {
+    const { code, shortLink } = await createShortLink(roster);
     const url = new URL(window.location.href);
-    url.searchParams.set("code", data);
+    if (shortLink) {
+      url.searchParams.set("link", shortLink);
+      url.searchParams.delete("code");
+    } else {
+      url.searchParams.set("code", code);
+      url.searchParams.delete("link");
+    }
     window.history.pushState({}, window.document.title, url);
     navigator.clipboard.writeText(window.location.href);
   }
@@ -31,9 +37,9 @@
     downloadFile(generateXml({ Roster: roster }), "new_roster.xml");
   }
 
-  onMount(() => {
-    const urlCode = new URLSearchParams(window.location.search).get("code");
-    if (urlCode) roster = deserialize(urlCode);
+  onMount(async () => {
+    const rosterData = await getUrlParams(window.location.search);
+    if (rosterData) roster = rosterData;
   });
 </script>
 

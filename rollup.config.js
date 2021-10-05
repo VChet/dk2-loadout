@@ -2,11 +2,15 @@ import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
+import replace from "@rollup/plugin-replace";
 import css from "rollup-plugin-css-only";
 import livereload from "rollup-plugin-livereload";
 import svelte from "rollup-plugin-svelte";
 import { terser } from "rollup-plugin-terser";
 import sveltePreprocess from "svelte-preprocess";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -50,6 +54,16 @@ export default {
         // enable run-time checks when not in production
         dev: !production,
       },
+    }),
+    replace({
+      preventAssignment: true,
+      "process.env.FIREBASE_KEY": JSON.stringify(process.env.FIREBASE_KEY),
+      "process.env.FIREBASE_SENDER_ID": JSON.stringify(
+        process.env.FIREBASE_SENDER_ID
+      ),
+      "process.env.FIREBASE_APP_ID": JSON.stringify(
+        process.env.FIREBASE_APP_ID
+      ),
     }),
     // we'll extract any component CSS out into
     // a separate file - better for performance
