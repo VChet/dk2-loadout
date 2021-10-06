@@ -15,7 +15,7 @@
     All game resources and images belong to their respective owner —
     <a href="https://inthekillhouse.com" rel="noopener">KillHouse Games</a>
   </div>
-  <div>Tested on 0.19v</div>
+  <div>Tested on 0.20v</div>
   <a
     href="https://github.com/VChet/dk2-loadout/issues"
     target="_blank"
