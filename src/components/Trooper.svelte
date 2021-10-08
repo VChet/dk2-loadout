@@ -117,24 +117,10 @@
           className="utility-2"
           utility={current.Equipment.UtilityPouch2}
         />
-        {#if current.Equipment.SupportGear1}
-          <Equipment
-            className="support-1"
-            support={current.Equipment.SupportGear1}
-          />
-        {/if}
-        {#if current.Equipment.SupportGear2}
-          <Equipment
-            className="support-2"
-            support={current.Equipment.SupportGear2}
-          />
-        {/if}
-        {#if current.Equipment.SupportGear3}
-          <Equipment
-            className="support-3"
-            support={current.Equipment.SupportGear3}
-          />
-        {/if}
+        <Equipment
+          className="support-1"
+          support={current.Equipment.SupportGear1}
+        />
       </ul>
     </div>
   {/if}
