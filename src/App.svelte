@@ -12,7 +12,7 @@
 </main>
 <footer class="footer">
   <div>
-    All game resources and images belong to their respective owner —
+    All game resources and images used with permission from
     <a href="https://inthekillhouse.com" rel="noopener">KillHouse Games</a>
   </div>
   <div>Tested on 0.20v</div>
