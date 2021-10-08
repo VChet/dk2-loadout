@@ -31,6 +31,18 @@
           />
           <img class="trooper__image-class" src={getClassImg(current.class)} alt={current.class} draggable="false" />
         </div>
+        <details class="trooper__statistics">
+          <summary class="title">Soldier stats</summary>
+          <ul>
+            <li>Missions completed: {current.Statistics.totalMissionsWon || 0}</li>
+            <li>Hostiles pacified: {current.Statistics.kills || 0}</li>
+            <li>Shots fired: {current.Statistics.bulletsFired || 0}</li>
+            <li>Doors kicked: {current.Statistics.doorsKicked || 0}</li>
+            <li>Doors blown up: {current.Statistics.doorsBlownUp || 0}</li>
+            <li>Walls breached: {current.Statistics.wallsBreached || 0}</li>
+            <li>Distance walked (meters): {current.Statistics.distanceWalkedMeters || 0}</li>
+          </ul>
+        </details>
         <div class="trooper__stats trooper__stats--abilities">
           <div class="title">Abilities</div>
           <ul>
@@ -142,6 +154,23 @@
             top: 0;
             right: 0;
             padding: 12px;
+          }
+        }
+        .trooper__statistics {
+          background-color: var(--bg-main);
+          .title {
+            margin: 5px;
+            font-size: 24px;
+            cursor: pointer;
+          }
+          ul {
+            font-family: "Noto-Sans";
+            li {
+              padding: 2px 5px;
+              &:nth-of-type(2n - 1) {
+                background-color: var(--bg-main);
+              }
+            }
           }
         }
         .trooper__stats {
