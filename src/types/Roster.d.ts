@@ -1,4 +1,4 @@
-interface Partial<Equipment> {
+export interface TrooperEquipment {
   PrimaryWeapon: { name: string };
   PrimaryWeaponScope: { name: string };
   PrimaryWeaponAmmo: { name: string };
@@ -16,7 +16,7 @@ interface Partial<Equipment> {
 export interface Trooper {
   class: string;
   Id: { name: string; portrait: string; gender: string; voicePack: string };
-  Equipment: Equipment;
+  Equipment: Partial<TrooperEquipment>;
   InnateAbilities: {
     InnateAbility: Array<{ name: string; percent: string }>;
   };
@@ -34,4 +34,10 @@ export interface Roster {
   version: string;
   numSquads: string;
   Squad: Array<Squad>;
+}
+
+export interface TrooperConcealment {
+  value: number;
+  text: string;
+  color: string;
 }

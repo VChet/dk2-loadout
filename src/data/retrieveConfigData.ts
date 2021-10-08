@@ -7,8 +7,11 @@ function getEquipmentFields(equipment: EquipmentEntry) {
     name: equipment.name,
     tooltip: equipment.tooltip,
     img: equipment.img,
-    unit: equipment.ClassBinding,
-    inventoryBinding: equipment.inventoryBinding,
+    mobility: {
+      move: equipment.MobilityModifiers?.moveSpeedModifierPercent,
+      turn: equipment.MobilityModifiers?.turnSpeedModifierPercent,
+    },
+    concealment: equipment.ConcealmentModifier?.add,
   };
 }
 

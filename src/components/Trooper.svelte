@@ -4,18 +4,24 @@
   import {
     getClassImg,
     getFileName,
+    getTrooperConcealment,
     getTrooperImg,
+    getTrooperMobility,
   } from "../utilities/getters";
   import type { Trooper } from "../types/Roster";
 
   export let current: Trooper;
+
+  $: mobility = current && getTrooperMobility(current.Equipment);
+  $: concealment =
+    current && getTrooperConcealment(current.class, current.Equipment);
 </script>
 
 <section class="trooper" class:active={!!current}>
   {#if current}
     <div class="trooper__name">{current.Id.name}</div>
     <div class="trooper__wrapper">
-      <div class="trooper__statistics">
+      <div class="trooper__profile">
         <div class="trooper__image">
           <img
             class="trooper__image-portrait"
@@ -30,22 +36,64 @@
             draggable="false"
           />
         </div>
-        <div class="title">Abilities</div>
-        <ul>
-          {#each current.InnateAbilities.InnateAbility as ability}
-            <li class="trooper__ability">
-              <div class="subtitle">{ability.name} ({ability.percent}%)</div>
+        <div class="trooper__stats trooper__stats--abilities">
+          <div class="title">Abilities</div>
+          <ul>
+            {#each current.InnateAbilities.InnateAbility as ability}
+              <li class="trooper__bar">
+                <div class="subtitle">{ability.name}</div>
+                <div class="progress">
+                  {#each Array(10) as _, i}
+                    <span
+                      class:active={Math.round(Number(ability.percent) / 10) >=
+                        i + 1}
+                    />
+                  {/each}
+                </div>
+              </li>
+            {/each}
+          </ul>
+        </div>
+        <div class="trooper__stats trooper__stats--equipment">
+          <div class="title">Equipment</div>
+          <ul>
+            <li class="trooper__bar">
+              <div class="subtitle">Mobility</div>
               <div class="progress">
                 {#each Array(10) as _, i}
-                  <span
-                    class:active={Math.round(Number(ability.percent) / 10) >=
-                      i + 1}
-                  />
+                  <span class:active={mobility >= i + 1} />
                 {/each}
               </div>
             </li>
-          {/each}
-        </ul>
+            <li class="trooper__bar">
+              <div class="subtitle">
+                Concealment
+                <span
+                  class="subtitle-concealment"
+                  style="color: {concealment.color}"
+                >
+                  {concealment.text}
+                </span>
+              </div>
+              <div class="progress">
+                {#each Array(10) as _, i}
+                  <span class:active={concealment.value >= i + 1}>
+                    {#if i === 1}
+                      <svg class="concealment-point" height="10" width="10">
+                        <polygon points="0,10 5,0 10,10" fill="#ffc600" />
+                      </svg>
+                    {/if}
+                    {#if i === 6}
+                      <svg class="concealment-point" height="10" width="10">
+                        <polygon points="0,10 5,0 10,10" fill="#9fd3ff" />
+                      </svg>
+                    {/if}
+                  </span>
+                {/each}
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
       <ul class="trooper__equipment">
         <Equipment
@@ -106,7 +154,7 @@
       color: var(--title);
       font-family: "Bebas-Neue";
       font-size: 64px;
-      line-height: 32px;
+      line-height: 48px;
     }
     .trooper__wrapper {
       display: grid;
@@ -115,7 +163,7 @@
       @media (max-width: 768px) {
         grid-template-columns: 1fr;
       }
-      .trooper__statistics {
+      .trooper__profile {
         .title {
           font-size: 40px;
           line-height: 32px;
@@ -134,24 +182,50 @@
             padding: 12px;
           }
         }
-        .trooper__ability {
-          background-color: var(--bg-main);
-          padding: 8px;
-          margin-top: 8px;
+        .trooper__stats {
+          margin-top: 30px;
           .subtitle {
             margin-bottom: 5px;
+            letter-spacing: 0.05em;
           }
-          .progress {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            gap: 2px;
-            span {
-              height: 12px;
-              background-color: var(--bg-main);
-              color: red;
-              font-size: 10px;
+          .trooper__bar {
+            background-color: var(--bg-main);
+            padding: 8px;
+            margin-top: 8px;
+            .progress {
+              display: grid;
+              grid-template-columns: repeat(10, 1fr);
+              gap: 2px;
+              span {
+                position: relative;
+                height: 12px;
+                background-color: var(--bg-main);
+                &.active {
+                  background-color: var(--text);
+                }
+                .concealment-point {
+                  position: absolute;
+                  bottom: -9px;
+                  right: -6px;
+                }
+              }
+            }
+          }
+          &--equipment {
+            .subtitle {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 18px;
+              text-transform: uppercase;
+              color: var(--title);
+              .subtitle-concealment {
+                font-size: 14px;
+              }
+            }
+            .trooper__bar .progress span {
               &.active {
-                background-color: var(--text);
+                background-color: var(--title);
               }
             }
           }

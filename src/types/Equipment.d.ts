@@ -3,6 +3,11 @@ export type EquipmentEntry = {
   tooltip: string;
   img?: string;
   quantity?: number;
-  ClassBinding?: { name: string } | Array<{ name: string }>;
   inventoryBinding?: string;
+  ClassBinding?: { name: string } | Array<{ name: string }>;
+  MobilityModifiers?: {
+    moveSpeedModifierPercent: number;
+    turnSpeedModifierPercent: number;
+  };
+  ConcealmentModifier?: { add: number };
 };
