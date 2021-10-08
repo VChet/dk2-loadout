@@ -54,7 +54,7 @@
       accept=".xml"
       on:change={(e) => onFileSelected(e)}
     />
-    <pre>[USER]/AppData/Local/KillHouseGames/DoorKickers2/roster.xml</pre>
+    <pre>%LocalAppData%/KillHouseGames/DoorKickers2/roster.xml</pre>
     {#if roster}
       <button on:click={getUrl}>Copy URL</button>
       <button on:click={downloadXml}>Download XML</button>
@@ -71,6 +71,7 @@
 
 <style lang="scss">
   .roster {
+    flex-basis: 300px;
     @media (max-width: 768px) {
       flex: 1;
       max-height: 300px;

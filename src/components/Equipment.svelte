@@ -93,9 +93,6 @@
     &[class^="support-"] {
       grid-column: 1 / -1;
     }
-    &:not(.support-2):not(.support-3) {
-      min-height: 120px;
-    }
     > img {
       align-self: center;
       box-sizing: border-box;
@@ -103,6 +100,13 @@
       height: 130px;
       max-width: 100%;
       object-fit: contain;
+    }
+    &.primary > img,
+    &.secondary > img {
+      padding: 20px;
+    }
+    &.armor > img {
+      padding: 5px;
     }
     .subtitle {
       margin-top: auto;
@@ -115,6 +119,7 @@
       gap: 8px;
       img {
         max-height: 32px;
+        border: 2px solid #423929;
       }
     }
   }

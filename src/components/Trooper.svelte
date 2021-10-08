@@ -235,6 +235,7 @@
         display: grid;
         gap: 8px;
         grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 170px;
       }
     }
   }

@@ -59,7 +59,7 @@
 
 <style lang="scss">
   .squad {
-    margin-top: 20px;
+    margin-top: 10px;
     @mixin squad-title {
       padding: 5px 10px;
       text-align: right;
@@ -101,7 +101,7 @@
     ul {
       .squad__class {
         + .squad__class {
-          margin-top: 20px;
+          margin-top: 10px;
         }
         .squad__class-name {
           position: relative;
@@ -148,8 +148,8 @@
               border: 3px dashed var(--accent);
             }
             img {
-              max-width: 80px;
-              max-height: 80px;
+              max-width: 60px;
+              max-height: 60px;
             }
           }
         }
