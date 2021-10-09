@@ -148,8 +148,8 @@
               border: 3px dashed var(--accent);
             }
             img {
-              max-width: 60px;
-              max-height: 60px;
+              width: 60px;
+              height: 60px;
             }
           }
         }
