@@ -6,6 +6,6 @@
 
 # Game Files
 **/*.xml
-**/*.txt
+**/txt/*.txt
 **/*.dds
 **/*.tga
