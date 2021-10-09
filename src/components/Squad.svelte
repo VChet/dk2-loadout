@@ -1,39 +1,25 @@
 <script lang="ts">
-  import {
-    getClassIcon,
-    getFileName,
-    getTrooperImg,
-  } from "../utilities/getters";
+  import { getClassIcon, getFileName, getTrooperImg } from "../utilities/getters";
   import type { Squad, Trooper } from "../types/Roster";
 
   export let current: Trooper | null = null;
   export let squad: Squad | null = null;
 
   $: classMap = squad.Trooper.reduce((acc, trooper) => {
-    acc[trooper.class]
-      ? acc[trooper.class].push(trooper)
-      : (acc[trooper.class] = [trooper]);
+    acc[trooper.class] ? acc[trooper.class].push(trooper) : (acc[trooper.class] = [trooper]);
     return acc;
   }, {}) as { [key: string]: Array<Trooper> };
 </script>
 
 {#if squad}
-  <li
-    class="squad"
-    class:squad--ranger={squad.unit === "Rangers"}
-    class:squad--cia={squad.unit === "CIA"}
-  >
+  <li class="squad" class:squad--ranger={squad.unit === "Rangers"} class:squad--cia={squad.unit === "CIA"}>
     <div class="squad__unit">{squad.unit}</div>
     <div class="squad__name">{squad.name}</div>
     <ul>
       {#each Object.keys(classMap) as className}
         <li class="squad__class">
           <div class="squad__class-name">
-            <img
-              src={getClassIcon(className)}
-              alt={getFileName(className)}
-              draggable="false"
-            />
+            <img src={getClassIcon(className)} alt={getFileName(className)} draggable="false" />
             {className}
           </div>
           <ul>

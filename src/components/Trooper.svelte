@@ -13,8 +13,7 @@
   export let current: Trooper;
 
   $: mobility = current && getTrooperMobility(current.Equipment);
-  $: concealment =
-    current && getTrooperConcealment(current.class, current.Equipment);
+  $: concealment = current && getTrooperConcealment(current.class, current.Equipment);
 </script>
 
 <section class="trooper" class:active={!!current}>
@@ -29,12 +28,7 @@
             alt={getFileName(current.Id.portrait)}
             draggable="false"
           />
-          <img
-            class="trooper__image-class"
-            src={getClassImg(current.class)}
-            alt={current.class}
-            draggable="false"
-          />
+          <img class="trooper__image-class" src={getClassImg(current.class)} alt={current.class} draggable="false" />
         </div>
         <div class="trooper__stats trooper__stats--abilities">
           <div class="title">Abilities</div>
@@ -44,10 +38,7 @@
                 <div class="subtitle">{ability.name}</div>
                 <div class="progress">
                   {#each Array(10) as _, i}
-                    <span
-                      class:active={Math.round(Number(ability.percent) / 10) >=
-                        i + 1}
-                    />
+                    <span class:active={Math.round(Number(ability.percent) / 10) >= i + 1} />
                   {/each}
                 </div>
               </li>
@@ -68,10 +59,7 @@
             <li class="trooper__bar">
               <div class="subtitle">
                 Concealment
-                <span
-                  class="subtitle-concealment"
-                  style="color: {concealment.color}"
-                >
+                <span class="subtitle-concealment" style="color: {concealment.color}">
                   {concealment.text}
                 </span>
               </div>
@@ -109,18 +97,9 @@
           scope={current.Equipment.SecondaryWeaponScope}
         />
         <Equipment className="armor" armor={current.Equipment.Armor} />
-        <Equipment
-          className="utility-1"
-          utility={current.Equipment.UtilityPouch1}
-        />
-        <Equipment
-          className="utility-2"
-          utility={current.Equipment.UtilityPouch2}
-        />
-        <Equipment
-          className="support-1"
-          support={current.Equipment.SupportGear1}
-        />
+        <Equipment className="utility-1" utility={current.Equipment.UtilityPouch1} />
+        <Equipment className="utility-2" utility={current.Equipment.UtilityPouch2} />
+        <Equipment className="support-1" support={current.Equipment.SupportGear1} />
       </ul>
     </div>
   {/if}

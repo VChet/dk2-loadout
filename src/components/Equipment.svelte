@@ -1,11 +1,5 @@
 <script lang="ts">
-  import {
-    getAttachmentImg,
-    getEquipmentImg,
-    getFileName,
-    getNameString,
-    getWeaponImg,
-  } from "../utilities/getters";
+  import { getAttachmentImg, getEquipmentImg, getFileName, getNameString, getWeaponImg } from "../utilities/getters";
 
   export let className: string;
 
@@ -20,11 +14,7 @@
 
 <li class={className}>
   {#if weapon}
-    <img
-      src={getWeaponImg(weapon.name)}
-      alt={getFileName(weapon.name)}
-      draggable="false"
-    />
+    <img src={getWeaponImg(weapon.name)} alt={getFileName(weapon.name)} draggable="false" />
     {#if ammo || scope}
       <div class="attachments">
         {#if ammo}

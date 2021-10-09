@@ -45,9 +45,7 @@ export function getNameString(name: string): string {
   return localization[object.tooltip] || name;
 }
 
-export function getTrooperMobility(
-  equipment: Partial<TrooperEquipment>
-): number {
+export function getTrooperMobility(equipment: Partial<TrooperEquipment>): number {
   let mobility: number = 110;
   Object.values(equipment).forEach((item) => {
     const { move, turn } = datamap.get(item.name).mobility;
@@ -57,10 +55,7 @@ export function getTrooperMobility(
   return Math.floor(mobility / 10);
 }
 
-export function getTrooperConcealment(
-  className: string,
-  equipment: Partial<TrooperEquipment>
-): TrooperConcealment {
+export function getTrooperConcealment(className: string, equipment: Partial<TrooperEquipment>): TrooperConcealment {
   // Set default concealment from entities/humans_goodguys.xml
   let concealment: TrooperConcealment = {} as TrooperConcealment;
   if (className === "Undercover") {

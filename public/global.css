@@ -10,16 +10,14 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  src: url("./fonts/Bebas-Neue-Regular.woff2") format("woff2"),
-    url("./fonts/Bebas-Neue-Regular.woff") format("woff");
+  src: url("./fonts/Bebas-Neue-Regular.woff2") format("woff2"), url("./fonts/Bebas-Neue-Regular.woff") format("woff");
 }
 @font-face {
   font-family: Noto-Sans;
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-  src: url("./fonts/Noto-Sans-Regular.woff2") format("woff2"),
-    url("./fonts/Noto-Sans-Regular.woff") format("woff");
+  src: url("./fonts/Noto-Sans-Regular.woff2") format("woff2"), url("./fonts/Noto-Sans-Regular.woff") format("woff");
 }
 
 html,
@@ -37,8 +35,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+    sans-serif;
 }
 ul {
   list-style: none;

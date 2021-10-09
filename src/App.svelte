@@ -16,13 +16,7 @@
     <a href="https://inthekillhouse.com" rel="noopener">KillHouse Games</a>
   </div>
   <div>Tested on 0.20v</div>
-  <a
-    href="https://github.com/VChet/dk2-loadout/issues"
-    target="_blank"
-    rel="noopener"
-  >
-    Report Bug
-  </a>
+  <a href="https://github.com/VChet/dk2-loadout/issues" target="_blank" rel="noopener">Report Bug</a>
 </footer>
 
 <style lang="scss">
