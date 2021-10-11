@@ -47,12 +47,15 @@
 
 <section class="roster">
   <div class="file-input-wrap">
-    <label for="file-input" class="visually-hidden">Roster Upload</label>
-    <input id="file-input" type="file" accept=".xml" on:change={(e) => onFileSelected(e)} />
-    <pre>%LocalAppData%/KillHouseGames/DoorKickers2/roster.xml</pre>
-    {#if roster}
-      <button on:click={getUrl}>Copy URL</button>
-      <button on:click={downloadXml}>Download XML</button>
+    <label>
+      Upload Roster
+      <input class="visually-hidden" type="file" accept=".xml" on:change={(e) => onFileSelected(e)} />
+    </label>
+    {#if !roster}
+      <pre>%LocalAppData%/KillHouseGames/DoorKickers2/roster.xml</pre>
+    {:else}
+      <button on:click={getUrl}>Share URL</button>
+      <button on:click={downloadXml}>Download</button>
     {/if}
   </div>
   {#if roster}
@@ -74,11 +77,35 @@
       margin-bottom: 20px;
     }
     .file-input-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
       padding: 8px;
       background-color: var(--bg-main);
+      label,
+      button {
+        background: var(--bg-main);
+        color: var(--paragraph);
+        border: none;
+        padding: 4px;
+        outline: inherit;
+        cursor: pointer;
+        font-family: "Bebas-Neue";
+        text-align: center;
+        font-size: 24px;
+        &:hover,
+        &:focus {
+          background-color: var(--paragraph);
+          color: var(--dark-text);
+        }
+      }
       pre {
+        background-color: var(--bg-main);
+        margin: 0;
+        padding: 4px;
         white-space: normal;
         word-break: break-word;
+        font-size: 12px;
       }
     }
   }
