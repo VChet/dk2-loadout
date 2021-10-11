@@ -64,4 +64,5 @@ img {
   color: var(--text);
   font-family: "Noto-Sans", sans-serif;
   font-weight: bold;
+  letter-spacing: 0.05em;
 }

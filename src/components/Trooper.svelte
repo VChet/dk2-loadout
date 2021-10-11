@@ -152,7 +152,6 @@
           margin-top: 30px;
           .subtitle {
             margin-bottom: 5px;
-            letter-spacing: 0.05em;
           }
           .trooper__bar {
             background-color: var(--bg-main);
