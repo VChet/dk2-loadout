@@ -117,7 +117,7 @@
     .trooper__name {
       margin-bottom: 24px;
       text-transform: uppercase;
-      color: var(--title);
+      color: var(--header);
       font-family: "Bebas-Neue";
       font-size: 64px;
       line-height: 48px;
@@ -133,7 +133,7 @@
         .title {
           font-size: 40px;
           line-height: 32px;
-          border-bottom: 3px solid var(--title);
+          border-bottom: 3px solid var(--header);
         }
         .trooper__image {
           position: relative;
@@ -166,7 +166,7 @@
                 height: 12px;
                 background-color: var(--bg-main);
                 &.active {
-                  background-color: var(--text);
+                  background-color: var(--paragraph);
                 }
                 .concealment-point {
                   position: absolute;
@@ -183,14 +183,14 @@
               justify-content: space-between;
               font-size: 18px;
               text-transform: uppercase;
-              color: var(--title);
+              color: var(--header);
               .subtitle-concealment {
                 font-size: 14px;
               }
             }
             .trooper__bar .progress span {
               &.active {
-                background-color: var(--title);
+                background-color: var(--header);
               }
             }
           }

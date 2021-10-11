@@ -52,6 +52,7 @@
       font-family: "Bebas-Neue";
       text-transform: uppercase;
       line-height: 1;
+      color: var(--dark-text);
     }
     &--ranger {
       .squad__unit {
@@ -59,7 +60,7 @@
       }
       .squad__class-name {
         @include squad-title;
-        background-color: #cc8a3c;
+        background-color: #cb893e;
       }
     }
     &--cia {
@@ -68,19 +69,18 @@
       }
       .squad__class-name {
         @include squad-title;
-        background-color: #6a899e;
+        background-color: #6a879d;
       }
     }
     .squad__unit {
       @include squad-title;
       box-shadow: inset 0 0 0 50px var(--bg-main);
-      color: #f2e6d6;
+      color: var(--paragraph);
       font-size: 24px;
     }
     .squad__name {
       @include squad-title;
-      background-color: #f0e4cc;
-      color: #251e18;
+      background-color: var(--paragraph);
       font-size: 28px;
     }
 
@@ -94,7 +94,6 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          color: #251e18;
           font-size: 28px;
           &:before {
             content: "";
@@ -122,16 +121,17 @@
             align-items: center;
             justify-content: center;
             margin: auto;
-            background-color: #261a0a;
+            background: #1a1407 url("/images/ui/trooper_background.webp") center no-repeat;
             border: 3px solid #4c3f2e;
             border-radius: 50%;
             overflow: hidden;
             cursor: pointer;
-            &:hover {
+            &:hover,
+            &.selected {
               border-color: var(--accent);
             }
             &.selected {
-              border: 3px dashed var(--accent);
+              box-shadow: inset 0 0 6px 1px var(--accent), 0 0 3px 1px var(--accent);
             }
             img {
               width: 60px;
