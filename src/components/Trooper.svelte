@@ -2,6 +2,7 @@
   import Equipment from "./Equipment.svelte";
 
   import {
+    getAbilityName,
     getClassImg,
     getFileName,
     getTrooperConcealment,
@@ -35,7 +36,7 @@
           <ul>
             {#each current.InnateAbilities.InnateAbility as ability}
               <li class="trooper__bar">
-                <div class="subtitle">{ability.name}</div>
+                <div class="subtitle">{getAbilityName(ability.name)}</div>
                 <div class="progress">
                   {#each Array(10) as _, i}
                     <span class:active={Math.round(Number(ability.percent) / 10) >= i + 1} />

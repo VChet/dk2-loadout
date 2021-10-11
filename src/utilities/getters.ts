@@ -40,6 +40,17 @@ export function getEquipmentImg(name: string): string | null {
   return `images/equipment/${getFileName(equip.img)}.webp`;
 }
 
+export function getAbilityName(name: string): string {
+  switch (name) {
+    case "AssaultShooting":
+      return "Assault shooting";
+    case "FieldSkills":
+      return "Field skills";
+    default:
+      return name;
+  }
+}
+
 export function getNameString(name: string): string {
   const object = datamap.get(name);
   return localization[object.tooltip] || name;
