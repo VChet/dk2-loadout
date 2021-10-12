@@ -1,4 +1,5 @@
 import { readdir, readFile, writeFile } from "fs/promises";
+import { EOL } from "os";
 import { parseXml } from "../utilities/parser";
 import type { EquipmentEntry } from "../types/Equipment";
 
@@ -41,7 +42,7 @@ readdir(`${__dirname}/xml`)
         });
       }
     });
-    return writeFile(`${__dirname}/equipmentData.json`, JSON.stringify(equipment), "utf-8");
+    return writeFile(`${__dirname}/equipmentData.json`, JSON.stringify(equipment, null, 2) + EOL, "utf-8");
   })
   .then(() => console.log("Finished equipment parsing"))
   .catch((error) => {
@@ -60,7 +61,7 @@ readdir(`${__dirname}/txt`)
     });
     return mappings;
   })
-  .then((mappings) => writeFile(`${__dirname}/localization.json`, JSON.stringify(mappings), "utf-8"))
+  .then((mappings) => writeFile(`${__dirname}/localization.json`, JSON.stringify(mappings, null, 2) + EOL, "utf-8"))
   .then(() => console.log("Finished localization parsing"))
   .catch((error) => {
     console.error(error);
