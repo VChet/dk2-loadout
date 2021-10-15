@@ -15,24 +15,24 @@ export interface TrooperEquipment {
 
 export interface Trooper {
   class: string;
-  Id: { name: string; portrait: string; gender: string; voicePack: string };
+  Id: { name: string; portrait: string; gender: number; voicePack: string };
   Equipment: Partial<TrooperEquipment>;
   InnateAbilities: {
-    InnateAbility: Array<{ name: string; percent: string }>;
+    InnateAbility: Array<{ name: string; percent: number }>;
   };
-  Statistics: { [key: string]: string };
+  Statistics: { [key: string]: number };
 }
 
 export interface Squad {
-  id: string;
+  id: number;
   name: string;
   unit: string;
   Trooper: Array<Trooper>;
 }
 
 export interface Roster {
-  version: string;
-  numSquads: string;
+  version: number;
+  numSquads: number;
   Squad: Array<Squad>;
 }
 
