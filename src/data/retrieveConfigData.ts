@@ -51,7 +51,7 @@ readdir(`${__dirname}/xml`)
 
 readdir(`${__dirname}/txt`)
   .then((files) => readFiles(files, "txt"))
-  .then((filesContent) => filesContent.reduce((acc, item) => (acc += item), ""))
+  .then((filesContent) => filesContent.reduce((acc, item) => acc + item, ""))
   .then((string: string) => {
     const mappings: { [key: string]: string } = {};
     string.split("\n").forEach((line) => {
