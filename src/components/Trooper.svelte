@@ -1,5 +1,6 @@
 <script lang="ts">
   import Equipment from "./Equipment.svelte";
+  import Rank from "./Rank.svelte";
 
   import {
     getAbilityName,
@@ -7,12 +8,14 @@
     getFileName,
     getTrooperConcealment,
     getTrooperImg,
+    getTrooperLevel,
     getTrooperMobility,
   } from "../utilities/getters";
   import type { Trooper } from "../types/Roster";
 
   export let current: Trooper;
 
+  $: level = current && getTrooperLevel(current.$class, current.Statistics.$xp);
   $: mobility = current && getTrooperMobility(current.Equipment);
   $: concealment = current && getTrooperConcealment(current.$class, current.Equipment);
 </script>
@@ -30,6 +33,7 @@
             draggable="false"
           />
           <img class="trooper__image-class" src={getClassImg(current.$class)} alt={current.$class} draggable="false" />
+          <Rank {level} />
         </div>
         <details class="trooper__statistics">
           <summary class="title">Soldier stats</summary>

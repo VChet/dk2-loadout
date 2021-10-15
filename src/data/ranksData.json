@@ -1,0 +1,86 @@
+{
+  "Rangers": [
+    {
+      "name": "@trooper_rank_0",
+      "xpNeeded": 0
+    },
+    {
+      "name": "@trooper_rank_1",
+      "xpNeeded": 700
+    },
+    {
+      "name": "@trooper_rank_2",
+      "xpNeeded": 2300
+    },
+    {
+      "name": "@trooper_rank_3",
+      "xpNeeded": 5600
+    },
+    {
+      "name": "@trooper_rank_4",
+      "xpNeeded": 11800
+    },
+    {
+      "name": "@trooper_rank_5",
+      "xpNeeded": 22400
+    },
+    {
+      "name": "@trooper_rank_6",
+      "xpNeeded": 38400
+    },
+    {
+      "name": "@trooper_rank_7",
+      "xpNeeded": 60200
+    },
+    {
+      "name": "@trooper_rank_8",
+      "xpNeeded": 86400
+    },
+    {
+      "name": "@trooper_rank_9",
+      "xpNeeded": 126400
+    }
+  ],
+  "CIA": [
+    {
+      "name": "@agent_rank_0",
+      "xpNeeded": 0
+    },
+    {
+      "name": "@agent_rank_1",
+      "xpNeeded": 700
+    },
+    {
+      "name": "@agent_rank_2",
+      "xpNeeded": 2300
+    },
+    {
+      "name": "@agent_rank_3",
+      "xpNeeded": 5600
+    },
+    {
+      "name": "@agent_rank_4",
+      "xpNeeded": 11800
+    },
+    {
+      "name": "@agent_rank_5",
+      "xpNeeded": 22400
+    },
+    {
+      "name": "@agent_rank_6",
+      "xpNeeded": 38400
+    },
+    {
+      "name": "@agent_rank_7",
+      "xpNeeded": 60200
+    },
+    {
+      "name": "@agent_rank_8",
+      "xpNeeded": 86400
+    },
+    {
+      "name": "@agent_rank_9",
+      "xpNeeded": 126400
+    }
+  ]
+}

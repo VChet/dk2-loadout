@@ -35,22 +35,9 @@ export type EquipmentEntry = {
   };
 };
 
-export type ParsedEquipment = {
-  name: string;
-  tooltip?: string;
-  img?: string;
-  mobility?: {
-    move?: number;
-    turn?: number;
-  };
-  concealment?: number;
-  suppressorAvailable?: boolean;
-  suppressed?: boolean;
-  NVGAvailable?: boolean;
-};
-
 export type FileDataEntry = {
   [key: string]: any;
   Equipment?: { [key: string]: EquipmentEntry | Array<EquipmentEntry> };
+  Units?: { [key: string]: UnitEntry | Array<UnitEntry> };
 };
 export type FileData = Array<FileDataEntry>;

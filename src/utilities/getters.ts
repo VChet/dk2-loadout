@@ -1,6 +1,7 @@
 import equipmentData from "../data/equipmentData.json";
+import ranksData from "../data/ranksData.json";
 import localization from "../data/localization.json";
-import type { ParsedEquipment } from "../types/Equipment";
+import type { ComputedLevel, ParsedEquipment } from "../types/Parsed";
 import type { TrooperEquipment } from "../types/Roster";
 
 const datamap = new Map(equipmentData.map((item) => [item.name, item]));
@@ -103,4 +104,36 @@ export function getTrooperConcealment(className: string, equipment: Partial<Troo
   });
 
   return concealment;
+}
+
+export function getTrooperLevel(className: string, xp: number): ComputedLevel {
+  let unit;
+  if (["Assault", "Support", "Marksman", "Grenadier"].includes(className)) {
+    unit = ranksData["Rangers"];
+  } else {
+    unit = ranksData["CIA"];
+  }
+
+  const level = unit.findIndex((rank) => rank.xpNeeded > xp);
+  if (level < 0) {
+    return {
+      rank: (localization as { [key: string]: string })[unit[9].name],
+      nextLevel: 10,
+    };
+  } else {
+    const earnedXp = xp - unit[level - 1].xpNeeded;
+    const nextLevelXp = unit[level].xpNeeded - unit[level - 1].xpNeeded;
+    return {
+      rank: (localization as { [key: string]: string })[unit[level - 1].name],
+      earnedXp,
+      nextLevelXp,
+      nextLevel: level,
+    };
+  }
+}
+
+export function getRankProgress(level: ComputedLevel) {
+  const { earnedXp, nextLevelXp } = level;
+  if (!earnedXp || !nextLevelXp) return 100;
+  return ((earnedXp / nextLevelXp) * 100).toFixed(2);
 }
