@@ -17,8 +17,8 @@
   $: concealment = current && getTrooperConcealment(current.class, current.Equipment);
 </script>
 
-<section class="trooper" class:active={!!current}>
-  {#if current}
+{#if current}
+  <section class="trooper">
     <div class="trooper__name">{current.Id.name}</div>
     <div class="trooper__wrapper">
       <div class="trooper__profile">
@@ -103,24 +103,20 @@
         <Equipment className="support-1" support={current.Equipment.SupportGear1} />
       </ul>
     </div>
-  {/if}
-</section>
+  </section>
+{/if}
 
 <style lang="scss">
   .trooper {
-    margin: 0 auto;
-    flex-basis: 850px;
-    padding: 20px;
-    &.active {
-      background-color: var(--bg-main);
-    }
+    background-color: var(--bg-main);
+    margin-top: 30px;
+    padding: 10px 20px;
     .trooper__name {
-      margin-bottom: 24px;
+      margin-bottom: 8px;
       text-transform: uppercase;
       color: var(--header);
       font-family: "Bebas-Neue";
       font-size: 64px;
-      line-height: 48px;
     }
     .trooper__wrapper {
       display: grid;

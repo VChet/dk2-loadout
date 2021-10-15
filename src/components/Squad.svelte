@@ -45,7 +45,6 @@
 
 <style lang="scss">
   .squad {
-    margin-top: 10px;
     @mixin squad-title {
       padding: 5px 10px;
       text-align: right;

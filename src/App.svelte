@@ -1,14 +1,19 @@
 <script lang="ts">
-  import RosterBlock from "./components/Roster.svelte";
+  import ManagerBlock from "./components/Manager.svelte";
   import TrooperBlock from "./components/Trooper.svelte";
-  import type { Trooper } from "./types/Roster";
+  import RosterBlock from "./components/Roster.svelte";
+  import type { Roster, Trooper } from "./types/Roster";
 
+  let roster: Roster;
   let current: Trooper;
 </script>
 
 <main class="container">
-  <TrooperBlock {current} />
-  <RosterBlock bind:current />
+  <div class="left-block">
+    <ManagerBlock bind:roster />
+    <TrooperBlock {current} />
+  </div>
+  <RosterBlock {roster} bind:current />
 </main>
 <footer class="footer">
   <div>
@@ -26,6 +31,10 @@
     margin-bottom: 20px;
     @media (max-width: 768px) {
       flex-wrap: wrap-reverse;
+    }
+    .left-block {
+      flex-basis: 850px;
+      margin: 0 auto;
     }
   }
   .footer {
