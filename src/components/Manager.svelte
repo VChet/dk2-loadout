@@ -32,7 +32,9 @@
   }
 
   function downloadXml() {
-    downloadFile(generateXml({ Roster: roster }), "new_roster.xml");
+    const now = new Date();
+    const date = `${now.getFullYear()}${now.getMonth()}${now.getDate()}`;
+    downloadFile(generateXml({ Roster: roster }), `roster-${date}.xml`);
   }
 
   onMount(async () => {
