@@ -34,12 +34,12 @@ async function addEntry(code: string): Promise<string> {
 }
 
 export async function getUrlParams(query: string): Promise<Roster | null> {
-  const code = new URLSearchParams(query).get("code");
-  const link = new URLSearchParams(query).get("link");
+  const urlCode = new URLSearchParams(query).get("code");
+  if (urlCode) return deserialize(urlCode);
 
-  if (code) return deserialize(code);
-  if (link) {
-    const code = await getLinkData(link);
+  const urlLink = new URLSearchParams(query).get("link");
+  if (urlLink) {
+    const code = await getLinkData(urlLink);
     return code ? deserialize(code) : null;
   }
 }
