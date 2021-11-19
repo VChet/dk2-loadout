@@ -2,7 +2,9 @@
   "extends": "@tsconfig/svelte/tsconfig.json",
 
   "compilerOptions": {
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "noUnusedLocals": true
   },
 
   "include": ["src/**/*"],

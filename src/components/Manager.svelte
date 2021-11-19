@@ -18,6 +18,7 @@
   }
 
   async function getUrl() {
+    if (!roster) return;
     const { code, shortLink } = await createShortLink(roster);
     const url = new URL(window.location.href);
     if (shortLink) {
