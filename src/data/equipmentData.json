@@ -17,7 +17,9 @@
       "move": -1,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "Mini Uzi CIA",
@@ -27,7 +29,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -2
+    "concealment": -2,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MP5K CIA BOps",
@@ -37,7 +41,9 @@
       "move": -1,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MP5K Sup CIA BOps",
@@ -47,7 +53,9 @@
       "move": -1,
       "turn": 0
     },
-    "concealment": -2
+    "concealment": -2,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MP5KPDW CIA BOps",
@@ -57,7 +65,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -2
+    "concealment": -2,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MP5KPDW Sup CIA BOps",
@@ -67,7 +77,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MP5A CIA BOps",
@@ -77,7 +89,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MP5A Sup CIA BOps",
@@ -87,7 +101,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MP5SD CIA Bops",
@@ -97,7 +113,9 @@
       "move": -3,
       "turn": -1
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MP7 CIA BOps",
@@ -107,7 +125,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MP7Sup CIA BOps",
@@ -117,7 +137,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "AKS 74U CIA BOps",
@@ -127,7 +149,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -2
+    "concealment": -2,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "AKS 74USup CIA BOps",
@@ -137,7 +161,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MK 18 CIA BOps",
@@ -147,7 +173,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MK 18Sup CIA BOps",
@@ -157,7 +185,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "AK 105 Alpha CIA BOps",
@@ -167,7 +197,9 @@
       "move": -4,
       "turn": -2
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "AK 105 Alpha Sup CIA BOps",
@@ -177,7 +209,9 @@
       "move": -4,
       "turn": -2
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "Type 56 CIA BOps",
@@ -187,7 +221,9 @@
       "move": -4,
       "turn": -1
     },
-    "concealment": -2
+    "concealment": -2,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MK17CQC CIA BOps",
@@ -197,7 +233,9 @@
       "move": -3,
       "turn": -1
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MK17CQC Sup CIA BOps",
@@ -207,7 +245,9 @@
       "move": -3,
       "turn": -1
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M4 CIA BOps",
@@ -217,7 +257,9 @@
       "move": -3,
       "turn": 0
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "M4 Sup CIA BOps",
@@ -227,7 +269,9 @@
       "move": -3,
       "turn": 0
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MK17STD CIA BOps",
@@ -237,7 +281,9 @@
       "move": -8,
       "turn": -2
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MK17STD Sup CIA BOps",
@@ -247,7 +293,9 @@
       "move": -8,
       "turn": -2
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M249SPW CIA BOps",
@@ -257,7 +305,9 @@
       "move": -10,
       "turn": -5
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MK48 CIA BOps",
@@ -267,7 +317,9 @@
       "move": -12,
       "turn": -6
     },
-    "concealment": -5
+    "concealment": -5,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "PKP CIA BOps",
@@ -277,7 +329,9 @@
       "move": -15,
       "turn": -10
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "SVD CIA BOps",
@@ -287,7 +341,9 @@
       "move": -9,
       "turn": -2
     },
-    "concealment": -4
+    "concealment": -4,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "VSS CIA BOps",
@@ -297,7 +353,9 @@
       "move": -4,
       "turn": 0
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M110A1 CIA BOps",
@@ -307,7 +365,9 @@
       "move": -9,
       "turn": -4
     },
-    "concealment": -5
+    "concealment": -5,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "M110A1Sup CIA BOps",
@@ -317,7 +377,9 @@
       "move": -9,
       "turn": -5
     },
-    "concealment": -5
+    "concealment": -5,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M9 Pistol",
@@ -326,7 +388,9 @@
     "mobility": {
       "move": -2,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "M9Sup Pistol",
@@ -335,7 +399,9 @@
     "mobility": {
       "move": -3,
       "turn": -1
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M17 Pistol",
@@ -344,7 +410,9 @@
     "mobility": {
       "move": -2.3,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M18 Pistol",
@@ -353,7 +421,9 @@
     "mobility": {
       "move": -1.5,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "G19X Pistol",
@@ -362,7 +432,9 @@
     "mobility": {
       "move": -1,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "G2240 Pistol",
@@ -371,7 +443,9 @@
     "mobility": {
       "move": -1.2,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "1911 Pistol",
@@ -380,7 +454,9 @@
     "mobility": {
       "move": -2,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MPS45Sup Pistol",
@@ -389,7 +465,9 @@
     "mobility": {
       "move": -2,
       "turn": -1
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "TSS4 Pistol",
@@ -399,7 +477,9 @@
       "move": -1,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "G19 Pistol CIA BOps",
@@ -409,7 +489,9 @@
       "move": -0.8,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "G19X Pistol CIA BOps",
@@ -419,7 +501,9 @@
       "move": -1,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "G19Custom Pistol CIA BOps",
@@ -429,7 +513,9 @@
       "move": -1.8,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "G17 Pistol CIA BOps",
@@ -439,7 +525,9 @@
       "move": -1.2,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "G2240 Pistol CIA BOps",
@@ -449,7 +537,9 @@
       "move": -1.2,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M18 Pistol CIA BOps",
@@ -459,7 +549,9 @@
       "move": -1.5,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M17 Pistol CIA BOps",
@@ -469,7 +561,9 @@
       "move": -2.3,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M9 Pistol CIA BOps",
@@ -479,7 +573,9 @@
       "move": -2,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "HK45CT CIA BOps",
@@ -489,7 +585,9 @@
       "move": -1.6,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "HK45CTSup CIA BOps",
@@ -499,7 +597,9 @@
       "move": -1.6,
       "turn": 0
     },
-    "concealment": -2
+    "concealment": -2,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "1911 Pistol CIA BOps",
@@ -509,7 +609,9 @@
       "move": -2.1,
       "turn": 0
     },
-    "concealment": -1
+    "concealment": -1,
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M500PP",
@@ -536,7 +638,9 @@
     "mobility": {
       "move": -2,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MP5SD",
@@ -545,7 +649,9 @@
     "mobility": {
       "move": -3,
       "turn": -1
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M16A4",
@@ -554,7 +660,9 @@
     "mobility": {
       "move": -8,
       "turn": -1
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M4 Carbine",
@@ -563,7 +671,9 @@
     "mobility": {
       "move": -3,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "M4Sup",
@@ -572,7 +682,9 @@
     "mobility": {
       "move": -3,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MK 18",
@@ -581,7 +693,9 @@
     "mobility": {
       "move": -2,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MK 18Sup",
@@ -590,7 +704,9 @@
     "mobility": {
       "move": -2,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M4/M203",
@@ -599,7 +715,9 @@
     "mobility": {
       "move": -10,
       "turn": -5
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MK18/M203",
@@ -608,7 +726,9 @@
     "mobility": {
       "move": -9,
       "turn": -4
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M16A4/M203",
@@ -617,7 +737,9 @@
     "mobility": {
       "move": -12,
       "turn": -5
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M249SPW",
@@ -626,7 +748,9 @@
     "mobility": {
       "move": -10,
       "turn": -5
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M240L",
@@ -635,7 +759,9 @@
     "mobility": {
       "move": -20,
       "turn": -10
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MK48",
@@ -644,7 +770,9 @@
     "mobility": {
       "move": -12,
       "turn": -6
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MG338",
@@ -653,7 +781,9 @@
     "mobility": {
       "move": -17,
       "turn": -10
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M16A4Marksman",
@@ -662,7 +792,9 @@
     "mobility": {
       "move": -10,
       "turn": -2
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MK17LB",
@@ -671,7 +803,9 @@
     "mobility": {
       "move": -10,
       "turn": -2
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MK17LB Sup",
@@ -680,7 +814,9 @@
     "mobility": {
       "move": -10,
       "turn": -2
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M14EBR",
@@ -689,7 +825,9 @@
     "mobility": {
       "move": -10,
       "turn": -3
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MK20SSR",
@@ -698,7 +836,9 @@
     "mobility": {
       "move": -10,
       "turn": -2
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MK20SSRSup",
@@ -707,7 +847,9 @@
     "mobility": {
       "move": -10,
       "turn": -2
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M110A1",
@@ -716,7 +858,9 @@
     "mobility": {
       "move": -9,
       "turn": -4
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "M110A1Sup",
@@ -725,7 +869,9 @@
     "mobility": {
       "move": -9,
       "turn": -5
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MK17STD",
@@ -734,7 +880,9 @@
     "mobility": {
       "move": -8,
       "turn": -2
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MK17STD Sup",
@@ -744,7 +892,9 @@
       "move": -8,
       "turn": -2
     },
-    "concealment": -3
+    "concealment": -3,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MK17CQC",
@@ -753,7 +903,9 @@
     "mobility": {
       "move": -3,
       "turn": -1
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
   },
   {
     "name": "MK17CQC Sup",
@@ -762,7 +914,9 @@
     "mobility": {
       "move": -3,
       "turn": -1
-    }
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "Breacher Shotgun",
@@ -780,7 +934,9 @@
     "mobility": {
       "move": -13,
       "turn": 0
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "12GA00BUCK_M1014",

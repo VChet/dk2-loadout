@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { getAttachmentImg, getEquipmentImg, getFileName, getNameString, getWeaponImg } from "../utilities/getters";
+  import { getAttachmentImg, getEquipmentImg, getFileName, getNameString, getWeaponData } from "../utilities/getters";
 
   export let className: string;
 
   export let weapon: { name: string } | null = null;
+  $: weaponData = weapon?.name && getWeaponData(weapon.name);
   export let ammo: { name: string } | null = null;
   export let scope: { name: string } | null = null;
 
@@ -13,10 +14,27 @@
 </script>
 
 <li class={className}>
-  {#if weapon}
-    <img src={getWeaponImg(weapon.name)} alt={getFileName(weapon.name)} draggable="false" />
+  {#if weaponData}
+    <img src={weaponData.img} alt={getFileName(weaponData.name)} draggable="false" />
     {#if ammo || scope}
       <div class="attachments">
+        {#if weaponData.suppressorAvailable}
+          {#if weaponData.suppressed}
+            <img
+              class="attachments__silencer"
+              src="images/weapons/attachments/basic_silencer_ui_small.webp"
+              alt="basic_silencer_ui_small"
+              draggable="false"
+            />
+          {:else}
+            <img
+              class="attachments__silencer"
+              src="images/weapons/attachments/silencer_none.webp"
+              alt="silencer_none"
+              draggable="false"
+            />
+          {/if}
+        {/if}
         {#if ammo}
           <img
             src={getAttachmentImg(ammo.name)}
@@ -35,7 +53,7 @@
         {/if}
       </div>
     {/if}
-    <div class="subtitle">{getNameString(weapon.name)}</div>
+    <div class="subtitle">{getNameString(weaponData.name)}</div>
   {:else if armor}
     <img
       src={getEquipmentImg(armor.name)}
@@ -103,10 +121,15 @@
     }
     .attachments {
       position: absolute;
-      right: 40px;
-      bottom: 40px;
-      display: flex;
+      right: 5px;
+      bottom: 35px;
+      display: grid;
+      grid-template-columns: min-content 1fr;
       gap: 8px;
+      &__silencer {
+        grid-column: 1 / -1;
+        justify-self: flex-end;
+      }
       img {
         max-height: 32px;
         border: 2px solid #423929;

@@ -1,10 +1,10 @@
 import { readdir, readFile, writeFile } from "fs/promises";
 import { EOL } from "os";
+import type { EquipmentEntry, ParsedEquipment } from "../types/Equipment";
 import { parseXml } from "../utilities/parser";
-import type { EquipmentEntry } from "../types/Equipment";
 
-function getEquipmentFields(equipment: EquipmentEntry) {
-  return {
+function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
+  const data: ParsedEquipment = {
     name: equipment.name,
     tooltip: equipment.tooltip,
     img: equipment.img,
@@ -14,6 +14,11 @@ function getEquipmentFields(equipment: EquipmentEntry) {
     },
     concealment: equipment.ConcealmentModifier?.add,
   };
+  if (["rifle", "pistol"].includes(equipment.category)) {
+    data.suppressorAvailable = Boolean(equipment.Params?.suppressedSwitch);
+    data.suppressed = Boolean(equipment.Params?.suppressedImg);
+  }
+  return data;
 }
 
 function readFiles(dirContent: Array<string>, extension: string): Promise<Array<string>> {

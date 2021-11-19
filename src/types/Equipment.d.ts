@@ -1,6 +1,9 @@
+export type WeaponCategory = "rifle" | "shotgun" | "pistol" | "rpg";
+
 export type EquipmentEntry = {
   name: string;
-  tooltip: string;
+  tooltip?: string;
+  category?: WeaponCategory;
   img?: string;
   quantity?: number;
   inventoryBinding?: string;
@@ -10,4 +13,18 @@ export type EquipmentEntry = {
     turnSpeedModifierPercent: number;
   };
   ConcealmentModifier?: { add: number };
+  Params?: { suppressedImg: string; suppressedSwitch: string };
+};
+
+export type ParsedEquipment = {
+  name: string;
+  tooltip?: string;
+  img?: string;
+  mobility?: {
+    move?: number;
+    turn?: number;
+  };
+  concealment?: number;
+  suppressorAvailable?: boolean;
+  suppressed?: boolean;
 };

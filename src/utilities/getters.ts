@@ -1,5 +1,6 @@
 import equipmentData from "../data/equipmentData.json";
 import localization from "../data/localization.json";
+import type { ParsedEquipment } from "../types/Equipment";
 import type { TrooperConcealment, TrooperEquipment } from "../types/Roster";
 
 const datamap = new Map(equipmentData.map((item) => [item.name, item]));
@@ -22,10 +23,10 @@ export function getClassIcon(name: string): string {
   return `images/classes/icon_${getFileName(name.toLowerCase())}.webp`;
 }
 
-export function getWeaponImg(name: string): string | null {
+export function getWeaponData(name: string): ParsedEquipment | null {
   const weapon = datamap.get(name);
-  if (!weapon?.img) return null;
-  return `images/weapons/${getFileName(weapon.img)}.webp`;
+  if (!weapon) return null;
+  return { ...weapon, img: `images/weapons/${getFileName(weapon.img)}.webp` };
 }
 
 export function getAttachmentImg(name: string): string | null {
@@ -53,6 +54,7 @@ export function getAbilityName(name: string): string {
 
 export function getNameString(name: string): string {
   const object = datamap.get(name);
+  if (!object?.tooltip) return null;
   return localization[object.tooltip] || name;
 }
 
