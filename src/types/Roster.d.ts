@@ -42,6 +42,7 @@ export interface Statistics {
   perfectAccuracy: number;
   challengesCompleted: number;
   bombsDisarmed: number;
+  wallsBreached: number;
   arrests: number;
   rescues: number;
   prev_xp: number;
