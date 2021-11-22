@@ -1,3 +1,10 @@
+export interface Id {
+  name: string;
+  portrait: string;
+  gender: number;
+  voicePack: string;
+}
+
 export interface TrooperEquipment {
   PrimaryWeapon: { name: string };
   PrimaryWeaponScope: { name: string };
@@ -13,14 +20,41 @@ export interface TrooperEquipment {
   SupportGear3: { name: string };
 }
 
+export interface Statistics {
+  xp: number;
+  totalMissionsWon: number;
+  missionFailed: number;
+  mission1Star: number;
+  mission2Star: number;
+  mission3Star: number;
+  bulletsFired: number;
+  bulletsHit: number;
+  kills: number;
+  killsStunnedTarget: number;
+  killsUnawareTarget: number;
+  injuries: number;
+  doorsKicked: number;
+  doorForcedBreaches: number;
+  doorsBlownUp: number;
+  grenadesUsed: number;
+  distanceWalkedMeters: number;
+  completedHealthy: number;
+  perfectAccuracy: number;
+  challengesCompleted: number;
+  bombsDisarmed: number;
+  arrests: number;
+  rescues: number;
+  prev_xp: number;
+}
+
 export interface Trooper {
   class: string;
-  Id: { name: string; portrait: string; gender: number; voicePack: string };
+  Id: Id;
   Equipment: Partial<TrooperEquipment>;
   InnateAbilities: {
     InnateAbility: Array<{ name: string; percent: number }>;
   };
-  Statistics: { [key: string]: number };
+  Statistics: Statistics;
 }
 
 export interface Squad {
