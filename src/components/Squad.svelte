@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { getClassIcon, getFileName, getTrooperImg } from "../utilities/getters";
   import type { Squad, Trooper } from "../types/Roster";
+  import { getClassIcon, getFileName, getTrooperImg } from "../utilities/getters";
 
   export let current: Trooper | null = null;
   export let squad: Squad | null = null;
@@ -53,12 +53,79 @@
       line-height: 1;
       color: var(--dark-text);
     }
+    &__unit {
+      @include squad-title;
+      box-shadow: inset 0 0 0 50px var(--bg-main);
+      color: var(--paragraph);
+      font-size: 24px;
+    }
+    &__name {
+      @include squad-title;
+      background-color: var(--paragraph);
+      font-size: 28px;
+    }
+    &__class {
+      + .squad__class {
+        margin-top: 10px;
+      }
+      &-name {
+        @include squad-title;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 28px;
+        background-color: #bbbbbb;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 120px;
+          height: 100%;
+          background-image: url("/images/ui/class_bars.webp");
+          background-repeat: no-repeat;
+        }
+        img {
+          z-index: 1;
+          max-width: 24px;
+        }
+      }
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        padding: 8px;
+        background-color: var(--bg-main);
+        .trooper {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+          background: #1a1407 url("/images/ui/trooper_background.webp") center no-repeat;
+          border: 3px solid #4c3f2e;
+          border-radius: 50%;
+          overflow: hidden;
+          cursor: pointer;
+          &:hover,
+          &.selected {
+            border-color: var(--accent);
+          }
+          &.selected {
+            box-shadow: inset 0 0 6px 1px var(--accent), 0 0 3px 1px var(--accent);
+          }
+          img {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+    }
     &--ranger {
       .squad__unit {
         background-image: url("/images/rangers_bg.webp");
       }
-      .squad__class-name {
-        @include squad-title;
+      .squad__class .squad__class-name {
         background-color: #cb893e;
       }
     }
@@ -66,78 +133,8 @@
       .squad__unit {
         background-image: url("/images/cia_bg.webp");
       }
-      .squad__class-name {
-        @include squad-title;
+      .squad__class .squad__class-name {
         background-color: #6a879d;
-      }
-    }
-    .squad__unit {
-      @include squad-title;
-      box-shadow: inset 0 0 0 50px var(--bg-main);
-      color: var(--paragraph);
-      font-size: 24px;
-    }
-    .squad__name {
-      @include squad-title;
-      background-color: var(--paragraph);
-      font-size: 28px;
-    }
-
-    ul {
-      .squad__class {
-        + .squad__class {
-          margin-top: 10px;
-        }
-        .squad__class-name {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          font-size: 28px;
-          &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 120px;
-            height: 100%;
-            background-image: url("/images/ui/class_bars.webp");
-            background-repeat: no-repeat;
-          }
-          img {
-            z-index: 1;
-            max-width: 24px;
-          }
-        }
-        ul {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 8px;
-          padding: 8px;
-          background-color: var(--bg-main);
-          .trooper {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            background: #1a1407 url("/images/ui/trooper_background.webp") center no-repeat;
-            border: 3px solid #4c3f2e;
-            border-radius: 50%;
-            overflow: hidden;
-            cursor: pointer;
-            &:hover,
-            &.selected {
-              border-color: var(--accent);
-            }
-            &.selected {
-              box-shadow: inset 0 0 6px 1px var(--accent), 0 0 3px 1px var(--accent);
-            }
-            img {
-              width: 60px;
-              height: 60px;
-            }
-          }
-        }
       }
     }
   }
