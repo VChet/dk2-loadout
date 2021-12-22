@@ -484,6 +484,30 @@
   {
     "name": "G19 Pistol CIA BOps",
     "tooltip": "@firearm_g19_name",
+    "img": "data/models/weapons/g19_sup_ui.dds",
+    "mobility": {
+      "move": -0.8,
+      "turn": 0
+    },
+    "concealment": -1,
+    "suppressorAvailable": true,
+    "suppressed": false
+  },
+  {
+    "name": "G19Sup Pistol CIA BOps",
+    "tooltip": "@firearm_g19sup_name",
+    "img": "data/models/weapons/g19_sup_ui.dds",
+    "mobility": {
+      "move": -0.8,
+      "turn": 0
+    },
+    "concealment": -1,
+    "suppressorAvailable": true,
+    "suppressed": true
+  },
+  {
+    "name": "G19 Pistol",
+    "tooltip": "@firearm_g19_name",
     "img": "data/models/weapons/g19_ui.dds",
     "mobility": {
       "move": -0.8,
@@ -1650,7 +1674,7 @@
     }
   },
   {
-    "name": "919FMJ108GRHP_SupHandgun",
+    "name": "919FMJ108GRHP_SupSmallHandgun",
     "tooltip": "@ammo_919FMJ108GRHP_name",
     "img": "data/models/weapons/attachments/m882_ammo_ui.dds",
     "mobility": {
@@ -1677,6 +1701,15 @@
     }
   },
   {
+    "name": "919JHPM1153_SupSmallHandgun",
+    "tooltip": "@ammo_919JHPM1153_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
     "name": "919FMJM1152_SupHandgun",
     "tooltip": "@ammo_919FMJM1152_name",
     "img": "data/models/weapons/attachments/m1152_ammo_ui.dds",
@@ -1686,7 +1719,25 @@
     }
   },
   {
+    "name": "919FMJM1152_SupSmallHandgun",
+    "tooltip": "@ammo_919FMJM1152_name",
+    "img": "data/models/weapons/attachments/m1152_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
     "name": "919FMJM882_G19X Pistol",
+    "tooltip": "@ammo_919FMJM882_name",
+    "img": "data/models/weapons/attachments/m882_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "919FMJM882_G19XSupSmall",
     "tooltip": "@ammo_919FMJM882_name",
     "img": "data/models/weapons/attachments/m882_ammo_ui.dds",
     "mobility": {
@@ -2161,6 +2212,166 @@
       "turn": -6
     },
     "concealment": -1
+  },
+  {
+    "name": "HelmetACH",
+    "tooltip": "@helmet_rangers_ach_name",
+    "img": "data/models/humans/attachments/ach_helmet_ui.dds",
+    "mobility": {
+      "move": -2,
+      "turn": -2
+    },
+    "concealment": 0
+  },
+  {
+    "name": "HelmetFAST",
+    "tooltip": "@helmet_rangers_fast_name",
+    "img": "data/models/humans/attachments/ranger_helmet_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    },
+    "concealment": 0
+  },
+  {
+    "name": "HelmetFASTMandible",
+    "tooltip": "@helmet_rangers_fastmandible_name",
+    "img": "data/models/humans/attachments/mandible_helmet_ui.dds",
+    "mobility": {
+      "move": -1,
+      "turn": -1
+    },
+    "concealment": 0
+  },
+  {
+    "name": "HelmetFASTRF",
+    "tooltip": "@helmet_rangers_fastrf_name",
+    "img": "data/models/humans/attachments/ranger_helmet_ui.dds",
+    "mobility": {
+      "move": -1,
+      "turn": -3
+    },
+    "concealment": 0
+  },
+  {
+    "name": "HelmetIHPS",
+    "tooltip": "@helmet_rangers_ihps_name",
+    "img": "data/models/humans/attachments/ihps_helmet_ui.dds",
+    "mobility": {
+      "move": -1,
+      "turn": -2
+    },
+    "concealment": 0
+  },
+  {
+    "name": "CapUndercover",
+    "tooltip": "@helmet_CIA_localhat_name",
+    "img": "data/models/humans/attachments/cia_beret_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    },
+    "concealment": 1
+  },
+  {
+    "name": "CapBlackOps",
+    "tooltip": "@helmet_CIA_basiccap_name",
+    "img": "data/models/humans/attachments/cia_cap_ui.dds",
+    "mobility": {
+      "move": 3,
+      "turn": 0
+    },
+    "concealment": 0
+  },
+  {
+    "name": "HelmetBumpBlackOps",
+    "tooltip": "@helmet_CIA_bump_name",
+    "img": "data/models/humans/attachments/bump_helmet_ui.dds",
+    "mobility": {
+      "move": 2,
+      "turn": 1
+    },
+    "concealment": -2
+  },
+  {
+    "name": "HelmetFASTBlackOps",
+    "tooltip": "@helmet_CIA_fast_name",
+    "img": "data/models/humans/attachments/ranger_helmet_ui.dds",
+    "mobility": {
+      "move": -1,
+      "turn": -1
+    },
+    "concealment": -2
+  },
+  {
+    "name": "SantaHat",
+    "tooltip": "@hat_santa_name",
+    "img": "data/models/humans/attachments/santa_hat_ui.dds",
+    "mobility": {
+      "move": 50,
+      "turn": -20
+    },
+    "concealment": 0
+  },
+  {
+    "name": "NVG",
+    "tooltip": "@nvg_rangers_pvs14_name",
+    "img": "data/models/humans/attachments/nvg_01_ui.dds",
+    "mobility": {
+      "move": -3,
+      "turn": -2
+    },
+    "concealment": 0
+  },
+  {
+    "name": "NVG_02",
+    "tooltip": "@nvg_rangers_pvs31_name",
+    "img": "data/models/humans/attachments/nvg_02_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": -1
+    },
+    "concealment": 0
+  },
+  {
+    "name": "Smoke Grenade Single",
+    "tooltip": "@grenade_smokesingle_name",
+    "img": "data/models/equipment/smoke_grenade_ui.dds",
+    "mobility": {
+      "move": -0.5,
+      "turn": 0
+    },
+    "concealment": -0.5
+  },
+  {
+    "name": "Frag Grenade Single",
+    "tooltip": "@grenade_fragsingle_name",
+    "img": "data/models/equipment/frag_grenade_ui.dds",
+    "mobility": {
+      "move": -0.5,
+      "turn": 0
+    },
+    "concealment": -0.5
+  },
+  {
+    "name": "Flashbang Single",
+    "tooltip": "@grenade_flashbangsingle_name",
+    "img": "data/models/equipment/flashbang_ui.dds",
+    "mobility": {
+      "move": -0.5,
+      "turn": 0
+    },
+    "concealment": -0.5
+  },
+  {
+    "name": "Stinger Single",
+    "tooltip": "@grenade_stingersingle_name",
+    "img": "data/models/equipment/stinger_ui.dds",
+    "mobility": {
+      "move": -0.5,
+      "turn": 0
+    },
+    "concealment": -0.5
   },
   {
     "name": "Smoke Grenade",

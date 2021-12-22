@@ -39,6 +39,7 @@ readdir(`${__dirname}/xml`)
           if (typeof value !== "object") return;
           if (Array.isArray(value)) {
             value.forEach((groupEntry) => {
+              if (groupEntry.name === "DarknessPenalty") return; // Stub from equipment/firearm_scopes.xml
               equipment.push(getEquipmentFields(groupEntry));
             });
           } else {

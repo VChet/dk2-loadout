@@ -29,7 +29,19 @@ export function getWeaponData(name: string): ParsedEquipment | null {
   return { ...weapon, img: `images/weapons/${getFileName(weapon.img)}.webp` };
 }
 
-export function getAttachmentImg(name: string): string | null {
+export function getHelmetImg(name: string): string | null {
+  const attachment = datamap.get(name);
+  if (!attachment?.img) return null;
+  return `images/attachments/${getFileName(attachment.img)}.webp`;
+}
+
+export function getNVGImg(name: string): string | null {
+  const attachment = datamap.get(name);
+  if (!attachment?.img) return null;
+  return `images/attachments/${getFileName(attachment.img)}_small.webp`;
+}
+
+export function getWeaponAttachmentImg(name: string): string | null {
   const attachment = datamap.get(name);
   if (!attachment?.img) return null;
   return `images/weapons/attachments/${getFileName(attachment.img)}_small.webp`;
@@ -61,6 +73,7 @@ export function getNameString(name: string): string {
 export function getTrooperMobility(equipment: Partial<TrooperEquipment>): number {
   let mobility: number = 110;
   Object.values(equipment).forEach((item) => {
+    if (!item) return;
     const { move, turn } = datamap.get(item.name).mobility;
     if (move) mobility += move;
     if (turn) mobility += turn;
@@ -80,6 +93,7 @@ export function getTrooperConcealment(className: string, equipment: Partial<Troo
   }
 
   Object.values(equipment).forEach((item) => {
+    if (!item) return;
     const modifier = datamap.get(item.name).concealment;
     if (modifier) concealment.value += modifier;
   });

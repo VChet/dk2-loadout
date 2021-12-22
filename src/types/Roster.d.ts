@@ -9,10 +9,14 @@ export interface TrooperEquipment {
   PrimaryWeapon: { name: string };
   PrimaryWeaponScope: { name: string };
   PrimaryWeaponAmmo: { name: string };
+  PrimaryWeaponMuzzle: "";
   SecondaryWeapon: { name: string };
   SecondaryWeaponScope: { name: string };
   SecondaryWeaponAmmo: { name: string };
+  SecondaryWeaponMuzzle: "";
   Armor: { name: string };
+  Helmet: { name: string };
+  HelmetNVG: { name: string };
   UtilityPouch1: { name: string };
   UtilityPouch2: { name: string };
   SupportGear1: { name: string };

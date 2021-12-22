@@ -1,5 +1,13 @@
 <script lang="ts">
-  import { getAttachmentImg, getEquipmentImg, getFileName, getNameString, getWeaponData } from "../utilities/getters";
+  import {
+    getEquipmentImg,
+    getFileName,
+    getHelmetImg,
+    getNameString,
+    getNVGImg,
+    getWeaponAttachmentImg,
+    getWeaponData
+  } from "../utilities/getters";
 
   export let className: string;
 
@@ -8,6 +16,8 @@
   export let ammo: { name: string } | null = null;
   export let scope: { name: string } | null = null;
 
+  export let helmet: { name: string } | null = null;
+  export let nvg: { name: string } | null = null;
   export let armor: { name: string } | null = null;
   export let utility: { name: string } | null = null;
   export let support: { name: string } | null = null;
@@ -37,7 +47,7 @@
         {/if}
         {#if ammo}
           <img
-            src={getAttachmentImg(ammo.name)}
+            src={getWeaponAttachmentImg(ammo.name)}
             alt={getFileName(ammo.name)}
             title={getNameString(ammo.name)}
             draggable="false"
@@ -45,7 +55,7 @@
         {/if}
         {#if scope}
           <img
-            src={getAttachmentImg(scope.name)}
+            src={getWeaponAttachmentImg(scope.name)}
             alt={getFileName(scope.name)}
             title={getNameString(scope.name)}
             draggable="false"
@@ -54,6 +64,24 @@
       </div>
     {/if}
     <div class="subtitle">{getNameString(weaponData.name)}</div>
+  {:else if helmet}
+    <img
+      src={getHelmetImg(helmet.name)}
+      alt={getFileName(helmet.name)}
+      title={getNameString(helmet.name)}
+      draggable="false"
+    />
+    {#if nvg}
+      <div class="attachments">
+        <img
+          src={getNVGImg(nvg.name)}
+          alt={getFileName(nvg.name)}
+          title={getNameString(nvg.name)}
+          draggable="false"
+        />
+      </div>
+    {/if}
+    <div class="subtitle">{getNameString(helmet.name)}</div>
   {:else if armor}
     <img
       src={getEquipmentImg(armor.name)}
@@ -97,7 +125,6 @@
     flex-direction: column;
     &.primary,
     &.secondary,
-    &.armor,
     &[class^="support-"] {
       grid-column: 1 / -1;
     }
@@ -133,6 +160,7 @@
       img {
         max-height: 32px;
         border: 2px solid #423929;
+        background-color: #0C0A0A;
       }
     }
   }

@@ -109,6 +109,7 @@
           ammo={current.Equipment.SecondaryWeaponAmmo}
           scope={current.Equipment.SecondaryWeaponScope}
         />
+        <Equipment className="helmet" helmet={current.Equipment.Helmet} nvg="{current.Equipment.HelmetNVG}" />
         <Equipment className="armor" armor={current.Equipment.Armor} />
         <Equipment className="utility-1" utility={current.Equipment.UtilityPouch1} />
         <Equipment className="utility-2" utility={current.Equipment.UtilityPouch2} />
