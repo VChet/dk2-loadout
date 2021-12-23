@@ -20,7 +20,7 @@
     All game resources and images used with permission from
     <a href="https://inthekillhouse.com" rel="noopener">KillHouse Games</a>
   </div>
-  <div>Tested on 0.25v</div>
+  <div>Tested on 0.26v</div>
   <a href="https://github.com/VChet/dk2-loadout/issues" target="_blank" rel="noopener">Report Bug</a>
 </footer>
 
