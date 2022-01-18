@@ -306,8 +306,20 @@
       "turn": -5
     },
     "concealment": -4,
-    "suppressorAvailable": false,
+    "suppressorAvailable": true,
     "suppressed": false
+  },
+  {
+    "name": "M249SPW Sup CIA BOps",
+    "tooltip": "@firearm_m249spwSup_name",
+    "img": "data/models/weapons/m249_spw_ui.dds",
+    "mobility": {
+      "move": -10,
+      "turn": -6
+    },
+    "concealment": -5,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MK48 CIA BOps",
@@ -318,8 +330,20 @@
       "turn": -6
     },
     "concealment": -5,
-    "suppressorAvailable": false,
+    "suppressorAvailable": true,
     "suppressed": false
+  },
+  {
+    "name": "MK48 Sup CIA BOps",
+    "tooltip": "@firearm_mk48Sup_name",
+    "img": "data/models/weapons/mk48_lmg_ui.dds",
+    "mobility": {
+      "move": -12,
+      "turn": -7
+    },
+    "concealment": -6,
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "PKP CIA BOps",
@@ -740,8 +764,19 @@
       "move": -10,
       "turn": -5
     },
-    "suppressorAvailable": false,
+    "suppressorAvailable": true,
     "suppressed": false
+  },
+  {
+    "name": "M4/M203Sup",
+    "tooltip": "@firearm_m4_m203Sup_name",
+    "img": "data/models/weapons/m4_m203_ui.dds",
+    "mobility": {
+      "move": -10,
+      "turn": -6
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MK18/M203",
@@ -751,8 +786,19 @@
       "move": -9,
       "turn": -4
     },
-    "suppressorAvailable": false,
+    "suppressorAvailable": true,
     "suppressed": false
+  },
+  {
+    "name": "MK18/M203Sup",
+    "tooltip": "@firearm_mk18_m203Sup_name",
+    "img": "data/models/weapons/mk18_m203_ui.dds",
+    "mobility": {
+      "move": -9,
+      "turn": -4
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M16A4/M203",
@@ -773,8 +819,19 @@
       "move": -10,
       "turn": -5
     },
-    "suppressorAvailable": false,
+    "suppressorAvailable": true,
     "suppressed": false
+  },
+  {
+    "name": "M249Sup",
+    "tooltip": "@firearm_m249spwSup_name",
+    "img": "data/models/weapons/m249_spw_ui.dds",
+    "mobility": {
+      "move": -10,
+      "turn": -6
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M240L",
@@ -795,8 +852,19 @@
       "move": -12,
       "turn": -6
     },
-    "suppressorAvailable": false,
+    "suppressorAvailable": true,
     "suppressed": false
+  },
+  {
+    "name": "MK48Sup",
+    "tooltip": "@firearm_mk48Sup_name",
+    "img": "data/models/weapons/mk48_lmg_ui.dds",
+    "mobility": {
+      "move": -12,
+      "turn": -7
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "MG338",
@@ -806,8 +874,19 @@
       "move": -17,
       "turn": -10
     },
-    "suppressorAvailable": false,
+    "suppressorAvailable": true,
     "suppressed": false
+  },
+  {
+    "name": "MG338Sup",
+    "tooltip": "@firearm_mg338Sup_name",
+    "img": "data/models/weapons/mg338_ui.dds",
+    "mobility": {
+      "move": -17,
+      "turn": -10
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
   },
   {
     "name": "M16A4Marksman",
@@ -1035,6 +1114,15 @@
     }
   },
   {
+    "name": "556FMJM855_M249SPWSup",
+    "tooltip": "@ammo_556FMJM855_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
     "name": "556FMJM855A1_MK18",
     "tooltip": "@ammo_556FMJM855A1_name",
     "img": "data/models/weapons/attachments/m855a1_ammo_ui.dds",
@@ -1251,6 +1339,15 @@
     }
   },
   {
+    "name": "762FMJM80_MK48Sup",
+    "tooltip": "@ammo_762FMJM80_name",
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
     "name": "762FMJM80_M240L",
     "tooltip": "@ammo_762FMJM80_name",
     "img": "data/models/weapons/attachments/m80_ammo_ui.dds",
@@ -1279,6 +1376,15 @@
   },
   {
     "name": "338FMJ_MG338",
+    "tooltip": "@ammo_338FMJXM338_name",
+    "img": "data/models/weapons/attachments/xm338_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "338FMJ_MG338Sup",
     "tooltip": "@ammo_338FMJXM338_name",
     "img": "data/models/weapons/attachments/xm338_ammo_ui.dds",
     "mobility": {
@@ -1620,6 +1726,42 @@
     }
   },
   {
+    "name": "45JHP185GR_Pistol",
+    "tooltip": "@ammo_45JHP185GR_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "45JHP185GR_SuppressedPistol",
+    "tooltip": "@ammo_45JHP185GR_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "45JHP160GR_Pistol",
+    "tooltip": "@ammo_45JHP160GR_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "45JHP160GR_SuppressedPistol",
+    "tooltip": "@ammo_45JHP160GR_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
     "name": "45JHP230GR_MPS45_SuppressedPistol",
     "tooltip": "@ammo_45JHP230GR_name",
     "img": "data/models/weapons/attachments/m1911fmj_ammo_ui.dds",
@@ -1812,7 +1954,22 @@
     }
   },
   {
+    "name": "9x19FMJ_MiniUziSup",
+    "img": "data/models/weapons/attachments/m1911fmj_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
     "name": "545x39FMJ_AKS 74U",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "545x39FMJ_AKS 74U Sup",
     "mobility": {
       "move": 0,
       "turn": 0
@@ -1977,6 +2134,15 @@
   },
   {
     "name": "762x25FMJ_TT 33 Pistol",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "12GA00BUCK_CRUISER",
+    "tooltip": "@ammo_12GA00BUCK_name",
+    "img": "data/models/weapons/attachments/m257_buckshot_ammo_ui.dds",
     "mobility": {
       "move": 0,
       "turn": 0
