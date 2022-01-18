@@ -1,21 +1,22 @@
-import { j2xParser, parse } from "fast-xml-parser";
+import { XMLBuilder, XMLParser } from "fast-xml-parser";
 
 export function parseXml(xml: string) {
-  return parse(xml, {
+  const parser = new XMLParser({
     attributeNamePrefix: "",
     ignoreAttributes: false,
     parseAttributeValue: true,
   });
+  return parser.parse(xml);
 }
 
 export function generateXml(object: object) {
-  const parser = new j2xParser({
+  const builder = new XMLBuilder({
     attributeNamePrefix: "",
-    attrNodeName: false,
+    attributesGroupName: false,
     ignoreAttributes: false,
     format: true,
-    supressEmptyNode: true,
+    suppressEmptyNode: true,
     indentBy: "    ",
   });
-  return parser.parse(object);
+  return builder.build(object);
 }
