@@ -5,7 +5,7 @@
 .env
 
 # Game Files
-**/*.xml
-**/txt/*.txt
-**/*.dds
-**/*.tga
+src/**/*.xml
+src/**/*.txt
+src/**/*.dds
+src/**/*.tga
