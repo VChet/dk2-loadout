@@ -1,18 +1,19 @@
 import { initializeApp } from "firebase/app";
 import { doc, getDoc, getFirestore, setDoc } from "firebase/firestore/lite";
 import md5 from "md5";
+import type { FirebaseOptions } from "firebase/app";
 
-import { deserialize, serialize } from "./serializer";
+import { deserialize, serialize } from "@/utilities/serializer";
+import type { Roster } from "@/types/Roster";
 
-import type { Roster } from "../types/Roster";
-
-const firebaseConfig = {
-  apiKey: process.env.FIREBASE_KEY,
+const { FIREBASE_KEY, FIREBASE_SENDER_ID, FIREBASE_APP_ID } = import.meta.env;
+const firebaseConfig: FirebaseOptions = {
+  apiKey: FIREBASE_KEY?.toString(),
   authDomain: "dk2-loadout.firebaseapp.com",
   projectId: "dk2-loadout",
   storageBucket: "dk2-loadout.appspot.com",
-  messagingSenderId: process.env.FIREBASE_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
+  messagingSenderId: FIREBASE_SENDER_ID?.toString(),
+  appId: FIREBASE_APP_ID?.toString(),
 };
 
 const app = initializeApp(firebaseConfig);

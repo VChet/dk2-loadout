@@ -1,14 +1,16 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
 
+  "ts-node": { "esm": true },
   "compilerOptions": {
-    "target": "esnext",
+    "target": "ESNext",
+    "module": "ESNext",
+    "useDefineForClassFields": true,
     "strict": true,
     "resolveJsonModule": true,
     "noUnusedLocals": true,
     "allowJs": true,
     "checkJs": true,
-    "preserveValueImports": false,
     "paths": { "@/*": ["./src/*"] }
   },
 

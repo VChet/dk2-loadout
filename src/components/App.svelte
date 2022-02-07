@@ -1,10 +1,10 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import ManagerBlock from "./components/Manager.svelte";
-  import TrooperBlock from "./components/Trooper.svelte";
-  import RosterBlock from "./components/Roster.svelte";
-  import { initAnalytics } from "./utilities/counter.dev";
-  import type { Roster, Trooper } from "./types/Roster";
+  import ManagerBlock from "@/components/Manager.svelte";
+  import TrooperBlock from "@/components/Trooper.svelte";
+  import RosterBlock from "@/components/Roster.svelte";
+  import { initAnalytics } from "@/utilities/counter.dev";
+  import type { Roster, Trooper } from "@/types/Roster";
 
   let roster: Roster;
   let selectedTrooper: Trooper;
