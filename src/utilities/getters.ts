@@ -1,8 +1,8 @@
-import equipmentData from "../data/equipmentData.json";
-import ranksData from "../data/ranksData.json";
-import localization from "../data/localization.json";
-import type { ComputedLevel, ParsedEquipment } from "../types/Parsed";
-import type { TrooperEquipment } from "../types/Roster";
+import equipmentData from "@/data/equipmentData.json";
+import ranksData from "@/data/ranksData.json";
+import localization from "@/data/localization.json";
+import type { ComputedLevel, ParsedEquipment } from "@/types/Parsed";
+import type { TrooperEquipment } from "@/types/Roster";
 
 const datamap = new Map(equipmentData.map((item) => [item.name, item]));
 

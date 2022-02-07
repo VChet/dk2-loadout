@@ -9,7 +9,7 @@
     getNVGImg,
     getWeaponAttachmentImg,
     getWeaponData,
-  } from "../utilities/getters";
+  } from "@/utilities/getters";
 
   export let className: string;
 

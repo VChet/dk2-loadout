@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { getClassImg, getFileName, getTrooperImg } from "../utilities/getters";
-  import type { Squad, Trooper } from "../types/Roster";
+  import { getClassImg, getFileName, getTrooperImg } from "@/utilities/getters";
+  import type { Squad, Trooper } from "@/types/Roster";
 
   export let selectedTrooper: Trooper | null = null;
   export let squad: Squad | null = null;

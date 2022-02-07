@@ -1,6 +1,6 @@
 <script lang="ts">
-  import SquadBlock from "./Squad.svelte";
-  import type { Roster, Trooper } from "../types/Roster";
+  import SquadBlock from "@/components/Squad.svelte";
+  import type { Roster, Trooper } from "@/types/Roster";
 
   export let roster: Roster | null = null;
   export let selectedTrooper: Trooper | null = null;

@@ -1,9 +1,14 @@
 import { readdir, readFile, writeFile } from "fs/promises";
 import { EOL } from "os";
-import { parseXml } from "../utilities/parser";
-import type { EquipmentEntry, FileData } from "../types/Equipment";
-import type { ParsedEquipment } from "../types/Parsed";
-import type { UnitEntry } from "../types/Unit";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+import { parseXml } from "../utilities/parser.js";
+import type { EquipmentEntry, FileData } from "@/types/Equipment";
+import type { ParsedEquipment } from "@/types/Parsed";
+import type { UnitEntry } from "@/types/Unit";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
   const data: ParsedEquipment = {

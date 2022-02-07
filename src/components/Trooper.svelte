@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Equipment from "./Equipment.svelte";
-  import Rank from "./Rank.svelte";
+  import Equipment from "@/components/Equipment.svelte";
+  import Rank from "@/components/Rank.svelte";
 
   import {
     getAbilityName,
@@ -10,8 +10,8 @@
     getTrooperImg,
     getTrooperLevel,
     getTrooperMobility,
-  } from "../utilities/getters";
-  import type { Trooper } from "../types/Roster";
+  } from "@/utilities/getters";
+  import type { Trooper } from "@/types/Roster";
 
   export let selectedTrooper: Trooper;
 

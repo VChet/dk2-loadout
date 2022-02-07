@@ -1,10 +1,10 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  import { generateXml, parseXml } from "../utilities/parser";
-  import { createShortLink, getUrlParams } from "../utilities/shortenUrl";
-  import { downloadFile, readFile } from "../utilities/files";
-  import type { Roster } from "../types/Roster";
+  import { generateXml, parseXml } from "@/utilities/parser";
+  import { createShortLink, getUrlParams } from "@/utilities/shortenUrl";
+  import { downloadFile, readFile } from "@/utilities/files";
+  import type { Roster } from "@/types/Roster";
 
   export let roster: Roster | null = null;
 
