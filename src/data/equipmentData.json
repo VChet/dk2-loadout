@@ -2106,6 +2106,60 @@
     }
   },
   {
+    "name": "545x39HP55_AKS74UCIA",
+    "tooltip": "@ammo_545HP_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "545x39HP55_AKS74UCIASup",
+    "tooltip": "@ammo_545HP_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "545x39HP55_AK105ALPHACIA",
+    "tooltip": "@ammo_545HP_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "545x39HP55_AK105ALPHACIASup",
+    "tooltip": "@ammo_545HP_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "545x39FMJ7U1SUBS_AKS74UCIASup",
+    "tooltip": "@ammo_545FMJ7U1_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "545x39FMJ7U1SUBS_AK105ALPHACIASup",
+    "tooltip": "@ammo_545FMJ7U1_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
     "name": "545x39FMJ7N24_AKS74UCIA",
     "tooltip": "@ammo_545FMJ7N24_name",
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
@@ -2117,15 +2171,6 @@
   {
     "name": "545x39FMJ7N39_AKS74UCIA",
     "tooltip": "@ammo_545FMJ7N39_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
-    "mobility": {
-      "move": 0,
-      "turn": 0
-    }
-  },
-  {
-    "name": "545x39HP55_AKS74UCIA",
-    "tooltip": "@ammo_545HP_name",
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds",
     "mobility": {
       "move": 0,
