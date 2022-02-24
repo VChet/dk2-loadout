@@ -2,7 +2,7 @@
   import {
     getEquipmentImg,
     getFileName,
-    getHelmetImg,
+    getHelmetData,
     getNameString,
     getNVGImg,
     getWeaponAttachmentImg,
@@ -17,6 +17,7 @@
   export let scope: { name: string } | null = null;
 
   export let helmet: { name: string } | null = null;
+  $: helmetData = helmet?.name && getHelmetData(helmet.name);
   export let nvg: { name: string } | null = null;
   export let armor: { name: string } | null = null;
   export let utility: { name: string } | null = null;
@@ -64,19 +65,19 @@
       </div>
     {/if}
     <div class="subtitle">{weaponData.name && getNameString(weaponData.name)}</div>
-  {:else if helmet}
+  {:else if helmetData}
     <img
-      src={getHelmetImg(helmet.name)}
-      alt={getFileName(helmet.name)}
-      title={getNameString(helmet.name)}
+      src={helmetData.img}
+      alt={helmetData.name && getFileName(helmetData.name)}
+      title={helmetData.name && getNameString(helmetData.name)}
       draggable="false"
     />
-    {#if nvg}
+    {#if helmetData.NVGAvailable && nvg}
       <div class="attachments">
         <img src={getNVGImg(nvg.name)} alt={getFileName(nvg.name)} title={getNameString(nvg.name)} draggable="false" />
       </div>
     {/if}
-    <div class="subtitle">{getNameString(helmet.name)}</div>
+    <div class="subtitle">{helmetData.name && getNameString(helmetData.name)}</div>
   {:else if armor}
     <img
       src={getEquipmentImg(armor.name)}

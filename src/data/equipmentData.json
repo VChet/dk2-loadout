@@ -2432,7 +2432,8 @@
       "move": -2,
       "turn": -2
     },
-    "concealment": 0
+    "concealment": 0,
+    "NVGAvailable": true
   },
   {
     "name": "HelmetFAST",
@@ -2442,7 +2443,8 @@
       "move": 0,
       "turn": 0
     },
-    "concealment": 0
+    "concealment": 0,
+    "NVGAvailable": true
   },
   {
     "name": "HelmetFASTMandible",
@@ -2452,7 +2454,8 @@
       "move": -1,
       "turn": -1
     },
-    "concealment": 0
+    "concealment": 0,
+    "NVGAvailable": true
   },
   {
     "name": "HelmetFASTRF",
@@ -2462,7 +2465,8 @@
       "move": -1,
       "turn": -3
     },
-    "concealment": 0
+    "concealment": 0,
+    "NVGAvailable": true
   },
   {
     "name": "HelmetIHPS",
@@ -2472,7 +2476,8 @@
       "move": -1,
       "turn": -2
     },
-    "concealment": 0
+    "concealment": 0,
+    "NVGAvailable": true
   },
   {
     "name": "CapUndercover",
@@ -2482,7 +2487,8 @@
       "move": 0,
       "turn": 0
     },
-    "concealment": 1
+    "concealment": 1,
+    "NVGAvailable": false
   },
   {
     "name": "CapBlackOps",
@@ -2492,7 +2498,8 @@
       "move": 3,
       "turn": 0
     },
-    "concealment": 0
+    "concealment": 0,
+    "NVGAvailable": false
   },
   {
     "name": "HelmetBumpBlackOps",
@@ -2502,7 +2509,8 @@
       "move": 2,
       "turn": 1
     },
-    "concealment": -2
+    "concealment": -2,
+    "NVGAvailable": true
   },
   {
     "name": "HelmetFASTBlackOps",
@@ -2512,7 +2520,8 @@
       "move": -1,
       "turn": -1
     },
-    "concealment": -2
+    "concealment": -2,
+    "NVGAvailable": true
   },
   {
     "name": "SantaHat",
@@ -2522,7 +2531,8 @@
       "move": 50,
       "turn": -20
     },
-    "concealment": 0
+    "concealment": 0,
+    "NVGAvailable": false
   },
   {
     "name": "NVG",

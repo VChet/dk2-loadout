@@ -19,7 +19,11 @@ export type EquipmentEntry = {
     turnSpeedModifierPercent: number;
   };
   ConcealmentModifier?: { add: number };
-  Params?: { suppressedImg: string; suppressedSwitch: string };
+  Params?: {
+    suppressedImg: string;
+    suppressedSwitch: string;
+    allowNVG: boolean;
+  };
 };
 
 export type ParsedEquipment = {
@@ -33,4 +37,5 @@ export type ParsedEquipment = {
   concealment?: number;
   suppressorAvailable?: boolean;
   suppressed?: boolean;
+  NVGAvailable?: boolean;
 };
