@@ -1,7 +1,7 @@
 import equipmentData from "../data/equipmentData.json";
 import localization from "../data/localization.json";
 import type { ParsedEquipment } from "../types/Equipment";
-import type { TrooperConcealment, TrooperEquipment } from "../types/Roster";
+import type { TrooperEquipment } from "../types/Roster";
 
 const datamap = new Map(equipmentData.map((item) => [item.name, item]));
 
@@ -85,33 +85,22 @@ export function getTrooperMobility(equipment: Partial<TrooperEquipment>): number
   return Math.floor(mobility / 10);
 }
 
-export function getTrooperConcealment(className: string, equipment: Partial<TrooperEquipment>): TrooperConcealment {
+export function getTrooperConcealment(className: string, equipment: Partial<TrooperEquipment>): number {
   // Set default concealment from entities/humans_goodguys.xml
-  let concealment: TrooperConcealment = {} as TrooperConcealment;
+  let concealment: number;
   if (className === "Undercover") {
-    concealment.value = 10;
+    concealment = 10;
   } else if (className === "BlackOps") {
-    concealment.value = 7;
+    concealment = 7;
   } else {
-    concealment.value = 0;
+    concealment = 0;
   }
 
   Object.values(equipment).forEach((item) => {
     if (!item) return;
     const modifier = datamap.get(item.name)?.concealment;
-    if (modifier) concealment.value += modifier;
+    if (modifier) concealment += modifier;
   });
-
-  if (concealment.value < 3) {
-    concealment.text = "Overt";
-    concealment.color = "#e62121";
-  } else if (concealment.value < 7) {
-    concealment.text = "Suspicious";
-    concealment.color = "#ffc600";
-  } else {
-    concealment.text = "Covert";
-    concealment.color = "#9fd3ff";
-  }
 
   return concealment;
 }

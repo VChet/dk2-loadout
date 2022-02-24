@@ -74,9 +74,3 @@ export interface Roster {
   numSquads: number;
   Squad: Array<Squad>;
 }
-
-export interface TrooperConcealment {
-  value: number;
-  text: string;
-  color: string;
-}

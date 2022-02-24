@@ -72,13 +72,17 @@
             <li class="trooper__bar">
               <div class="subtitle">
                 Concealment
-                <span class="subtitle-concealment" style="color: {concealment.color}">
-                  {concealment.text}
-                </span>
+                {#if concealment < 3}
+                  <span class="subtitle-concealment" style="color: #e62121">Overt</span>
+                {:else if concealment < 7}
+                  <span class="subtitle-concealment" style="color: #ffc600">Suspicious</span>
+                {:else}
+                  <span class="subtitle-concealment" style="color: #9fd3ff">Covert</span>
+                {/if}
               </div>
               <div class="progress">
                 {#each Array(10) as _, i}
-                  <span class:active={concealment.value >= i + 1}>
+                  <span class:active={concealment >= i + 1}>
                     {#if i === 1}
                       <svg class="concealment-point" height="10" width="10">
                         <polygon points="0,10 5,0 10,10" fill="#ffc600" />
