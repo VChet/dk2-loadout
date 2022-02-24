@@ -16,22 +16,22 @@ type InventoryBinding =
 type ClassBinding = "Assault" | "Support" | "Marksman" | "Medic" | "Grenadier" | "BlackOps" | "Undercover";
 
 export type EquipmentEntry = {
-  name: string;
-  tooltip?: string;
-  category?: WeaponCategory;
-  img?: string;
-  quantity?: number;
-  inventoryBinding?: InventoryBinding;
-  ClassBinding?: { name: ClassBinding } | Array<{ name: ClassBinding }>;
+  $name: string;
+  $tooltip?: string;
+  $category?: WeaponCategory;
+  $img?: string;
+  $quantity?: number;
+  $inventoryBinding?: InventoryBinding;
+  ClassBinding?: { $name: ClassBinding } | Array<{ $name: ClassBinding }>;
   MobilityModifiers?: {
-    moveSpeedModifierPercent: number;
-    turnSpeedModifierPercent: number;
+    $moveSpeedModifierPercent: number;
+    $turnSpeedModifierPercent: number;
   };
-  ConcealmentModifier?: { add: number };
+  ConcealmentModifier?: { $add: number };
   Params?: {
-    suppressedImg: string;
-    suppressedSwitch: string;
-    allowNVG: boolean;
+    $suppressedImg: string;
+    $suppressedSwitch: string;
+    $allowNVG: boolean;
   };
 };
 

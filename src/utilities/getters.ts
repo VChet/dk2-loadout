@@ -76,7 +76,7 @@ export function getTrooperMobility(equipment: Partial<TrooperEquipment>): number
   let mobility: number = 110;
   Object.values(equipment).forEach((item) => {
     if (!item) return;
-    const object = datamap.get(item.name);
+    const object = datamap.get(item.$name);
     if (!object?.mobility) return;
     const { move, turn } = object.mobility;
     if (move) mobility += move;
@@ -98,7 +98,7 @@ export function getTrooperConcealment(className: string, equipment: Partial<Troo
 
   Object.values(equipment).forEach((item) => {
     if (!item) return;
-    const modifier = datamap.get(item.name)?.concealment;
+    const modifier = datamap.get(item.$name)?.concealment;
     if (modifier) concealment += modifier;
   });
 

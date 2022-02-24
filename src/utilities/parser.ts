@@ -2,7 +2,7 @@ import { XMLBuilder, XMLParser } from "fast-xml-parser";
 
 export function parseXml(xml: string) {
   const parser = new XMLParser({
-    attributeNamePrefix: "",
+    attributeNamePrefix: "$",
     ignoreAttributes: false,
     parseAttributeValue: true,
   });
@@ -11,7 +11,7 @@ export function parseXml(xml: string) {
 
 export function generateXml(object: object) {
   const builder = new XMLBuilder({
-    attributeNamePrefix: "",
+    attributeNamePrefix: "$",
     attributesGroupName: false,
     ignoreAttributes: false,
     format: true,

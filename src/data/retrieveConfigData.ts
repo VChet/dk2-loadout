@@ -5,27 +5,27 @@ import type { EquipmentEntry, FileData, ParsedEquipment } from "../types/Equipme
 
 function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
   const data: ParsedEquipment = {
-    name: equipment.name,
-    tooltip: equipment.tooltip,
-    img: equipment.img,
+    name: equipment.$name,
+    tooltip: equipment.$tooltip,
+    img: equipment.$img,
     mobility: {
-      move: equipment.MobilityModifiers?.moveSpeedModifierPercent,
-      turn: equipment.MobilityModifiers?.turnSpeedModifierPercent,
+      move: equipment.MobilityModifiers?.$moveSpeedModifierPercent,
+      turn: equipment.MobilityModifiers?.$turnSpeedModifierPercent,
     },
-    concealment: equipment.ConcealmentModifier?.add,
+    concealment: equipment.ConcealmentModifier?.$add,
   };
-  if (equipment.inventoryBinding === "Helmet") {
+  if (equipment.$inventoryBinding === "Helmet") {
     // allowNVG attr is either false or not exists
-    data.NVGAvailable = equipment.Params?.allowNVG !== false;
+    data.NVGAvailable = equipment.Params?.$allowNVG !== false;
   }
   if (
-    equipment.inventoryBinding === "PrimaryWeapon" ||
-    equipment.inventoryBinding === "PrimaryWeaponMuzzle" ||
-    equipment.inventoryBinding === "SecondaryWeapon" ||
-    equipment.inventoryBinding === "SecondaryWeaponMuzzle"
+    equipment.$inventoryBinding === "PrimaryWeapon" ||
+    equipment.$inventoryBinding === "PrimaryWeaponMuzzle" ||
+    equipment.$inventoryBinding === "SecondaryWeapon" ||
+    equipment.$inventoryBinding === "SecondaryWeaponMuzzle"
   ) {
-    data.suppressorAvailable = Boolean(equipment.Params?.suppressedSwitch);
-    data.suppressed = Boolean(equipment.Params?.suppressedImg);
+    data.suppressorAvailable = Boolean(equipment.Params?.$suppressedSwitch);
+    data.suppressed = Boolean(equipment.Params?.$suppressedImg);
   }
   return data;
 }
@@ -48,7 +48,7 @@ readdir(`${__dirname}/xml`)
           if (typeof value !== "object") return;
           if (Array.isArray(value)) {
             value.forEach((groupEntry) => {
-              if (groupEntry.name === "DarknessPenalty") return; // Stub from equipment/firearm_scopes.xml
+              if (groupEntry.$name === "DarknessPenalty") return; // Stub from equipment/firearm_scopes.xml
               equipment.push(getEquipmentFields(groupEntry));
             });
           } else {

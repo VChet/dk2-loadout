@@ -1,4 +1,6 @@
 <script lang="ts">
+  import type { TrooperEquipment } from "@/types/Roster";
+
   import {
     getEquipmentImg,
     getFileName,
@@ -11,17 +13,17 @@
 
   export let className: string;
 
-  export let weapon: { name: string } | null = null;
-  $: weaponData = weapon?.name && getWeaponData(weapon.name);
-  export let ammo: { name: string } | null = null;
-  export let scope: { name: string } | null = null;
+  export let weapon: TrooperEquipment["PrimaryWeapon"] | TrooperEquipment["SecondaryWeapon"] | null = null;
+  $: weaponData = weapon?.$name && getWeaponData(weapon.$name);
+  export let ammo: TrooperEquipment["PrimaryWeaponAmmo"] | TrooperEquipment["SecondaryWeaponAmmo"] | null = null;
+  export let scope: TrooperEquipment["PrimaryWeaponScope"] | TrooperEquipment["SecondaryWeaponScope"] | null = null;
 
-  export let helmet: { name: string } | null = null;
-  $: helmetData = helmet?.name && getHelmetData(helmet.name);
-  export let nvg: { name: string } | null = null;
-  export let armor: { name: string } | null = null;
-  export let utility: { name: string } | null = null;
-  export let support: { name: string } | null = null;
+  export let helmet: TrooperEquipment["Helmet"] | null = null;
+  $: helmetData = helmet?.$name && getHelmetData(helmet.$name);
+  export let nvg: TrooperEquipment["HelmetNVG"] | null = null;
+  export let armor: TrooperEquipment["Armor"] | null = null;
+  export let utility: TrooperEquipment["UtilityPouch1"] | null = null;
+  export let support: TrooperEquipment["SupportGear1"] | null = null;
 </script>
 
 <li class={className}>
@@ -48,17 +50,17 @@
         {/if}
         {#if ammo}
           <img
-            src={getWeaponAttachmentImg(ammo.name)}
-            alt={getFileName(ammo.name)}
-            title={getNameString(ammo.name)}
+            src={getWeaponAttachmentImg(ammo.$name)}
+            alt={getFileName(ammo.$name)}
+            title={getNameString(ammo.$name)}
             draggable="false"
           />
         {/if}
         {#if scope}
           <img
-            src={getWeaponAttachmentImg(scope.name)}
-            alt={getFileName(scope.name)}
-            title={getNameString(scope.name)}
+            src={getWeaponAttachmentImg(scope.$name)}
+            alt={getFileName(scope.$name)}
+            title={getNameString(scope.$name)}
             draggable="false"
           />
         {/if}
@@ -74,36 +76,41 @@
     />
     {#if helmetData.NVGAvailable && nvg}
       <div class="attachments">
-        <img src={getNVGImg(nvg.name)} alt={getFileName(nvg.name)} title={getNameString(nvg.name)} draggable="false" />
+        <img
+          src={getNVGImg(nvg.$name)}
+          alt={getFileName(nvg.$name)}
+          title={getNameString(nvg.$name)}
+          draggable="false"
+        />
       </div>
     {/if}
     <div class="subtitle">{getNameString(helmetData.name)}</div>
   {:else if armor}
     <img
-      src={getEquipmentImg(armor.name)}
-      alt={getFileName(armor.name)}
-      title={getNameString(armor.name)}
+      src={getEquipmentImg(armor.$name)}
+      alt={getFileName(armor.$name)}
+      title={getNameString(armor.$name)}
       draggable="false"
     />
-    <div class="subtitle">{getNameString(armor.name)}</div>
+    <div class="subtitle">{getNameString(armor.$name)}</div>
   {:else if utility}
     <img
-      src={getEquipmentImg(utility.name)}
-      alt={getFileName(utility.name)}
-      title={getNameString(utility.name)}
+      src={getEquipmentImg(utility.$name)}
+      alt={getFileName(utility.$name)}
+      title={getNameString(utility.$name)}
       draggable="false"
     />
-    <div class="subtitle">{getNameString(utility.name)}</div>
+    <div class="subtitle">{getNameString(utility.$name)}</div>
   {:else if support}
-    {#if getEquipmentImg(support.name)}
+    {#if getEquipmentImg(support.$name)}
       <img
-        src={getEquipmentImg(support.name)}
-        alt={getFileName(support.name)}
-        title={getNameString(support.name)}
+        src={getEquipmentImg(support.$name)}
+        alt={getFileName(support.$name)}
+        title={getNameString(support.$name)}
         draggable="false"
       />
     {/if}
-    <div class="subtitle">{getNameString(support.name)}</div>
+    <div class="subtitle">{getNameString(support.$name)}</div>
   {:else}
     <div class="subtitle">Empty</div>
   {/if}

@@ -8,7 +8,7 @@
   function mapClasses(): { [key: string]: Array<Trooper> } {
     if (!squad) return {};
     return squad.Trooper.reduce((acc: { [key: string]: Array<Trooper> }, trooper) => {
-      acc[trooper.class] ? acc[trooper.class].push(trooper) : (acc[trooper.class] = [trooper]);
+      acc[trooper.$class] ? acc[trooper.$class].push(trooper) : (acc[trooper.$class] = [trooper]);
       return acc;
     }, {});
   }
@@ -17,9 +17,9 @@
 </script>
 
 {#if squad}
-  <li class="squad" class:squad--ranger={squad.unit === "Rangers"} class:squad--cia={squad.unit === "CIA"}>
-    <div class="squad__unit">{squad.unit}</div>
-    <div class="squad__name">{squad.name}</div>
+  <li class="squad" class:squad--ranger={squad.$unit === "Rangers"} class:squad--cia={squad.$unit === "CIA"}>
+    <div class="squad__unit">{squad.$unit}</div>
+    <div class="squad__name">{squad.$name}</div>
     <ul>
       {#each Object.keys(classMap) as className}
         <li class="squad__class">
@@ -35,8 +35,8 @@
                 on:click={() => (current = trooper)}
               >
                 <img
-                  src={getTrooperImg(trooper.Id.portrait)}
-                  alt={getFileName(trooper.Id.portrait)}
+                  src={getTrooperImg(trooper.Id.$portrait)}
+                  alt={getFileName(trooper.Id.$portrait)}
                   draggable="false"
                 />
               </li>

@@ -14,33 +14,33 @@
   export let current: Trooper;
 
   $: mobility = current && getTrooperMobility(current.Equipment);
-  $: concealment = current && getTrooperConcealment(current.class, current.Equipment);
+  $: concealment = current && getTrooperConcealment(current.$class, current.Equipment);
 </script>
 
 {#if current}
   <section class="trooper">
-    <div class="trooper__name">{current.Id.name}</div>
+    <div class="trooper__name">{current.Id.$name}</div>
     <div class="trooper__wrapper">
       <div class="trooper__profile">
         <div class="trooper__image">
           <img
             class="trooper__image-portrait"
-            src={getTrooperImg(current.Id.portrait, true)}
-            alt={getFileName(current.Id.portrait)}
+            src={getTrooperImg(current.Id.$portrait, true)}
+            alt={getFileName(current.Id.$portrait)}
             draggable="false"
           />
-          <img class="trooper__image-class" src={getClassImg(current.class)} alt={current.class} draggable="false" />
+          <img class="trooper__image-class" src={getClassImg(current.$class)} alt={current.$class} draggable="false" />
         </div>
         <details class="trooper__statistics">
           <summary class="title">Soldier stats</summary>
           <ul>
-            <li>Missions completed: {current.Statistics.totalMissionsWon || 0}</li>
-            <li>Hostiles pacified: {current.Statistics.kills || 0}</li>
-            <li>Shots fired: {current.Statistics.bulletsFired || 0}</li>
-            <li>Doors kicked: {current.Statistics.doorsKicked || 0}</li>
-            <li>Doors blown up: {current.Statistics.doorsBlownUp || 0}</li>
-            <li>Walls breached: {current.Statistics.wallsBreached || 0}</li>
-            <li>Distance walked (meters): {current.Statistics.distanceWalkedMeters || 0}</li>
+            <li>Missions completed: {current.Statistics.$totalMissionsWon || 0}</li>
+            <li>Hostiles pacified: {current.Statistics.$kills || 0}</li>
+            <li>Shots fired: {current.Statistics.$bulletsFired || 0}</li>
+            <li>Doors kicked: {current.Statistics.$doorsKicked || 0}</li>
+            <li>Doors blown up: {current.Statistics.$doorsBlownUp || 0}</li>
+            <li>Walls breached: {current.Statistics.$wallsBreached || 0}</li>
+            <li>Distance walked (meters): {current.Statistics.$distanceWalkedMeters || 0}</li>
           </ul>
         </details>
         <div class="trooper__stats trooper__stats--abilities">
@@ -48,10 +48,10 @@
           <ul>
             {#each current.InnateAbilities.InnateAbility as ability}
               <li class="trooper__bar">
-                <div class="subtitle">{getAbilityName(ability.name)}</div>
+                <div class="subtitle">{getAbilityName(ability.$name)}</div>
                 <div class="progress">
                   {#each Array(10) as _, i}
-                    <span class:active={Math.round(Number(ability.percent) / 10) >= i + 1} />
+                    <span class:active={Math.round(Number(ability.$percent) / 10) >= i + 1} />
                   {/each}
                 </div>
               </li>
