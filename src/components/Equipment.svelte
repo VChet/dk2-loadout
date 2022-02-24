@@ -6,7 +6,7 @@
     getNameString,
     getNVGImg,
     getWeaponAttachmentImg,
-    getWeaponData
+    getWeaponData,
   } from "../utilities/getters";
 
   export let className: string;
@@ -25,7 +25,7 @@
 
 <li class={className}>
   {#if weaponData}
-    <img src={weaponData.img} alt={getFileName(weaponData.name)} draggable="false" />
+    <img src={weaponData.img} alt={weaponData.name && getFileName(weaponData.name)} draggable="false" />
     {#if ammo || scope}
       <div class="attachments">
         {#if weaponData.suppressorAvailable}
@@ -63,7 +63,7 @@
         {/if}
       </div>
     {/if}
-    <div class="subtitle">{getNameString(weaponData.name)}</div>
+    <div class="subtitle">{weaponData.name && getNameString(weaponData.name)}</div>
   {:else if helmet}
     <img
       src={getHelmetImg(helmet.name)}
@@ -73,12 +73,7 @@
     />
     {#if nvg}
       <div class="attachments">
-        <img
-          src={getNVGImg(nvg.name)}
-          alt={getFileName(nvg.name)}
-          title={getNameString(nvg.name)}
-          draggable="false"
-        />
+        <img src={getNVGImg(nvg.name)} alt={getFileName(nvg.name)} title={getNameString(nvg.name)} draggable="false" />
       </div>
     {/if}
     <div class="subtitle">{getNameString(helmet.name)}</div>
@@ -160,7 +155,7 @@
       img {
         max-height: 32px;
         border: 2px solid #423929;
-        background-color: #0C0A0A;
+        background-color: #0c0a0a;
       }
     }
   }

@@ -5,10 +5,15 @@
   export let current: Trooper | null = null;
   export let squad: Squad | null = null;
 
-  $: classMap = squad.Trooper.reduce((acc, trooper) => {
-    acc[trooper.class] ? acc[trooper.class].push(trooper) : (acc[trooper.class] = [trooper]);
-    return acc;
-  }, {}) as { [key: string]: Array<Trooper> };
+  function mapClasses(): { [key: string]: Array<Trooper> } {
+    if (!squad) return {};
+    return squad.Trooper.reduce((acc: { [key: string]: Array<Trooper> }, trooper) => {
+      acc[trooper.class] ? acc[trooper.class].push(trooper) : (acc[trooper.class] = [trooper]);
+      return acc;
+    }, {});
+  }
+
+  $: classMap = mapClasses();
 </script>
 
 {#if squad}
@@ -19,7 +24,7 @@
       {#each Object.keys(classMap) as className}
         <li class="squad__class">
           <div class="squad__class-name">
-            <img src={getClassIcon(className)} alt={getFileName(className)} draggable="false" />
+            <img src={getClassIcon(className)} alt={className} draggable="false" />
             {className}
           </div>
           <ul>

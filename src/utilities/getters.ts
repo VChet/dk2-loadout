@@ -6,7 +6,9 @@ import type { TrooperConcealment, TrooperEquipment } from "../types/Roster";
 const datamap = new Map(equipmentData.map((item) => [item.name, item]));
 
 export function getFileName(filepath: string): string {
-  return filepath.split("\\").pop().split("/").pop().split(".").shift();
+  const regexp = new RegExp(/[\w-]+?(?=\.)/);
+  const [name] = filepath.match(regexp) ?? [];
+  return name ?? filepath;
 }
 
 export function getTrooperImg(name: string, large: boolean = false): string {
@@ -25,7 +27,7 @@ export function getClassIcon(name: string): string {
 
 export function getWeaponData(name: string): ParsedEquipment | null {
   const weapon = datamap.get(name);
-  if (!weapon) return null;
+  if (!weapon?.img) return null;
   return { ...weapon, img: `images/weapons/${getFileName(weapon.img)}.webp` };
 }
 
@@ -64,17 +66,19 @@ export function getAbilityName(name: string): string {
   }
 }
 
-export function getNameString(name: string): string {
+export function getNameString(name: string): string | null {
   const object = datamap.get(name);
   if (!object?.tooltip) return null;
-  return localization[object.tooltip] || name;
+  return (localization as { [key: string]: string })[object.tooltip] || name;
 }
 
 export function getTrooperMobility(equipment: Partial<TrooperEquipment>): number {
   let mobility: number = 110;
   Object.values(equipment).forEach((item) => {
     if (!item) return;
-    const { move, turn } = datamap.get(item.name).mobility;
+    const object = datamap.get(item.name);
+    if (!object?.mobility) return;
+    const { move, turn } = object.mobility;
     if (move) mobility += move;
     if (turn) mobility += turn;
   });
@@ -94,7 +98,7 @@ export function getTrooperConcealment(className: string, equipment: Partial<Troo
 
   Object.values(equipment).forEach((item) => {
     if (!item) return;
-    const modifier = datamap.get(item.name).concealment;
+    const modifier = datamap.get(item.name)?.concealment;
     if (modifier) concealment.value += modifier;
   });
 

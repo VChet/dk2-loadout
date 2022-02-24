@@ -5,5 +5,6 @@ export function serialize(payload: any) {
 }
 
 export function deserialize(payload: string) {
-  return JSON.parse(decompressFromBase64(payload));
+  const string = decompressFromBase64(payload);
+  return string ? JSON.parse(string) : null;
 }

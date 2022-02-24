@@ -1,7 +1,7 @@
 import { readdir, readFile, writeFile } from "fs/promises";
 import { EOL } from "os";
-import type { EquipmentEntry, ParsedEquipment } from "../types/Equipment";
 import { parseXml } from "../utilities/parser";
+import type { EquipmentEntry, FileData, ParsedEquipment } from "../types/Equipment";
 
 function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
   const data: ParsedEquipment = {
@@ -14,7 +14,7 @@ function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
     },
     concealment: equipment.ConcealmentModifier?.add,
   };
-  if (["rifle", "pistol"].includes(equipment.category)) {
+  if (["rifle", "pistol"].includes(equipment.category ?? "")) {
     data.suppressorAvailable = Boolean(equipment.Params?.suppressedSwitch);
     data.suppressed = Boolean(equipment.Params?.suppressedImg);
   }
@@ -30,12 +30,12 @@ function readFiles(dirContent: Array<string>, extension: string): Promise<Array<
 readdir(`${__dirname}/xml`)
   .then((files) => readFiles(files, "xml"))
   .then((filesContent) => Promise.all(filesContent.map((file) => parseXml(file))))
-  .then((data: Array<any>) => {
-    const equipment = [];
+  .then((data: FileData) => {
+    const equipment: Array<ParsedEquipment> = [];
     data.forEach((entry) => {
       if (typeof entry !== "object") return;
-      if ("Equipment" in entry) {
-        Object.values(entry.Equipment).forEach((value: EquipmentEntry | Array<EquipmentEntry>) => {
+      if (entry.Equipment) {
+        Object.values(entry.Equipment).forEach((value) => {
           if (typeof value !== "object") return;
           if (Array.isArray(value)) {
             value.forEach((groupEntry) => {

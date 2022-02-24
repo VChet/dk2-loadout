@@ -1,7 +1,13 @@
 export type WeaponCategory = "rifle" | "shotgun" | "pistol" | "rpg";
 
+export type FileDataEntry = {
+  [key: string]: any;
+  Equipment?: EquipmentEntry | Array<EquipmentEntry>;
+};
+export type FileData = Array<FileDataEntry>;
+
 export type EquipmentEntry = {
-  name: string;
+  name?: string;
   tooltip?: string;
   category?: WeaponCategory;
   img?: string;
@@ -17,7 +23,7 @@ export type EquipmentEntry = {
 };
 
 export type ParsedEquipment = {
-  name: string;
+  name?: string;
   tooltip?: string;
   img?: string;
   mobility?: {

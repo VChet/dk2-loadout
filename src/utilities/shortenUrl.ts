@@ -38,10 +38,9 @@ export async function getUrlParams(query: string): Promise<Roster | null> {
   if (urlCode) return deserialize(urlCode);
 
   const urlLink = new URLSearchParams(query).get("link");
-  if (urlLink) {
-    const code = await getLinkData(urlLink);
-    return code ? deserialize(code) : null;
-  }
+  if (!urlLink) return null;
+  const code = await getLinkData(urlLink);
+  return code ? deserialize(code) : null;
 }
 
 export async function createShortLink(payload: Roster): Promise<{

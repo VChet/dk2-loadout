@@ -4,7 +4,7 @@ export function readFile(file: File): Promise<string | ArrayBuffer> {
     reader.readAsText(file);
 
     reader.onload = () => {
-      resolve(reader.result);
+      if (reader.result) resolve(reader.result);
     };
     reader.onerror = reject;
   });
