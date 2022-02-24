@@ -668,7 +668,9 @@
     "mobility": {
       "move": -3,
       "turn": -1
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "M1014",
@@ -677,7 +679,9 @@
     "mobility": {
       "move": -8,
       "turn": -2
-    }
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
   },
   {
     "name": "MP5A",

@@ -18,7 +18,12 @@ function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
     // allowNVG attr is either false or not exists
     data.NVGAvailable = equipment.Params?.allowNVG !== false;
   }
-  if (["rifle", "pistol"].includes(equipment.category ?? "")) {
+  if (
+    equipment.inventoryBinding === "PrimaryWeapon" ||
+    equipment.inventoryBinding === "PrimaryWeaponMuzzle" ||
+    equipment.inventoryBinding === "SecondaryWeapon" ||
+    equipment.inventoryBinding === "SecondaryWeaponMuzzle"
+  ) {
     data.suppressorAvailable = Boolean(equipment.Params?.suppressedSwitch);
     data.suppressed = Boolean(equipment.Params?.suppressedImg);
   }

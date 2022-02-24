@@ -26,7 +26,7 @@
 
 <li class={className}>
   {#if weaponData}
-    <img src={weaponData.img} alt={weaponData.name && getFileName(weaponData.name)} draggable="false" />
+    <img src={weaponData.img} alt={getFileName(weaponData.name)} draggable="false" />
     {#if ammo || scope}
       <div class="attachments">
         {#if weaponData.suppressorAvailable}
@@ -64,12 +64,12 @@
         {/if}
       </div>
     {/if}
-    <div class="subtitle">{weaponData.name && getNameString(weaponData.name)}</div>
+    <div class="subtitle">{getNameString(weaponData.name)}</div>
   {:else if helmetData}
     <img
       src={helmetData.img}
-      alt={helmetData.name && getFileName(helmetData.name)}
-      title={helmetData.name && getNameString(helmetData.name)}
+      alt={getFileName(helmetData.name)}
+      title={getNameString(helmetData.name)}
       draggable="false"
     />
     {#if helmetData.NVGAvailable && nvg}
@@ -77,7 +77,7 @@
         <img src={getNVGImg(nvg.name)} alt={getFileName(nvg.name)} title={getNameString(nvg.name)} draggable="false" />
       </div>
     {/if}
-    <div class="subtitle">{helmetData.name && getNameString(helmetData.name)}</div>
+    <div class="subtitle">{getNameString(helmetData.name)}</div>
   {:else if armor}
     <img
       src={getEquipmentImg(armor.name)}

@@ -1,19 +1,28 @@
-export type WeaponCategory = "rifle" | "shotgun" | "pistol" | "rpg";
-
-export type FileDataEntry = {
-  [key: string]: any;
-  Equipment?: EquipmentEntry | Array<EquipmentEntry>;
-};
-export type FileData = Array<FileDataEntry>;
+type WeaponCategory = "rifle" | "shotgun" | "pistol" | "rpg";
+type InventoryBinding =
+  | "PrimaryWeapon"
+  | "PrimaryWeaponMuzzle"
+  | "PrimaryWeaponScope"
+  | "SecondaryWeapon"
+  | "SecondaryWeaponMuzzle"
+  | "SecondaryWeaponScope"
+  | "Armor"
+  | "Helmet"
+  | "HelmetNVG"
+  | "UtilityPouch"
+  | "SupportGear1"
+  | "SupportGear2"
+  | "SupportGear3";
+type ClassBinding = "Assault" | "Support" | "Marksman" | "Medic" | "Grenadier" | "BlackOps" | "Undercover";
 
 export type EquipmentEntry = {
-  name?: string;
+  name: string;
   tooltip?: string;
   category?: WeaponCategory;
   img?: string;
   quantity?: number;
-  inventoryBinding?: string;
-  ClassBinding?: { name: string } | Array<{ name: string }>;
+  inventoryBinding?: InventoryBinding;
+  ClassBinding?: { name: ClassBinding } | Array<{ name: ClassBinding }>;
   MobilityModifiers?: {
     moveSpeedModifierPercent: number;
     turnSpeedModifierPercent: number;
@@ -27,7 +36,7 @@ export type EquipmentEntry = {
 };
 
 export type ParsedEquipment = {
-  name?: string;
+  name: string;
   tooltip?: string;
   img?: string;
   mobility?: {
@@ -39,3 +48,9 @@ export type ParsedEquipment = {
   suppressed?: boolean;
   NVGAvailable?: boolean;
 };
+
+export type FileDataEntry = {
+  [key: string]: any;
+  Equipment?: { [key: string]: EquipmentEntry | Array<EquipmentEntry> };
+};
+export type FileData = Array<FileDataEntry>;
