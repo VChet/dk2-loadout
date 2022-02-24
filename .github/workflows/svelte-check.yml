@@ -1,4 +1,4 @@
-name: svelte-check
+name: ci
 
 on:
   push:
@@ -13,5 +13,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "16"
-      - run: npm install
+      - run: npm ci
+      - run: npm test
       - run: npm run check
