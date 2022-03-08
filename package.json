@@ -11,8 +11,8 @@
     "update-data": "ts-node ./src/data/retrieveConfigData.ts"
   },
   "dependencies": {
-    "fast-xml-parser": "^4.0.3",
-    "firebase": "^9.6.7",
+    "fast-xml-parser": "^4.0.6",
+    "firebase": "^9.6.8",
     "lz-string": "^1.4.4",
     "md5": "^2.3.0",
     "sirv-cli": "^2.0.2"
@@ -31,18 +31,18 @@
     "chai": "^4.3.6",
     "chai-xml": "^0.4.0",
     "dotenv": "^16.0.0",
-    "rollup": "^2.68.0",
+    "rollup": "^2.70.0",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.49.8",
+    "sass": "^1.49.9",
     "svelte": "^3.46.4",
     "svelte-check": "^2.4.5",
     "svelte-preprocess": "^4.10.4",
-    "ts-mocha": "^8.0.0",
-    "ts-node": "^10.5.0",
+    "ts-mocha": "^9.0.2",
+    "ts-node": "^10.7.0",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.5"
+    "typescript": "^4.6.2"
   }
 }
