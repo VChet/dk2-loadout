@@ -7,7 +7,7 @@
   import type { Roster, Trooper } from "./types/Roster";
 
   let roster: Roster;
-  let current: Trooper;
+  let selectedTrooper: Trooper;
 
   onMount(() => {
     initAnalytics();
@@ -17,9 +17,9 @@
 <main class="container">
   <div class="left-block">
     <ManagerBlock bind:roster />
-    <TrooperBlock {current} />
+    <TrooperBlock {selectedTrooper} />
   </div>
-  <RosterBlock {roster} bind:current />
+  <RosterBlock bind:roster bind:selectedTrooper />
 </main>
 <footer class="footer">
   <div>

@@ -16,6 +16,9 @@
       window.history.pushState({}, window.document.title, "/");
     }
   }
+  function handleSameFile({ currentTarget }: any) {
+    currentTarget.value = "";
+  }
 
   async function getUrl() {
     if (!roster) return;
@@ -33,8 +36,10 @@
   }
 
   function downloadXml() {
+    if (!roster) return;
     const now = new Date();
     const date = `${now.getFullYear()}${now.getMonth()}${now.getDate()}`;
+    roster.Squad = roster.Squad.filter((squad) => squad);
     downloadFile(generateXml({ Roster: roster }), `roster-${date}.xml`);
   }
 
@@ -47,7 +52,7 @@
 <section class="file-input-wrap">
   <label>
     Upload Roster
-    <input class="visually-hidden" type="file" accept=".xml" on:change={(e) => onFileSelected(e)} />
+    <input class="visually-hidden" type="file" accept=".xml" on:change={onFileSelected} on:click={handleSameFile} />
   </label>
   <pre>%LocalAppData%/KillHouseGames/DoorKickers2/roster.xml</pre>
   {#if roster}

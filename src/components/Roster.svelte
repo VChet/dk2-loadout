@@ -3,14 +3,14 @@
   import type { Roster, Trooper } from "../types/Roster";
 
   export let roster: Roster | null = null;
-  export let current: Trooper | null = null;
+  export let selectedTrooper: Trooper | null = null;
 </script>
 
 {#if roster}
   <section class="roster">
     <ul>
       {#each roster.Squad as squad}
-        <SquadBlock {squad} bind:current />
+        <SquadBlock bind:squad bind:selectedTrooper />
       {/each}
     </ul>
   </section>

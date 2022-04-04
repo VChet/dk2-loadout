@@ -1,8 +1,8 @@
 <script lang="ts">
-  import type { Squad, Trooper } from "../types/Roster";
   import { getClassIcon, getFileName, getTrooperImg } from "../utilities/getters";
+  import type { Squad, Trooper } from "../types/Roster";
 
-  export let current: Trooper | null = null;
+  export let selectedTrooper: Trooper | null = null;
   export let squad: Squad | null = null;
 
   function mapClasses(): { [key: string]: Array<Trooper> } {
@@ -12,13 +12,20 @@
       return acc;
     }, {});
   }
-
   $: classMap = mapClasses();
+
+  function removeSquad() {
+    squad = null;
+    selectedTrooper = null;
+  }
 </script>
 
 {#if squad}
   <li class="squad" class:squad--ranger={squad.$unit === "Rangers"} class:squad--cia={squad.$unit === "CIA"}>
-    <div class="squad__unit">{squad.$unit}</div>
+    <div class="squad__unit">
+      <button on:click={removeSquad} />
+      {squad.$unit}
+    </div>
     <div class="squad__name">{squad.$name}</div>
     <ul>
       {#each Object.keys(classMap) as className}
@@ -31,8 +38,8 @@
             {#each classMap[className] as trooper}
               <li
                 class="trooper"
-                class:selected={current ? current.Id === trooper.Id : false}
-                on:click={() => (current = trooper)}
+                class:selected={selectedTrooper?.Id === trooper.Id}
+                on:click={() => (selectedTrooper = trooper)}
               >
                 <img
                   src={getTrooperImg(trooper.Id.$portrait)}
@@ -59,10 +66,26 @@
       color: var(--dark-text);
     }
     &__unit {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       @include squad-title;
       box-shadow: inset 0 0 0 50px var(--bg-main);
       color: var(--paragraph);
       font-size: 24px;
+      button {
+        width: 30px;
+        height: 30px;
+        background: url("/images/ui/squad_delete.webp") no-repeat center / contain;
+        border: none;
+        padding: 0;
+        outline: inherit;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+          background-image: url("/images/ui/squad_delete_hover.webp");
+        }
+      }
     }
     &__name {
       @include squad-title;
