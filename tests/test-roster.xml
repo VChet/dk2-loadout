@@ -1,7 +1,7 @@
-<Roster version="20" numSquads="4">
+<Roster version="20" numSquads="5">
     <Squad unit="Rangers" name="BRAVO ONE" id="2460694628">
         <Trooper class="Assault">
-            <Id name="JERSEY" portrait="data/textures/portraits/ranger29.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="JERSEY" portrait="data/textures/portraits/ranger29.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M4 Carbine"/>
                 <PrimaryWeaponScope name="LPVO_6X"/>
@@ -12,7 +12,7 @@
                 <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
-                <HelmetNVG name="NVG_02"/>
+                <HelmetNVG/>
                 <Armor name="Rangers SFLCS Extended"/>
                 <UtilityPouch1 name="Frag Grenade"/>
                 <UtilityPouch2 name="Smoke Grenade"/>
@@ -25,10 +25,10 @@
                 <InnateAbility name="AssaultShooting" percent="21"/>
                 <InnateAbility name="FieldSkills" percent="12"/>
             </InnateAbilities>
-            <Statistics xp="187880" totalMissionsWon="140" missionFailed="32" mission1Star="6" mission2Star="34" mission3Star="100" bulletsFired="2603" bulletsHit="1697" kills="815" killsStunnedTarget="114" killsUnawareTarget="60" injuries="165" doorsKicked="147" doorForcedBreaches="32" doorsBlownUp="75" grenadesUsed="134" distanceWalkedMeters="7638" completedHealthy="78" perfectAccuracy="21" challengesCompleted="28" bombsDisarmed="13" arrests="9" rescues="13" prev_xp="16104210"/>
+            <Statistics xp="272510" totalMissionsWon="212" missionFailed="48" mission1Star="10" mission2Star="45" mission3Star="157" bulletsFired="3448" bulletsHit="2227" kills="1113" killsStunnedTarget="145" killsUnawareTarget="78" injuries="214" doorsKicked="208" doorForcedBreaches="45" doorsBlownUp="85" grenadesUsed="193" distanceWalkedMeters="10529" completedHealthy="131" perfectAccuracy="37" challengesCompleted="31" bombsDisarmed="13" arrests="11" rescues="24" prev_xp="36293210"/>
         </Trooper>
         <Trooper class="Assault">
-            <Id name="SOLO" portrait="data/textures/portraits/ranger20.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="SOLO" portrait="data/textures/portraits/ranger20.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M4 Carbine"/>
                 <PrimaryWeaponScope name="LPVO_6X"/>
@@ -39,7 +39,7 @@
                 <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
-                <HelmetNVG name="NVG_02"/>
+                <HelmetNVG/>
                 <Armor name="Rangers SFLCS Extended"/>
                 <UtilityPouch1 name="Frag Grenade"/>
                 <UtilityPouch2 name="Smoke Grenade"/>
@@ -52,10 +52,10 @@
                 <InnateAbility name="AssaultShooting" percent="81"/>
                 <InnateAbility name="FieldSkills" percent="3"/>
             </InnateAbilities>
-            <Statistics xp="187500" totalMissionsWon="133" missionFailed="27" mission1Star="6" mission2Star="33" mission3Star="94" bulletsFired="2094" bulletsHit="1339" kills="718" killsStunnedTarget="94" killsUnawareTarget="61" injuries="122" doorsKicked="122" doorForcedBreaches="33" doorsBlownUp="57" grenadesUsed="129" distanceWalkedMeters="7751" completedHealthy="84" perfectAccuracy="23" challengesCompleted="29" bombsDisarmed="7" wallsBreached="20" arrests="9" rescues="17" prev_xp="14464220"/>
+            <Statistics xp="266960" totalMissionsWon="199" missionFailed="42" mission1Star="10" mission2Star="42" mission3Star="147" bulletsFired="2957" bulletsHit="1889" kills="1009" killsStunnedTarget="116" killsUnawareTarget="78" injuries="168" doorsKicked="170" doorForcedBreaches="43" doorsBlownUp="78" grenadesUsed="184" distanceWalkedMeters="10925" completedHealthy="131" perfectAccuracy="36" challengesCompleted="31" bombsDisarmed="9" wallsBreached="20" arrests="14" rescues="22" prev_xp="32923190"/>
         </Trooper>
         <Trooper class="Assault">
-            <Id name="ROSE" portrait="data/textures/portraits/ranger26.dds" gender="0" voicePack="female_operator"/>
+            <Id name="ROSE" portrait="data/textures/portraits/ranger26.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M4 Carbine"/>
                 <PrimaryWeaponScope name="LPVO_6X"/>
@@ -66,7 +66,7 @@
                 <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
-                <HelmetNVG name="NVG_02"/>
+                <HelmetNVG/>
                 <Armor name="Rangers SFLCS Extended"/>
                 <UtilityPouch1 name="Frag Grenade"/>
                 <UtilityPouch2 name="Smoke Grenade"/>
@@ -79,14 +79,41 @@
                 <InnateAbility name="AssaultShooting" percent="15"/>
                 <InnateAbility name="FieldSkills" percent="24"/>
             </InnateAbilities>
-            <Statistics xp="145850" totalMissionsWon="119" missionFailed="25" mission1Star="6" mission2Star="33" mission3Star="80" bulletsFired="1724" bulletsHit="1079" kills="527" killsStunnedTarget="120" killsUnawareTarget="42" injuries="132" doorsKicked="148" doorForcedBreaches="22" doorsBlownUp="38" grenadesUsed="131" distanceWalkedMeters="7826" completedHealthy="69" perfectAccuracy="18" challengesCompleted="41" bombsDisarmed="7" arrests="5" rescues="8" prev_xp="9899850"/>
+            <Statistics xp="208230" totalMissionsWon="174" missionFailed="38" mission1Star="10" mission2Star="42" mission3Star="122" bulletsFired="2340" bulletsHit="1458" kills="727" killsStunnedTarget="142" killsUnawareTarget="62" injuries="166" doorsKicked="190" doorForcedBreaches="30" doorsBlownUp="47" grenadesUsed="167" distanceWalkedMeters="10090" completedHealthy="113" perfectAccuracy="33" challengesCompleted="42" bombsDisarmed="8" arrests="8" rescues="20" prev_xp="21864990"/>
         </Trooper>
         <Trooper class="Assault">
-            <Id name="KILLER" portrait="data/textures/portraits/ranger41.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="KILLER" portrait="data/textures/portraits/ranger41.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M4 Carbine"/>
                 <PrimaryWeaponScope name="LPVO_6X"/>
                 <PrimaryWeaponAmmo name="556FMJM855_M4"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="1911 Pistol"/>
+                <SecondaryWeaponScope name="IronSights_Pistol1911"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="HelmetIHPS"/>
+                <HelmetNVG/>
+                <Armor name="Rangers SFLCS Extended"/>
+                <UtilityPouch1 name="Frag Grenade"/>
+                <UtilityPouch2 name="Smoke Grenade"/>
+                <SupportGear1 name="Flashbang Kit"/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="69"/>
+                <InnateAbility name="AssaultShooting" percent="9"/>
+                <InnateAbility name="FieldSkills" percent="22"/>
+            </InnateAbilities>
+            <Statistics xp="166330" totalMissionsWon="127" missionFailed="37" mission1Star="6" mission2Star="32" mission3Star="89" bulletsFired="1896" bulletsHit="1200" kills="658" killsStunnedTarget="104" killsUnawareTarget="57" injuries="152" doorsKicked="99" doorForcedBreaches="43" doorsBlownUp="56" grenadesUsed="160" distanceWalkedMeters="7272" completedHealthy="83" perfectAccuracy="36" challengesCompleted="30" bombsDisarmed="7" wallsBreached="7" arrests="8" rescues="16" prev_xp="13437520"/>
+        </Trooper>
+        <Trooper class="Assault">
+            <Id name="BAUER" portrait="data/textures/portraits/ranger15.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="M4Sup"/>
+                <PrimaryWeaponScope name="LPVO_6X"/>
+                <PrimaryWeaponAmmo name="556FMJM855_M4Sup"/>
                 <PrimaryWeaponMuzzle/>
                 <SecondaryWeapon name="1911 Pistol"/>
                 <SecondaryWeaponScope name="IronSights_Pistol1911"/>
@@ -102,56 +129,29 @@
                 <SupportGear3 name="Crowbar"/>
             </Equipment>
             <InnateAbilities>
-                <InnateAbility name="Marksmanship" percent="69"/>
-                <InnateAbility name="AssaultShooting" percent="9"/>
-                <InnateAbility name="FieldSkills" percent="22"/>
-            </InnateAbilities>
-            <Statistics xp="121360" totalMissionsWon="87" missionFailed="29" mission1Star="3" mission2Star="25" mission3Star="59" bulletsFired="1525" bulletsHit="979" kills="530" killsStunnedTarget="94" killsUnawareTarget="40" injuries="129" doorsKicked="77" doorForcedBreaches="36" doorsBlownUp="49" grenadesUsed="126" distanceWalkedMeters="5460" completedHealthy="49" perfectAccuracy="24" challengesCompleted="29" bombsDisarmed="6" wallsBreached="7" arrests="5" rescues="8" prev_xp="6549780"/>
-        </Trooper>
-        <Trooper class="Assault">
-            <Id name="BAUER" portrait="data/textures/portraits/ranger15.dds" gender="0" voicePack="female_operator"/>
-            <Equipment>
-                <PrimaryWeapon name="M4Sup"/>
-                <PrimaryWeaponScope name="LPVO_6X"/>
-                <PrimaryWeaponAmmo name="556FMJMk318_M4Sup"/>
-                <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="M9Sup Pistol"/>
-                <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919JHPM1153_SupHandgun"/>
-                <SecondaryWeaponMuzzle/>
-                <Helmet name="HelmetIHPS"/>
-                <HelmetNVG name="NVG_02"/>
-                <Armor name="Rangers SFLCS Level IV Sides"/>
-                <UtilityPouch1 name="Flashbang"/>
-                <UtilityPouch2 name="Slap Charge"/>
-                <SupportGear1 name="Spy Camera"/>
-                <SupportGear2/>
-                <SupportGear3 name="Crowbar"/>
-            </Equipment>
-            <InnateAbilities>
                 <InnateAbility name="Marksmanship" percent="6"/>
                 <InnateAbility name="AssaultShooting" percent="79"/>
                 <InnateAbility name="FieldSkills" percent="16"/>
             </InnateAbilities>
-            <Statistics xp="88210" totalMissionsWon="60" missionFailed="25" mission1Star="1" mission2Star="19" mission3Star="40" bulletsFired="1168" bulletsHit="750" kills="305" killsStunnedTarget="52" killsUnawareTarget="31" injuries="90" doorsKicked="46" doorForcedBreaches="44" doorsBlownUp="24" grenadesUsed="48" distanceWalkedMeters="2512" completedHealthy="33" perfectAccuracy="10" challengesCompleted="29" bombsDisarmed="6" arrests="4" rescues="6" prev_xp="3958250"/>
+            <Statistics xp="104190" totalMissionsWon="72" missionFailed="26" mission1Star="1" mission2Star="21" mission3Star="50" bulletsFired="1308" bulletsHit="842" kills="350" killsStunnedTarget="55" killsUnawareTarget="40" injuries="98" doorsKicked="53" doorForcedBreaches="47" doorsBlownUp="25" grenadesUsed="55" distanceWalkedMeters="3115" completedHealthy="41" perfectAccuracy="12" challengesCompleted="32" bombsDisarmed="6" arrests="8" rescues="10" prev_xp="5201640"/>
         </Trooper>
         <Trooper class="Assault">
-            <Id name="BOOK" portrait="data/textures/portraits/ranger3.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="BOOK" portrait="data/textures/portraits/ranger3.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M4Sup"/>
                 <PrimaryWeaponScope name="LPVO_6X"/>
-                <PrimaryWeaponAmmo name="556FMJMk318_M4Sup"/>
+                <PrimaryWeaponAmmo name="556FMJM855_M4Sup"/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="M9Sup Pistol"/>
-                <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919JHPM1153_SupHandgun"/>
+                <SecondaryWeapon name="1911 Pistol"/>
+                <SecondaryWeaponScope name="IronSights_Pistol1911"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
                 <HelmetNVG name="NVG_02"/>
-                <Armor name="Rangers SFLCS Level IV Sides"/>
-                <UtilityPouch1 name="Flashbang"/>
-                <UtilityPouch2 name="Slap Charge"/>
-                <SupportGear1 name="Dynamic Hammer"/>
+                <Armor name="Rangers SFLCS Extended"/>
+                <UtilityPouch1 name="Frag Grenade"/>
+                <UtilityPouch2 name="Smoke Grenade"/>
+                <SupportGear1 name="Flashbang Kit"/>
                 <SupportGear2/>
                 <SupportGear3 name="Crowbar"/>
             </Equipment>
@@ -160,25 +160,25 @@
                 <InnateAbility name="AssaultShooting" percent="53"/>
                 <InnateAbility name="FieldSkills" percent="38"/>
             </InnateAbilities>
-            <Statistics xp="81070" totalMissionsWon="57" missionFailed="24" mission1Star="1" mission2Star="17" mission3Star="39" bulletsFired="1087" bulletsHit="683" kills="309" killsStunnedTarget="51" killsUnawareTarget="41" injuries="78" doorsKicked="35" doorForcedBreaches="24" doorsBlownUp="17" grenadesUsed="54" distanceWalkedMeters="2423" completedHealthy="40" perfectAccuracy="9" challengesCompleted="27" bombsDisarmed="3" arrests="3" rescues="7" prev_xp="3537710"/>
+            <Statistics xp="98830" totalMissionsWon="69" missionFailed="25" mission1Star="1" mission2Star="19" mission3Star="49" bulletsFired="1219" bulletsHit="757" kills="355" killsStunnedTarget="53" killsUnawareTarget="48" injuries="80" doorsKicked="46" doorForcedBreaches="30" doorsBlownUp="20" grenadesUsed="61" distanceWalkedMeters="3248" completedHealthy="51" perfectAccuracy="11" challengesCompleted="30" bombsDisarmed="3" arrests="8" rescues="10" prev_xp="4693570"/>
         </Trooper>
         <Trooper class="Assault">
-            <Id name="KENT" portrait="data/textures/portraits/ranger58.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="KENT" portrait="data/textures/portraits/ranger58.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M4Sup"/>
                 <PrimaryWeaponScope name="LPVO_6X"/>
-                <PrimaryWeaponAmmo name="556FMJMk318_M4Sup"/>
+                <PrimaryWeaponAmmo name="556FMJM855_M4Sup"/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="M9Sup Pistol"/>
-                <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919JHPM1153_SupHandgun"/>
+                <SecondaryWeapon name="1911 Pistol"/>
+                <SecondaryWeaponScope name="IronSights_Pistol1911"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
                 <HelmetNVG name="NVG_02"/>
-                <Armor name="Rangers SFLCS Level IV Sides"/>
-                <UtilityPouch1 name="Flashbang"/>
-                <UtilityPouch2 name="Slap Charge"/>
-                <SupportGear1 name="Spy Camera"/>
+                <Armor name="Rangers SFLCS Extended"/>
+                <UtilityPouch1 name="Frag Grenade"/>
+                <UtilityPouch2 name="Smoke Grenade"/>
+                <SupportGear1 name="Flashbang Kit"/>
                 <SupportGear2/>
                 <SupportGear3 name="Crowbar"/>
             </Equipment>
@@ -187,25 +187,25 @@
                 <InnateAbility name="AssaultShooting" percent="67"/>
                 <InnateAbility name="FieldSkills" percent="2"/>
             </InnateAbilities>
-            <Statistics xp="36910" totalMissionsWon="32" missionFailed="17" mission1Star="1" mission2Star="13" mission3Star="18" bulletsFired="591" bulletsHit="362" kills="175" killsStunnedTarget="21" killsUnawareTarget="18" injuries="64" doorsKicked="33" doorForcedBreaches="11" doorsBlownUp="8" grenadesUsed="28" distanceWalkedMeters="1669" completedHealthy="19" perfectAccuracy="8" challengesCompleted="4" bombsDisarmed="3" arrests="2" rescues="2" prev_xp="817720"/>
+            <Statistics xp="50410" totalMissionsWon="41" missionFailed="18" mission1Star="1" mission2Star="14" mission3Star="26" bulletsFired="686" bulletsHit="429" kills="209" killsStunnedTarget="26" killsUnawareTarget="26" injuries="66" doorsKicked="39" doorForcedBreaches="12" doorsBlownUp="8" grenadesUsed="36" distanceWalkedMeters="2329" completedHealthy="27" perfectAccuracy="10" challengesCompleted="6" bombsDisarmed="6" arrests="2" rescues="8" prev_xp="1244900"/>
         </Trooper>
         <Trooper class="Assault">
-            <Id name="HOPE" portrait="data/textures/portraits/ranger11.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="HOPE" portrait="data/textures/portraits/ranger11.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M4Sup"/>
                 <PrimaryWeaponScope name="LPVO_6X"/>
-                <PrimaryWeaponAmmo name="556FMJMk318_M4Sup"/>
+                <PrimaryWeaponAmmo name="556FMJM855_M4Sup"/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="M9Sup Pistol"/>
-                <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919JHPM1153_SupHandgun"/>
+                <SecondaryWeapon name="1911 Pistol"/>
+                <SecondaryWeaponScope name="IronSights_Pistol1911"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
                 <HelmetNVG name="NVG_02"/>
-                <Armor name="Rangers SFLCS Level IV Sides"/>
-                <UtilityPouch1 name="Flashbang"/>
-                <UtilityPouch2 name="Slap Charge"/>
-                <SupportGear1 name="Dynamic Hammer"/>
+                <Armor name="Rangers SFLCS Extended"/>
+                <UtilityPouch1 name="Frag Grenade"/>
+                <UtilityPouch2 name="Smoke Grenade"/>
+                <SupportGear1 name="Flashbang Kit"/>
                 <SupportGear2/>
                 <SupportGear3 name="Crowbar"/>
             </Equipment>
@@ -214,13 +214,13 @@
                 <InnateAbility name="AssaultShooting" percent="1"/>
                 <InnateAbility name="FieldSkills" percent="7"/>
             </InnateAbilities>
-            <Statistics xp="27850" totalMissionsWon="27" missionFailed="12" mission2Star="11" mission3Star="16" bulletsFired="374" bulletsHit="239" kills="106" killsStunnedTarget="13" killsUnawareTarget="13" injuries="40" doorsKicked="11" doorForcedBreaches="10" doorsBlownUp="4" grenadesUsed="13" distanceWalkedMeters="1053" completedHealthy="21" perfectAccuracy="6" challengesCompleted="4" bombsDisarmed="3" arrests="1" rescues="2" prev_xp="533770"/>
+            <Statistics xp="41920" totalMissionsWon="36" missionFailed="13" mission2Star="12" mission3Star="24" bulletsFired="492" bulletsHit="315" kills="149" killsStunnedTarget="18" killsUnawareTarget="18" injuries="42" doorsKicked="22" doorForcedBreaches="14" doorsBlownUp="7" grenadesUsed="23" distanceWalkedMeters="1603" completedHealthy="29" perfectAccuracy="8" challengesCompleted="6" bombsDisarmed="4" arrests="2" rescues="5" prev_xp="873870"/>
         </Trooper>
         <Trooper class="Support">
-            <Id name="SABICH" portrait="data/textures/portraits/ranger49.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="SABICH" portrait="data/textures/portraits/ranger49.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M1014"/>
-                <PrimaryWeaponScope name="IronSights"/>
+                <PrimaryWeaponScope name="Holosight"/>
                 <PrimaryWeaponAmmo name="12GA00BUCK_M1014"/>
                 <PrimaryWeaponMuzzle/>
                 <SecondaryWeapon name="G2240 Pistol"/>
@@ -228,11 +228,11 @@
                 <SecondaryWeaponAmmo name="40FMJ180GR_G2240 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
-                <HelmetNVG name="NVG_02"/>
+                <HelmetNVG/>
                 <Armor name="Rangers SFLCS Extended"/>
                 <UtilityPouch1 name="Frag Grenade"/>
                 <UtilityPouch2 name="Flashbang"/>
-                <SupportGear1 name="Breaching Charge"/>
+                <SupportGear1 name="AT4 Rocket Launcher"/>
                 <SupportGear2/>
                 <SupportGear3 name="Crowbar"/>
             </Equipment>
@@ -241,21 +241,21 @@
                 <InnateAbility name="AssaultShooting" percent="30"/>
                 <InnateAbility name="FieldSkills" percent="24"/>
             </InnateAbilities>
-            <Statistics xp="64450" totalMissionsWon="46" missionFailed="21" mission1Star="1" mission2Star="13" mission3Star="32" bulletsFired="1968" bulletsHit="955" kills="268" killsStunnedTarget="14" killsUnawareTarget="23" injuries="62" doorsKicked="39" doorForcedBreaches="24" doorsBlownUp="34" grenadesUsed="53" distanceWalkedMeters="2674" completedHealthy="31" perfectAccuracy="11" challengesCompleted="14" wallsBreached="11" rescues="8" prev_xp="1998360"/>
+            <Statistics xp="153530" totalMissionsWon="119" missionFailed="35" mission1Star="7" mission2Star="25" mission3Star="87" bulletsFired="5163" bulletsHit="2575" kills="570" killsStunnedTarget="57" killsUnawareTarget="63" injuries="116" doorsKicked="107" doorForcedBreaches="39" doorsBlownUp="59" grenadesUsed="100" distanceWalkedMeters="5883" completedHealthy="81" perfectAccuracy="28" challengesCompleted="17" wallsBreached="12" arrests="4" rescues="17" prev_xp="11443020"/>
         </Trooper>
         <Trooper class="Support">
-            <Id name="BARNSBY" portrait="data/textures/portraits/ranger47.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="BARNSBY" portrait="data/textures/portraits/ranger47.dds" gender="0" voicePack=""/>
             <Equipment>
-                <PrimaryWeapon name="MK48"/>
-                <PrimaryWeaponScope name="SpecterDR"/>
-                <PrimaryWeaponAmmo name="762FMJM80_MK48"/>
+                <PrimaryWeapon name="M1014"/>
+                <PrimaryWeaponScope name="Holosight"/>
+                <PrimaryWeaponAmmo name="12GA00BUCK_M1014"/>
                 <PrimaryWeaponMuzzle/>
                 <SecondaryWeapon name="G2240 Pistol"/>
                 <SecondaryWeaponScope name="IronSights_Pistol"/>
                 <SecondaryWeaponAmmo name="40FMJ180GR_G2240 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
-                <HelmetNVG name="NVG_02"/>
+                <HelmetNVG/>
                 <Armor name="Rangers SFLCS Extended"/>
                 <UtilityPouch1 name="Frag Grenade"/>
                 <UtilityPouch2 name="Flashbang"/>
@@ -268,25 +268,25 @@
                 <InnateAbility name="AssaultShooting" percent="8"/>
                 <InnateAbility name="FieldSkills" percent="88"/>
             </InnateAbilities>
-            <Statistics xp="37230" totalMissionsWon="28" missionFailed="11" mission2Star="7" mission3Star="21" bulletsFired="1039" bulletsHit="475" kills="113" killsStunnedTarget="6" killsUnawareTarget="15" injuries="29" doorsKicked="16" doorsBlownUp="9" grenadesUsed="29" distanceWalkedMeters="1078" completedHealthy="23" perfectAccuracy="9" challengesCompleted="11" bombsDisarmed="1" wallsBreached="7" rescues="1" prev_xp="683890"/>
+            <Statistics xp="110920" totalMissionsWon="87" missionFailed="22" mission1Star="6" mission2Star="16" mission3Star="65" bulletsFired="3835" bulletsHit="1917" kills="371" killsStunnedTarget="33" killsUnawareTarget="54" injuries="80" doorsKicked="77" doorForcedBreaches="9" doorsBlownUp="45" grenadesUsed="56" distanceWalkedMeters="3230" completedHealthy="59" perfectAccuracy="20" challengesCompleted="13" bombsDisarmed="1" wallsBreached="53" arrests="5" rescues="4" prev_xp="5662280"/>
         </Trooper>
         <Trooper class="Support">
-            <Id name="COWBOY" portrait="data/textures/portraits/ranger30.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="COWBOY" portrait="data/textures/portraits/ranger30.dds" gender="0" voicePack=""/>
             <Equipment>
-                <PrimaryWeapon name="MK48"/>
-                <PrimaryWeaponScope name="SpecterDR"/>
-                <PrimaryWeaponAmmo name="762FMJM80_MK48"/>
+                <PrimaryWeapon name="M1014"/>
+                <PrimaryWeaponScope name="Holosight"/>
+                <PrimaryWeaponAmmo name="12GA00BUCK_M1014"/>
                 <PrimaryWeaponMuzzle/>
                 <SecondaryWeapon name="G2240 Pistol"/>
                 <SecondaryWeaponScope name="IronSights_Pistol"/>
                 <SecondaryWeaponAmmo name="40FMJ180GR_G2240 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
-                <HelmetNVG name="NVG_02"/>
+                <HelmetNVG/>
                 <Armor name="Rangers SFLCS Extended"/>
                 <UtilityPouch1 name="Frag Grenade"/>
                 <UtilityPouch2 name="Flashbang"/>
-                <SupportGear1 name="Breaching Charge"/>
+                <SupportGear1 name="AT4 Rocket Launcher"/>
                 <SupportGear2/>
                 <SupportGear3 name="Crowbar"/>
             </Equipment>
@@ -295,21 +295,21 @@
                 <InnateAbility name="AssaultShooting" percent="78"/>
                 <InnateAbility name="FieldSkills" percent="9"/>
             </InnateAbilities>
-            <Statistics xp="19890" totalMissionsWon="15" missionFailed="2" mission2Star="3" mission3Star="12" bulletsFired="556" bulletsHit="267" kills="66" killsStunnedTarget="5" killsUnawareTarget="6" injuries="17" doorsKicked="6" doorForcedBreaches="7" doorsBlownUp="7" grenadesUsed="19" distanceWalkedMeters="452" completedHealthy="7" perfectAccuracy="2" challengesCompleted="8" wallsBreached="2" arrests="1" prev_xp="149690"/>
+            <Statistics xp="59480" totalMissionsWon="53" missionFailed="6" mission1Star="3" mission2Star="7" mission3Star="43" bulletsFired="1745" bulletsHit="887" kills="180" killsStunnedTarget="23" killsUnawareTarget="28" injuries="43" doorsKicked="48" doorForcedBreaches="11" doorsBlownUp="18" grenadesUsed="35" distanceWalkedMeters="1559" completedHealthy="32" perfectAccuracy="7" challengesCompleted="10" bombsDisarmed="2" wallsBreached="2" arrests="6" prev_xp="1788610"/>
         </Trooper>
         <Trooper class="Support">
-            <Id name="DOPE" portrait="data/textures/portraits/ranger42.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="DOPE" portrait="data/textures/portraits/ranger42.dds" gender="0" voicePack=""/>
             <Equipment>
-                <PrimaryWeapon name="MK48"/>
-                <PrimaryWeaponScope name="SpecterDR"/>
-                <PrimaryWeaponAmmo name="762FMJM80_MK48"/>
+                <PrimaryWeapon name="M1014"/>
+                <PrimaryWeaponScope name="Holosight"/>
+                <PrimaryWeaponAmmo name="12GA00BUCK_M1014"/>
                 <PrimaryWeaponMuzzle/>
                 <SecondaryWeapon name="G2240 Pistol"/>
                 <SecondaryWeaponScope name="IronSights_Pistol"/>
                 <SecondaryWeaponAmmo name="40FMJ180GR_G2240 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
-                <HelmetNVG name="NVG_02"/>
+                <HelmetNVG/>
                 <Armor name="Rangers SFLCS Extended"/>
                 <UtilityPouch1 name="Frag Grenade"/>
                 <UtilityPouch2 name="Flashbang"/>
@@ -322,18 +322,18 @@
                 <InnateAbility name="AssaultShooting" percent="2"/>
                 <InnateAbility name="FieldSkills" percent="45"/>
             </InnateAbilities>
-            <Statistics xp="12210" totalMissionsWon="7" missionFailed="1" mission2Star="1" mission3Star="6" bulletsFired="158" bulletsHit="99" kills="26" killsStunnedTarget="2" killsUnawareTarget="2" injuries="4" doorsBlownUp="6" grenadesUsed="7" distanceWalkedMeters="126" completedHealthy="6" perfectAccuracy="3" challengesCompleted="7" wallsBreached="3" prev_xp="38960"/>
+            <Statistics xp="46530" totalMissionsWon="35" missionFailed="4" mission1Star="3" mission2Star="4" mission3Star="28" bulletsFired="1154" bulletsHit="601" kills="117" killsStunnedTarget="20" killsUnawareTarget="15" injuries="14" doorsKicked="26" doorForcedBreaches="7" doorsBlownUp="19" grenadesUsed="15" distanceWalkedMeters="1181" completedHealthy="29" perfectAccuracy="4" challengesCompleted="8" bombsDisarmed="1" wallsBreached="20" arrests="6" rescues="4" prev_xp="920690"/>
         </Trooper>
         <Trooper class="Marksman">
-            <Id name="FOX" portrait="data/textures/portraits/ranger1.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="FOX" portrait="data/textures/portraits/ranger1.dds" gender="0" voicePack=""/>
             <Equipment>
-                <PrimaryWeapon name="M14EBR"/>
+                <PrimaryWeapon name="MK20SSR"/>
                 <PrimaryWeaponScope name="LROMK4_3_10X"/>
-                <PrimaryWeaponAmmo name="762FMJM118LR_M14EBR"/>
+                <PrimaryWeaponAmmo name="762FMJM118LR_MK20SSR"/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="G19X Pistol"/>
-                <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919FMJM882_G19X Pistol"/>
+                <SecondaryWeapon name="1911 Pistol"/>
+                <SecondaryWeaponScope name="IronSights_Pistol1911"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
                 <HelmetNVG name="NVG_02"/>
@@ -349,18 +349,18 @@
                 <InnateAbility name="AssaultShooting" percent="43"/>
                 <InnateAbility name="FieldSkills" percent="11"/>
             </InnateAbilities>
-            <Statistics xp="93070" totalMissionsWon="64" missionFailed="16" mission1Star="4" mission2Star="23" mission3Star="37" bulletsFired="590" bulletsHit="471" kills="348" killsStunnedTarget="36" killsUnawareTarget="21" injuries="63" doorsKicked="33" doorForcedBreaches="16" doorsBlownUp="14" grenadesUsed="61" distanceWalkedMeters="3442" completedHealthy="40" perfectAccuracy="30" challengesCompleted="26" bombsDisarmed="6" arrests="1" rescues="7" prev_xp="3505330"/>
+            <Statistics xp="126580" totalMissionsWon="91" missionFailed="21" mission1Star="6" mission2Star="26" mission3Star="59" bulletsFired="758" bulletsHit="595" kills="457" killsStunnedTarget="38" killsUnawareTarget="30" injuries="74" doorsKicked="46" doorForcedBreaches="19" doorsBlownUp="18" grenadesUsed="69" distanceWalkedMeters="5096" completedHealthy="63" perfectAccuracy="45" challengesCompleted="28" bombsDisarmed="8" arrests="2" rescues="7" prev_xp="7014910"/>
         </Trooper>
         <Trooper class="Marksman">
-            <Id name="GRAHAM" portrait="data/textures/portraits/ranger7.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="GRAHAM" portrait="data/textures/portraits/ranger7.dds" gender="0" voicePack=""/>
             <Equipment>
-                <PrimaryWeapon name="M14EBR"/>
+                <PrimaryWeapon name="MK20SSR"/>
                 <PrimaryWeaponScope name="LROMK4_3_10X"/>
-                <PrimaryWeaponAmmo name="762FMJM118LR_M14EBR"/>
+                <PrimaryWeaponAmmo name="762FMJM118LR_MK20SSR"/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="G19X Pistol"/>
-                <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919FMJM882_G19X Pistol"/>
+                <SecondaryWeapon name="1911 Pistol"/>
+                <SecondaryWeaponScope name="IronSights_Pistol1911"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
                 <HelmetNVG name="NVG_02"/>
@@ -376,18 +376,18 @@
                 <InnateAbility name="AssaultShooting" percent="8"/>
                 <InnateAbility name="FieldSkills" percent="47"/>
             </InnateAbilities>
-            <Statistics xp="46650" totalMissionsWon="34" missionFailed="9" mission1Star="4" mission2Star="14" mission3Star="16" bulletsFired="258" bulletsHit="205" kills="169" killsStunnedTarget="10" killsUnawareTarget="13" injuries="25" doorsKicked="16" doorForcedBreaches="2" doorsBlownUp="11" grenadesUsed="25" distanceWalkedMeters="1774" completedHealthy="27" perfectAccuracy="23" challengesCompleted="9" bombsDisarmed="4" arrests="1" rescues="2" prev_xp="942800"/>
+            <Statistics xp="70680" totalMissionsWon="53" missionFailed="13" mission1Star="6" mission2Star="15" mission3Star="32" bulletsFired="386" bulletsHit="311" kills="258" killsStunnedTarget="14" killsUnawareTarget="24" injuries="33" doorsKicked="24" doorForcedBreaches="5" doorsBlownUp="13" grenadesUsed="30" distanceWalkedMeters="3083" completedHealthy="45" perfectAccuracy="32" challengesCompleted="10" bombsDisarmed="7" arrests="1" rescues="2" prev_xp="2277340"/>
         </Trooper>
         <Trooper class="Marksman">
-            <Id name="ICE" portrait="data/textures/portraits/ranger22.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="ICE" portrait="data/textures/portraits/ranger22.dds" gender="0" voicePack=""/>
             <Equipment>
-                <PrimaryWeapon name="M14EBR"/>
+                <PrimaryWeapon name="MK20SSR"/>
                 <PrimaryWeaponScope name="LROMK4_3_10X"/>
-                <PrimaryWeaponAmmo name="762FMJM118LR_M14EBR"/>
+                <PrimaryWeaponAmmo name="762FMJM118LR_MK20SSR"/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="G19X Pistol"/>
-                <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919FMJM882_G19X Pistol"/>
+                <SecondaryWeapon name="1911 Pistol"/>
+                <SecondaryWeaponScope name="IronSights_Pistol1911"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
                 <HelmetNVG name="NVG_02"/>
@@ -403,18 +403,18 @@
                 <InnateAbility name="AssaultShooting" percent="70"/>
                 <InnateAbility name="FieldSkills" percent="20"/>
             </InnateAbilities>
-            <Statistics xp="21550" totalMissionsWon="19" missionFailed="3" mission1Star="2" mission2Star="5" mission3Star="12" bulletsFired="133" bulletsHit="114" kills="86" killsStunnedTarget="5" killsUnawareTarget="6" injuries="20" doorsKicked="11" doorForcedBreaches="4" doorsBlownUp="5" grenadesUsed="14" distanceWalkedMeters="947" completedHealthy="9" perfectAccuracy="12" prev_xp="209720"/>
+            <Statistics xp="34880" totalMissionsWon="28" missionFailed="4" mission1Star="3" mission2Star="6" mission3Star="19" bulletsFired="229" bulletsHit="192" kills="146" killsStunnedTarget="5" killsUnawareTarget="8" injuries="24" doorsKicked="19" doorForcedBreaches="5" doorsBlownUp="6" grenadesUsed="17" distanceWalkedMeters="1722" completedHealthy="15" perfectAccuracy="16" bombsDisarmed="1" arrests="2" prev_xp="489940"/>
         </Trooper>
         <Trooper class="Marksman">
-            <Id name="LEWIS" portrait="data/textures/portraits/ranger6.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="LEWIS" portrait="data/textures/portraits/ranger6.dds" gender="0" voicePack=""/>
             <Equipment>
-                <PrimaryWeapon name="M14EBR"/>
+                <PrimaryWeapon name="MK20SSR"/>
                 <PrimaryWeaponScope name="LROMK4_3_10X"/>
-                <PrimaryWeaponAmmo name="762FMJM118LR_M14EBR"/>
+                <PrimaryWeaponAmmo name="762FMJM118LR_MK20SSR"/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="G19X Pistol"/>
-                <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919FMJM882_G19X Pistol"/>
+                <SecondaryWeapon name="1911 Pistol"/>
+                <SecondaryWeaponScope name="IronSights_Pistol1911"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="HelmetIHPS"/>
                 <HelmetNVG name="NVG_02"/>
@@ -430,10 +430,10 @@
                 <InnateAbility name="AssaultShooting" percent="66"/>
                 <InnateAbility name="FieldSkills" percent="8"/>
             </InnateAbilities>
-            <Statistics xp="15020" totalMissionsWon="12" missionFailed="3" mission1Star="1" mission2Star="2" mission3Star="9" bulletsFired="93" bulletsHit="77" kills="59" killsUnawareTarget="4" injuries="11" doorsKicked="6" doorForcedBreaches="1" doorsBlownUp="2" grenadesUsed="5" distanceWalkedMeters="413" completedHealthy="9" perfectAccuracy="6" bombsDisarmed="2" rescues="3" prev_xp="106750"/>
+            <Statistics xp="26580" totalMissionsWon="21" missionFailed="4" mission1Star="2" mission2Star="3" mission3Star="16" bulletsFired="146" bulletsHit="119" kills="94" killsUnawareTarget="7" injuries="17" doorsKicked="11" doorForcedBreaches="3" doorsBlownUp="2" grenadesUsed="6" distanceWalkedMeters="1080" completedHealthy="16" perfectAccuracy="12" bombsDisarmed="4" rescues="7" prev_xp="317450"/>
         </Trooper>
         <Trooper class="Grenadier">
-            <Id name="DONOVAN" portrait="data/textures/portraits/ranger2.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="DONOVAN" portrait="data/textures/portraits/ranger2.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M16A4/M203"/>
                 <PrimaryWeaponScope name="SpecterDR"/>
@@ -457,10 +457,10 @@
                 <InnateAbility name="AssaultShooting" percent="11"/>
                 <InnateAbility name="FieldSkills" percent="17"/>
             </InnateAbilities>
-            <Statistics xp="95810" totalMissionsWon="70" missionFailed="28" mission1Star="4" mission2Star="19" mission3Star="47" bulletsFired="2304" bulletsHit="1301" kills="481" killsStunnedTarget="17" killsUnawareTarget="50" injuries="90" doorsKicked="56" doorForcedBreaches="18" doorsBlownUp="66" grenadesUsed="57" distanceWalkedMeters="5058" completedHealthy="46" perfectAccuracy="10" challengesCompleted="6" bombsDisarmed="3" wallsBreached="23" arrests="4" rescues="6" prev_xp="4157630"/>
+            <Statistics xp="130310" totalMissionsWon="94" missionFailed="32" mission1Star="5" mission2Star="21" mission3Star="68" bulletsFired="2659" bulletsHit="1502" kills="616" killsStunnedTarget="22" killsUnawareTarget="64" injuries="106" doorsKicked="63" doorForcedBreaches="24" doorsBlownUp="75" grenadesUsed="66" distanceWalkedMeters="6597" completedHealthy="61" perfectAccuracy="11" challengesCompleted="8" bombsDisarmed="3" wallsBreached="36" arrests="4" rescues="13" prev_xp="7303490"/>
         </Trooper>
         <Trooper class="Grenadier">
-            <Id name="SUNSHINE" portrait="data/textures/portraits/ranger8.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="SUNSHINE" portrait="data/textures/portraits/ranger8.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M16A4/M203"/>
                 <PrimaryWeaponScope name="SpecterDR"/>
@@ -484,10 +484,10 @@
                 <InnateAbility name="AssaultShooting" percent="27"/>
                 <InnateAbility name="FieldSkills" percent="24"/>
             </InnateAbilities>
-            <Statistics xp="61700" totalMissionsWon="45" missionFailed="12" mission1Star="2" mission2Star="13" mission3Star="30" bulletsFired="708" bulletsHit="449" kills="266" killsStunnedTarget="11" killsUnawareTarget="40" injuries="43" doorsKicked="22" doorForcedBreaches="9" doorsBlownUp="51" grenadesUsed="22" distanceWalkedMeters="2945" completedHealthy="32" perfectAccuracy="11" challengesCompleted="5" bombsDisarmed="6" wallsBreached="17" arrests="1" rescues="2" prev_xp="1535400"/>
+            <Statistics xp="76530" totalMissionsWon="56" missionFailed="16" mission1Star="3" mission2Star="14" mission3Star="39" bulletsFired="834" bulletsHit="521" kills="312" killsStunnedTarget="12" killsUnawareTarget="47" injuries="53" doorsKicked="25" doorForcedBreaches="15" doorsBlownUp="59" grenadesUsed="25" distanceWalkedMeters="4168" completedHealthy="40" perfectAccuracy="13" challengesCompleted="5" bombsDisarmed="8" wallsBreached="26" arrests="3" rescues="3" prev_xp="2553600"/>
         </Trooper>
         <Trooper class="Grenadier">
-            <Id name="BOYD" portrait="data/textures/portraits/ranger5.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="BOYD" portrait="data/textures/portraits/ranger5.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M16A4/M203"/>
                 <PrimaryWeaponScope name="SpecterDR"/>
@@ -511,10 +511,10 @@
                 <InnateAbility name="AssaultShooting" percent="48"/>
                 <InnateAbility name="FieldSkills" percent="35"/>
             </InnateAbilities>
-            <Statistics xp="40520" totalMissionsWon="23" missionFailed="5" mission1Star="2" mission2Star="8" mission3Star="13" bulletsFired="427" bulletsHit="269" kills="183" killsStunnedTarget="5" killsUnawareTarget="13" injuries="30" doorsKicked="16" doorForcedBreaches="10" doorsBlownUp="47" grenadesUsed="33" distanceWalkedMeters="1367" completedHealthy="11" perfectAccuracy="5" challengesCompleted="16" bombsDisarmed="6" wallsBreached="6" prev_xp="507000"/>
+            <Statistics xp="49070" totalMissionsWon="30" missionFailed="5" mission1Star="3" mission2Star="8" mission3Star="19" bulletsFired="500" bulletsHit="315" kills="211" killsStunnedTarget="6" killsUnawareTarget="16" injuries="31" doorsKicked="18" doorForcedBreaches="14" doorsBlownUp="48" grenadesUsed="35" distanceWalkedMeters="1928" completedHealthy="17" perfectAccuracy="5" challengesCompleted="16" bombsDisarmed="6" wallsBreached="6" arrests="1" rescues="2" prev_xp="816000"/>
         </Trooper>
         <Trooper class="Grenadier">
-            <Id name="BANDIT" portrait="data/textures/portraits/ranger12.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="BANDIT" portrait="data/textures/portraits/ranger12.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon name="M16A4/M203"/>
                 <PrimaryWeaponScope name="SpecterDR"/>
@@ -538,20 +538,20 @@
                 <InnateAbility name="AssaultShooting" percent="48"/>
                 <InnateAbility name="FieldSkills" percent="8"/>
             </InnateAbilities>
-            <Statistics xp="27350" totalMissionsWon="19" missionFailed="2" mission1Star="2" mission2Star="7" mission3Star="10" bulletsFired="251" bulletsHit="142" kills="91" killsStunnedTarget="2" killsUnawareTarget="7" injuries="16" doorsKicked="11" doorForcedBreaches="3" doorsBlownUp="19" grenadesUsed="18" distanceWalkedMeters="1054" completedHealthy="11" perfectAccuracy="4" challengesCompleted="15" bombsDisarmed="3" wallsBreached="6" arrests="1" rescues="4" prev_xp="288590"/>
+            <Statistics xp="35530" totalMissionsWon="24" missionFailed="2" mission1Star="3" mission2Star="7" mission3Star="14" bulletsFired="325" bulletsHit="185" kills="125" killsStunnedTarget="4" killsUnawareTarget="14" injuries="17" doorsKicked="13" doorForcedBreaches="5" doorsBlownUp="22" grenadesUsed="19" distanceWalkedMeters="1373" completedHealthy="15" perfectAccuracy="4" challengesCompleted="15" bombsDisarmed="3" wallsBreached="13" arrests="1" rescues="5" prev_xp="444050"/>
         </Trooper>
     </Squad>
-    <Squad unit="CIA" name="TEAM KRAKEN" id="999050707">
+    <Squad unit="CIA" name="TEAM PILGRIM" id="999050707">
         <Trooper class="Undercover">
-            <Id name="MONK" portrait="data/textures/portraits/cia34.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="MONK" portrait="data/textures/portraits/cia34.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon/>
                 <PrimaryWeaponScope/>
                 <PrimaryWeaponAmmo/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="G19Sup Pistol CIA BOps"/>
+                <SecondaryWeapon name="1911 Pistol CIA BOps"/>
                 <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919JHPM1153_SupSmallHandgun"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="CapUndercover"/>
                 <HelmetNVG/>
@@ -567,18 +567,18 @@
                 <InnateAbility name="AssaultShooting" percent="39"/>
                 <InnateAbility name="FieldSkills" percent="22"/>
             </InnateAbilities>
-            <Statistics xp="53510" totalMissionsWon="41" missionFailed="18" mission1Star="2" mission2Star="6" mission3Star="33" bulletsFired="481" bulletsHit="328" kills="159" killsStunnedTarget="8" killsUnawareTarget="18" injuries="47" doorsKicked="12" doorLockpicks="15" doorsBlownUp="2" grenadesUsed="2" distanceWalkedMeters="2659" completedHealthy="31" perfectAccuracy="13" challengesCompleted="14" bombsDisarmed="3" arrests="8" rescues="4" prev_xp="1373630"/>
+            <Statistics xp="58330" totalMissionsWon="46" missionFailed="19" mission1Star="2" mission2Star="7" mission3Star="37" bulletsFired="511" bulletsHit="348" kills="173" killsStunnedTarget="11" killsUnawareTarget="19" injuries="53" doorsKicked="12" doorLockpicks="16" doorsBlownUp="3" grenadesUsed="6" distanceWalkedMeters="2927" completedHealthy="34" perfectAccuracy="14" challengesCompleted="14" bombsDisarmed="3" arrests="8" rescues="4" prev_xp="1709450"/>
         </Trooper>
         <Trooper class="Undercover">
-            <Id name="FALCON" portrait="data/textures/portraits/cia43.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="FALCON" portrait="data/textures/portraits/cia43.dds" gender="0" voicePack=""/>
             <Equipment>
                 <PrimaryWeapon/>
                 <PrimaryWeaponScope/>
                 <PrimaryWeaponAmmo/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="G19Sup Pistol CIA BOps"/>
+                <SecondaryWeapon name="1911 Pistol CIA BOps"/>
                 <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919JHPM1153_SupSmallHandgun"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
                 <Helmet name="CapUndercover"/>
                 <HelmetNVG/>
@@ -594,25 +594,25 @@
                 <InnateAbility name="AssaultShooting" percent="55"/>
                 <InnateAbility name="FieldSkills" percent="23"/>
             </InnateAbilities>
-            <Statistics xp="51490" totalMissionsWon="40" missionFailed="21" mission1Star="2" mission2Star="6" mission3Star="32" bulletsFired="444" bulletsHit="299" kills="150" killsStunnedTarget="12" killsUnawareTarget="26" injuries="55" doorsKicked="9" doorLockpicks="9" grenadesUsed="2" distanceWalkedMeters="3138" completedHealthy="35" perfectAccuracy="19" challengesCompleted="13" bombsDisarmed="9" arrests="3" rescues="4" prev_xp="1334480"/>
+            <Statistics xp="57100" totalMissionsWon="45" missionFailed="21" mission1Star="2" mission2Star="7" mission3Star="36" bulletsFired="485" bulletsHit="325" kills="167" killsStunnedTarget="14" killsUnawareTarget="27" injuries="60" doorsKicked="9" doorLockpicks="9" doorsBlownUp="2" grenadesUsed="4" distanceWalkedMeters="3450" completedHealthy="36" perfectAccuracy="19" challengesCompleted="13" bombsDisarmed="13" arrests="3" rescues="5" prev_xp="1602670"/>
         </Trooper>
         <Trooper class="BlackOps">
-            <Id name="CLANCY" portrait="data/textures/portraits/cia8.dds" gender="0" voicePack="male_very_american"/>
+            <Id name="CLANCY" portrait="data/textures/portraits/cia8.dds" gender="0" voicePack=""/>
             <Equipment>
-                <PrimaryWeapon/>
-                <PrimaryWeaponScope/>
-                <PrimaryWeaponAmmo/>
+                <PrimaryWeapon name="M4 CIA BOps"/>
+                <PrimaryWeaponScope name="LPVO_8X"/>
+                <PrimaryWeaponAmmo name="556FMJMk262_M4"/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="G19Sup Pistol CIA BOps"/>
+                <SecondaryWeapon name="1911 Pistol CIA BOps"/>
                 <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919JHPM1153_SupSmallHandgun"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
-                <Helmet name="CapBlackOps"/>
+                <Helmet name="HelmetFASTBlackOps"/>
                 <HelmetNVG name="NVG_02"/>
-                <Armor name="CIA Concealable LVL2"/>
-                <UtilityPouch1 name="Flashbang"/>
+                <Armor name="CIA TacVest Level IV"/>
+                <UtilityPouch1 name="Frag Grenade"/>
                 <UtilityPouch2 name="Slap Charge"/>
-                <SupportGear1 name="Poncho"/>
+                <SupportGear1 name="Flashbang Kit"/>
                 <SupportGear2 name="Lockpick"/>
                 <SupportGear3/>
             </Equipment>
@@ -621,25 +621,25 @@
                 <InnateAbility name="AssaultShooting" percent="1"/>
                 <InnateAbility name="FieldSkills" percent="100"/>
             </InnateAbilities>
-            <Statistics xp="46430" totalMissionsWon="32" missionFailed="19" mission1Star="2" mission2Star="4" mission3Star="26" bulletsFired="678" bulletsHit="479" kills="232" killsStunnedTarget="6" killsUnawareTarget="22" injuries="50" doorsKicked="21" doorLockpicks="10" doorsBlownUp="3" grenadesUsed="3" distanceWalkedMeters="2180" completedHealthy="27" perfectAccuracy="11" challengesCompleted="6" arrests="5" rescues="1" prev_xp="1019510"/>
+            <Statistics xp="56740" totalMissionsWon="37" missionFailed="20" mission1Star="2" mission2Star="5" mission3Star="30" bulletsFired="824" bulletsHit="575" kills="297" killsStunnedTarget="9" killsUnawareTarget="26" injuries="53" doorsKicked="24" doorLockpicks="10" doorsBlownUp="3" grenadesUsed="9" distanceWalkedMeters="2450" completedHealthy="31" perfectAccuracy="11" challengesCompleted="6" arrests="5" rescues="1" prev_xp="1327490"/>
         </Trooper>
         <Trooper class="BlackOps">
-            <Id name="ROSE" portrait="data/textures/portraits/cia45.dds" gender="0" voicePack="female_ranger"/>
+            <Id name="ROSE" portrait="data/textures/portraits/cia45.dds" gender="0" voicePack=""/>
             <Equipment>
-                <PrimaryWeapon/>
-                <PrimaryWeaponScope/>
-                <PrimaryWeaponAmmo/>
+                <PrimaryWeapon name="M4 CIA BOps"/>
+                <PrimaryWeaponScope name="LPVO_8X"/>
+                <PrimaryWeaponAmmo name="556FMJMk262_M4"/>
                 <PrimaryWeaponMuzzle/>
-                <SecondaryWeapon name="G19Sup Pistol CIA BOps"/>
+                <SecondaryWeapon name="1911 Pistol CIA BOps"/>
                 <SecondaryWeaponScope name="IronSights_Pistol"/>
-                <SecondaryWeaponAmmo name="919JHPM1153_SupSmallHandgun"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
                 <SecondaryWeaponMuzzle/>
-                <Helmet name="CapBlackOps"/>
+                <Helmet name="HelmetFASTBlackOps"/>
                 <HelmetNVG name="NVG_02"/>
-                <Armor name="CIA Concealable LVL2"/>
-                <UtilityPouch1 name="Flashbang"/>
+                <Armor name="CIA TacVest Level IV"/>
+                <UtilityPouch1 name="Frag Grenade"/>
                 <UtilityPouch2 name="Slap Charge"/>
-                <SupportGear1 name="Poncho"/>
+                <SupportGear1 name="Flashbang Kit"/>
                 <SupportGear2 name="Lockpick"/>
                 <SupportGear3/>
             </Equipment>
@@ -648,7 +648,850 @@
                 <InnateAbility name="AssaultShooting" percent="87"/>
                 <InnateAbility name="FieldSkills" percent="8"/>
             </InnateAbilities>
-            <Statistics xp="45400" totalMissionsWon="31" missionFailed="15" mission1Star="2" mission2Star="4" mission3Star="25" bulletsFired="577" bulletsHit="380" kills="191" killsStunnedTarget="6" killsUnawareTarget="39" injuries="37" doorsKicked="8" doorLockpicks="12" doorsBlownUp="4" distanceWalkedMeters="1907" completedHealthy="26" perfectAccuracy="9" challengesCompleted="6" arrests="6" rescues="3" prev_xp="914270"/>
+            <Statistics xp="53930" totalMissionsWon="35" missionFailed="16" mission1Star="2" mission2Star="5" mission3Star="28" bulletsFired="671" bulletsHit="440" kills="238" killsStunnedTarget="9" killsUnawareTarget="47" injuries="41" doorsKicked="11" doorLockpicks="12" doorsBlownUp="5" grenadesUsed="9" distanceWalkedMeters="2320" completedHealthy="28" perfectAccuracy="9" challengesCompleted="6" bombsDisarmed="3" arrests="7" rescues="3" prev_xp="1162520"/>
+        </Trooper>
+    </Squad>
+    <Squad unit="CIA" name="TEAM HAMMER" id="2030697162">
+        <Trooper class="Undercover">
+            <Id name="MUNNY" portrait="data/textures/portraits/cia12.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKS 74U CIA BOps"/>
+                <PrimaryWeaponScope name="PK AS"/>
+                <PrimaryWeaponAmmo name="545x39FMJ7N10_AKS74UCIA"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="1911 Pistol CIA BOps"/>
+                <SecondaryWeaponScope name="IronSights_Pistol"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="CapBlackOps"/>
+                <HelmetNVG/>
+                <Armor name="CIA Concealable LVL3A"/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Lockpick Machine"/>
+                <SupportGear1 name="RPG 26 CIA BOps"/>
+                <SupportGear2 name="Lockpick"/>
+                <SupportGear3/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="83"/>
+                <InnateAbility name="AssaultShooting" percent="13"/>
+                <InnateAbility name="FieldSkills" percent="6"/>
+            </InnateAbilities>
+            <Statistics xp="127900" totalMissionsWon="93" missionFailed="23" mission1Star="11" mission2Star="23" mission3Star="59" bulletsFired="1121" bulletsHit="770" kills="335" killsStunnedTarget="94" killsUnawareTarget="30" injuries="98" doorsKicked="85" doorLockpicks="19" doorsBlownUp="8" grenadesUsed="90" distanceWalkedMeters="3869" completedHealthy="63" perfectAccuracy="19" challengesCompleted="64" bombsDisarmed="4" arrests="6" rescues="18" prev_xp="7504050"/>
+        </Trooper>
+        <Trooper class="Undercover">
+            <Id name="THREEPWOOD" portrait="data/textures/portraits/cia13.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKS 74U CIA BOps"/>
+                <PrimaryWeaponScope name="PK AS"/>
+                <PrimaryWeaponAmmo name="545x39FMJ7N10_AKS74UCIA"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="1911 Pistol CIA BOps"/>
+                <SecondaryWeaponScope name="IronSights_Pistol"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="CapBlackOps"/>
+                <HelmetNVG/>
+                <Armor name="CIA Concealable LVL3A"/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Lockpick Machine"/>
+                <SupportGear1 name="RPG 26 CIA BOps"/>
+                <SupportGear2 name="Lockpick"/>
+                <SupportGear3/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="78"/>
+                <InnateAbility name="AssaultShooting" percent="18"/>
+                <InnateAbility name="FieldSkills" percent="6"/>
+            </InnateAbilities>
+            <Statistics xp="140810" totalMissionsWon="97" missionFailed="23" mission1Star="10" mission2Star="26" mission3Star="61" bulletsFired="1162" bulletsHit="796" kills="362" killsStunnedTarget="81" killsUnawareTarget="21" injuries="95" doorsKicked="112" doorLockpicks="21" doorsBlownUp="10" grenadesUsed="61" distanceWalkedMeters="4168" completedHealthy="65" perfectAccuracy="18" challengesCompleted="72" bombsDisarmed="5" arrests="6" rescues="13" prev_xp="8734920"/>
+        </Trooper>
+        <Trooper class="BlackOps">
+            <Id name="FRUITY RUDY" portrait="data/textures/portraits/cia18.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="MK17STD CIA BOps"/>
+                <PrimaryWeaponScope name="LPVO_6X"/>
+                <PrimaryWeaponAmmo name="762FMJM80_MK17STD"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="1911 Pistol CIA BOps"/>
+                <SecondaryWeaponScope name="IronSights_Pistol"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="HelmetFASTBlackOps"/>
+                <HelmetNVG/>
+                <Armor name="CIA TacVest Level IV"/>
+                <UtilityPouch1 name="Frag Grenade"/>
+                <UtilityPouch2 name="Smoke Grenade"/>
+                <SupportGear1 name="Flashbang Kit"/>
+                <SupportGear2 name="Lockpick"/>
+                <SupportGear3/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="25"/>
+                <InnateAbility name="AssaultShooting" percent="54"/>
+                <InnateAbility name="FieldSkills" percent="22"/>
+            </InnateAbilities>
+            <Statistics xp="275800" totalMissionsWon="159" missionFailed="47" mission1Star="11" mission2Star="30" mission3Star="118" bulletsFired="2908" bulletsHit="1935" kills="1032" killsStunnedTarget="215" killsUnawareTarget="72" injuries="221" doorsKicked="190" doorForcedBreaches="16" doorLockpicks="28" doorsBlownUp="34" grenadesUsed="304" distanceWalkedMeters="7348" completedHealthy="74" perfectAccuracy="13" challengesCompleted="124" bombsDisarmed="8" arrests="17" rescues="10" prev_xp="29300360"/>
+        </Trooper>
+        <Trooper class="BlackOps">
+            <Id name="NEWELL" portrait="data/textures/portraits/cia29.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="MK17STD CIA BOps"/>
+                <PrimaryWeaponScope name="LPVO_6X"/>
+                <PrimaryWeaponAmmo name="762FMJM80_MK17STD"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="1911 Pistol CIA BOps"/>
+                <SecondaryWeaponScope name="IronSights_Pistol"/>
+                <SecondaryWeaponAmmo name="45FMJM1911_1911 Pistol"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="HelmetFASTBlackOps"/>
+                <HelmetNVG/>
+                <Armor name="CIA TacVest Level IV"/>
+                <UtilityPouch1 name="Frag Grenade"/>
+                <UtilityPouch2 name="Smoke Grenade"/>
+                <SupportGear1 name="Flashbang Kit"/>
+                <SupportGear2 name="Lockpick"/>
+                <SupportGear3/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="23"/>
+                <InnateAbility name="AssaultShooting" percent="37"/>
+                <InnateAbility name="FieldSkills" percent="42"/>
+            </InnateAbilities>
+            <Statistics xp="270070" totalMissionsWon="155" missionFailed="46" mission1Star="9" mission2Star="29" mission3Star="117" bulletsFired="3253" bulletsHit="2146" kills="1126" killsStunnedTarget="209" killsUnawareTarget="85" injuries="239" doorsKicked="137" doorForcedBreaches="7" doorLockpicks="27" doorsBlownUp="83" grenadesUsed="299" distanceWalkedMeters="6458" completedHealthy="63" perfectAccuracy="15" challengesCompleted="121" bombsDisarmed="7" arrests="13" rescues="9" prev_xp="28881060"/>
+        </Trooper>
+    </Squad>
+    <Squad unit="CIA" name="TEAM OWL" id="946467964">
+        <Trooper class="Undercover">
+            <Id name="PRIME" portrait="data/textures/portraits/cia37.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKS 74USup CIA BOps"/>
+                <PrimaryWeaponScope name="PK AS"/>
+                <PrimaryWeaponAmmo name="545x39FMJ7N10_AKS74UCIASup"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="G19Sup Pistol CIA BOps"/>
+                <SecondaryWeaponScope name="IronSights_Pistol"/>
+                <SecondaryWeaponAmmo name="919JHPM1153_SupSmallHandgun"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="CapBlackOps"/>
+                <HelmetNVG/>
+                <Armor name="CIA Concealable LVL3A"/>
+                <UtilityPouch1 name="Lockpick Machine"/>
+                <UtilityPouch2 name="TEC Torch"/>
+                <SupportGear1/>
+                <SupportGear2 name="Lockpick"/>
+                <SupportGear3/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="90"/>
+                <InnateAbility name="AssaultShooting" percent="10"/>
+                <InnateAbility name="FieldSkills" percent="2"/>
+            </InnateAbilities>
+            <Statistics xp="28820" totalMissionsWon="25" missionFailed="3" mission1Star="2" mission2Star="8" mission3Star="15" bulletsFired="292" bulletsHit="211" kills="86" killsStunnedTarget="2" killsUnawareTarget="8" injuries="21" doorsKicked="13" doorLockpicks="14" doorsBlownUp="2" grenadesUsed="2" distanceWalkedMeters="1059" completedHealthy="17" perfectAccuracy="3" challengesCompleted="5" arrests="5" rescues="6" prev_xp="386720"/>
+        </Trooper>
+        <Trooper class="Undercover">
+            <Id name="FORD" portrait="data/textures/portraits/cia16.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKS 74USup CIA BOps"/>
+                <PrimaryWeaponScope name="PK AS"/>
+                <PrimaryWeaponAmmo name="545x39FMJ7N10_AKS74UCIASup"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="G19Sup Pistol CIA BOps"/>
+                <SecondaryWeaponScope name="IronSights_Pistol"/>
+                <SecondaryWeaponAmmo name="919JHPM1153_SupSmallHandgun"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="CapBlackOps"/>
+                <HelmetNVG/>
+                <Armor name="CIA Concealable LVL3A"/>
+                <UtilityPouch1 name="Lockpick Machine"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2 name="Lockpick"/>
+                <SupportGear3/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="15"/>
+                <InnateAbility name="AssaultShooting" percent="2"/>
+                <InnateAbility name="FieldSkills" percent="84"/>
+            </InnateAbilities>
+            <Statistics xp="26610" totalMissionsWon="26" missionFailed="3" mission1Star="2" mission2Star="8" mission3Star="16" bulletsFired="244" bulletsHit="168" kills="71" killsUnawareTarget="7" injuries="31" doorsKicked="12" doorLockpicks="10" doorsBlownUp="2" grenadesUsed="9" distanceWalkedMeters="1069" completedHealthy="13" perfectAccuracy="10" challengesCompleted="5" bombsDisarmed="5" arrests="1" rescues="8" prev_xp="338790"/>
+        </Trooper>
+        <Trooper class="BlackOps">
+            <Id name="RASCZAK" portrait="data/textures/portraits/cia18.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="M4 Sup CIA BOps"/>
+                <PrimaryWeaponScope name="SpecterDR"/>
+                <PrimaryWeaponAmmo name="556FMJMk262_M4Sup"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="G19Sup Pistol CIA BOps"/>
+                <SecondaryWeaponScope name="IronSights_Pistol"/>
+                <SecondaryWeaponAmmo name="919JHPM1153_SupSmallHandgun"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="HelmetFASTBlackOps"/>
+                <HelmetNVG name="NVG_02"/>
+                <Armor name="CIA TacVest Level IV"/>
+                <UtilityPouch1 name="Lockpick Machine"/>
+                <UtilityPouch2 name="Slap Charge"/>
+                <SupportGear1 name="Spy Camera"/>
+                <SupportGear2 name="Lockpick"/>
+                <SupportGear3/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="46"/>
+                <InnateAbility name="AssaultShooting" percent="10"/>
+                <InnateAbility name="FieldSkills" percent="44"/>
+            </InnateAbilities>
+            <Statistics xp="42110" totalMissionsWon="33" missionFailed="4" mission1Star="2" mission2Star="8" mission3Star="23" bulletsFired="492" bulletsHit="299" kills="153" killsStunnedTarget="9" killsUnawareTarget="15" injuries="25" doorsKicked="23" doorLockpicks="3" doorsBlownUp="5" distanceWalkedMeters="1595" completedHealthy="21" perfectAccuracy="4" challengesCompleted="11" bombsDisarmed="1" arrests="3" rescues="1" prev_xp="770860"/>
+        </Trooper>
+        <Trooper class="BlackOps">
+            <Id name="HATCHET" portrait="data/textures/portraits/cia39.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="M4 Sup CIA BOps"/>
+                <PrimaryWeaponScope name="SpecterDR"/>
+                <PrimaryWeaponAmmo name="556FMJMk262_M4Sup"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="G19Sup Pistol CIA BOps"/>
+                <SecondaryWeaponScope name="IronSights_Pistol"/>
+                <SecondaryWeaponAmmo name="919JHPM1153_SupSmallHandgun"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="HelmetFASTBlackOps"/>
+                <HelmetNVG name="NVG_02"/>
+                <Armor name="CIA TacVest Level IV"/>
+                <UtilityPouch1 name="Lockpick Machine"/>
+                <UtilityPouch2 name="Slap Charge"/>
+                <SupportGear1 name="Spy Camera"/>
+                <SupportGear2 name="Lockpick"/>
+                <SupportGear3/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="9"/>
+                <InnateAbility name="AssaultShooting" percent="14"/>
+                <InnateAbility name="FieldSkills" percent="79"/>
+            </InnateAbilities>
+            <Statistics xp="40760" totalMissionsWon="33" missionFailed="4" mission1Star="2" mission2Star="8" mission3Star="23" bulletsFired="454" bulletsHit="264" kills="152" killsStunnedTarget="5" killsUnawareTarget="17" injuries="32" doorsKicked="19" doorLockpicks="7" doorsBlownUp="4" distanceWalkedMeters="1540" completedHealthy="19" perfectAccuracy="3" challengesCompleted="11" bombsDisarmed="3" arrests="4" rescues="6" prev_xp="724080"/>
+        </Trooper>
+    </Squad>
+    <Squad unit="Nowheraki" name="BLUE 1-2" id="3713046358">
+        <Trooper class="SwatLeader">
+            <Id name="MAHMOUD" portrait="data/textures/portraits/nwswat2.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM GL NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon name="M9 Pistol NWS"/>
+                <SecondaryWeaponScope name="IronSights_Pistol"/>
+                <SecondaryWeaponAmmo name="919FMJM882_Handgun"/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Smoke Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="21"/>
+                <InnateAbility name="AssaultShooting" percent="45"/>
+                <InnateAbility name="FieldSkills" percent="35"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatAssaulter">
+            <Id name="NECIP" portrait="data/textures/portraits/nwswat30.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="19"/>
+                <InnateAbility name="AssaultShooting" percent="39"/>
+                <InnateAbility name="FieldSkills" percent="43"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatAssaulter">
+            <Id name="BATMAN" portrait="data/textures/portraits/nwswat9.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="25"/>
+                <InnateAbility name="AssaultShooting" percent="19"/>
+                <InnateAbility name="FieldSkills" percent="58"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatAssaulter">
+            <Id name="ALTAIR" portrait="data/textures/portraits/nwswat13.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="63"/>
+                <InnateAbility name="AssaultShooting" percent="36"/>
+                <InnateAbility name="FieldSkills" percent="3"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatAssaulter">
+            <Id name="AHAB" portrait="data/textures/portraits/nwswat20.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="1"/>
+                <InnateAbility name="AssaultShooting" percent="1"/>
+                <InnateAbility name="FieldSkills" percent="100"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatAssaulter">
+            <Id name="ARGALAN" portrait="data/textures/portraits/nwswat22.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="26"/>
+                <InnateAbility name="AssaultShooting" percent="4"/>
+                <InnateAbility name="FieldSkills" percent="71"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatAssaulter">
+            <Id name="WALEED" portrait="data/textures/portraits/nwswat17.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="96"/>
+                <InnateAbility name="AssaultShooting" percent="2"/>
+                <InnateAbility name="FieldSkills" percent="4"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatAssaulter">
+            <Id name="NOOR" portrait="data/textures/portraits/nwswat19.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="90"/>
+                <InnateAbility name="AssaultShooting" percent="7"/>
+                <InnateAbility name="FieldSkills" percent="4"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatAssaulter">
+            <Id name="FAROOK" portrait="data/textures/portraits/nwswat29.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="86"/>
+                <InnateAbility name="AssaultShooting" percent="8"/>
+                <InnateAbility name="FieldSkills" percent="7"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatSapper">
+            <Id name="BOSS" portrait="data/textures/portraits/nwswat6.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="HelmetACH"/>
+                <HelmetNVG/>
+                <Armor name="NWS Vest Extended"/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="NWS Door Charge"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="16"/>
+                <InnateAbility name="AssaultShooting" percent="28"/>
+                <InnateAbility name="FieldSkills" percent="56"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatSapper">
+            <Id name="STARLORD" portrait="data/textures/portraits/nwswat31.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="AKM NWS"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet name="HelmetACH"/>
+                <HelmetNVG/>
+                <Armor name="NWS Vest Extended"/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="NWS Door Charge"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="Crowbar"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="4"/>
+                <InnateAbility name="AssaultShooting" percent="52"/>
+                <InnateAbility name="FieldSkills" percent="44"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="SINAN" portrait="data/textures/portraits/nwswat15.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="1"/>
+                <InnateAbility name="AssaultShooting" percent="1"/>
+                <InnateAbility name="FieldSkills" percent="100"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="SAMEER" portrait="data/textures/portraits/nwswat25.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="8"/>
+                <InnateAbility name="AssaultShooting" percent="39"/>
+                <InnateAbility name="FieldSkills" percent="53"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="MUHAMAD" portrait="data/textures/portraits/nwswat5.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="59"/>
+                <InnateAbility name="AssaultShooting" percent="26"/>
+                <InnateAbility name="FieldSkills" percent="16"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="MARUF" portrait="data/textures/portraits/nwswat1.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="89"/>
+                <InnateAbility name="AssaultShooting" percent="11"/>
+                <InnateAbility name="FieldSkills" percent="2"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="TARIQ" portrait="data/textures/portraits/nwswat3.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="76"/>
+                <InnateAbility name="AssaultShooting" percent="22"/>
+                <InnateAbility name="FieldSkills" percent="3"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="KAMAL" portrait="data/textures/portraits/nwswat28.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="24"/>
+                <InnateAbility name="AssaultShooting" percent="22"/>
+                <InnateAbility name="FieldSkills" percent="55"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="MALIK" portrait="data/textures/portraits/nwswat26.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="36"/>
+                <InnateAbility name="AssaultShooting" percent="13"/>
+                <InnateAbility name="FieldSkills" percent="51"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="AKRAM" portrait="data/textures/portraits/nwswat11.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="40"/>
+                <InnateAbility name="AssaultShooting" percent="50"/>
+                <InnateAbility name="FieldSkills" percent="11"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="ELIND" portrait="data/textures/portraits/nwswat27.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="5"/>
+                <InnateAbility name="AssaultShooting" percent="54"/>
+                <InnateAbility name="FieldSkills" percent="41"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="OMAR" portrait="data/textures/portraits/nwswat14.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="55"/>
+                <InnateAbility name="AssaultShooting" percent="40"/>
+                <InnateAbility name="FieldSkills" percent="6"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="GILAD" portrait="data/textures/portraits/nwswat21.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="4"/>
+                <InnateAbility name="AssaultShooting" percent="22"/>
+                <InnateAbility name="FieldSkills" percent="74"/>
+            </InnateAbilities>
+            <Statistics/>
+        </Trooper>
+        <Trooper class="SwatMilitia">
+            <Id name="HADIR" portrait="data/textures/portraits/nwswat8.dds" gender="0" voicePack=""/>
+            <Equipment>
+                <PrimaryWeapon name="Type 56 NWS Militia"/>
+                <PrimaryWeaponScope name="IronSightsAK"/>
+                <PrimaryWeaponAmmo name="762x39FMJM43_Type56NWS"/>
+                <PrimaryWeaponMuzzle/>
+                <SecondaryWeapon/>
+                <SecondaryWeaponScope/>
+                <SecondaryWeaponAmmo/>
+                <SecondaryWeaponMuzzle/>
+                <Helmet/>
+                <HelmetNVG/>
+                <Armor/>
+                <UtilityPouch1 name="Frag Grenade Single"/>
+                <UtilityPouch2 name="Frag Grenade Single"/>
+                <SupportGear1/>
+                <SupportGear2/>
+                <SupportGear3 name="FeetOfSteel"/>
+            </Equipment>
+            <InnateAbilities>
+                <InnateAbility name="Marksmanship" percent="12"/>
+                <InnateAbility name="AssaultShooting" percent="50"/>
+                <InnateAbility name="FieldSkills" percent="39"/>
+            </InnateAbilities>
+            <Statistics/>
         </Trooper>
     </Squad>
 </Roster>

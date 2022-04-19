@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getClassIcon, getFileName, getTrooperImg } from "../utilities/getters";
+  import { getClassImg, getFileName, getTrooperImg } from "../utilities/getters";
   import type { Squad, Trooper } from "../types/Roster";
 
   export let selectedTrooper: Trooper | null = null;
@@ -21,7 +21,12 @@
 </script>
 
 {#if squad}
-  <li class="squad" class:squad--ranger={squad.$unit === "Rangers"} class:squad--cia={squad.$unit === "CIA"}>
+  <li
+    class="squad"
+    class:squad--ranger={squad.$unit === "Rangers"}
+    class:squad--cia={squad.$unit === "CIA"}
+    class:squad--nowheraki={squad.$unit === "Nowheraki"}
+  >
     <div class="squad__unit">
       <button on:click={removeSquad} />
       {squad.$unit}
@@ -31,7 +36,7 @@
       {#each Object.keys(classMap) as className}
         <li class="squad__class">
           <div class="squad__class-name">
-            <img src={getClassIcon(className)} alt={className} draggable="false" />
+            <img src={getClassImg(className)} alt={className} draggable="false" />
             {className}
           </div>
           <ul>
@@ -163,6 +168,14 @@
       }
       .squad__class .squad__class-name {
         background-color: #6a879d;
+      }
+    }
+    &--nowheraki {
+      .squad__unit {
+        background-image: url("/images/nowheraki_bg.webp");
+      }
+      .squad__class .squad__class-name {
+        background-color: #c55b45;
       }
     }
   }

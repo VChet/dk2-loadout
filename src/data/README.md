@@ -9,14 +9,17 @@ Should be used only when the game data updates
      - Equipment
        ```
        data/equipment/cia_disguises.xml
-       data/equipment/firearms_cia.xml
-       data/equipment/firearms_pistols.xml
-       data/equipment/firearms_pistols_cia.xml
-       data/equipment/firearms_rifles.xml
        data/equipment/firearm_ammo.xml
        data/equipment/firearm_scopes.xml
+       data/equipment/firearms_cia.xml
+       data/equipment/firearms_nwswat.xml
+       data/equipment/firearms_pistols.xml
+       data/equipment/firearms_pistols_cia.xml
+       data/equipment/firearms_pistols_nws.xml
+       data/equipment/firearms_rifles.xml
        data/equipment/head_attachments.xml
        data/equipment/various.xml
+       data/equipment/various_nwswat.xml
        ```
      - Ranks
        ```

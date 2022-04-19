@@ -42,6 +42,8 @@ function readFiles(dirContent: Array<string>, extension: string): Promise<Array<
   return Promise.all(files.map((file) => readFile(`${__dirname}/${extension}/${file}`, "utf8")));
 }
 
+const excludedEquipment: string[] = ["BlackHood", "DarknessPenalty", "Extra_MolotovShrapnel", "FeetOfSteel"];
+
 readdir(`${__dirname}/xml`)
   .then((files) => readFiles(files, "xml"))
   .then((filesContent) => Promise.all(filesContent.map((file) => parseXml(file))))
@@ -51,14 +53,16 @@ readdir(`${__dirname}/xml`)
     data.forEach((entry) => {
       if (typeof entry !== "object") return;
       if (entry.Equipment) {
-        Object.values(entry.Equipment).forEach((value) => {
+        Object.entries(entry.Equipment).forEach(([key, value]) => {
+          if (key === "Bind") return;
           if (typeof value !== "object") return;
           if (Array.isArray(value)) {
             value.forEach((groupEntry) => {
-              if (groupEntry.$name === "DarknessPenalty") return; // Stub from equipment/firearm_scopes.xml
+              if (excludedEquipment.includes(groupEntry.$name)) return;
               equipment.push(getEquipmentFields(groupEntry));
             });
           } else {
+            if (excludedEquipment.includes(value.$name)) return;
             equipment.push(getEquipmentFields(value));
           }
         });

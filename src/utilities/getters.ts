@@ -22,10 +22,6 @@ export function getClassImg(name: string): string {
   return `images/classes/${getFileName(name.toLowerCase())}.webp`;
 }
 
-export function getClassIcon(name: string): string {
-  return `images/classes/icon_${getFileName(name.toLowerCase())}.webp`;
-}
-
 export function getWeaponData(name: string): ParsedEquipment | null {
   const weapon = datamap.get(name);
   if (!weapon?.img) return null;
@@ -110,11 +106,13 @@ export function getTrooperLevel(className: string, xp: number): ComputedLevel {
   let unit;
   if (["Assault", "Support", "Marksman", "Grenadier"].includes(className)) {
     unit = ranksData["Rangers"];
-  } else {
+  } else if (["Undercover", "BlackOps"].includes(className)) {
     unit = ranksData["CIA"];
+  } else {
+    unit = ranksData["Nowheraki"];
   }
 
-  const level = unit.findIndex((rank) => rank.xpNeeded > xp);
+  const level = xp ? unit.findIndex((rank) => rank.xpNeeded > xp) : 1;
   if (level < 0) {
     return {
       rank: (localization as { [key: string]: string })[unit[9].name],
@@ -132,8 +130,8 @@ export function getTrooperLevel(className: string, xp: number): ComputedLevel {
   }
 }
 
-export function getRankProgress(level: ComputedLevel) {
-  const { earnedXp, nextLevelXp } = level;
+export function getRankProgress({ earnedXp, nextLevelXp }: ComputedLevel) {
+  if (earnedXp === 0) return 0;
   if (!earnedXp || !nextLevelXp) return 100;
   return ((earnedXp / nextLevelXp) * 100).toFixed(2);
 }

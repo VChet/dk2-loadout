@@ -62,10 +62,12 @@ export interface Trooper {
   Statistics: Statistics;
 }
 
+export type SquadUnit = "Rangers" | "CIA" | "Nowheraki";
+
 export interface Squad {
   $id: number;
   $name: string;
-  $unit: string;
+  $unit: SquadUnit;
   Trooper: Array<Trooper>;
 }
 

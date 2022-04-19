@@ -1,6 +1,6 @@
 {
   "name": "dk2-loadout",
-  "version": "0.1.0",
+  "version": "0.30.0",
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "build": "rollup -c",
