@@ -10,12 +10,14 @@ function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
     name: equipment.$name,
     tooltip: equipment.$tooltip,
     img: equipment.$img,
-    mobility: {
-      move: equipment.MobilityModifiers?.$moveSpeedModifierPercent,
-      turn: equipment.MobilityModifiers?.$turnSpeedModifierPercent,
-    },
     concealment: equipment.ConcealmentModifier?.$add,
   };
+  if (equipment.MobilityModifiers) {
+    data.mobility = {
+      move: equipment.MobilityModifiers?.$moveSpeedModifierPercent,
+      turn: equipment.MobilityModifiers?.$turnSpeedModifierPercent
+    };
+  }
   if (equipment.$inventoryBinding === "Helmet") {
     // allowNVG attr is either false or not exists
     data.NVGAvailable = equipment.Params?.$allowNVG !== false;
