@@ -1912,6 +1912,9 @@
     "name": "762x39FMJ_Type 56 Noob"
   },
   {
+    "name": "762x39FMJ_Type 56 UltraNoob"
+  },
+  {
     "name": "9x18FMJ_PM63",
     "img": "data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
   },
@@ -1934,6 +1937,9 @@
   },
   {
     "name": "545x39FMJ_RPK 74 LMG"
+  },
+  {
+    "name": "545x39FMJ_7N39_RPK16 LMG"
   },
   {
     "name": "762x39FMJ_RPK LMG"
@@ -2297,7 +2303,34 @@
     }
   },
   {
+    "name": "HostageBlackHood",
+    "concealment": 0,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "HostageHandTies",
+    "concealment": 0,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
     "name": "HelmetACH",
+    "tooltip": "@helmet_rangers_ach_name",
+    "img": "data/models/humans/attachments/ach_helmet_ui.dds",
+    "concealment": 0,
+    "mobility": {
+      "move": -2,
+      "turn": -2
+    },
+    "NVGAvailable": true
+  },
+  {
+    "name": "HelmetACHNWS",
     "tooltip": "@helmet_rangers_ach_name",
     "img": "data/models/humans/attachments/ach_helmet_ui.dds",
     "concealment": 0,
@@ -2396,10 +2429,21 @@
     "NVGAvailable": true
   },
   {
+    "name": "CapNowherakiAssaulter",
+    "tooltip": "@helmet_NWS_basiccap_name",
+    "img": "data/models/humans/attachments/cia_cap_ui.dds",
+    "concealment": 0,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    },
+    "NVGAvailable": false
+  },
+  {
     "name": "SantaHat",
     "tooltip": "@hat_santa_name",
     "img": "data/models/humans/attachments/santa_hat_ui.dds",
-    "concealment": 0,
+    "concealment": -3,
     "mobility": {
       "move": 50,
       "turn": -20
