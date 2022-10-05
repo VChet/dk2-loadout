@@ -136,7 +136,6 @@ export function getTrooperLevel(className: string, xp: number): ComputedLevel {
 }
 
 export function getRankProgress({ nextLevel, earnedXp, nextLevelXp }: ComputedLevel) {
-  console.log(nextLevel, earnedXp, nextLevelXp)
   if (earnedXp === 0) return 0;
   if (!earnedXp || !nextLevelXp) return nextLevel === 10 ? 100 : 0;
   return ((earnedXp / nextLevelXp) * 100).toFixed(2);
