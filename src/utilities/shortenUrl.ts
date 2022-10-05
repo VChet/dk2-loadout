@@ -9,9 +9,9 @@ import type { Roster } from "@/types/Roster";
 const { FIREBASE_KEY, FIREBASE_SENDER_ID, FIREBASE_APP_ID } = import.meta.env;
 const firebaseConfig: FirebaseOptions = {
   apiKey: FIREBASE_KEY?.toString(),
-  authDomain: "dk2-loadout.firebaseapp.com",
-  projectId: "dk2-loadout",
-  storageBucket: "dk2-loadout.appspot.com",
+  authDomain: "dk2-loadout-51c91.firebaseapp.com",
+  projectId: "dk2-loadout-51c91",
+  storageBucket: "dk2-loadout-51c91.appspot.com",
   messagingSenderId: FIREBASE_SENDER_ID?.toString(),
   appId: FIREBASE_APP_ID?.toString(),
 };
