@@ -1,6 +1,6 @@
 import equipmentData from "@/data/equipmentData.json";
-import ranksData from "@/data/ranksData.json";
 import localization from "@/data/localization.json";
+import ranksData from "@/data/ranksData.json";
 import type { ComputedLevel, ParsedEquipment } from "@/types/Parsed";
 import type { TrooperEquipment } from "@/types/Roster";
 
@@ -118,7 +118,7 @@ export function getTrooperLevel(className: string, xp: number): ComputedLevel {
       rank: (localization as { [key: string]: string })[unit[9].name],
       nextLevel: 10,
     };
-  } else {
+  } else if (xp) {
     const earnedXp = xp - unit[level - 1].xpNeeded;
     const nextLevelXp = unit[level].xpNeeded - unit[level - 1].xpNeeded;
     return {
@@ -127,11 +127,17 @@ export function getTrooperLevel(className: string, xp: number): ComputedLevel {
       nextLevelXp,
       nextLevel: level,
     };
+  } else {
+    return {
+      rank: (localization as { [key: string]: string })[unit[0].name],
+      nextLevel: 1,
+    };
   }
 }
 
-export function getRankProgress({ earnedXp, nextLevelXp }: ComputedLevel) {
+export function getRankProgress({ nextLevel, earnedXp, nextLevelXp }: ComputedLevel) {
+  console.log(nextLevel, earnedXp, nextLevelXp)
   if (earnedXp === 0) return 0;
-  if (!earnedXp || !nextLevelXp) return 100;
+  if (!earnedXp || !nextLevelXp) return nextLevel === 10 ? 100 : 0;
   return ((earnedXp / nextLevelXp) * 100).toFixed(2);
 }
