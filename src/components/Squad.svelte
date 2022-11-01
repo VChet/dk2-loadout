@@ -41,16 +41,18 @@
           </div>
           <ul>
             {#each classMap[className] as trooper}
-              <li
-                class="trooper"
-                class:selected={selectedTrooper?.Id === trooper.Id}
-                on:click={() => (selectedTrooper = trooper)}
-              >
-                <img
-                  src={getTrooperImg(trooper.Id.$portrait)}
-                  alt={getFileName(trooper.Id.$portrait)}
-                  draggable="false"
-                />
+              <li>
+                <button
+                  class="trooper"
+                  class:selected={selectedTrooper?.Id === trooper.Id}
+                  on:click={() => (selectedTrooper = trooper)}
+                >
+                  <img
+                    src={getTrooperImg(trooper.Id.$portrait)}
+                    alt={getFileName(trooper.Id.$portrait)}
+                    draggable="false"
+                  />
+                </button>
               </li>
             {/each}
           </ul>
@@ -131,14 +133,13 @@
         padding: 8px;
         background-color: var(--bg-main);
         .trooper {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          margin: auto;
+          width: 60px;
+          height: 60px;
+          padding: 0;
           background: #1a1407 url("/images/ui/trooper_background.webp") center no-repeat;
           border: 3px solid #4c3f2e;
           border-radius: 50%;
-          overflow: hidden;
+          box-sizing: content-box;
           cursor: pointer;
           &:hover,
           &.selected {
@@ -148,8 +149,9 @@
             box-shadow: inset 0 0 6px 1px var(--accent), 0 0 3px 1px var(--accent);
           }
           img {
-            width: 60px;
-            height: 60px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
           }
         }
       }
