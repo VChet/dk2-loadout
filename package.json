@@ -27,7 +27,7 @@
     "chai": "^4.3.6",
     "chai-xml": "^0.4.0",
     "dotenv": "^16.0.3",
-    "sass": "^1.55.0",
+    "sass": "^1.56.1",
     "svelte": "^3.52.0",
     "svelte-check": "^2.9.2",
     "svelte-preprocess": "^4.10.7",
