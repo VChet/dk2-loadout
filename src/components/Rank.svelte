@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getRankProgress } from "@/utilities/getters";
+  import { Trooper } from "@/classes/Trooper";
   import type { ComputedLevel } from "@/types/Parsed";
 
   export let level: ComputedLevel;
@@ -16,7 +16,7 @@
       </div>
     {/if}
     <div class="rank__bar">
-      <div class="rank__bar-progress" style="width: {getRankProgress(level)}%" />
+      <div class="rank__bar-progress" style="width: {Trooper.GetRankProgress(level)}%" />
       <div class="rank__bar-level">{level.nextLevel}</div>
     </div>
   </div>

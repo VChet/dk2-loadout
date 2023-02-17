@@ -52,8 +52,9 @@ export interface Statistics {
   $prev_xp: number;
 }
 
-export interface Trooper {
-  $class: string;
+export type TrooperClass = "Assault" | "Support" | "Marksman" | "Grenadier" | "Undercover" | "BlackOps" | "Nowheraki";
+export interface ITrooper {
+  $class: TrooperClass;
   Id: Id;
   Equipment: Partial<TrooperEquipment>;
   InnateAbilities: {
@@ -64,15 +65,15 @@ export interface Trooper {
 
 export type SquadUnit = "Rangers" | "CIA" | "Nowheraki";
 
-export interface Squad {
+export interface ISquad {
   $id: number;
   $name: string;
   $unit: SquadUnit;
-  Trooper: Array<Trooper>;
+  Trooper: Array<ITrooper>;
 }
 
-export interface Roster {
+export interface IRoster {
   $version: number;
   $numSquads: number;
-  Squad: Array<Squad>;
+  Squad: Array<ISquad>;
 }

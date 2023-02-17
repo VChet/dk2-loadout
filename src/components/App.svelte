@@ -2,7 +2,8 @@
   import ManagerBlock from "@/components/Manager.svelte";
   import TrooperBlock from "@/components/Trooper.svelte";
   import RosterBlock from "@/components/Roster.svelte";
-  import type { Roster, Trooper } from "@/types/Roster";
+  import type { Roster } from "@/classes/Roster";
+  import type { Trooper } from "@/classes/Trooper";
 
   let roster: Roster;
   let selectedTrooper: Trooper;

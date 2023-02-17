@@ -1,6 +1,7 @@
 <script lang="ts">
   import SquadBlock from "@/components/Squad.svelte";
-  import type { Roster, Trooper } from "@/types/Roster";
+  import type { Roster } from "@/classes/Roster";
+  import type { Trooper } from "@/classes/Trooper";
 
   export let roster: Roster | null = null;
   export let selectedTrooper: Trooper | null = null;
@@ -9,7 +10,7 @@
 {#if roster}
   <section class="roster">
     <ul>
-      {#each roster.Squad as squad}
+      {#each roster.squads as squad}
         <SquadBlock bind:squad bind:selectedTrooper />
       {/each}
     </ul>

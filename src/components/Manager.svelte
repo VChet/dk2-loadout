@@ -4,15 +4,16 @@
   import { generateXml, parseXml } from "@/utilities/parser";
   import { createShortLink, getUrlParams } from "@/utilities/shortenUrl";
   import { downloadFile, readFile } from "@/utilities/files";
-  import type { Roster } from "@/types/Roster";
+  import { Roster } from "@/classes/Roster";
 
   export let roster: Roster | null = null;
 
   async function onFileSelected(event: any) {
     const content = await readFile(event.target.files[0]);
     if (content) {
-      roster = parseXml(content.toString()).Roster;
-      if (!roster) return alert("Wrong XML file");
+      const rosterData = parseXml(content.toString()).Roster;
+      if (!rosterData) return alert("Wrong XML file");
+      roster = new Roster(rosterData);
       window.history.pushState({}, window.document.title, "/");
     }
   }
@@ -39,13 +40,12 @@
     if (!roster) return;
     const now = new Date();
     const date = `${now.getFullYear()}${now.getMonth()}${now.getDate()}`;
-    roster.Squad = roster.Squad.filter((squad) => squad);
     downloadFile(generateXml({ Roster: roster }), `roster-${date}.xml`);
   }
 
   onMount(async () => {
     const rosterData = await getUrlParams(window.location.search);
-    if (rosterData) roster = rosterData;
+    if (rosterData) roster = new Roster(rosterData);
   });
 </script>
 

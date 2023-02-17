@@ -4,7 +4,8 @@ import md5 from "md5";
 import type { FirebaseOptions } from "firebase/app";
 
 import { deserialize, serialize } from "@/utilities/serializer";
-import type { Roster } from "@/types/Roster";
+import type { Roster } from "@/classes/Roster";
+import type { IRoster } from "@/types/Roster";
 
 const { FIREBASE_KEY, FIREBASE_SENDER_ID, FIREBASE_APP_ID } = import.meta.env;
 const firebaseConfig: FirebaseOptions = {
@@ -34,7 +35,7 @@ async function addEntry(code: string): Promise<string> {
   return hash;
 }
 
-export async function getUrlParams(query: string): Promise<Roster | null> {
+export async function getUrlParams(query: string): Promise<IRoster | null> {
   const urlCode = new URLSearchParams(query).get("code");
   if (urlCode) return deserialize(urlCode);
 

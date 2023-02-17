@@ -2,65 +2,53 @@
   import Equipment from "@/components/Equipment.svelte";
   import Rank from "@/components/Rank.svelte";
 
-  import {
-    getAbilityName,
-    getClassImg,
-    getFileName,
-    getTrooperConcealment,
-    getTrooperImg,
-    getTrooperLevel,
-    getTrooperMobility,
-  } from "@/utilities/getters";
-  import type { Trooper } from "@/types/Roster";
+  import { getClassImg } from "@/utilities/getters";
+  import type { Trooper } from "@/classes/Trooper";
 
   export let selectedTrooper: Trooper;
-
-  $: level = selectedTrooper && getTrooperLevel(selectedTrooper.$class, selectedTrooper.Statistics.$xp);
-  $: mobility = selectedTrooper && getTrooperMobility(selectedTrooper.Equipment);
-  $: concealment = selectedTrooper && getTrooperConcealment(selectedTrooper.$class, selectedTrooper.Equipment);
 </script>
 
 {#if selectedTrooper}
   <section class="trooper">
-    <div class="trooper__name">{selectedTrooper.Id.$name}</div>
+    <div class="trooper__name">{selectedTrooper.name}</div>
     <div class="trooper__wrapper">
       <div class="trooper__profile">
         <div class="trooper__image">
           <img
             class="trooper__image-portrait"
-            src={getTrooperImg(selectedTrooper.Id.$portrait, true)}
-            alt={getFileName(selectedTrooper.Id.$portrait)}
+            src={selectedTrooper.portraitBig}
+            alt={selectedTrooper.portraitFile}
             draggable="false"
           />
           <img
             class="trooper__image-class"
-            src={getClassImg(selectedTrooper.$class)}
-            alt={selectedTrooper.$class}
+            src={getClassImg(selectedTrooper.class)}
+            alt={selectedTrooper.class}
             draggable="false"
           />
-          <Rank {level} />
+          <Rank level={selectedTrooper.level} />
         </div>
         <details class="trooper__statistics">
           <summary class="title">Soldier stats</summary>
           <ul>
-            <li>Missions completed: {selectedTrooper.Statistics.$totalMissionsWon || 0}</li>
-            <li>Hostiles pacified: {selectedTrooper.Statistics.$kills || 0}</li>
-            <li>Shots fired: {selectedTrooper.Statistics.$bulletsFired || 0}</li>
-            <li>Doors kicked: {selectedTrooper.Statistics.$doorsKicked || 0}</li>
-            <li>Doors blown up: {selectedTrooper.Statistics.$doorsBlownUp || 0}</li>
-            <li>Walls breached: {selectedTrooper.Statistics.$wallsBreached || 0}</li>
-            <li>Distance walked (meters): {selectedTrooper.Statistics.$distanceWalkedMeters || 0}</li>
+            <li>Missions completed: {selectedTrooper.statistics.totalMissionsWon}</li>
+            <li>Hostiles pacified: {selectedTrooper.statistics.kills}</li>
+            <li>Shots fired: {selectedTrooper.statistics.bulletsFired}</li>
+            <li>Doors kicked: {selectedTrooper.statistics.doorsKicked}</li>
+            <li>Doors blown up: {selectedTrooper.statistics.doorsBlownUp}</li>
+            <li>Walls breached: {selectedTrooper.statistics.wallsBreached}</li>
+            <li>Distance walked (meters): {selectedTrooper.statistics.distanceWalkedMeters}</li>
           </ul>
         </details>
         <div class="trooper__stats trooper__stats--abilities">
           <div class="title">Abilities</div>
           <ul>
-            {#each selectedTrooper.InnateAbilities.InnateAbility as ability}
+            {#each selectedTrooper.abilities as ability}
               <li class="trooper__bar">
-                <div class="subtitle">{getAbilityName(ability.$name)}</div>
+                <div class="subtitle">{ability.name}</div>
                 <div class="progress">
                   {#each Array(10) as _, i}
-                    <span class:active={Math.round(Number(ability.$percent) / 10) >= i + 1} />
+                    <span class:active={ability.acquired >= i + 1} />
                   {/each}
                 </div>
               </li>
@@ -74,16 +62,16 @@
               <div class="subtitle">Mobility</div>
               <div class="progress">
                 {#each Array(10) as _, i}
-                  <span class:active={mobility >= i + 1} />
+                  <span class:active={selectedTrooper.mobility >= i + 1} />
                 {/each}
               </div>
             </li>
             <li class="trooper__bar">
               <div class="subtitle">
                 Concealment
-                {#if concealment < 3}
+                {#if selectedTrooper.concealment < 3}
                   <span class="subtitle-concealment" style="color: #e62121">Overt</span>
-                {:else if concealment < 7}
+                {:else if selectedTrooper.concealment < 7}
                   <span class="subtitle-concealment" style="color: #ffc600">Suspicious</span>
                 {:else}
                   <span class="subtitle-concealment" style="color: #9fd3ff">Covert</span>
@@ -91,7 +79,7 @@
               </div>
               <div class="progress">
                 {#each Array(10) as _, i}
-                  <span class:active={concealment >= i + 1}>
+                  <span class:active={selectedTrooper.concealment >= i + 1}>
                     {#if i === 1}
                       <svg class="concealment-point" height="10" width="10">
                         <polygon points="0,10 5,0 10,10" fill="#ffc600" />
@@ -112,25 +100,25 @@
       <ul class="trooper__equipment">
         <Equipment
           className="primary"
-          weapon={selectedTrooper.Equipment.PrimaryWeapon}
-          ammo={selectedTrooper.Equipment.PrimaryWeaponAmmo}
-          scope={selectedTrooper.Equipment.PrimaryWeaponScope}
+          weapon={selectedTrooper.equipment.PrimaryWeapon}
+          ammo={selectedTrooper.equipment.PrimaryWeaponAmmo}
+          scope={selectedTrooper.equipment.PrimaryWeaponScope}
         />
         <Equipment
           className="secondary"
-          weapon={selectedTrooper.Equipment.SecondaryWeapon}
-          ammo={selectedTrooper.Equipment.SecondaryWeaponAmmo}
-          scope={selectedTrooper.Equipment.SecondaryWeaponScope}
+          weapon={selectedTrooper.equipment.SecondaryWeapon}
+          ammo={selectedTrooper.equipment.SecondaryWeaponAmmo}
+          scope={selectedTrooper.equipment.SecondaryWeaponScope}
         />
         <Equipment
           className="helmet"
-          helmet={selectedTrooper.Equipment.Helmet}
-          nvg={selectedTrooper.Equipment.HelmetNVG}
+          helmet={selectedTrooper.equipment.Helmet}
+          nvg={selectedTrooper.equipment.HelmetNVG}
         />
-        <Equipment className="armor" armor={selectedTrooper.Equipment.Armor} />
-        <Equipment className="utility-1" utility={selectedTrooper.Equipment.UtilityPouch1} />
-        <Equipment className="utility-2" utility={selectedTrooper.Equipment.UtilityPouch2} />
-        <Equipment className="support-1" support={selectedTrooper.Equipment.SupportGear1} />
+        <Equipment className="armor" armor={selectedTrooper.equipment.Armor} />
+        <Equipment className="utility-1" utility={selectedTrooper.equipment.UtilityPouch1} />
+        <Equipment className="utility-2" utility={selectedTrooper.equipment.UtilityPouch2} />
+        <Equipment className="support-1" support={selectedTrooper.equipment.SupportGear1} />
       </ul>
     </div>
   </section>

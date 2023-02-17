@@ -1,18 +1,10 @@
 <script lang="ts">
-  import { getClassImg, getFileName, getTrooperImg } from "@/utilities/getters";
-  import type { Squad, Trooper } from "@/types/Roster";
+  import { getClassImg } from "@/utilities/getters";
+  import type { Trooper } from "@/classes/Trooper";
+  import type { Squad } from "@/classes/Squad";
 
   export let selectedTrooper: Trooper | null = null;
   export let squad: Squad | null = null;
-
-  function mapClasses(): { [key: string]: Array<Trooper> } {
-    if (!squad) return {};
-    return squad.Trooper.reduce((acc: { [key: string]: Array<Trooper> }, trooper) => {
-      acc[trooper.$class] ? acc[trooper.$class].push(trooper) : (acc[trooper.$class] = [trooper]);
-      return acc;
-    }, {});
-  }
-  $: classMap = mapClasses();
 
   function removeSquad() {
     squad = null;
@@ -23,35 +15,31 @@
 {#if squad}
   <li
     class="squad"
-    class:squad--ranger={squad.$unit === "Rangers"}
-    class:squad--cia={squad.$unit === "CIA"}
-    class:squad--nowheraki={squad.$unit === "Nowheraki"}
+    class:squad--ranger={squad.unit === "Rangers"}
+    class:squad--cia={squad.unit === "CIA"}
+    class:squad--nowheraki={squad.unit === "Nowheraki"}
   >
     <div class="squad__unit">
       <button on:click={removeSquad} />
-      {squad.$unit}
+      {squad.unit}
     </div>
-    <div class="squad__name">{squad.$name}</div>
+    <div class="squad__name">{squad.name}</div>
     <ul>
-      {#each Object.keys(classMap) as className}
+      {#each Object.keys(squad.classMap) as className}
         <li class="squad__class">
           <div class="squad__class-name">
             <img src={getClassImg(className)} alt={className} draggable="false" />
             {className}
           </div>
           <ul>
-            {#each classMap[className] as trooper}
+            {#each squad.classMap[className] as trooper}
               <li>
                 <button
                   class="trooper"
-                  class:selected={selectedTrooper?.Id === trooper.Id}
+                  class:selected={selectedTrooper?.id === trooper.id}
                   on:click={() => (selectedTrooper = trooper)}
                 >
-                  <img
-                    src={getTrooperImg(trooper.Id.$portrait)}
-                    alt={getFileName(trooper.Id.$portrait)}
-                    draggable="false"
-                  />
+                  <img src={trooper.portraitSmall} alt={trooper.portraitFile} draggable="false" />
                 </button>
               </li>
             {/each}

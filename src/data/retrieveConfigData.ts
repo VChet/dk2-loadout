@@ -6,7 +6,7 @@ import type { EquipmentEntry, FileData } from "@/types/Equipment";
 import type { ParsedEquipment } from "@/types/Parsed";
 import type { UnitEntry } from "@/types/Unit";
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url));
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
 function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
   const data: ParsedEquipment = {
@@ -18,7 +18,7 @@ function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
   if (equipment.MobilityModifiers) {
     data.mobility = {
       move: equipment.MobilityModifiers?.$moveSpeedModifierPercent,
-      turn: equipment.MobilityModifiers?.$turnSpeedModifierPercent
+      turn: equipment.MobilityModifiers?.$turnSpeedModifierPercent,
     };
   }
   if (equipment.$inventoryBinding === "Helmet") {
