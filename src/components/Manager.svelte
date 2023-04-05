@@ -54,7 +54,10 @@
     Upload Roster
     <input class="visually-hidden" type="file" accept=".xml" on:change={onFileSelected} on:click={handleSameFile} />
   </label>
-  <pre>%LocalAppData%/KillHouseGames/DoorKickers2/roster.xml</pre>
+  <pre>
+    roster.xml at
+    <b>%LocalAppData%/KillHouseGames/DoorKickers2</b>
+  </pre>
   {#if roster}
     <div class="button-group">
       <button on:click={getUrl}>Share URL</button>
