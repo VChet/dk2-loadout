@@ -40,13 +40,13 @@ export class Equipment {
     }
   }
 
-  get mobility(): number {
-    const move = datamap.get(this.token)?.mobility?.move ?? 0;
-    const turn = datamap.get(this.token)?.mobility?.turn ?? 0;
+  static getMobility(token: string): number {
+    const move = datamap.get(token)?.mobility?.move ?? 0;
+    const turn = datamap.get(token)?.mobility?.turn ?? 0;
     return move + turn;
   }
-  get concealment(): number {
-    return datamap.get(this.token)?.concealment ?? 0;
+  static getConcealment(token: string): number {
+    return datamap.get(token)?.concealment ?? 0;
   }
 }
 

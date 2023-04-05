@@ -1,7 +1,8 @@
 import ranksData from "@/data/ranksData.json";
 import localization from "@/data/localization.json";
 import { getFileName } from "@/utilities/getters";
-import type { ITrooper, TrooperEquipment } from "@/types/Roster";
+import { Equipment } from "@/classes/Equipment";
+import type { ITrooper } from "@/types/Roster";
 import type { ComputedLevel } from "@/types/Parsed";
 
 export class Trooper {
@@ -13,11 +14,9 @@ export class Trooper {
   abilities: { name: string; acquired: number }[];
   concealment: number;
   mobility: number;
-  equipment: TrooperEquipment;
 
   constructor(trooper: ITrooper) {
     this.#trooper = trooper;
-    this.equipment = this.#trooper.Equipment;
 
     if (["Assault", "Support", "Marksman", "Grenadier"].includes(this.class)) {
       this.#ranks = ranksData["Rangers"];
@@ -93,17 +92,20 @@ export class Trooper {
       };
     }
   }
+  get equipment() {
+    return this.#trooper.Equipment;
+  }
   private getMobility() {
     let mobility: number = 110;
     Object.values(this.equipment).forEach((item) => {
-      mobility += item.mobility;
+      mobility += Equipment.getMobility(item.$name);
     });
     return Math.floor(mobility / 10);
   }
   private getConcealment() {
     let concealment = this.#defaultConcealment;
     Object.values(this.equipment).forEach((item) => {
-      concealment += item.concealment;
+      concealment += Equipment.getConcealment(item.$name);
     });
     return concealment;
   }
