@@ -1,7 +1,7 @@
 import ranksData from "@/data/ranksData.json";
 import localization from "@/data/localization.json";
-import { datamap, getFileName } from "@/utilities/getters";
-import type { ITrooper } from "@/types/Roster";
+import { getFileName } from "@/utilities/getters";
+import type { ITrooper, TrooperEquipment } from "@/types/Roster";
 import type { ComputedLevel } from "@/types/Parsed";
 
 export class Trooper {
@@ -13,9 +13,11 @@ export class Trooper {
   abilities: { name: string; acquired: number }[];
   concealment: number;
   mobility: number;
+  equipment: TrooperEquipment;
 
   constructor(trooper: ITrooper) {
     this.#trooper = trooper;
+    this.equipment = this.#trooper.Equipment;
 
     if (["Assault", "Support", "Marksman", "Grenadier"].includes(this.class)) {
       this.#ranks = ranksData["Rangers"];
@@ -91,27 +93,17 @@ export class Trooper {
       };
     }
   }
-  get equipment() {
-    return this.#trooper.Equipment;
-  }
   private getMobility() {
     let mobility: number = 110;
     Object.values(this.equipment).forEach((item) => {
-      if (!item) return;
-      const object = datamap.get(item.$name);
-      if (!object?.mobility) return;
-      const { move, turn } = object.mobility;
-      if (move) mobility += move;
-      if (turn) mobility += turn;
+      mobility += item.mobility;
     });
     return Math.floor(mobility / 10);
   }
   private getConcealment() {
     let concealment = this.#defaultConcealment;
     Object.values(this.equipment).forEach((item) => {
-      if (!item) return;
-      const modifier = datamap.get(item.$name)?.concealment;
-      if (modifier) concealment += modifier;
+      concealment += item.concealment;
     });
     return concealment;
   }

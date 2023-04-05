@@ -98,27 +98,13 @@
         </div>
       </div>
       <ul class="trooper__equipment">
-        <Equipment
-          className="primary"
-          weapon={selectedTrooper.equipment.PrimaryWeapon}
-          ammo={selectedTrooper.equipment.PrimaryWeaponAmmo}
-          scope={selectedTrooper.equipment.PrimaryWeaponScope}
-        />
-        <Equipment
-          className="secondary"
-          weapon={selectedTrooper.equipment.SecondaryWeapon}
-          ammo={selectedTrooper.equipment.SecondaryWeaponAmmo}
-          scope={selectedTrooper.equipment.SecondaryWeaponScope}
-        />
-        <Equipment
-          className="helmet"
-          helmet={selectedTrooper.equipment.Helmet}
-          nvg={selectedTrooper.equipment.HelmetNVG}
-        />
-        <Equipment className="armor" armor={selectedTrooper.equipment.Armor} />
-        <Equipment className="utility-1" utility={selectedTrooper.equipment.UtilityPouch1} />
-        <Equipment className="utility-2" utility={selectedTrooper.equipment.UtilityPouch2} />
-        <Equipment className="support-1" support={selectedTrooper.equipment.SupportGear1} />
+        <Equipment className="primary" equipment={selectedTrooper.equipment} slot="PrimaryWeapon" />
+        <Equipment className="secondary" equipment={selectedTrooper.equipment} slot="SecondaryWeapon" />
+        <Equipment className="helmet" equipment={selectedTrooper.equipment} slot="Helmet" />
+        <Equipment className="armor" equipment={selectedTrooper.equipment} slot="Armor" />
+        <Equipment className="utility-1" equipment={selectedTrooper.equipment} slot="UtilityPouch1" />
+        <Equipment className="utility-2" equipment={selectedTrooper.equipment} slot="UtilityPouch2" />
+        <Equipment className="support-1" equipment={selectedTrooper.equipment} slot="SupportGear1" />
       </ul>
     </div>
   </section>

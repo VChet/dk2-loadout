@@ -5,23 +5,24 @@ export interface Id {
   $voicePack: string;
 }
 
+type TrooperEquipmentEntry = { $name: string };
 export interface TrooperEquipment {
-  PrimaryWeapon: { $name: string };
-  PrimaryWeaponScope: { $name: string };
-  PrimaryWeaponAmmo: { $name: string };
-  PrimaryWeaponMuzzle: { $name: string } | "";
-  SecondaryWeapon: { $name: string };
-  SecondaryWeaponScope: { $name: string };
-  SecondaryWeaponAmmo: { $name: string };
-  SecondaryWeaponMuzzle: { $name: string } | "";
-  Armor: { $name: string };
-  Helmet: { $name: string };
-  HelmetNVG: { $name: string };
-  UtilityPouch1: { $name: string };
-  UtilityPouch2: { $name: string };
-  SupportGear1: { $name: string } | "";
-  SupportGear2: { $name: string } | "";
-  SupportGear3: { $name: string } | "";
+  PrimaryWeapon: TrooperEquipmentEntry;
+  PrimaryWeaponScope: TrooperEquipmentEntry;
+  PrimaryWeaponAmmo: TrooperEquipmentEntry;
+  PrimaryWeaponMuzzle: TrooperEquipmentEntry | "";
+  SecondaryWeapon: TrooperEquipmentEntry;
+  SecondaryWeaponScope: TrooperEquipmentEntry;
+  SecondaryWeaponAmmo: TrooperEquipmentEntry;
+  SecondaryWeaponMuzzle: TrooperEquipmentEntry | "";
+  Armor: TrooperEquipmentEntry;
+  Helmet: TrooperEquipmentEntry;
+  HelmetNVG: TrooperEquipmentEntry;
+  UtilityPouch1: TrooperEquipmentEntry;
+  UtilityPouch2: TrooperEquipmentEntry;
+  SupportGear1: TrooperEquipmentEntry | "";
+  SupportGear2: TrooperEquipmentEntry | "";
+  SupportGear3: TrooperEquipmentEntry | "";
 }
 
 export interface Statistics {
@@ -56,7 +57,7 @@ export type TrooperClass = "Assault" | "Support" | "Marksman" | "Grenadier" | "U
 export interface ITrooper {
   $class: TrooperClass;
   Id: Id;
-  Equipment: Partial<TrooperEquipment>;
+  Equipment: TrooperEquipment;
   InnateAbilities: {
     InnateAbility: Array<{ $name: string; $percent: number }>;
   };
