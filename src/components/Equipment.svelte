@@ -10,7 +10,7 @@
 
 <li class={className}>
   {#if data instanceof Weapon}
-    <img src={data.image} alt={data.imageName} draggable="false" />
+    <img src={data.image} alt={data.imageAltText} draggable="false" />
     {#if data.ammo || data.scope}
       <div class="attachments">
         {#if data.isSuppressed}
@@ -29,33 +29,33 @@
           />
         {/if}
         {#if data.ammo}
-          <img src={data.ammo.image} alt={data.ammo.imageName} title={data.ammo.name} draggable="false" />
+          <img src={data.ammo.image} alt={data.ammo.imageAltText} title={data.ammo.name} draggable="false" />
         {/if}
         {#if data.scope}
-          <img src={data.scope.image} alt={data.scope.imageName} title={data.scope.name} draggable="false" />
+          <img src={data.scope.image} alt={data.scope.imageAltText} title={data.scope.name} draggable="false" />
         {/if}
       </div>
     {/if}
     <div class="subtitle">{data.name}</div>
   {:else if data instanceof Helmet}
     {#if data.image}
-      <img src={data.image} alt={data.imageName} title={data.name} draggable="false" />
+      <img src={data.image} alt={data.imageAltText} title={data.name} draggable="false" />
     {/if}
     {#if data.isNVGAvailable && data.nvg}
       <div class="attachments">
-        <img src={data.nvg.image} alt={data.nvg.imageName} title={data.nvg.name} draggable="false" />
+        <img src={data.nvg.image} alt={data.nvg.imageAltText} title={data.nvg.name} draggable="false" />
       </div>
     {/if}
     <div class="subtitle">{data.name}</div>
   {:else if data instanceof Armor}
-    <img src={data.image} alt={data.imageName} title={data.name} draggable="false" />
+    <img src={data.image} alt={data.imageAltText} title={data.name} draggable="false" />
     <div class="subtitle">{data.name}</div>
   {:else if data instanceof Utility}
-    <img src={data.image} alt={data.imageName} title={data.name} draggable="false" />
+    <img src={data.image} alt={data.imageAltText} title={data.name} draggable="false" />
     <div class="subtitle">{data.name}</div>
   {:else if data instanceof Support}
     {#if data.image}
-      <img src={data.image} alt={data.imageName} title={data.name} draggable="false" />
+      <img src={data.image} alt={data.imageAltText} title={data.name} draggable="false" />
     {/if}
     <div class="subtitle">{data.name}</div>
   {/if}

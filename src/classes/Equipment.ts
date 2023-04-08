@@ -69,7 +69,7 @@ export class Weapon extends Equipment {
     if (!this.#weapon) return null;
     return this.#weapon.img;
   }
-  get imageName() {
+  get imageAltText() {
     if (!this.#weapon) return null;
     return getFileName(this.#weapon.name);
   }
@@ -83,7 +83,7 @@ class WeaponAttachment extends Equipment {
   get name() {
     return getNameString(this._token);
   }
-  get imageName() {
+  get imageAltText() {
     return getFileName(this._token);
   }
   get image() {
@@ -110,7 +110,7 @@ export class Helmet extends Equipment {
     if (!this.#helmet) return null;
     return this.#helmet.img;
   }
-  get imageName() {
+  get imageAltText() {
     if (!this.#helmet) return null;
     return getFileName(this.#helmet.name);
   }
@@ -126,7 +126,7 @@ export class NVG extends Equipment {
   get image() {
     return getNVGImg(this._token);
   }
-  get imageName() {
+  get imageAltText() {
     return getFileName(this._token);
   }
 }
@@ -138,7 +138,7 @@ class CommonUtility extends Equipment {
   get image() {
     return getEquipmentImg(this._token);
   }
-  get imageName() {
+  get imageAltText() {
     return getFileName(this._token);
   }
 }
