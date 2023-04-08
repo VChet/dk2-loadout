@@ -13,18 +13,11 @@
     <img src={data.image} alt={data.imageAltText} draggable="false" />
     {#if data.ammo || data.scope}
       <div class="attachments">
-        {#if data.isSuppressed}
+        {#if data.suppressor}
           <img
             class="attachments__silencer"
-            src="images/weapons/attachments/basic_silencer_ui_small.webp"
-            alt="basic_silencer_ui_small"
-            draggable="false"
-          />
-        {:else}
-          <img
-            class="attachments__silencer"
-            src="images/weapons/attachments/silencer_none.webp"
-            alt="silencer_none"
+            src={data.suppressor.image}
+            alt={data.suppressor.imageAltText}
             draggable="false"
           />
         {/if}
