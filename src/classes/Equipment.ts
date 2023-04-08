@@ -12,10 +12,10 @@ import {
 } from "@/utilities/getters";
 
 export class Equipment {
-  token: string;
+  _token: string;
 
   constructor(name: string) {
-    this.token = name;
+    this._token = name;
   }
 
   static init(slot: keyof TrooperEquipment, equipment: TrooperEquipment) {
@@ -81,13 +81,13 @@ export class Weapon extends Equipment {
 
 class WeaponAttachment extends Equipment {
   get name() {
-    return getNameString(this.token);
+    return getNameString(this._token);
   }
   get imageName() {
-    return getFileName(this.token);
+    return getFileName(this._token);
   }
   get image() {
-    return getWeaponAttachmentImg(this.token);
+    return getWeaponAttachmentImg(this._token);
   }
 }
 export class Ammo extends WeaponAttachment {}
@@ -121,25 +121,25 @@ export class Helmet extends Equipment {
 }
 export class NVG extends Equipment {
   get name() {
-    return getNameString(this.token);
+    return getNameString(this._token);
   }
   get image() {
-    return getNVGImg(this.token);
+    return getNVGImg(this._token);
   }
   get imageName() {
-    return getFileName(this.token);
+    return getFileName(this._token);
   }
 }
 
 class CommonUtility extends Equipment {
   get name() {
-    return getNameString(this.token) ?? "Empty";
+    return getNameString(this._token) ?? "Empty";
   }
   get image() {
-    return getEquipmentImg(this.token);
+    return getEquipmentImg(this._token);
   }
   get imageName() {
-    return getFileName(this.token);
+    return getFileName(this._token);
   }
 }
 export class Armor extends CommonUtility {}
