@@ -650,6 +650,17 @@
     "suppressed": true
   },
   {
+    "name": "M500PP NWS",
+    "tooltip": "@firearm_m500pp_name",
+    "img": "data/models/weapons/m500_ui.dds",
+    "mobility": {
+      "move": -3,
+      "turn": -1
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
+  },
+  {
     "name": "FAL NWS",
     "tooltip": "@firearm_falnws_name",
     "img": "data/models/weapons/fal_ui.dds",
@@ -711,11 +722,11 @@
   {
     "name": "SVU NWS",
     "tooltip": "@firearm_SVUnws_name",
-    "img": "data/models/weapons/dragunov_ui.dds",
+    "img": "data/models/weapons/dragunov_svu_ui.dds",
     "concealment": -3,
     "mobility": {
       "move": -9,
-      "turn": -2
+      "turn": -1
     },
     "suppressorAvailable": false,
     "suppressed": false
@@ -1012,6 +1023,17 @@
   },
   {
     "name": "HS45 Pistol NWS",
+    "tooltip": "@firearm_hs45_pistol_name",
+    "img": "data/models/weapons/hs45_ui.dds",
+    "mobility": {
+      "move": -2,
+      "turn": 0
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
+  },
+  {
+    "name": "HS45 Pistol Asset",
     "tooltip": "@firearm_hs45_pistol_name",
     "img": "data/models/weapons/hs45_ui.dds",
     "mobility": {
@@ -1408,12 +1430,22 @@
   {
     "name": "12GA00BUCK_M1014",
     "tooltip": "@ammo_12GA00BUCK_name",
-    "img": "data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m162_buckshot_ammo_ui.dds"
   },
   {
     "name": "12GA00BUCK_M500",
     "tooltip": "@ammo_12GA00BUCK_name",
-    "img": "data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m162_buckshot_ammo_ui.dds"
+  },
+  {
+    "name": "12GA00BUCK8_M500",
+    "tooltip": "@ammo_12GA00BUCK8_name",
+    "img": "data/models/weapons/attachments/00_buck_ammo8_ui.dds"
+  },
+  {
+    "name": "12GANO4BUCK_M500",
+    "tooltip": "@ammo_12GANO4BUCK_name",
+    "img": "data/models/weapons/attachments/m257_buckshot_ammo24_ui.dds"
   },
   {
     "name": "556FMJM855_MK18",
@@ -1927,6 +1959,11 @@
     "img": "data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
   },
   {
+    "name": "919FMJM882_APC9KSupEnemy",
+    "tooltip": "@ammo_919FMJM882_name",
+    "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
+  },
+  {
     "name": "545x39FMJ_AKS 74U"
   },
   {
@@ -1956,7 +1993,17 @@
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
   },
   {
+    "name": "762R203GR_SVDNWS",
+    "tooltip": "@ammo_762R203_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
     "name": "762RAP7N13_SVDCIA",
+    "tooltip": "@ammo_762RAP7N13_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "762RAP7N13_SVDNWS",
     "tooltip": "@ammo_762RAP7N13_name",
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
   },
@@ -1968,6 +2015,11 @@
   {
     "name": "762R7N1_SVUNWS",
     "tooltip": "@ammo_762R7N1_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "762R203GR_SVUNWS",
+    "tooltip": "@ammo_762R203_name",
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
   },
   {
@@ -2737,6 +2789,16 @@
   {
     "name": "Lockpick",
     "tooltip": "@support_gear_lockpic_name",
+    "img": "data/models/equipment/lockpick_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "HouseKeys",
+    "tooltip": "@support_gear_housekeys",
+    "img": "data/models/equipment/housekeys_ui.dds",
     "mobility": {
       "move": 0,
       "turn": 0
@@ -2754,6 +2816,7 @@
   },
   {
     "name": "Crowbar",
+    "img": "data/models/equipment/crowbar_ui.dds",
     "mobility": {
       "move": 0,
       "turn": 0
