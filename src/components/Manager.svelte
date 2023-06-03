@@ -58,7 +58,7 @@
     roster.xml at
     <b>%LocalAppData%/KillHouseGames/DoorKickers2</b>
   </pre>
-  {#if roster}
+  {#if false && roster}
     <div class="button-group">
       <button on:click={getUrl}>Share URL</button>
       <button on:click={downloadXml}>Download</button>
