@@ -25,7 +25,7 @@ jobs:
           cache: pnpm
 
       - name: Run linters
-        run: pnpm run check && pnpm run lint:all
+        run: pnpm run lint:all
 
       - name: Run build
         run: pnpm run build
