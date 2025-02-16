@@ -9,7 +9,7 @@ import type { UnitEntry } from "@/types/unit";
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const XML_DIR = `${__dirname}/xml`;
 const TXT_DIR = `${__dirname}/txt`;
-const EXCLUDED_EQUIPMENT = new Set(["BlackHood", "DarknessPenalty", "Extra_MolotovShrapnel", "FeetOfSteel"]);
+const EXCLUDED_EQUIPMENT = new Set(["DarknessPenalty", "Extra_MolotovShrapnel", "FeetOfSteel"]);
 
 function hasNVGParam(equipment: EquipmentEntry): equipment is Helmet {
   return "$inventoryBinding" in equipment && equipment.$inventoryBinding === "Helmet";
