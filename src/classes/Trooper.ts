@@ -49,10 +49,10 @@ export class Trooper {
     return this.#trooper.Id.$name;
   }
   get portraitBig() {
-    return `images/portraits/${this.portraitFile}_large.webp`;
+    return `img/portraits/${this.portraitFile}_large.webp`;
   }
   get portraitSmall() {
-    return `images/portraits/${this.portraitFile}.webp`;
+    return `img/portraits/${this.portraitFile}.webp`;
   }
   get class() {
     return this.#trooper.$class;

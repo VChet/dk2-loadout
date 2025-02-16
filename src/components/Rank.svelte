@@ -70,7 +70,7 @@
         height: 50px;
         font-size: 20px;
         color: var(--dark-text);
-        background: url("/images/ui/xp_level.webp") center / cover no-repeat;
+        background: url("/img/gui/customization/xp_level.webp") center / cover no-repeat;
         transform: translateY(-50%);
       }
     }

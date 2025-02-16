@@ -22,6 +22,18 @@
     "suppressed": false
   },
   {
+    "name": "PM63 Fergie",
+    "tooltip": "@firearm_pm63cia_name",
+    "img": "data/models/weapons/pm63_ui.dds",
+    "concealment": -1,
+    "mobility": {
+      "move": -1,
+      "turn": 0
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
+  },
+  {
     "name": "Mini Uzi CIA",
     "tooltip": "@firearm_miniuzicia_name",
     "img": "data/models/weapons/mini_uzi_ui.dds",
@@ -166,6 +178,30 @@
     "suppressed": true
   },
   {
+    "name": "Rattler CIA BOps",
+    "tooltip": "@firearm_rattler_name",
+    "img": "data/models/weapons/mcx_rattler_ui.dds",
+    "concealment": -3,
+    "mobility": {
+      "move": -2,
+      "turn": 0
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
+  },
+  {
+    "name": "RattlerSup CIA BOps",
+    "tooltip": "@firearm_rattlerSup_name",
+    "img": "data/models/weapons/mcx_rattler_ui.dds",
+    "concealment": -4,
+    "mobility": {
+      "move": -2,
+      "turn": 0
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
+  },
+  {
     "name": "MK 18 CIA BOps",
     "tooltip": "@firearm_mk18_name",
     "img": "data/models/weapons/mk18_ui.dds",
@@ -250,6 +286,18 @@
     "suppressed": true
   },
   {
+    "name": "M4 CIA Undercover",
+    "tooltip": "@firearm_m4_carabine_name",
+    "img": "data/models/weapons/m4_ui.dds",
+    "concealment": -3,
+    "mobility": {
+      "move": -3,
+      "turn": 0
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
+  },
+  {
     "name": "M4 CIA BOps",
     "tooltip": "@firearm_m4_carabine_name",
     "img": "data/models/weapons/m4_ui.dds",
@@ -317,6 +365,30 @@
     "mobility": {
       "move": -10,
       "turn": -6
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
+  },
+  {
+    "name": "LAMG CIA BOps",
+    "tooltip": "@firearm_lamg_name",
+    "img": "data/models/weapons/lamg_ui.dds",
+    "concealment": -5,
+    "mobility": {
+      "move": -7,
+      "turn": -3
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
+  },
+  {
+    "name": "LAMG Sup CIA BOps",
+    "tooltip": "@firearm_lamgSup_name",
+    "img": "data/models/weapons/lamg_ui.dds",
+    "concealment": -5,
+    "mobility": {
+      "move": -7,
+      "turn": -3
     },
     "suppressorAvailable": true,
     "suppressed": true
@@ -406,6 +478,18 @@
     "suppressed": true
   },
   {
+    "name": "Sawnoff CIA",
+    "tooltip": "@firearm_sawnoff_name",
+    "img": "data/models/weapons/db_shotgun_ui.dds",
+    "concealment": -2,
+    "mobility": {
+      "move": -2,
+      "turn": 0
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
+  },
+  {
     "name": "Mini Uzi NWS",
     "tooltip": "@firearm_miniuzicia_name",
     "img": "data/models/weapons/mini_uzi_ui.dds",
@@ -461,17 +545,6 @@
     },
     "suppressorAvailable": true,
     "suppressed": true
-  },
-  {
-    "name": "MK17STD/EGLM NWS",
-    "tooltip": "@firearm_mk17_std_eglm_name",
-    "img": "data/models/weapons/mk17_std_ui.dds",
-    "mobility": {
-      "move": -10,
-      "turn": -5
-    },
-    "suppressorAvailable": false,
-    "suppressed": false
   },
   {
     "name": "AR M14 NWS",
@@ -536,9 +609,9 @@
   {
     "name": "M16A4 NWS",
     "tooltip": "@firearm_m16a4_name",
-    "img": "data/models/weapons/m16a4_ui.dds",
+    "img": "data/models/weapons/m16a4_nws_ui.dds",
     "mobility": {
-      "move": -8,
+      "move": -7,
       "turn": -1
     },
     "suppressorAvailable": false,
@@ -547,9 +620,9 @@
   {
     "name": "M16A4 NWS Militia",
     "tooltip": "@firearm_m16a4_name",
-    "img": "data/models/weapons/m16a4_ui.dds",
+    "img": "data/models/weapons/m16a4_nws_ui.dds",
     "mobility": {
-      "move": -8,
+      "move": -7,
       "turn": -1
     },
     "suppressorAvailable": false,
@@ -575,30 +648,6 @@
     "mobility": {
       "move": -3,
       "turn": 0
-    },
-    "suppressorAvailable": true,
-    "suppressed": true
-  },
-  {
-    "name": "MK17STD NWS",
-    "tooltip": "@firearm_mk17_std_name",
-    "img": "data/models/weapons/mk17_std_ui.dds",
-    "concealment": -3,
-    "mobility": {
-      "move": -8,
-      "turn": -2
-    },
-    "suppressorAvailable": true,
-    "suppressed": false
-  },
-  {
-    "name": "MK17STD Sup NWS",
-    "tooltip": "@firearm_mk17_stdSup_name",
-    "img": "data/models/weapons/mk17_std_ui.dds",
-    "concealment": -3,
-    "mobility": {
-      "move": -8,
-      "turn": -2
     },
     "suppressorAvailable": true,
     "suppressed": true
@@ -758,7 +807,7 @@
     "tooltip": "@firearm_m17_name",
     "img": "data/models/weapons/m17_ui.dds",
     "mobility": {
-      "move": -2.3,
+      "move": -1.85,
       "turn": 0
     },
     "suppressorAvailable": false,
@@ -769,7 +818,7 @@
     "tooltip": "@firearm_m18_name",
     "img": "data/models/weapons/m18_ui.dds",
     "mobility": {
-      "move": -1.5,
+      "move": -1.6,
       "turn": 0
     },
     "suppressorAvailable": false,
@@ -811,7 +860,7 @@
   {
     "name": "MPS45Sup Pistol",
     "tooltip": "@firearm_mps45sup_name",
-    "img": "data/models/weapons/m9sup_ui.dds",
+    "img": "data/models/weapons/fergie_pistol_ui.dds",
     "mobility": {
       "move": -2,
       "turn": -1
@@ -832,10 +881,34 @@
     "suppressed": false
   },
   {
+    "name": "PPK Pistol CIA",
+    "tooltip": "@firearm_ppk_name",
+    "img": "data/models/weapons/ppk_ui.dds",
+    "concealment": -0.5,
+    "mobility": {
+      "move": -0.5,
+      "turn": 0
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
+  },
+  {
+    "name": "PPK Sup Pistol CIA",
+    "tooltip": "@firearm_ppksup_name",
+    "img": "data/models/weapons/ppk_ui.dds",
+    "concealment": -0.8,
+    "mobility": {
+      "move": -0.7,
+      "turn": 0
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
+  },
+  {
     "name": "G19 Pistol CIA BOps",
     "tooltip": "@firearm_g19_name",
     "img": "data/models/weapons/g19_sup_ui.dds",
-    "concealment": -1,
+    "concealment": -0.8,
     "mobility": {
       "move": -0.8,
       "turn": 0
@@ -854,18 +927,6 @@
     },
     "suppressorAvailable": true,
     "suppressed": true
-  },
-  {
-    "name": "G19 Pistol",
-    "tooltip": "@firearm_g19_name",
-    "img": "data/models/weapons/g19_ui.dds",
-    "concealment": -1,
-    "mobility": {
-      "move": -0.8,
-      "turn": 0
-    },
-    "suppressorAvailable": false,
-    "suppressed": false
   },
   {
     "name": "G19X Pistol CIA BOps",
@@ -921,7 +982,7 @@
     "img": "data/models/weapons/m18_ui.dds",
     "concealment": -1,
     "mobility": {
-      "move": -1.5,
+      "move": -1.6,
       "turn": 0
     },
     "suppressorAvailable": false,
@@ -933,7 +994,7 @@
     "img": "data/models/weapons/m17_ui.dds",
     "concealment": -1,
     "mobility": {
-      "move": -2.3,
+      "move": -1.85,
       "turn": 0
     },
     "suppressorAvailable": false,
@@ -952,7 +1013,7 @@
     "suppressed": false
   },
   {
-    "name": "HK45CT CIA BOps",
+    "name": "HK45CT CIA UCov",
     "tooltip": "@firearm_hk45ct_pistol_name",
     "img": "data/models/weapons/hk45ct_ui.dds",
     "concealment": -1,
@@ -964,10 +1025,34 @@
     "suppressed": false
   },
   {
-    "name": "HK45CTSup CIA BOps",
+    "name": "HK45CTSup CIA UCov",
     "tooltip": "@firearm_hk45ctsup_pistol_name",
     "img": "data/models/weapons/hk45ct_ui.dds",
     "concealment": -2,
+    "mobility": {
+      "move": -1.6,
+      "turn": 0
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
+  },
+  {
+    "name": "HK45CT CIA BOps",
+    "tooltip": "@firearm_hk45ct_pistol_name",
+    "img": "data/models/weapons/hk45ct_mag_ui.dds",
+    "concealment": -1.5,
+    "mobility": {
+      "move": -1.6,
+      "turn": 0
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
+  },
+  {
+    "name": "HK45CTSup CIA BOps",
+    "tooltip": "@firearm_hk45ctsup_pistol_name",
+    "img": "data/models/weapons/hk45ct_mag_ui.dds",
+    "concealment": -2.5,
     "mobility": {
       "move": -1.6,
       "turn": 0
@@ -1038,6 +1123,29 @@
     "img": "data/models/weapons/hs45_ui.dds",
     "mobility": {
       "move": -2,
+      "turn": 0
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
+  },
+  {
+    "name": "M9 Pistol NWS Militia",
+    "tooltip": "@firearm_m9_name",
+    "img": "data/models/weapons/m9_ui.dds",
+    "mobility": {
+      "move": -2,
+      "turn": 0
+    },
+    "suppressorAvailable": false,
+    "suppressed": false
+  },
+  {
+    "name": "G17 Pistol NWS Militia",
+    "tooltip": "@firearm_g17_name",
+    "img": "data/models/weapons/g22_ui.dds",
+    "concealment": -1,
+    "mobility": {
+      "move": -1.2,
       "turn": 0
     },
     "suppressorAvailable": false,
@@ -1143,6 +1251,28 @@
     "suppressed": true
   },
   {
+    "name": "M4 URGI",
+    "tooltip": "@firearm_m4urgi_name",
+    "img": "data/models/weapons/urg_i_ui.dds",
+    "mobility": {
+      "move": -3,
+      "turn": 0
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
+  },
+  {
+    "name": "M4 URGISup",
+    "tooltip": "@firearm_m4urgiSup_name",
+    "img": "data/models/weapons/urg_i_ui.dds",
+    "mobility": {
+      "move": -3,
+      "turn": 0
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
+  },
+  {
     "name": "M4/M203",
     "tooltip": "@firearm_m4_m203_name",
     "img": "data/models/weapons/m4_m203_ui.dds",
@@ -1215,6 +1345,30 @@
     "mobility": {
       "move": -10,
       "turn": -6
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
+  },
+  {
+    "name": "LAMG",
+    "tooltip": "@firearm_lamg_name",
+    "img": "data/models/weapons/lamg_ui.dds",
+    "concealment": -5,
+    "mobility": {
+      "move": -8,
+      "turn": -3
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
+  },
+  {
+    "name": "LAMG Sup",
+    "tooltip": "@firearm_lamgSup_name",
+    "img": "data/models/weapons/lamg_ui.dds",
+    "concealment": -5,
+    "mobility": {
+      "move": -8,
+      "turn": -3
     },
     "suppressorAvailable": true,
     "suppressed": true
@@ -1408,6 +1562,50 @@
     "suppressed": true
   },
   {
+    "name": "MK17CQC EGLM",
+    "tooltip": "@firearm_mk17_cqc_eglm_name",
+    "img": "data/models/weapons/mk17_cqc_gl_ui.dds",
+    "mobility": {
+      "move": -10,
+      "turn": -6
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
+  },
+  {
+    "name": "MK17CQC EGLM Sup",
+    "tooltip": "@firearm_mk17_cqc_eglmSup_name",
+    "img": "data/models/weapons/mk17_cqc_gl_ui.dds",
+    "mobility": {
+      "move": -10,
+      "turn": -6
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
+  },
+  {
+    "name": "MK17STD EGLM",
+    "tooltip": "@firearm_mk17_std_eglm_name",
+    "img": "data/models/weapons/mk17_std_gl_ui.dds",
+    "mobility": {
+      "move": -12,
+      "turn": -6
+    },
+    "suppressorAvailable": true,
+    "suppressed": false
+  },
+  {
+    "name": "MK17STD EGLM Sup",
+    "tooltip": "@firearm_mk17_std_eglmSup_name",
+    "img": "data/models/weapons/mk17_std_gl_ui.dds",
+    "mobility": {
+      "move": -12,
+      "turn": -6
+    },
+    "suppressorAvailable": true,
+    "suppressed": true
+  },
+  {
     "name": "Breacher Shotgun",
     "tooltip": "@firearm_breacher_name",
     "img": "data/models/equipment/breacher_shotgun_ui.dds",
@@ -1426,6 +1624,11 @@
     },
     "suppressorAvailable": false,
     "suppressed": false
+  },
+  {
+    "name": "40MMBUCKSHOT_M79",
+    "tooltip": "@ammo_12GA00BUCK_name",
+    "img": "data/models/weapons/attachments/m162_buckshot_ammo_ui.dds"
   },
   {
     "name": "12GA00BUCK_M1014",
@@ -1448,6 +1651,11 @@
     "img": "data/models/weapons/attachments/m257_buckshot_ammo24_ui.dds"
   },
   {
+    "name": "12GA00BUCK_SO",
+    "tooltip": "@ammo_12GA00BUCK_name",
+    "img": "data/models/weapons/attachments/m162_buckshot_ammo_ui.dds"
+  },
+  {
     "name": "556FMJM855_MK18",
     "tooltip": "@ammo_556FMJM855_name",
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
@@ -1468,6 +1676,16 @@
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
   },
   {
+    "name": "556FMJM855_M4URGI",
+    "tooltip": "@ammo_556FMJM855_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "556FMJM855_M4URGISup",
+    "tooltip": "@ammo_556FMJM855_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
     "name": "556FMJM855_M16A4",
     "tooltip": "@ammo_556FMJM855_name",
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
@@ -1479,6 +1697,16 @@
   },
   {
     "name": "556FMJM855_M249SPWSup",
+    "tooltip": "@ammo_556FMJM855_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "556FMJM855_LAMG",
+    "tooltip": "@ammo_556FMJM855_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "556FMJM855_LAMGSup",
     "tooltip": "@ammo_556FMJM855_name",
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
   },
@@ -1499,6 +1727,16 @@
   },
   {
     "name": "556FMJM855A1_M4Sup",
+    "tooltip": "@ammo_556FMJM855A1_name",
+    "img": "data/models/weapons/attachments/m855a1_ammo_ui.dds"
+  },
+  {
+    "name": "556FMJM855A1_M4URGI",
+    "tooltip": "@ammo_556FMJM855A1_name",
+    "img": "data/models/weapons/attachments/m855a1_ammo_ui.dds"
+  },
+  {
+    "name": "556FMJM855A1_M4URGISup",
     "tooltip": "@ammo_556FMJM855A1_name",
     "img": "data/models/weapons/attachments/m855a1_ammo_ui.dds"
   },
@@ -1524,6 +1762,16 @@
   },
   {
     "name": "556FMJMk318_M4Sup",
+    "tooltip": "@ammo_556FMJMk318_name",
+    "img": "data/models/weapons/attachments/mk318_ammo_ui.dds"
+  },
+  {
+    "name": "556FMJMk318_M4URGI",
+    "tooltip": "@ammo_556FMJMk318_name",
+    "img": "data/models/weapons/attachments/mk318_ammo_ui.dds"
+  },
+  {
+    "name": "556FMJMk318_M4URGISup",
     "tooltip": "@ammo_556FMJMk318_name",
     "img": "data/models/weapons/attachments/mk318_ammo_ui.dds"
   },
@@ -1568,9 +1816,214 @@
     "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
   },
   {
-    "name": "556FMJMk262_M16A4Marksman",
-    "tooltip": "@ammo_556FMJMk262_name",
-    "img": "data/models/weapons/attachments/mk262_ammo_ui.dds"
+    "name": "762FMJM80A1_MK17LB",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_MK17LBSup",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_MK20SSR",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_MK20SSRSup",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_M14EBR",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_MK48",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_MK48Sup",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_M240L",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_MK17CQC",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_MK17CQCSup",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_MK17STD",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM80A1_MK17STDSup",
+    "tooltip": "@ammo_762FMJM80A1_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_M110A1",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_M110A1Sup",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK17LB",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK17LBSup",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK20SSR",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK20SSRSup",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_M14EBR",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK48",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK48Sup",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_M240L",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK17CQC",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK17CQCSup",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK17STD",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762XM1158ADVAP_MK17STDSup",
+    "tooltip": "@ammo_762APXM1158_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_M110A1",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_M110A1Sup",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK17LB",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK17LBSup",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK20SSR",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK20SSRSup",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_M14EBR",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK48",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK48Sup",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_M240L",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK17CQC",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK17CQCSup",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK17STD",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762APM993_MK17STDSup",
+    "tooltip": "@ammo_762APM993_name",
+    "img": "data/models/weapons/attachments/m80a1_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM118LR_M110A1",
+    "tooltip": "@ammo_762FMJM118LR_name",
+    "img": "data/models/weapons/attachments/m118lr_ammo_ui.dds"
+  },
+  {
+    "name": "762FMJM118LR_M110A1Sup",
+    "tooltip": "@ammo_762FMJM118LR_name",
+    "img": "data/models/weapons/attachments/m118lr_ammo_ui.dds"
   },
   {
     "name": "762FMJM118LR_MK20SSR",
@@ -1608,29 +2061,14 @@
     "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
   },
   {
-    "name": "762FMJM80_M240L",
+    "name": "762FMJM80_HK21E",
     "tooltip": "@ammo_762FMJM80_name",
     "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
   },
   {
-    "name": "762R57N323_PKPCIA",
-    "tooltip": "@ammo_762R57N323_name",
+    "name": "762FMJM80_M240L",
+    "tooltip": "@ammo_762FMJM80_name",
     "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
-  },
-  {
-    "name": "762RAP7N13_PKPCIA",
-    "tooltip": "@ammo_762RAP7N13_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
-  },
-  {
-    "name": "338FMJ_MG338",
-    "tooltip": "@ammo_338FMJXM338_name",
-    "img": "data/models/weapons/attachments/xm338_ammo_ui.dds"
-  },
-  {
-    "name": "338FMJ_MG338Sup",
-    "tooltip": "@ammo_338FMJXM338_name",
-    "img": "data/models/weapons/attachments/xm338_ammo_ui.dds"
   },
   {
     "name": "762FMJM80_MK17CQC",
@@ -1651,6 +2089,76 @@
     "name": "762FMJM80_MK17STDSup",
     "tooltip": "@ammo_762FMJM80_name",
     "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
+  },
+  {
+    "name": "556FMJMk262_M16A4Marksman",
+    "tooltip": "@ammo_556FMJMk262_name",
+    "img": "data/models/weapons/attachments/mk262_ammo_ui.dds"
+  },
+  {
+    "name": "68X51GP_XM7",
+    "tooltip": "@ammo_68x51XM1186_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "68X51GP_XM7Sup",
+    "tooltip": "@ammo_68x51XM1186_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "68X51GP_XM250",
+    "tooltip": "@ammo_68x51XM1186_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "68X51GP_XM250Sup",
+    "tooltip": "@ammo_68x51XM1186_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "68X51GP_M240L",
+    "tooltip": "@ammo_68x51XM1186_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "300BLK220GRSUBS_RATTLER",
+    "tooltip": "@ammo_300BLK220GRSUBS_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "300BLK220GRSUBS_RATTLERSup",
+    "tooltip": "@ammo_300BLK220GRSUBS_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "300BLK125GROTM_RATTLER",
+    "tooltip": "@ammo_300BLK125GROTM_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "300BLK125GROTM_RATTLERSup",
+    "tooltip": "@ammo_300BLK125GROTM_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "762R57N323_PKPCIA",
+    "tooltip": "@ammo_762R57N323_name",
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
+  },
+  {
+    "name": "762RAP7N13_PKPCIA",
+    "tooltip": "@ammo_762RAP7N13_name",
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
+  },
+  {
+    "name": "338FMJ_MG338",
+    "tooltip": "@ammo_338FMJXM338_name",
+    "img": "data/models/weapons/attachments/xm338_ammo_ui.dds"
+  },
+  {
+    "name": "338FMJ_MG338Sup",
+    "tooltip": "@ammo_338FMJXM338_name",
+    "img": "data/models/weapons/attachments/xm338_ammo_ui.dds"
   },
   {
     "name": "12GAM1030_Breacher Shotgun",
@@ -1708,6 +2216,11 @@
     "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
   },
   {
+    "name": "919FMJM882_NWSMiniUzi",
+    "tooltip": "@ammo_919FMJM882_name",
+    "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
+  },
+  {
     "name": "919FMJM882_MiniUzi",
     "tooltip": "@ammo_919FMJM882_name",
     "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
@@ -1728,6 +2241,16 @@
     "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
   },
   {
+    "name": "919JHPM1153_APC9K",
+    "tooltip": "@ammo_919JHPM1153_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
+  },
+  {
+    "name": "919JHPM1153_APC9KSup",
+    "tooltip": "@ammo_919JHPM1153_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
+  },
+  {
     "name": "919FMJM1152_MiniUzi",
     "tooltip": "@ammo_919FMJM1152_name",
     "img": "data/models/weapons/attachments/m1152_ammo_ui.dds"
@@ -1739,6 +2262,11 @@
   },
   {
     "name": "919JHPM1153_MiniUzi",
+    "tooltip": "@ammo_919JHPM1153_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
+  },
+  {
+    "name": "919JHPM1153_NWSMiniUzi",
     "tooltip": "@ammo_919JHPM1153_name",
     "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
   },
@@ -1818,6 +2346,11 @@
     "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
   },
   {
+    "name": "45FMJM1911_NWSHS45",
+    "tooltip": "@ammo_45FMJM1911_name",
+    "img": "data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+  },
+  {
     "name": "45FMJM1911_1911 Pistol",
     "tooltip": "@ammo_45FMJM1911_name",
     "img": "data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
@@ -1853,8 +2386,38 @@
     "img": "data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
   },
   {
+    "name": "380JHP90GR_PPK",
+    "tooltip": "@ammo_380JHP90GR_name",
+    "img": "data/models/weapons/attachments/m1152_ammo_ui.dds"
+  },
+  {
+    "name": "380JHP90GR_PPKSup",
+    "tooltip": "@ammo_380JHP90GR_name",
+    "img": "data/models/weapons/attachments/m1152_ammo_ui.dds"
+  },
+  {
+    "name": "380EHP70GR_PPK",
+    "tooltip": "@ammo_380EHP70GR_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
+  },
+  {
+    "name": "380EHP70GR_PPKSup",
+    "tooltip": "@ammo_380EHP70GR_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
+  },
+  {
+    "name": "40JHP180GR_G2240 Pistol",
+    "tooltip": "@ammo_40JHP180GR_name",
+    "img": "data/models/weapons/attachments/40fmj_ammo_ui.dds"
+  },
+  {
     "name": "40FMJ180GR_G2240 Pistol",
     "tooltip": "@ammo_40FMJ180GR_name",
+    "img": "data/models/weapons/attachments/40fmj_ammo_ui.dds"
+  },
+  {
+    "name": "40JHP165GR_G2240 Pistol",
+    "tooltip": "@ammo_40JHP165GR_name",
     "img": "data/models/weapons/attachments/40fmj_ammo_ui.dds"
   },
   {
@@ -1863,7 +2426,17 @@
     "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
   },
   {
+    "name": "919FMJM882_NWSHandgun",
+    "tooltip": "@ammo_919FMJM882_name",
+    "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
+  },
+  {
     "name": "919JHPM1153_Handgun",
+    "tooltip": "@ammo_919JHPM1153_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
+  },
+  {
+    "name": "919JHPM1153_NWSHandgun",
     "tooltip": "@ammo_919JHPM1153_name",
     "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
   },
@@ -1888,6 +2461,16 @@
     "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
   },
   {
+    "name": "919FMJM882_NWSSupHandgun",
+    "tooltip": "@ammo_919FMJM882_name",
+    "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
+  },
+  {
+    "name": "919JHPM1153_NWSSupHandgun",
+    "tooltip": "@ammo_919JHPM1153_name",
+    "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
+  },
+  {
     "name": "919JHPM1153_SupHandgun",
     "tooltip": "@ammo_919JHPM1153_name",
     "img": "data/models/weapons/attachments/m1153_ammo_ui.dds"
@@ -1906,6 +2489,11 @@
     "name": "919FMJM1152_SupSmallHandgun",
     "tooltip": "@ammo_919FMJM1152_name",
     "img": "data/models/weapons/attachments/m1152_ammo_ui.dds"
+  },
+  {
+    "name": "919FMJM882_G19XNWSPistol",
+    "tooltip": "@ammo_919FMJM882_name",
+    "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
   },
   {
     "name": "919FMJM882_G19X Pistol",
@@ -1959,6 +2547,10 @@
     "img": "data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
   },
   {
+    "name": "9x19FMJ_MP40",
+    "img": "data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+  },
+  {
     "name": "919FMJM882_APC9KSupEnemy",
     "tooltip": "@ammo_919FMJM882_name",
     "img": "data/models/weapons/attachments/m882_ammo_ui.dds"
@@ -1971,6 +2563,9 @@
   },
   {
     "name": "762x51FMJ_FAL Rifle"
+  },
+  {
+    "name": "303BRITFMJ_SMLE"
   },
   {
     "name": "545x39FMJ_RPK 74 LMG"
@@ -1990,42 +2585,50 @@
   {
     "name": "762R7N1_SVDCIA",
     "tooltip": "@ammo_762R7N1_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
   },
   {
     "name": "762R203GR_SVDNWS",
     "tooltip": "@ammo_762R203_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
   },
   {
     "name": "762RAP7N13_SVDCIA",
     "tooltip": "@ammo_762RAP7N13_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
   },
   {
     "name": "762RAP7N13_SVDNWS",
     "tooltip": "@ammo_762RAP7N13_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
   },
   {
     "name": "762R7N14_SVDCIA",
     "tooltip": "@ammo_762R7N14_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
+  },
+  {
+    "name": "303BRITFMJ_SMLENWS"
   },
   {
     "name": "762R7N1_SVUNWS",
     "tooltip": "@ammo_762R7N1_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
   },
   {
     "name": "762R203GR_SVUNWS",
     "tooltip": "@ammo_762R203_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
   },
   {
     "name": "762RAP7N13_SVUNWS",
     "tooltip": "@ammo_762RAP7N13_name",
-    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
+  },
+  {
+    "name": "300BLK220GRSUBS_AUGSup",
+    "tooltip": "@ammo_300BLK220GRSUBS_name",
+    "img": "data/models/weapons/attachments/m80_ammo_ui.dds"
   },
   {
     "name": "9x39APSP6_SR3_M"
@@ -2054,6 +2657,11 @@
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
   },
   {
+    "name": "762x39FMJ7N23_Type56NWS",
+    "tooltip": "@ammo_762397N23AP_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
     "name": "762x39FMJM43_VulcanNWS",
     "tooltip": "@ammo_762FMJM43_name",
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
@@ -2064,8 +2672,23 @@
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
   },
   {
+    "name": "762x39FMJ7N23_VulcanNWS",
+    "tooltip": "@ammo_762397N23AP_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "762x39FMJ7N23_VulcanNWSSup",
+    "tooltip": "@ammo_762397N23AP_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
     "name": "762x39FMJM43_RPKNWS",
     "tooltip": "@ammo_762FMJM43_name",
+    "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
+  },
+  {
+    "name": "762x39FMJ7N23_RPKNWS",
+    "tooltip": "@ammo_762397N23AP_name",
     "img": "data/models/weapons/attachments/m855_ammo_ui.dds"
   },
   {
@@ -2132,6 +2755,11 @@
     "img": "data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
   },
   {
+    "name": "12GA1BUCK_HUNTING",
+    "tooltip": "@ammo_12GA00BUCK_name",
+    "img": "data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+  },
+  {
     "name": "IronSights",
     "tooltip": "@scope_ironsights_name",
     "img": "data/models/weapons/attachments/iron_sights_ui.dds"
@@ -2172,7 +2800,35 @@
     "img": "data/models/weapons/attachments/iron_sights_ui.dds"
   },
   {
+    "name": "IronSights_PistolCustomizableMk27",
+    "tooltip": "@scope_ironsights_name",
+    "img": "data/models/weapons/attachments/iron_sights_ui.dds"
+  },
+  {
+    "name": "IronSightsSawedOff",
+    "tooltip": "@scope_ironsightsso_name",
+    "img": "data/models/weapons/attachments/iron_sights_ui.dds"
+  },
+  {
     "name": "RedDot_Pistol",
+    "tooltip": "@scope_pistolreddot_name",
+    "img": "data/models/weapons/attachments/rmr_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "RedDot_PistolMk27",
+    "tooltip": "@scope_pistolreddot_name",
+    "img": "data/models/weapons/attachments/rmr_ui.dds",
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "RedDot_PistolM17",
     "tooltip": "@scope_pistolreddot_name",
     "img": "data/models/weapons/attachments/rmr_ui.dds",
     "mobility": {
@@ -2191,9 +2847,30 @@
     }
   },
   {
+    "name": "Holosight Black",
+    "tooltip": "@scope_rangersholo_name",
+    "img": "data/models/weapons/attachments/holosight_ui.dds",
+    "concealment": -1,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
     "name": "M68CCO",
     "tooltip": "@scope_rangersM68reddot_name",
     "img": "data/models/weapons/attachments/m68_cco_ui.dds",
+    "concealment": -1,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    }
+  },
+  {
+    "name": "RedDotT2",
+    "tooltip": "@scope_CIAT2reddot_name",
+    "img": "data/models/weapons/attachments/reddot_t2_ui.dds",
+    "concealment": -1,
     "mobility": {
       "move": 0,
       "turn": 0
@@ -2223,7 +2900,7 @@
     "name": "LPVO_6X",
     "tooltip": "@scope_rangerslpvo6x_name",
     "img": "data/models/weapons/attachments/lpvo_6x_ui.dds",
-    "concealment": 0,
+    "concealment": -1,
     "mobility": {
       "move": -1,
       "turn": -3
@@ -2345,6 +3022,16 @@
     }
   },
   {
+    "name": "NSPUM2",
+    "tooltip": "@scope_nspum2_name",
+    "img": "data/models/weapons/attachments/nspum2_ui.dds",
+    "concealment": -2,
+    "mobility": {
+      "move": -5,
+      "turn": -12
+    }
+  },
+  {
     "name": "PSO39",
     "tooltip": "@scope_pso39_name",
     "img": "data/models/weapons/attachments/po_3_9_ui.dds",
@@ -2353,6 +3040,16 @@
       "move": -2,
       "turn": -6
     }
+  },
+  {
+    "name": "AUG 1.5X",
+    "tooltip": "",
+    "img": "data/models/weapons/attachments/augscope_ui.dds"
+  },
+  {
+    "name": "AUG 3X",
+    "tooltip": "",
+    "img": "data/models/weapons/attachments/augscope_ui.dds"
   },
   {
     "name": "HostageBlackHood",
@@ -2390,7 +3087,51 @@
       "move": -2,
       "turn": -2
     },
-    "NVGAvailable": true
+    "NVGAvailable": false
+  },
+  {
+    "name": "CapNowherakiAssaulter",
+    "tooltip": "@helmet_NWS_basiccap_name",
+    "img": "data/models/humans/attachments/cia_cap_ui.dds",
+    "concealment": 0,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    },
+    "NVGAvailable": false
+  },
+  {
+    "name": "CapNowherakiBeret",
+    "tooltip": "@helmet_NWS_beret_name",
+    "img": "data/models/humans/attachments/captain_beret_ui.dds",
+    "concealment": -4,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    },
+    "NVGAvailable": false
+  },
+  {
+    "name": "HelmetACHNWSTroop",
+    "tooltip": "@helmet_rangers_ach_name",
+    "img": "data/models/humans/attachments/ach_helmet_ui.dds",
+    "concealment": 0,
+    "mobility": {
+      "move": -2,
+      "turn": -2
+    },
+    "NVGAvailable": false
+  },
+  {
+    "name": "HelmetACHNWSLeader",
+    "tooltip": "@helmet_rangers_ach_name",
+    "img": "data/models/humans/attachments/ach_helmet_ui.dds",
+    "concealment": 0,
+    "mobility": {
+      "move": -2,
+      "turn": -2
+    },
+    "NVGAvailable": false
   },
   {
     "name": "HelmetFAST",
@@ -2481,10 +3222,43 @@
     "NVGAvailable": true
   },
   {
-    "name": "CapNowherakiAssaulter",
-    "tooltip": "@helmet_NWS_basiccap_name",
-    "img": "data/models/humans/attachments/cia_cap_ui.dds",
-    "concealment": 0,
+    "name": "CapNowherakiHeadband",
+    "tooltip": "@helmet_NWS_headband_name",
+    "img": "data/models/humans/attachments/headband_ui.dds",
+    "concealment": -2,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    },
+    "NVGAvailable": false
+  },
+  {
+    "name": "CapNowherakiBandana",
+    "tooltip": "@helmet_NWS_bandana_name",
+    "img": "data/models/humans/attachments/bandana_01_ui.dds",
+    "concealment": -2,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    },
+    "NVGAvailable": false
+  },
+  {
+    "name": "CapUSFlagBandana",
+    "tooltip": "@helmet_NWS_bandana_name",
+    "img": "data/models/humans/attachments/bandana_01_ui.dds",
+    "concealment": -10,
+    "mobility": {
+      "move": 0,
+      "turn": 0
+    },
+    "NVGAvailable": false
+  },
+  {
+    "name": "CapBlackOpsHeadband",
+    "tooltip": "@helmet_CIA_headband_name",
+    "img": "data/models/humans/attachments/headband_ui.dds",
+    "concealment": -1,
     "mobility": {
       "move": 0,
       "turn": 0
@@ -2501,6 +3275,17 @@
       "turn": -20
     },
     "NVGAvailable": false
+  },
+  {
+    "name": "HelmetSkullCrusherNWS",
+    "tooltip": "@helmet_NWS_sc_name",
+    "img": "data/models/humans/attachments/straps_skullcrusher_ui.dds",
+    "concealment": -2,
+    "mobility": {
+      "move": -2,
+      "turn": -2
+    },
+    "NVGAvailable": true
   },
   {
     "name": "NVG",
@@ -2520,6 +3305,31 @@
     "mobility": {
       "move": 0,
       "turn": -1
+    }
+  },
+  {
+    "name": "NVGSkullCrusherNWS",
+    "tooltip": "@nvg_pvs7_name",
+    "img": "data/models/humans/attachments/nvg_03_ui.dds"
+  },
+  {
+    "name": "Dynamic Hammer",
+    "tooltip": "@utility_dynamic_hammer_name",
+    "img": "data/models/equipment/hammer_dynamic_ui.dds",
+    "concealment": -3,
+    "mobility": {
+      "move": -7,
+      "turn": -2
+    }
+  },
+  {
+    "name": "Bolt Cutter",
+    "tooltip": "@utility_bolt_cutter_name",
+    "img": "data/models/equipment/bolt_cutter_ui.dds",
+    "concealment": -3,
+    "mobility": {
+      "move": -5,
+      "turn": 0
     }
   },
   {
@@ -2823,16 +3633,6 @@
     }
   },
   {
-    "name": "Dynamic Hammer",
-    "tooltip": "@utility_dynamic_hammer_name",
-    "img": "data/models/equipment/hammer_dynamic_ui.dds",
-    "concealment": -3,
-    "mobility": {
-      "move": -7,
-      "turn": -2
-    }
-  },
-  {
     "name": "Spy Camera",
     "tooltip": "@support_gear_spy_camera_name",
     "img": "data/models/equipment/spy_camera_ui.dds",
@@ -2932,6 +3732,16 @@
     }
   },
   {
+    "name": "NWS Vest FrontPlateMilitia",
+    "tooltip": "@armor_nws_frontplate_name",
+    "img": "data/models/equipment/armor_singleleveliii_ui.dds",
+    "concealment": -3,
+    "mobility": {
+      "move": -5,
+      "turn": 0
+    }
+  },
+  {
     "name": "NWS Vest Level III",
     "tooltip": "@armor_nws_basicvest_name",
     "img": "data/models/equipment/armor_basic_ui.dds",
@@ -2943,6 +3753,16 @@
   },
   {
     "name": "NWS Vest Extended",
+    "tooltip": "@armor_nws_extended_name",
+    "img": "data/models/equipment/armor_extended_ui.dds",
+    "concealment": -6,
+    "mobility": {
+      "move": -18,
+      "turn": -11
+    }
+  },
+  {
+    "name": "NWS Vest Extended Leader",
     "tooltip": "@armor_nws_extended_name",
     "img": "data/models/equipment/armor_extended_ui.dds",
     "concealment": -6,

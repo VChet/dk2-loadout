@@ -33,7 +33,7 @@ export type EquipmentEntry = {
   Params?: {
     $suppressedImg: string
     $suppressedSwitch: string
-    $allowNVG: boolean
+    $allowNVG?: false
   }
 };
 

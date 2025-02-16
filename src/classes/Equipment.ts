@@ -97,8 +97,8 @@ export class Suppressor {
   image: string;
   constructor(isSuppressed: boolean) {
     this.image = isSuppressed ?
-      "images/weapons/attachments/basic_silencer_ui_small.webp" :
-      "images/weapons/attachments/silencer_none.webp";
+      "img/weapons/attachments/basic_silencer_ui_small.webp" :
+      "img/weapons/attachments/silencer_none.webp";
     this.imageAltText = isSuppressed ? "basic_silencer_ui_small" : "silencer_none";
   }
 }

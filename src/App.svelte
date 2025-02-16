@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { GAME_VERSION } from "./data/version";
   import type { Roster } from "@/classes/Roster";
   import type { Trooper } from "@/classes/Trooper";
   import ManagerBlock from "@/components/Manager.svelte";
@@ -21,7 +22,7 @@
     All game resources and images used with permission from
     <a href="https://inthekillhouse.com" rel="noopener">KillHouse Games</a>
   </div>
-  <div>Updated for 0.35v</div>
+  <div>Updated for {GAME_VERSION}</div>
   <a href="https://github.com/VChet/dk2-loadout/issues" target="_blank" rel="noreferrer noopener">Report Bug</a>
 </footer>
 

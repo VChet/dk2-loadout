@@ -1,7 +1,7 @@
 {
   "name": "dk2-loadout",
   "type": "module",
-  "version": "0.30.0",
+  "version": "1.3.0",
   "author": "VChet",
   "license": "AGPL-3.0-or-later",
   "repository": {
@@ -20,7 +20,7 @@
     "lint:css:fix": "npm run lint:css -- --fix",
     "lint:all": "npm run check && npm run lint:js && npm run lint:css",
     "test": "vitest --run",
-    "update-data": "tsx ./src/data/retrieveConfigData.ts"
+    "update-data": "tsx ./src/data/parseData.ts"
   },
   "dependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",

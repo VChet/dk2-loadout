@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getClassImg } from "@/helpers/data-getter";
+  import { getClassImg, getClassTitle } from "@/helpers/data-getter";
   import type { Squad } from "@/classes/Squad";
   import type { Trooper } from "@/classes/Trooper";
 
@@ -29,7 +29,7 @@
         <li class="squad__class">
           <div class="squad__class-name">
             <img src={getClassImg(className)} alt={className} draggable="false" />
-            {className}
+            {getClassTitle(className)}
           </div>
           <ul>
             {#each squad.classMap[className] as trooper}
@@ -67,6 +67,7 @@
       justify-content: space-between;
       font-size: 24px;
       color: var(--paragraph);
+      background-size: cover;
       box-shadow: inset 0 0 0 50px var(--bg-main);
       button {
         width: 30px;
@@ -74,11 +75,11 @@
         padding: 0;
         cursor: pointer;
         outline: inherit;
-        background: url("/images/ui/squad_delete.webp") no-repeat center / contain;
+        background: url("/img/gui/mod_remove.webp") no-repeat center / contain;
         border: none;
         &:hover,
         &:focus {
-          background-image: url("/images/ui/squad_delete_hover.webp");
+          background-image: url("/img/gui/mod_remove_hover.webp");
         }
       }
     }
@@ -106,7 +107,7 @@
           width: 120px;
           height: 100%;
           content: "";
-          background-image: url("/images/ui/class_bars.webp");
+          background-image: url("/img/gui/deploy/deploy_class_diagonalbars.webp");
           background-repeat: no-repeat;
         }
         img {
@@ -126,7 +127,7 @@
           height: 60px;
           padding: 0;
           cursor: pointer;
-          background: #1a1407 url("/images/ui/trooper_background.webp") center no-repeat;
+          background: #1a1407 url("/img/gui/deploy/deploy_trooperbackground_01.webp") center no-repeat;
           border: 3px solid #4c3f2e;
           border-radius: 50%;
           &:hover,
@@ -146,7 +147,7 @@
     }
     &--ranger {
       .squad__unit {
-        background-image: url("/images/rangers_bg.webp");
+        background-image: url("/img/gui/squads/rangers_bg_01.webp");
       }
       .squad__class .squad__class-name {
         background-color: #cb893e;
@@ -154,7 +155,7 @@
     }
     &--cia {
       .squad__unit {
-        background-image: url("/images/cia_bg.webp");
+        background-image: url("/img/gui/squads/cia_bg_01.webp");
       }
       .squad__class .squad__class-name {
         background-color: #6a879d;
@@ -162,7 +163,7 @@
     }
     &--nowheraki {
       .squad__unit {
-        background-image: url("/images/nowheraki_bg.webp");
+        background-image: url("/img/gui/squads/nowheraki_bg_01.webp");
       }
       .squad__class .squad__class-name {
         background-color: #c55b45;

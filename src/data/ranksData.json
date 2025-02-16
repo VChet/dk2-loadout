@@ -41,6 +41,40 @@
       "xpNeeded": 126400
     }
   ],
+  "Nowheraki": [
+    {
+      "name": "@nowheraki_rank_0",
+      "xpNeeded": 0
+    },
+    {
+      "name": "@nowheraki_rank_1",
+      "xpNeeded": 2300
+    },
+    {
+      "name": "@nowheraki_rank_2",
+      "xpNeeded": 5600
+    },
+    {
+      "name": "@nowheraki_rank_3",
+      "xpNeeded": 12800
+    },
+    {
+      "name": "@nowheraki_rank_4",
+      "xpNeeded": 33900
+    },
+    {
+      "name": "@nowheraki_rank_5",
+      "xpNeeded": 55400
+    },
+    {
+      "name": "@nowheraki_rank_6",
+      "xpNeeded": 70400
+    },
+    {
+      "name": "@nowheraki_rank_7",
+      "xpNeeded": 100000
+    }
+  ],
   "CIA": [
     {
       "name": "@agent_rank_0",
@@ -81,40 +115,6 @@
     {
       "name": "@agent_rank_9",
       "xpNeeded": 126400
-    }
-  ],
-  "Nowheraki": [
-    {
-      "name": "@nowheraki_rank_0",
-      "xpNeeded": 0
-    },
-    {
-      "name": "@nowheraki_rank_1",
-      "xpNeeded": 2300
-    },
-    {
-      "name": "@nowheraki_rank_2",
-      "xpNeeded": 5600
-    },
-    {
-      "name": "@nowheraki_rank_3",
-      "xpNeeded": 12800
-    },
-    {
-      "name": "@nowheraki_rank_4",
-      "xpNeeded": 33900
-    },
-    {
-      "name": "@nowheraki_rank_5",
-      "xpNeeded": 55400
-    },
-    {
-      "name": "@nowheraki_rank_6",
-      "xpNeeded": 70400
-    },
-    {
-      "name": "@nowheraki_rank_7",
-      "xpNeeded": 100000
     }
   ]
 }
