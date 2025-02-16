@@ -1,9 +1,9 @@
 <script lang="ts">
-  import ManagerBlock from "@/components/Manager.svelte";
-  import TrooperBlock from "@/components/Trooper.svelte";
-  import RosterBlock from "@/components/Roster.svelte";
   import type { Roster } from "@/classes/Roster";
   import type { Trooper } from "@/classes/Trooper";
+  import ManagerBlock from "@/components/Manager.svelte";
+  import RosterBlock from "@/components/Roster.svelte";
+  import TrooperBlock from "@/components/Trooper.svelte";
 
   let roster: Roster;
   let selectedTrooper: Trooper;
@@ -30,7 +30,7 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       flex-wrap: wrap-reverse;
     }
     .left-block {
@@ -42,11 +42,11 @@
     display: grid;
     grid-template-columns: 2fr repeat(2, 1fr);
     gap: 8px;
-    margin-top: auto;
     padding: 5px;
-    background-color: var(--bg-main);
+    margin-top: auto;
     text-align: center;
-    @media (max-width: 768px) {
+    background-color: var(--bg-main);
+    @media (width <= 768px) {
       grid-template-columns: 1fr;
     }
     a {

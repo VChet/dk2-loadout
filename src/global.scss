@@ -5,22 +5,25 @@
   --bg-main: #00000050;
   --accent: #ffc600;
 }
-
 @font-face {
   font-family: Bebas-Neue;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Bebas-Neue-Regular.woff2") format("woff2");
   font-display: swap;
-  src: url("/fonts/Bebas-Neue-Regular.woff2") format("woff2"), url("/fonts/Bebas-Neue-Regular.woff") format("woff");
 }
 @font-face {
   font-family: Noto-Sans;
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Noto-Sans-Regular.woff2") format("woff2");
   font-display: swap;
-  src: url("/fonts/Noto-Sans-Regular.woff2") format("woff2"), url("/fonts/Noto-Sans-Regular.woff") format("woff");
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 html,
 body {
   position: relative;
@@ -28,28 +31,31 @@ body {
   height: 100%;
 }
 body {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--paragraph);
   background-image: url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: var(--paragraph);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
-    sans-serif;
+  -webkit-font-smoothing: antialiased;
   @media (prefers-color-scheme: dark) {
     background-image: url("/images/bg-dark.jpg");
   }
 }
 ul {
-  list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  list-style: none;
+}
+img, svg {
+  max-width: 100%;
 }
 img {
-  font-weight: normal;
   font-size: 12px;
+  font-weight: normal;
   user-select: none;
 }
 .visually-hidden {
@@ -60,13 +66,13 @@ img {
   clip: rect(0 0 0 0);
 }
 .title {
+  font-family: Bebas-Neue, sans-serif;
   color: var(--header);
   text-transform: uppercase;
-  font-family: "Bebas-Neue", sans-serif;
 }
 .subtitle {
-  color: var(--paragraph);
-  font-family: "Noto-Sans", sans-serif;
+  font-family: Noto-Sans, sans-serif;
   font-weight: bold;
+  color: var(--paragraph);
   letter-spacing: 0.05em;
 }

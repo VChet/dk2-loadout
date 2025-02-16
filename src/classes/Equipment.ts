@@ -1,15 +1,15 @@
-import type { ParsedEquipment } from "@/types/Parsed";
-import type { TrooperEquipment, TrooperEquipmentEntry } from "@/types/Roster";
 import {
-  getFileName,
-  getNameString,
-  getHelmetData,
-  getWeaponAttachmentImg,
-  getWeaponData,
-  getNVGImg,
-  getEquipmentImg,
   datamap,
-} from "@/utilities/getters";
+  getEquipmentImg,
+  getFileName,
+  getHelmetData,
+  getNameString,
+  getNVGImg,
+  getWeaponAttachmentImg,
+  getWeaponData
+} from "@/helpers/data-getter";
+import type { ParsedEquipment } from "@/types/parsed";
+import type { TrooperEquipment, TrooperEquipmentEntry } from "@/types/roster";
 
 export class Equipment {
   _token: string;
@@ -51,10 +51,10 @@ export class Equipment {
 }
 
 export class Weapon extends Equipment {
-  #weapon: ParsedEquipment | null;
   suppressor: Suppressor | null;
   ammo: Ammo | null;
   scope: Scope | null;
+  #weapon: ParsedEquipment | null;
   constructor(name: string, ammo: TrooperEquipmentEntry, scope: TrooperEquipmentEntry) {
     super(name);
     this.#weapon = getWeaponData(name);
@@ -63,10 +63,6 @@ export class Weapon extends Equipment {
     this.scope = scope.$name ? new Scope(scope.$name) : null;
   }
 
-  get #isSuppressed(): boolean {
-    if (!this.#weapon) return false;
-    return !!this.#weapon.suppressorAvailable && !!this.#weapon.suppressed;
-  }
   get name() {
     if (!this.#weapon) return "Empty";
     return getNameString(this.#weapon.name);
@@ -78,6 +74,10 @@ export class Weapon extends Equipment {
   get imageAltText() {
     if (!this.#weapon) return null;
     return getFileName(this.#weapon.name);
+  }
+  get #isSuppressed(): boolean {
+    if (!this.#weapon) return false;
+    return !!this.#weapon.suppressorAvailable && !!this.#weapon.suppressed;
   }
 }
 
@@ -96,9 +96,9 @@ export class Suppressor {
   imageAltText: string;
   image: string;
   constructor(isSuppressed: boolean) {
-    this.image = isSuppressed
-      ? "images/weapons/attachments/basic_silencer_ui_small.webp"
-      : "images/weapons/attachments/silencer_none.webp";
+    this.image = isSuppressed ?
+      "images/weapons/attachments/basic_silencer_ui_small.webp" :
+      "images/weapons/attachments/silencer_none.webp";
     this.imageAltText = isSuppressed ? "basic_silencer_ui_small" : "silencer_none";
   }
 }
@@ -106,8 +106,8 @@ export class Ammo extends WeaponAttachment {}
 export class Scope extends WeaponAttachment {}
 
 export class Helmet extends Equipment {
-  #helmet: ParsedEquipment | null;
   nvg: NVG | null;
+  #helmet: ParsedEquipment | null;
   constructor(name: string, helmetNVG: TrooperEquipmentEntry) {
     super(name);
     this.#helmet = getHelmetData(name);

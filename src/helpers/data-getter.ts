@@ -1,12 +1,11 @@
 import equipmentData from "@/data/equipmentData.json";
 import localization from "@/data/localization.json";
-import type { ParsedEquipment } from "@/types/Parsed";
+import type { ParsedEquipment } from "@/types/parsed";
 
 export const datamap = new Map(equipmentData.map((item) => [item.name, item]));
 
 export function getFileName(filepath: string): string {
-  const regexp = new RegExp(/[\w-]+?(?=\.)/);
-  const [name] = filepath.match(regexp) ?? [];
+  const [name] = filepath.match(/[\w-]+(?=\.)/) ?? [];
   return name ?? filepath;
 }
 
@@ -47,5 +46,5 @@ export function getEquipmentImg(name: string): string | null {
 export function getNameString(name: string): string | null {
   const object = datamap.get(name);
   if (!object?.tooltip) return null;
-  return (localization as { [key: string]: string })[object.tooltip] || name;
+  return (localization as Record<string, string>)[object.tooltip] || name;
 }

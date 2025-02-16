@@ -1,11 +1,9 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, type FirebaseOptions } from "firebase/app";
 import { doc, getDoc, getFirestore, setDoc } from "firebase/firestore/lite";
 import md5 from "md5";
-import type { FirebaseOptions } from "firebase/app";
 
-import { deserialize, serialize } from "@/utilities/serializer";
+import { deserialize, serialize } from "@/helpers/serializer";
 import type { Roster } from "@/classes/Roster";
-import type { IRoster } from "@/types/Roster";
 
 const { FIREBASE_KEY, FIREBASE_SENDER_ID, FIREBASE_APP_ID } = import.meta.env;
 const firebaseConfig: FirebaseOptions = {
@@ -14,7 +12,7 @@ const firebaseConfig: FirebaseOptions = {
   projectId: "dk2-loadout-51c91",
   storageBucket: "dk2-loadout-51c91.appspot.com",
   messagingSenderId: FIREBASE_SENDER_ID?.toString(),
-  appId: FIREBASE_APP_ID?.toString(),
+  appId: FIREBASE_APP_ID?.toString()
 };
 
 const app = initializeApp(firebaseConfig);
@@ -35,7 +33,7 @@ async function addEntry(code: string): Promise<string> {
   return hash;
 }
 
-export async function getUrlParams(query: string): Promise<IRoster | null> {
+export async function getUrlParams(query: string): Promise<unknown> {
   const urlCode = new URLSearchParams(query).get("code");
   if (urlCode) return deserialize(urlCode);
 
@@ -46,8 +44,8 @@ export async function getUrlParams(query: string): Promise<IRoster | null> {
 }
 
 export async function createShortLink(payload: Roster): Promise<{
-  code: string;
-  shortLink: string | null;
+  code: string
+  shortLink: string | null
 }> {
   const code = serialize(payload);
   return { code, shortLink: await addEntry(code) };

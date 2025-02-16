@@ -2,7 +2,7 @@
 
 ![svelte](https://img.shields.io/github/package-json/dependency-version/VChet/dk2-loadout/dev/svelte?color=ff3e00)
 ![build](https://github.com/VChet/dk2-loadout/workflows/build/badge.svg)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
 
 ![preview](./preview.jpg)
 
@@ -10,6 +10,6 @@
 
 ## Development
 
-- Install dependencies: `npm install`
-- Start dev-server: `npm run dev`
-- Build for production: `npm run build`
+- Install dependencies: `pnpm install`
+- Start dev-server: `pnpm run dev`
+- Build for production: `pnpm run build`

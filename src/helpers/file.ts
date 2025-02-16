@@ -10,7 +10,7 @@ export function readFile(file: File): Promise<string | ArrayBuffer> {
   });
 }
 
-export function downloadFile(data: any, fileName: string, type: string = "text/xml"): void {
+export function downloadFile(data: BufferSource, fileName: File["name"], type: File["type"] = "text/xml"): void {
   const blob = new Blob([data], { type });
   const element = window.document.createElement("a");
   element.href = window.URL.createObjectURL(blob);

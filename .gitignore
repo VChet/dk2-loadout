@@ -9,3 +9,8 @@ src/**/*.xml
 src/**/*.txt
 src/**/*.dds
 src/**/*.tga
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json

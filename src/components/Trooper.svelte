@@ -1,11 +1,11 @@
 <script lang="ts">
+  import { getClassImg } from "@/helpers/data-getter";
+  import type { Trooper } from "@/classes/Trooper";
   import Equipment from "@/components/Equipment.svelte";
   import Rank from "@/components/Rank.svelte";
 
-  import { getClassImg } from "@/utilities/getters";
-  import type { Trooper } from "@/classes/Trooper";
-
   export let selectedTrooper: Trooper;
+  const ABILITY_BARS = Array.from({ length: 10 }, (_, i) => i);
 </script>
 
 {#if selectedTrooper}
@@ -47,8 +47,8 @@
               <li class="trooper__bar">
                 <div class="subtitle">{ability.name}</div>
                 <div class="progress">
-                  {#each Array(10) as _, i}
-                    <span class:active={ability.acquired >= i + 1} />
+                  {#each ABILITY_BARS as i}
+                    <span class:active={ability.acquired >= i + 1}></span>
                   {/each}
                 </div>
               </li>
@@ -61,8 +61,8 @@
             <li class="trooper__bar">
               <div class="subtitle">Mobility</div>
               <div class="progress">
-                {#each Array(10) as _, i}
-                  <span class:active={selectedTrooper.mobility >= i + 1} />
+                {#each ABILITY_BARS as i}
+                  <span class:active={selectedTrooper.mobility >= i + 1}></span>
                 {/each}
               </div>
             </li>
@@ -78,7 +78,7 @@
                 {/if}
               </div>
               <div class="progress">
-                {#each Array(10) as _, i}
+                {#each ABILITY_BARS as i}
                   <span class:active={selectedTrooper.concealment >= i + 1}>
                     {#if i === 1}
                       <svg class="concealment-point" height="10" width="10">
@@ -112,21 +112,21 @@
 
 <style lang="scss">
   .trooper {
-    background-color: var(--bg-main);
-    margin-top: 30px;
     padding: 10px 20px;
+    margin-top: 30px;
+    background-color: var(--bg-main);
     .trooper__name {
       margin-bottom: 8px;
-      text-transform: uppercase;
-      color: var(--header);
-      font-family: "Bebas-Neue";
+      font-family: Bebas-Neue, sans-serif;
       font-size: 64px;
+      color: var(--header);
+      text-transform: uppercase;
     }
     .trooper__wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      @media (max-width: 768px) {
+      @media (width <= 768px) {
         grid-template-columns: 1fr;
       }
       .trooper__profile {
@@ -156,7 +156,7 @@
             cursor: pointer;
           }
           ul {
-            font-family: "Noto-Sans";
+            font-family: Noto-Sans, sans-serif;
             li {
               padding: 2px 5px;
               &:nth-of-type(2n - 1) {
@@ -171,9 +171,9 @@
             margin-bottom: 5px;
           }
           .trooper__bar {
-            background-color: var(--bg-main);
             padding: 8px;
             margin-top: 8px;
+            background-color: var(--bg-main);
             .progress {
               display: grid;
               grid-template-columns: repeat(10, 1fr);
@@ -187,8 +187,8 @@
                 }
                 .concealment-point {
                   position: absolute;
-                  bottom: -9px;
                   right: -6px;
+                  bottom: -9px;
                 }
               }
             }
@@ -199,8 +199,8 @@
               align-items: center;
               justify-content: space-between;
               font-size: 18px;
-              text-transform: uppercase;
               color: var(--header);
+              text-transform: uppercase;
               .subtitle-concealment {
                 font-size: 14px;
               }
@@ -215,9 +215,9 @@
       }
       .trooper__equipment {
         display: grid;
-        gap: 8px;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 170px;
+        gap: 8px;
       }
     }
   }

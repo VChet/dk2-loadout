@@ -1,10 +1,10 @@
-import { readdir, readFile, writeFile } from "fs/promises";
-import { EOL } from "os";
-import { fileURLToPath } from "url";
-import { parseXml } from "../utilities/parser.js";
-import type { EquipmentEntry, FileData } from "@/types/Equipment";
-import type { ParsedEquipment } from "@/types/Parsed";
-import type { UnitEntry } from "@/types/Unit";
+import { readdir, readFile, writeFile } from "node:fs/promises";
+import { EOL } from "node:os";
+import { fileURLToPath } from "node:url";
+import { parseXML } from "../helpers/parser.js";
+import type { EquipmentEntry, FileData } from "@/types/equipment.js";
+import type { ParsedEquipment } from "@/types/parsed.js";
+import type { UnitEntry } from "@/types/unit.js";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 
@@ -13,12 +13,12 @@ function getEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
     name: equipment.$name,
     tooltip: equipment.$tooltip,
     img: equipment.$img,
-    concealment: equipment.ConcealmentModifier?.$add,
+    concealment: equipment.ConcealmentModifier?.$add
   };
   if (equipment.MobilityModifiers) {
     data.mobility = {
       move: equipment.MobilityModifiers?.$moveSpeedModifierPercent,
-      turn: equipment.MobilityModifiers?.$turnSpeedModifierPercent,
+      turn: equipment.MobilityModifiers?.$turnSpeedModifierPercent
     };
   }
   if (equipment.$inventoryBinding === "Helmet") {
@@ -41,7 +41,7 @@ function getUnitRanks(unit: UnitEntry) {
   return unit.TrooperRanks.Rank.map((rank) => ({ name: rank.$name, xpNeeded: rank.$xpNeeded }));
 }
 
-function readFiles(dirContent: Array<string>, extension: string): Promise<Array<string>> {
+function readFiles(dirContent: string[], extension: string): Promise<string[]> {
   const files = dirContent.filter((file) => file.endsWith(extension));
   if (!files.length) throw new Error(`Empty ${extension} folder`);
   return Promise.all(files.map((file) => readFile(`${__dirname}/${extension}/${file}`, "utf8")));
@@ -51,10 +51,10 @@ const excludedEquipment: string[] = ["BlackHood", "DarknessPenalty", "Extra_Molo
 
 readdir(`${__dirname}/xml`)
   .then((files) => readFiles(files, "xml"))
-  .then((filesContent) => Promise.all(filesContent.map((file) => parseXml(file))))
+  .then((filesContent) => Promise.all(filesContent.map((file) => parseXML(file))))
   .then((data: FileData) => {
-    const equipment: Array<ParsedEquipment> = [];
-    const ranks: { [key: string]: Array<{ name: string; xpNeeded: number }> } = {};
+    const equipment: ParsedEquipment[] = [];
+    const ranks: Record<string, { name: string, xpNeeded: number }[]> = {};
     data.forEach((entry) => {
       if (typeof entry !== "object") return;
       if (entry.Equipment) {
@@ -73,8 +73,8 @@ readdir(`${__dirname}/xml`)
         });
       }
       if (entry.Units) {
-        Object.values(entry.Units).forEach((value: Array<UnitEntry>) => {
-          if (typeof value !== "object") return;
+        Object.values(entry.Units).forEach((value: UnitEntry | UnitEntry[]) => {
+          if (!Array.isArray(value)) return;
           value.forEach((unit) => {
             ranks[unit.$name] = getUnitRanks(unit);
           });
@@ -84,10 +84,10 @@ readdir(`${__dirname}/xml`)
 
     return Promise.all([
       writeFile(`${__dirname}/equipmentData.json`, JSON.stringify(equipment, null, 2) + EOL, "utf-8"),
-      writeFile(`${__dirname}/ranksData.json`, JSON.stringify(ranks, null, 2) + EOL, "utf-8"),
+      writeFile(`${__dirname}/ranksData.json`, JSON.stringify(ranks, null, 2) + EOL, "utf-8")
     ]);
   })
-  .then(() => console.log("Finished equipment parsing"))
+  .then(() => console.info("Finished equipment parsing"))
   .catch((error) => {
     console.error(error);
   });
@@ -96,7 +96,7 @@ readdir(`${__dirname}/txt`)
   .then((files) => readFiles(files, "txt"))
   .then((filesContent) => filesContent.reduce((acc, item) => acc + item, ""))
   .then((string: string) => {
-    const mappings: { [key: string]: string } = {};
+    const mappings: Record<string, string> = {};
     string.split("\n").forEach((line) => {
       if (!line.startsWith("@")) return;
       const [key, value] = line.split("=");
@@ -105,7 +105,7 @@ readdir(`${__dirname}/txt`)
     return mappings;
   })
   .then((mappings) => writeFile(`${__dirname}/localization.json`, JSON.stringify(mappings, null, 2) + EOL, "utf-8"))
-  .then(() => console.log("Finished localization parsing"))
+  .then(() => console.info("Finished localization parsing"))
   .catch((error) => {
     console.error(error);
   });

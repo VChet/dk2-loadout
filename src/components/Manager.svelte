@@ -1,18 +1,18 @@
 <script lang="ts">
   import { onMount } from "svelte";
-
-  import { generateXml, parseXml } from "@/utilities/parser";
-  import { createShortLink, getUrlParams } from "@/utilities/shortenUrl";
-  import { downloadFile, readFile } from "@/utilities/files";
   import { Roster } from "@/classes/Roster";
+  import { downloadFile, readFile } from "@/helpers/file";
+  import { generateXML, parseXML } from "@/helpers/parser";
+  import { createShortLink, getUrlParams } from "@/helpers/share";
+  import type { IRoster } from "@/types/roster";
 
   export let roster: Roster | null = null;
 
   async function onFileSelected(event: any) {
     const content = await readFile(event.target.files[0]);
     if (content) {
-      const rosterData = parseXml(content.toString()).Roster;
-      if (!rosterData) return alert("Wrong XML file");
+      const rosterData = parseXML(content.toString()).Roster;
+      if (!rosterData) return alert("Wrong XML file"); // eslint-disable-line no-alert
       roster = new Roster(rosterData);
       window.history.pushState({}, window.document.title, "/");
     }
@@ -40,11 +40,11 @@
     if (!roster) return;
     const now = new Date();
     const date = `${now.getFullYear()}${now.getMonth()}${now.getDate()}`;
-    downloadFile(generateXml({ Roster: roster }), `roster-${date}.xml`);
+    downloadFile(generateXML({ Roster: roster }), `roster-${date}.xml`);
   }
 
   onMount(async () => {
-    const rosterData = await getUrlParams(window.location.search);
+    const rosterData = await getUrlParams(window.location.search) as IRoster | null;
     if (rosterData) roster = new Roster(rosterData);
   });
 </script>
@@ -75,19 +75,19 @@
     background-color: var(--bg-main);
     label,
     button {
-      background: var(--bg-main);
-      color: var(--paragraph);
-      border: none;
       padding: 4px;
-      outline: inherit;
-      cursor: pointer;
-      font-family: "Bebas-Neue";
-      text-align: center;
+      font-family: Bebas-Neue, sans-serif;
       font-size: 24px;
+      color: var(--paragraph);
+      text-align: center;
+      cursor: pointer;
+      outline: inherit;
+      background: var(--bg-main);
+      border: none;
       &:hover,
       &:focus {
-        background-color: var(--paragraph);
         color: var(--dark-text);
+        background-color: var(--paragraph);
       }
     }
     .button-group {
@@ -98,11 +98,11 @@
       }
     }
     pre {
-      background-color: var(--bg-main);
-      margin: 0;
       padding: 4px;
-      white-space: normal;
+      margin: 0;
       word-break: break-word;
+      white-space: normal;
+      background-color: var(--bg-main);
     }
   }
 </style>

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Armor, Equipment, Helmet, Support, Utility, Weapon } from "@/classes/Equipment";
-  import type { TrooperEquipment } from "@/types/Roster";
+  import type { TrooperEquipment } from "@/types/roster";
 
   export let className: string;
   export let equipment: TrooperEquipment;
@@ -56,25 +56,25 @@
 
 <style lang="scss">
   .subtitle {
-    background-color: var(--bg-main);
     padding: 4px 8px;
+    background-color: var(--bg-main);
   }
   li {
     position: relative;
-    background-color: var(--bg-main);
     display: flex;
     flex-direction: column;
+    background-color: var(--bg-main);
     &.primary,
     &.secondary,
     &[class^="support-"] {
       grid-column: 1 / -1;
     }
     > img {
-      align-self: center;
       box-sizing: border-box;
-      padding: 15px;
-      height: 130px;
+      align-self: center;
       max-width: 100%;
+      height: 130px;
+      padding: 15px;
       object-fit: contain;
     }
     &.primary > img,
@@ -92,16 +92,16 @@
       right: 5px;
       bottom: 35px;
       display: grid;
-      grid-template-columns: min-content 1fr;
+      grid-template-columns: auto auto;
       gap: 8px;
       &__silencer {
         grid-column: 1 / -1;
         justify-self: flex-end;
       }
       img {
-        max-height: 32px;
-        border: 2px solid #423929;
+        height: 32px;
         background-color: #0c0a0a;
+        border: 2px solid #423929;
       }
     }
   }

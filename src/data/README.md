@@ -7,7 +7,8 @@ Should be used only when the game data updates
    - `xml` folder
 
      - Equipment
-       ```
+
+       ```txt
        data/equipment/cia_disguises.xml
        data/equipment/firearm_ammo.xml
        data/equipment/firearm_scopes.xml
@@ -21,14 +22,16 @@ Should be used only when the game data updates
        data/equipment/various.xml
        data/equipment/various_nwswat.xml
        ```
+
      - Ranks
-       ```
+
+       ```txt
        data/units/units.xml
        ```
 
    - `txt` folder
 
-     ```
+     ```txt
      data/localization/game.txt
      ```
 

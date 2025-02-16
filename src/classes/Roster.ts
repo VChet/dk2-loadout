@@ -1,5 +1,5 @@
 import { Squad } from "@/classes/Squad";
-import type { IRoster } from "@/types/Roster";
+import type { IRoster } from "@/types/roster";
 
 export class Roster {
   squads: Squad[];

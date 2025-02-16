@@ -1,7 +1,7 @@
 <script lang="ts">
-  import SquadBlock from "@/components/Squad.svelte";
   import type { Roster } from "@/classes/Roster";
   import type { Trooper } from "@/classes/Trooper";
+  import SquadBlock from "@/components/Squad.svelte";
 
   export let roster: Roster | null = null;
   export let selectedTrooper: Trooper | null = null;
@@ -20,11 +20,11 @@
 <style lang="scss">
   .roster {
     flex-basis: 300px;
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
       flex: 1;
       max-height: 300px;
-      overflow-y: auto;
       margin-bottom: 20px;
+      overflow-y: auto;
     }
     ul {
       display: flex;

@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { getClassImg } from "@/utilities/getters";
-  import type { Trooper } from "@/classes/Trooper";
+  import { getClassImg } from "@/helpers/data-getter";
   import type { Squad } from "@/classes/Squad";
+  import type { Trooper } from "@/classes/Trooper";
 
   export let selectedTrooper: Trooper | null = null;
   export let squad: Squad | null = null;
 
-  function removeSquad() {
+  function deleteSquad() {
     squad = null;
     selectedTrooper = null;
   }
@@ -20,7 +20,7 @@
     class:squad--nowheraki={squad.unit === "Nowheraki"}
   >
     <div class="squad__unit">
-      <button on:click={removeSquad} />
+      <button aria-label="Delete Squad" on:click={deleteSquad}></button>
       {squad.unit}
     </div>
     <div class="squad__name">{squad.name}</div>
@@ -54,28 +54,28 @@
   .squad {
     @mixin squad-title {
       padding: 5px 10px;
-      text-align: right;
-      font-family: "Bebas-Neue";
-      text-transform: uppercase;
+      font-family: Bebas-Neue, sans-serif;
       line-height: 1;
       color: var(--dark-text);
+      text-align: right;
+      text-transform: uppercase;
     }
     &__unit {
+      @include squad-title;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      @include squad-title;
-      box-shadow: inset 0 0 0 50px var(--bg-main);
-      color: var(--paragraph);
       font-size: 24px;
+      color: var(--paragraph);
+      box-shadow: inset 0 0 0 50px var(--bg-main);
       button {
         width: 30px;
         height: 30px;
+        padding: 0;
+        cursor: pointer;
+        outline: inherit;
         background: url("/images/ui/squad_delete.webp") no-repeat center / contain;
         border: none;
-        padding: 0;
-        outline: inherit;
-        cursor: pointer;
         &:hover,
         &:focus {
           background-image: url("/images/ui/squad_delete_hover.webp");
@@ -84,8 +84,8 @@
     }
     &__name {
       @include squad-title;
-      background-color: var(--paragraph);
       font-size: 28px;
+      background-color: var(--paragraph);
     }
     &__class {
       + .squad__class {
@@ -98,14 +98,14 @@
         align-items: center;
         justify-content: space-between;
         font-size: 28px;
-        background-color: #bbbbbb;
-        &:before {
-          content: "";
+        background-color: #bbb;
+        &::before {
           position: absolute;
           top: 0;
           left: 0;
           width: 120px;
           height: 100%;
+          content: "";
           background-image: url("/images/ui/class_bars.webp");
           background-repeat: no-repeat;
         }
@@ -121,14 +121,14 @@
         padding: 8px;
         background-color: var(--bg-main);
         .trooper {
+          box-sizing: content-box;
           width: 60px;
           height: 60px;
           padding: 0;
+          cursor: pointer;
           background: #1a1407 url("/images/ui/trooper_background.webp") center no-repeat;
           border: 3px solid #4c3f2e;
           border-radius: 50%;
-          box-sizing: content-box;
-          cursor: pointer;
           &:hover,
           &.selected {
             border-color: var(--accent);

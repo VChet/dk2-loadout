@@ -1,9 +1,9 @@
 import { Trooper } from "@/classes/Trooper";
-import type { ISquad } from "@/types/Roster";
+import type { ISquad } from "@/types/roster";
 
 export class Squad {
-  #squad: ISquad;
   classMap: Record<string, Trooper[]>;
+  #squad: ISquad;
 
   constructor(squad: ISquad) {
     this.#squad = squad;
