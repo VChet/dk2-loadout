@@ -1,33 +1,60 @@
+export type TrooperClassName = |
+  "Assault" |
+  "Support" |
+  "Marksman" |
+  "Grenadier" |
+  "SwatLeader" |
+  "SwatAssaulter" |
+  "SwatSapper" |
+  "SwatMilitia" |
+  "Undercover" |
+  "BlackOps";
 export interface Id {
   $name: string
   $portrait: string
-  $gender: number
-  $voicePack: string
+  $gender: 0 | 1
+  $voicePack: ""
 }
 
-export type TrooperEquipmentEntry = { $name: string };
+interface TrooperEquipmentEntry {
+  $name: string
+};
 export interface TrooperEquipment {
-  PrimaryWeapon: TrooperEquipmentEntry
-  PrimaryWeaponScope: TrooperEquipmentEntry
-  PrimaryWeaponAmmo: TrooperEquipmentEntry
-  PrimaryWeaponMuzzle: TrooperEquipmentEntry | ""
-  SecondaryWeapon: TrooperEquipmentEntry
-  SecondaryWeaponScope: TrooperEquipmentEntry
-  SecondaryWeaponAmmo: TrooperEquipmentEntry
-  SecondaryWeaponMuzzle: TrooperEquipmentEntry | ""
-  Armor: TrooperEquipmentEntry
+  PrimaryWeapon: TrooperEquipmentEntry | ""
+  PrimaryWeaponScope: TrooperEquipmentEntry | ""
+  PrimaryWeaponAmmo: TrooperEquipmentEntry | ""
+  PrimaryWeaponMuzzle: ""
+  SecondaryWeapon: TrooperEquipmentEntry | ""
+  SecondaryWeaponScope: TrooperEquipmentEntry | ""
+  SecondaryWeaponAmmo: TrooperEquipmentEntry | ""
+  SecondaryWeaponMuzzle: ""
   Helmet: TrooperEquipmentEntry
-  HelmetNVG: TrooperEquipmentEntry
+  HelmetNVG: TrooperEquipmentEntry | ""
+  Armor: TrooperEquipmentEntry | ""
   UtilityPouch1: TrooperEquipmentEntry
-  UtilityPouch2: TrooperEquipmentEntry
+  UtilityPouch2: TrooperEquipmentEntry | ""
   SupportGear1: TrooperEquipmentEntry | ""
   SupportGear2: TrooperEquipmentEntry | ""
   SupportGear3: TrooperEquipmentEntry | ""
+  MountedGun: ""
+  Custom1: ""
+  Custom2: ""
+  Custom3: ""
+  Custom4: ""
+  Custom5: ""
+  Custom6: ""
+  Custom7: ""
+  Custom8: ""
+  Custom9: ""
 }
 
+type InnateAbility = "Marksmanship" | "AssaultShooting" | "FieldSkills";
+
 export interface Statistics {
-  $xp: number
+  $totalCampaignsPlayed: number
   $totalMissionsWon: number
+  $xp: number
+  $promoted: number
   $missionFailed: number
   $mission1Star: number
   $mission2Star: number
@@ -37,44 +64,50 @@ export interface Statistics {
   $kills: number
   $killsStunnedTarget: number
   $killsUnawareTarget: number
-  $injuries: number
+  $hitsTaken: number
   $doorsKicked: number
   $doorForcedBreaches: number
   $doorsBlownUp: number
-  $grenadesUsed: number
+  $explosivesUsed: number
   $distanceWalkedMeters: number
-  $completedHealthy: number
-  $perfectAccuracy: number
+  $distanceSprintMeters: number
+  $arrests: number
+  $rescues: number
   $challengesCompleted: number
   $bombsDisarmed: number
   $wallsBreached: number
-  $arrests: number
-  $rescues: number
-  $prev_xp: number
+  $completedHealthy: number
+  $perfectAccuracy: number
+  $jumps: number
+  $deaths: number
+  $health: number
+  $startingHealth: number
+  $prev_total_xp: number
 }
 
-export type TrooperClass = "Assault" | "Support" | "Marksman" | "Grenadier" | "Undercover" | "BlackOps" | "Nowheraki";
 export interface ITrooper {
-  $class: TrooperClass
+  $class: TrooperClassName
   Id: Id
   Equipment: TrooperEquipment
   InnateAbilities: {
-    InnateAbility: { $name: string, $percent: number }[]
+    InnateAbility: { $name: InnateAbility, $percent: number }[]
   }
   Statistics: Statistics
 }
 
 export type SquadUnit = "Rangers" | "CIA" | "Nowheraki";
-
 export interface ISquad {
-  $id: number
-  $name: string
   $unit: SquadUnit
+  $name: string
+  $id: number
+  $newTroopsBitset: number
+  $battleHonors: number
   Trooper: ITrooper[]
 }
 
 export interface IRoster {
   $version: number
+  $gameVersion: number
   $numSquads: number
   Squad: ISquad[]
 }

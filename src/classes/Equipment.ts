@@ -9,7 +9,7 @@ import {
   getWeaponData
 } from "@/helpers/data-getter";
 import type { ParsedEquipment } from "@/types/parsed";
-import type { TrooperEquipment, TrooperEquipmentEntry } from "@/types/roster";
+import type { TrooperEquipment } from "@/types/roster";
 
 export class Equipment {
   _token: string;
@@ -55,12 +55,16 @@ export class Weapon extends Equipment {
   ammo: Ammo | null;
   scope: Scope | null;
   #weapon: ParsedEquipment | null;
-  constructor(name: string, ammo: TrooperEquipmentEntry, scope: TrooperEquipmentEntry) {
+  constructor(
+    name: string,
+    ammo: TrooperEquipment["PrimaryWeaponAmmo"] | TrooperEquipment["SecondaryWeaponAmmo"],
+    scope: TrooperEquipment["PrimaryWeaponScope"] | TrooperEquipment["SecondaryWeaponScope"]
+  ) {
     super(name);
     this.#weapon = getWeaponData(name);
-    this.suppressor = new Suppressor(this.#isSuppressed);
-    this.ammo = ammo.$name ? new Ammo(ammo.$name) : null;
-    this.scope = scope.$name ? new Scope(scope.$name) : null;
+    this.suppressor = this.#isSuppressorAvailable || this.#isSuppressed ? new Suppressor(this.#isSuppressed) : null;
+    this.ammo = ammo ? new Ammo(ammo.$name) : null;
+    this.scope = scope ? new Scope(scope.$name) : null;
   }
 
   get name() {
@@ -75,9 +79,13 @@ export class Weapon extends Equipment {
     if (!this.#weapon) return null;
     return getFileName(this.#weapon.name);
   }
+  get #isSuppressorAvailable(): boolean {
+    if (!this.#weapon) return false;
+    return !!this.#weapon.suppressorAvailable;
+  }
   get #isSuppressed(): boolean {
     if (!this.#weapon) return false;
-    return !!this.#weapon.suppressorAvailable && !!this.#weapon.suppressed;
+    return !!this.#weapon.suppressed;
   }
 }
 
@@ -96,10 +104,9 @@ export class Suppressor {
   imageAltText: string;
   image: string;
   constructor(isSuppressed: boolean) {
-    this.image = isSuppressed ?
-      "img/weapons/attachments/basic_silencer_ui_small.webp" :
-      "img/weapons/attachments/silencer_none.webp";
-    this.imageAltText = isSuppressed ? "basic_silencer_ui_small" : "silencer_none";
+    const fileName = isSuppressed ? "basic_silencer_ui_small" : "silencer_none";
+    this.image = `img/weapons/attachments/${fileName}.webp`;
+    this.imageAltText = fileName;
   }
 }
 export class Ammo extends WeaponAttachment {}
@@ -108,7 +115,7 @@ export class Scope extends WeaponAttachment {}
 export class Helmet extends Equipment {
   nvg: NVG | null;
   #helmet: ParsedEquipment | null;
-  constructor(name: string, helmetNVG: TrooperEquipmentEntry) {
+  constructor(name: string, helmetNVG: TrooperEquipment["HelmetNVG"]) {
     super(name);
     this.#helmet = getHelmetData(name);
     this.nvg = helmetNVG ? new NVG(helmetNVG.$name) : null;

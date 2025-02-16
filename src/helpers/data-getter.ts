@@ -1,6 +1,7 @@
 import equipmentData from "@/data/equipmentData.json";
 import localization from "@/data/localization.json";
 import type { ParsedEquipment } from "@/types/parsed";
+import type { TrooperClassName } from "@/types/roster";
 
 export const datamap = new Map(equipmentData.map((item) => [item.name, item]));
 
@@ -9,7 +10,7 @@ export function getFileName(filepath: string): string {
   return name ?? filepath;
 }
 
-export function getClassTitle(className: string): string {
+export function getClassTitle(className: TrooperClassName): string {
   switch (className) {
     case "BlackOps": return "Black Ops";
     case "SwatLeader": return "Leader";
@@ -20,7 +21,7 @@ export function getClassTitle(className: string): string {
   }
 }
 
-function getClassName(className: string): string {
+function getClassName(className: TrooperClassName): string {
   switch (className) {
     case "Assault": return "assaulter";
     case "SwatLeader": return "nowheraki_leader";
@@ -30,7 +31,7 @@ function getClassName(className: string): string {
     default: return className.toLowerCase();
   }
 }
-export function getClassImg(name: string): string {
+export function getClassImg(name: TrooperClassName): string {
   return `img/gui/deploy/class_icon_${getFileName(getClassName(name))}.webp`;
 }
 

@@ -18,8 +18,7 @@
       "move": -1,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "PM63 Fergie",
@@ -30,8 +29,7 @@
       "move": -1,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "Mini Uzi CIA",
@@ -42,8 +40,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MP5K CIA BOps",
@@ -54,8 +51,7 @@
       "move": -1,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MP5K Sup CIA BOps",
@@ -66,7 +62,6 @@
       "move": -1,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -78,8 +73,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MP5KPDW Sup CIA BOps",
@@ -90,7 +84,6 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -102,8 +95,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MP5A Sup CIA BOps",
@@ -114,7 +106,6 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -126,8 +117,7 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MP7 CIA BOps",
@@ -138,8 +128,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MP7Sup CIA BOps",
@@ -150,7 +139,6 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -162,8 +150,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "AKS 74USup CIA BOps",
@@ -174,7 +161,6 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -186,8 +172,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "RattlerSup CIA BOps",
@@ -198,7 +183,6 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -210,8 +194,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK 18Sup CIA BOps",
@@ -222,7 +205,6 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -234,8 +216,7 @@
       "move": -4,
       "turn": -2
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "AK 105 Alpha Sup CIA BOps",
@@ -246,7 +227,6 @@
       "move": -4,
       "turn": -2
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -258,8 +238,7 @@
       "move": -4,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MK17CQC CIA BOps",
@@ -270,8 +249,7 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK17CQC Sup CIA BOps",
@@ -282,7 +260,6 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -294,8 +271,7 @@
       "move": -3,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M4 CIA BOps",
@@ -306,8 +282,7 @@
       "move": -3,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M4 Sup CIA BOps",
@@ -318,7 +293,6 @@
       "move": -3,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -330,8 +304,7 @@
       "move": -8,
       "turn": -2
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK17STD Sup CIA BOps",
@@ -342,7 +315,6 @@
       "move": -8,
       "turn": -2
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -354,8 +326,7 @@
       "move": -10,
       "turn": -5
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M249SPW Sup CIA BOps",
@@ -366,7 +337,6 @@
       "move": -10,
       "turn": -6
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -378,8 +348,7 @@
       "move": -7,
       "turn": -3
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "LAMG Sup CIA BOps",
@@ -390,7 +359,6 @@
       "move": -7,
       "turn": -3
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -402,8 +370,7 @@
       "move": -12,
       "turn": -6
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK48 Sup CIA BOps",
@@ -414,7 +381,6 @@
       "move": -12,
       "turn": -7
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -426,8 +392,7 @@
       "move": -15,
       "turn": -10
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "SVD CIA BOps",
@@ -438,8 +403,7 @@
       "move": -9,
       "turn": -2
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "VSS CIA BOps",
@@ -450,8 +414,7 @@
       "move": -4,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M110A1 CIA BOps",
@@ -462,8 +425,7 @@
       "move": -9,
       "turn": -4
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M110A1Sup CIA BOps",
@@ -474,7 +436,6 @@
       "move": -9,
       "turn": -5
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -486,8 +447,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "Mini Uzi NWS",
@@ -498,8 +458,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "Mini Uzi Pistol NWS",
@@ -510,8 +469,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "AKM GL NWS",
@@ -521,8 +479,7 @@
       "move": -10,
       "turn": -5
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M4/M203 NWS",
@@ -532,8 +489,7 @@
       "move": -10,
       "turn": -5
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M4/M203 NWSSup",
@@ -543,7 +499,6 @@
       "move": -10,
       "turn": -6
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -555,8 +510,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "AKM NWS",
@@ -567,8 +521,7 @@
       "move": -5,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "AKM NWS Militia",
@@ -579,8 +532,7 @@
       "move": -5,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "Type 56 NWS Militia",
@@ -591,8 +543,7 @@
       "move": -4,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "Type 56 NWS",
@@ -603,8 +554,7 @@
       "move": -4,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M16A4 NWS",
@@ -614,8 +564,7 @@
       "move": -7,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M16A4 NWS Militia",
@@ -625,8 +574,7 @@
       "move": -7,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M4 NWS",
@@ -637,8 +585,7 @@
       "move": -3,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M4 Sup NWS",
@@ -649,7 +596,6 @@
       "move": -3,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -661,8 +607,7 @@
       "move": -4,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "Vulcan Sup NWS",
@@ -673,7 +618,6 @@
       "move": -4,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -684,8 +628,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "APC9K Sup NWS",
@@ -695,7 +638,6 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -706,8 +648,7 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "FAL NWS",
@@ -717,8 +658,7 @@
       "move": -8,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "RPK NWS",
@@ -729,8 +669,7 @@
       "move": -9,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "RPK NWS Militia",
@@ -741,8 +680,7 @@
       "move": -10,
       "turn": -5
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M249 NWS",
@@ -753,8 +691,7 @@
       "move": -10,
       "turn": -5
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "SVD NWS",
@@ -765,8 +702,7 @@
       "move": -9,
       "turn": -2
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "SVU NWS",
@@ -777,8 +713,7 @@
       "move": -9,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M9 Pistol",
@@ -788,8 +723,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M9Sup Pistol",
@@ -799,7 +733,6 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -810,8 +743,7 @@
       "move": -1.85,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M18 Pistol",
@@ -821,8 +753,7 @@
       "move": -1.6,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "G19X Pistol",
@@ -832,8 +763,7 @@
       "move": -1,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "G2240 Pistol",
@@ -843,8 +773,7 @@
       "move": -1.2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "1911 Pistol",
@@ -854,8 +783,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MPS45Sup Pistol",
@@ -865,8 +793,7 @@
       "move": -2,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "TSS4 Pistol",
@@ -877,8 +804,7 @@
       "move": -1,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "PPK Pistol CIA",
@@ -889,8 +815,7 @@
       "move": -0.5,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "PPK Sup Pistol CIA",
@@ -901,7 +826,6 @@
       "move": -0.7,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -913,8 +837,7 @@
       "move": -0.8,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "G19Sup Pistol CIA BOps",
@@ -925,7 +848,6 @@
       "move": -0.8,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -937,8 +859,7 @@
       "move": -1,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "G19Custom Pistol CIA BOps",
@@ -949,8 +870,7 @@
       "move": -1.8,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "G17 Pistol CIA BOps",
@@ -961,8 +881,7 @@
       "move": -1.2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "G2240 Pistol CIA BOps",
@@ -973,8 +892,7 @@
       "move": -1.2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M18 Pistol CIA BOps",
@@ -985,8 +903,7 @@
       "move": -1.6,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M17 Pistol CIA BOps",
@@ -997,8 +914,7 @@
       "move": -1.85,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M9 Pistol CIA BOps",
@@ -1009,8 +925,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "HK45CT CIA UCov",
@@ -1021,8 +936,7 @@
       "move": -1.6,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "HK45CTSup CIA UCov",
@@ -1033,7 +947,6 @@
       "move": -1.6,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1045,8 +958,7 @@
       "move": -1.6,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "HK45CTSup CIA BOps",
@@ -1057,7 +969,6 @@
       "move": -1.6,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1069,8 +980,7 @@
       "move": -2.1,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M9 Pistol NWS",
@@ -1080,8 +990,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M9Sup Pistol NWS",
@@ -1091,7 +1000,6 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1103,8 +1011,7 @@
       "move": -1.2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "HS45 Pistol NWS",
@@ -1114,8 +1021,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "HS45 Pistol Asset",
@@ -1125,8 +1031,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M9 Pistol NWS Militia",
@@ -1136,8 +1041,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "G17 Pistol NWS Militia",
@@ -1148,8 +1052,7 @@
       "move": -1.2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M500PP",
@@ -1159,8 +1062,7 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M1014",
@@ -1170,8 +1072,7 @@
       "move": -8,
       "turn": -2
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MP5A",
@@ -1181,8 +1082,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MP5SD",
@@ -1192,8 +1092,7 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M16A4",
@@ -1203,8 +1102,7 @@
       "move": -8,
       "turn": -1
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M4 Carbine",
@@ -1214,8 +1112,7 @@
       "move": -3,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M4Sup",
@@ -1225,7 +1122,6 @@
       "move": -3,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1236,8 +1132,7 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK 18Sup",
@@ -1247,7 +1142,6 @@
       "move": -2,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1258,8 +1152,7 @@
       "move": -3,
       "turn": 0
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M4 URGISup",
@@ -1269,7 +1162,6 @@
       "move": -3,
       "turn": 0
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1280,8 +1172,7 @@
       "move": -10,
       "turn": -5
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M4/M203Sup",
@@ -1291,7 +1182,6 @@
       "move": -10,
       "turn": -6
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1302,8 +1192,7 @@
       "move": -9,
       "turn": -4
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK18/M203Sup",
@@ -1313,7 +1202,6 @@
       "move": -9,
       "turn": -4
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1324,8 +1212,7 @@
       "move": -12,
       "turn": -5
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "M249SPW",
@@ -1335,8 +1222,7 @@
       "move": -10,
       "turn": -5
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M249Sup",
@@ -1346,7 +1232,6 @@
       "move": -10,
       "turn": -6
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1358,8 +1243,7 @@
       "move": -8,
       "turn": -3
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "LAMG Sup",
@@ -1370,7 +1254,6 @@
       "move": -8,
       "turn": -3
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1381,8 +1264,7 @@
       "move": -20,
       "turn": -10
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MK48",
@@ -1392,8 +1274,7 @@
       "move": -12,
       "turn": -6
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK48Sup",
@@ -1403,7 +1284,6 @@
       "move": -12,
       "turn": -7
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1414,8 +1294,7 @@
       "move": -17,
       "turn": -10
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MG338Sup",
@@ -1425,7 +1304,6 @@
       "move": -17,
       "turn": -10
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1436,8 +1314,7 @@
       "move": -10,
       "turn": -2
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MK17LB",
@@ -1447,8 +1324,7 @@
       "move": -10,
       "turn": -2
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK17LB Sup",
@@ -1458,7 +1334,6 @@
       "move": -10,
       "turn": -2
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1469,8 +1344,7 @@
       "move": -10,
       "turn": -3
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MK20SSR",
@@ -1480,8 +1354,7 @@
       "move": -10,
       "turn": -2
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK20SSRSup",
@@ -1491,7 +1364,6 @@
       "move": -10,
       "turn": -2
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1502,8 +1374,7 @@
       "move": -9,
       "turn": -4
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "M110A1Sup",
@@ -1513,7 +1384,6 @@
       "move": -9,
       "turn": -5
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1524,8 +1394,7 @@
       "move": -8,
       "turn": -2
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK17STD Sup",
@@ -1536,7 +1405,6 @@
       "move": -8,
       "turn": -2
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1547,8 +1415,7 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK17CQC Sup",
@@ -1558,7 +1425,6 @@
       "move": -3,
       "turn": -1
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1569,8 +1435,7 @@
       "move": -10,
       "turn": -6
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK17CQC EGLM Sup",
@@ -1580,7 +1445,6 @@
       "move": -10,
       "turn": -6
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1591,8 +1455,7 @@
       "move": -12,
       "turn": -6
     },
-    "suppressorAvailable": true,
-    "suppressed": false
+    "suppressorAvailable": true
   },
   {
     "name": "MK17STD EGLM Sup",
@@ -1602,7 +1465,6 @@
       "move": -12,
       "turn": -6
     },
-    "suppressorAvailable": true,
     "suppressed": true
   },
   {
@@ -1622,8 +1484,7 @@
       "move": -13,
       "turn": 0
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "40MMBUCKSHOT_M79",
@@ -3789,8 +3650,7 @@
       "move": -22,
       "turn": -60
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "NWS Shield Lvl IV",
@@ -3800,8 +3660,7 @@
       "move": -27,
       "turn": -65
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "MWS RPG 7",
@@ -3811,8 +3670,7 @@
       "move": -30,
       "turn": -30
     },
-    "suppressorAvailable": false,
-    "suppressed": false
+    "suppressorAvailable": false
   },
   {
     "name": "NWS RPG 26",

@@ -12,7 +12,7 @@ export class Trooper {
   concealment: number;
   mobility: number;
   #trooper: ITrooper;
-  #ranks;
+  #ranks: { name: string, xpNeeded: number }[];
   #defaultConcealment: number;
 
   constructor(trooper: ITrooper) {

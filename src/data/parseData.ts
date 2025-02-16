@@ -2,7 +2,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import { EOL } from "node:os";
 import { fileURLToPath } from "node:url";
 import { parseXML } from "../helpers/parser.js";
-import type { EquipmentEntry, FileData } from "@/types/equipment.js";
+import type { EquipmentEntry, FileData, Firearm, Helmet } from "@/types/equipment.js";
 import type { ParsedEquipment } from "@/types/parsed.js";
 import type { UnitEntry } from "@/types/unit.js";
 
@@ -10,28 +10,33 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const XML_DIR = `${__dirname}/xml`;
 const TXT_DIR = `${__dirname}/txt`;
 const EXCLUDED_EQUIPMENT = new Set(["BlackHood", "DarknessPenalty", "Extra_MolotovShrapnel", "FeetOfSteel"]);
-const SUPPRESSED_SLOTS = new Set(["PrimaryWeapon", "PrimaryWeaponMuzzle", "SecondaryWeapon", "SecondaryWeaponMuzzle"]);
+
+function hasNVGParam(equipment: EquipmentEntry): equipment is Helmet {
+  return "$inventoryBinding" in equipment && equipment.$inventoryBinding === "Helmet";
+}
+function isSuppressorAvailable(equipment: EquipmentEntry): equipment is Firearm {
+  return "$inventoryBinding" in equipment && ["PrimaryWeapon", "SecondaryWeapon"].includes(equipment.$inventoryBinding);
+}
+function isSuppressed(equipment: EquipmentEntry): equipment is Firearm {
+  return "$inventoryBinding" in equipment && ["PrimaryWeaponMuzzle", "SecondaryWeaponMuzzle"].includes(equipment.$inventoryBinding);
+}
 
 function composeEquipmentFields(equipment: EquipmentEntry): ParsedEquipment {
   const data: ParsedEquipment = {
     name: equipment.$name,
     tooltip: equipment.$tooltip,
     img: equipment.$img,
-    concealment: equipment.ConcealmentModifier?.$add
+    concealment: "ConcealmentModifier" in equipment ? equipment.ConcealmentModifier?.$add : undefined
   };
-  if (equipment.MobilityModifiers) {
+  if ("MobilityModifiers" in equipment) {
     data.mobility = {
-      move: equipment.MobilityModifiers?.$moveSpeedModifierPercent,
-      turn: equipment.MobilityModifiers?.$turnSpeedModifierPercent
+      move: equipment.MobilityModifiers.$moveSpeedModifierPercent,
+      turn: equipment.MobilityModifiers.$turnSpeedModifierPercent
     };
   }
-  if (equipment.$inventoryBinding === "Helmet") {
-    data.NVGAvailable = equipment.Params?.$allowNVG !== false;
-  }
-  if (equipment.$inventoryBinding && SUPPRESSED_SLOTS.has(equipment.$inventoryBinding)) {
-    data.suppressorAvailable = Boolean(equipment.Params?.$suppressedSwitch);
-    data.suppressed = Boolean(equipment.Params?.$suppressedImg);
-  }
+  if (hasNVGParam(equipment)) { data.NVGAvailable = equipment.Params.$allowNVG !== false; }
+  if (isSuppressorAvailable(equipment)) { data.suppressorAvailable = !!equipment.Params.$suppressedSwitch; }
+  if (isSuppressed(equipment)) { data.suppressed = true; }
   return data;
 }
 

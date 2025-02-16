@@ -1,4 +1,4 @@
-export type ParsedEquipment = {
+export interface ParsedEquipment {
   name: string
   tooltip?: string
   img?: string
@@ -12,7 +12,7 @@ export type ParsedEquipment = {
   NVGAvailable?: boolean
 };
 
-export type ComputedLevel = {
+export interface ComputedLevel {
   rank: string
   nextLevel: number
   earnedXp?: number

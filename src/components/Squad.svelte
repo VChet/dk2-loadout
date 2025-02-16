@@ -1,5 +1,6 @@
 <script lang="ts">
   import { getClassImg, getClassTitle } from "@/helpers/data-getter";
+  import { getTypedKeys } from "@/helpers/object";
   import type { Squad } from "@/classes/Squad";
   import type { Trooper } from "@/classes/Trooper";
 
@@ -25,7 +26,7 @@
     </div>
     <div class="squad__name">{squad.name}</div>
     <ul>
-      {#each Object.keys(squad.classMap) as className}
+      {#each getTypedKeys(squad.classMap) as className}
         <li class="squad__class">
           <div class="squad__class-name">
             <img src={getClassImg(className)} alt={className} draggable="false" />
