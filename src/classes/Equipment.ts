@@ -1,12 +1,10 @@
 import {
   datamap,
+  extractPathSegment,
+  getAttachmentImg,
+  getEquipmentData,
   getEquipmentImg,
-  getFileName,
-  getHelmetData,
-  getNameString,
-  getNVGImg,
-  getWeaponAttachmentImg,
-  getWeaponData
+  getNameString
 } from "@/helpers/data-getter";
 import type { ParsedEquipment } from "@/types/parsed";
 import type { TrooperEquipment } from "@/types/roster";
@@ -61,7 +59,7 @@ export class Weapon extends Equipment {
     scope: TrooperEquipment["PrimaryWeaponScope"] | TrooperEquipment["SecondaryWeaponScope"]
   ) {
     super(name);
-    this.#weapon = getWeaponData(name);
+    this.#weapon = getEquipmentData(name);
     this.suppressor = this.#isSuppressorAvailable || this.#isSuppressed ? new Suppressor(this.#isSuppressed) : null;
     this.ammo = ammo ? new Ammo(ammo.$name) : null;
     this.scope = scope ? new Scope(scope.$name) : null;
@@ -77,7 +75,7 @@ export class Weapon extends Equipment {
   }
   get imageAltText() {
     if (!this.#weapon) return null;
-    return getFileName(this.#weapon.name);
+    return extractPathSegment(this.#weapon.name);
   }
   get #isSuppressorAvailable(): boolean {
     if (!this.#weapon) return false;
@@ -94,10 +92,10 @@ class WeaponAttachment extends Equipment {
     return getNameString(this._token);
   }
   get imageAltText() {
-    return getFileName(this._token);
+    return extractPathSegment(this._token);
   }
   get image() {
-    return getWeaponAttachmentImg(this._token);
+    return getAttachmentImg(this._token);
   }
 }
 export class Suppressor {
@@ -117,7 +115,7 @@ export class Helmet extends Equipment {
   #helmet: ParsedEquipment | null;
   constructor(name: string, helmetNVG: TrooperEquipment["HelmetNVG"]) {
     super(name);
-    this.#helmet = getHelmetData(name);
+    this.#helmet = getEquipmentData(name);
     this.nvg = helmetNVG ? new NVG(helmetNVG.$name) : null;
   }
 
@@ -131,7 +129,7 @@ export class Helmet extends Equipment {
   }
   get imageAltText() {
     if (!this.#helmet) return null;
-    return getFileName(this.#helmet.name);
+    return extractPathSegment(this.#helmet.name);
   }
   get isNVGAvailable(): boolean {
     if (!this.#helmet) return false;
@@ -143,10 +141,10 @@ export class NVG extends Equipment {
     return getNameString(this._token);
   }
   get image() {
-    return getNVGImg(this._token);
+    return getAttachmentImg(this._token);
   }
   get imageAltText() {
-    return getFileName(this._token);
+    return extractPathSegment(this._token);
   }
 }
 
@@ -158,7 +156,7 @@ class CommonUtility extends Equipment {
     return getEquipmentImg(this._token);
   }
   get imageAltText() {
-    return getFileName(this._token);
+    return extractPathSegment(this._token);
   }
 }
 export class Armor extends CommonUtility {}

@@ -1,7 +1,7 @@
 import { Equipment } from "@/classes/Equipment";
 import localization from "@/data/localization.json";
 import ranksData from "@/data/ranksData.json";
-import { getFileName } from "@/helpers/data-getter";
+import { extractPathSegment } from "@/helpers/data-getter";
 import type { ComputedLevel } from "@/types/parsed";
 import type { ITrooper } from "@/types/roster";
 
@@ -35,7 +35,7 @@ export class Trooper {
       this.#defaultConcealment = 0;
     }
 
-    this.portraitFile = getFileName(this.#trooper.Id.$portrait);
+    this.portraitFile = extractPathSegment(this.#trooper.Id.$portrait);
     this.level = this.getLevel();
     this.abilities = this.getAbilities();
     this.concealment = this.getConcealment();
@@ -49,10 +49,10 @@ export class Trooper {
     return this.#trooper.Id.$name;
   }
   get portraitBig() {
-    return `img/portraits/${this.portraitFile}_large.webp`;
+    return `img/${this.portraitFile}_large.webp`;
   }
   get portraitSmall() {
-    return `img/portraits/${this.portraitFile}.webp`;
+    return `img/${this.portraitFile}.webp`;
   }
   get class() {
     return this.#trooper.$class;

@@ -32,7 +32,7 @@
     <div class="subtitle">{data.name}</div>
   {:else if data instanceof Helmet}
     {#if data.image}
-      <img src={data.image} alt={data.imageAltText} title={data.name} class="dds" draggable="false" />
+      <img src={data.image} alt={data.imageAltText} title={data.name} draggable="false" />
     {/if}
     {#if data.isNVGAvailable && data.nvg}
       <div class="attachments">

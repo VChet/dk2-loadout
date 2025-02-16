@@ -5,9 +5,8 @@ import type { TrooperClassName } from "@/types/roster";
 
 export const datamap = new Map(equipmentData.map((item) => [item.name, item]));
 
-export function getFileName(filepath: string): string {
-  const [name] = filepath.match(/[\w-]+(?=\.)/) ?? [];
-  return name ?? filepath;
+export function extractPathSegment(filepath: string): string {
+  return filepath.match(/^data\/(?:models|textures)\/(.+)\.dds$/)?.[1] ?? filepath;
 }
 
 export function getClassTitle(className: TrooperClassName): string {
@@ -32,37 +31,25 @@ function getClassName(className: TrooperClassName): string {
   }
 }
 export function getClassImg(name: TrooperClassName): string {
-  return `img/gui/deploy/class_icon_${getFileName(getClassName(name))}.webp`;
+  return `img/gui/deploy/class_icon_${extractPathSegment(getClassName(name))}.webp`;
 }
 
-export function getWeaponData(name: string): ParsedEquipment | null {
-  const weapon = datamap.get(name);
-  if (!weapon?.img) return null;
-  return { ...weapon, img: `img/weapons/${getFileName(weapon.img)}.webp` };
+export function getEquipmentData(name: string): ParsedEquipment | null {
+  const equipment = datamap.get(name);
+  if (!equipment?.img) return null;
+  return { ...equipment, img: `img/${extractPathSegment(equipment.img)}.webp` };
 }
 
-export function getHelmetData(name: string): ParsedEquipment | null {
-  const helmet = datamap.get(name);
-  if (!helmet?.img) return null;
-  return { ...helmet, img: `img/humans/attachments/${getFileName(helmet.img)}.webp` };
-}
-
-export function getNVGImg(name: string): string | null {
+export function getAttachmentImg(name: string): string | null {
   const attachment = datamap.get(name);
   if (!attachment?.img) return null;
-  return `img/humans/attachments/${getFileName(attachment.img)}_small.webp`;
-}
-
-export function getWeaponAttachmentImg(name: string): string | null {
-  const attachment = datamap.get(name);
-  if (!attachment?.img) return null;
-  return `img/weapons/attachments/${getFileName(attachment.img)}_small.webp`;
+  return `img/${extractPathSegment(attachment.img)}_small.webp`;
 }
 
 export function getEquipmentImg(name: string): string | null {
-  const equip = datamap.get(name);
-  if (!equip?.img) return null;
-  return `img/equipment/${getFileName(equip.img)}.webp`;
+  const equipment = datamap.get(name);
+  if (!equipment?.img) return null;
+  return `img/${extractPathSegment(equipment.img)}.webp`;
 }
 
 export function getNameString(name: string): string | null {
