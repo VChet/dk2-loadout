@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
-import { generateXML, parseXML, XMLParserInstance } from "../src/utilities/parser.js";
+import { generateXML, parseXML, XMLParserInstance } from "../src/helpers/parser";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROSTER_FILE = resolve(__dirname, "stub-roster.xml");

@@ -1,10 +1,10 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { EOL } from "node:os";
 import { fileURLToPath } from "node:url";
-import { parseXML } from "../helpers/parser.js";
-import type { EquipmentEntry, FileData, Firearm, Helmet } from "@/types/equipment.js";
-import type { ParsedEquipment } from "@/types/parsed.js";
-import type { UnitEntry } from "@/types/unit.js";
+import { parseXML } from "../helpers/parser";
+import type { EquipmentEntry, FileData, Firearm, Helmet } from "@/types/equipment";
+import type { ParsedEquipment } from "@/types/parsed";
+import type { UnitEntry } from "@/types/unit";
 
 const __dirname = fileURLToPath(new URL(".", import.meta.url));
 const XML_DIR = `${__dirname}/xml`;
