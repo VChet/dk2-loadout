@@ -57,3 +57,11 @@ export function getNameString(name: string): string | null {
   if (!object?.tooltip) return null;
   return (localization as Record<string, string>)[object.tooltip] || name;
 }
+
+export function getAbilityName(name: string): string {
+  switch (name) {
+    case "AssaultShooting": return "Assault shooting";
+    case "FieldSkills": return "Field skills";
+    default: return name;
+  }
+}

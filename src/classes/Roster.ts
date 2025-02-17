@@ -2,9 +2,13 @@ import { Squad } from "@/classes/Squad";
 import type { IRoster } from "@/types/roster";
 
 export class Roster {
-  squads: Squad[];
+  data: IRoster;
 
   constructor(roster: IRoster) {
-    this.squads = roster.Squad.map((squad) => squad && new Squad(squad));
+    this.data = roster;
+  }
+
+  get squads(): Squad[] {
+    return this.data.Squad.map((squad) => new Squad(squad));
   }
 }

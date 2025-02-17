@@ -2,12 +2,14 @@ import { Trooper } from "@/classes/Trooper";
 import type { ISquad, TrooperClassName } from "@/types/roster";
 
 export class Squad {
-  classMap: Record<TrooperClassName, Trooper[]>;
-  #squad: ISquad;
+  data: ISquad;
 
   constructor(squad: ISquad) {
-    this.#squad = squad;
-    this.classMap = squad.Trooper.reduce((acc: Record<string, Trooper[]>, trooper) => {
+    this.data = squad;
+  }
+
+  get classMap(): Record<TrooperClassName, Trooper[]> {
+    return this.data.Trooper.reduce((acc: Record<string, Trooper[]>, trooper) => {
       const newTrooper = new Trooper(trooper);
       if (!acc[newTrooper.class]) {
         acc[newTrooper.class] = [newTrooper];
@@ -17,11 +19,10 @@ export class Squad {
       return acc;
     }, {});
   }
-
   get name() {
-    return this.#squad.$name;
+    return this.data.$name;
   }
   get unit() {
-    return this.#squad.$unit;
+    return this.data.$unit;
   }
 }

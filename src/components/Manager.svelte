@@ -40,7 +40,7 @@
     if (!roster) return;
     const now = new Date();
     const date = `${now.getFullYear()}${now.getMonth()}${now.getDate()}`;
-    downloadFile(generateXML({ Roster: roster }), `roster-${date}.xml`);
+    downloadFile(generateXML({ Roster: roster.data }), `roster-${date}.xml`);
   }
 
   onMount(async () => {
@@ -58,9 +58,11 @@
     roster.xml at
     <b>%LocalAppData%/KillHouseGames/DoorKickers2</b>
   </pre>
-  {#if false && roster}
+  {#if roster}
     <div class="button-group">
-      <button on:click={getUrl}>Share URL</button>
+      {#if false}
+        <button on:click={getUrl}>Share URL</button>
+      {/if}
       <button on:click={downloadXml}>Download</button>
     </div>
   {/if}
