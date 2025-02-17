@@ -8,10 +8,10 @@ export const XMLParserInstance = new XMLParser({
 
 export const XMLBuilderInstance = new XMLBuilder({
   attributeNamePrefix: "$",
-  attributesGroupName: false,
   ignoreAttributes: false,
   format: true,
   suppressEmptyNode: true,
+  suppressBooleanAttributes: false,
   indentBy: "    "
 });
 

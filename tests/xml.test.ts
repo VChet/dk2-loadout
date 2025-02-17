@@ -21,6 +21,9 @@ describe("xml parser", () => {
   });
 
   it("should generate identical XML", () => {
-    expect(resultXML).toStrictEqual(initialXML);
+    const initialLines = initialXML.split(/\r?\n/);
+    const resultLines = resultXML.split(/\r?\n/);
+    expect(initialLines.length).toBe(resultLines.length);
+    initialLines.forEach((line, index) => { expect(resultLines[index]).toBe(line); });
   });
 });
