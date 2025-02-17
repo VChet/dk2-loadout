@@ -3,7 +3,7 @@
   import { Roster } from "@/classes/Roster";
   import { downloadFile, readFile } from "@/helpers/file";
   import { generateXML, parseXML } from "@/helpers/parser";
-  import { createShortLink, getUrlParams } from "@/helpers/share";
+  import { createShortLink, getDataFromCode } from "@/helpers/share";
   import type { IRoster } from "@/types/roster";
 
   export let roster: Roster | null = null;
@@ -21,17 +21,11 @@
     currentTarget.value = "";
   }
 
-  async function getUrl() {
+  async function share() {
     if (!roster) return;
-    const { code, shortLink } = await createShortLink(roster);
+    const code = await createShortLink(roster);
     const url = new URL(window.location.href);
-    if (shortLink) {
-      url.searchParams.set("link", shortLink);
-      url.searchParams.delete("code");
-    } else {
-      url.searchParams.set("code", code);
-      url.searchParams.delete("link");
-    }
+    if (code) { url.searchParams.set("code", code); }
     window.history.pushState({}, window.document.title, url);
     navigator.clipboard.writeText(window.location.href);
   }
@@ -44,8 +38,8 @@
   }
 
   onMount(async () => {
-    const rosterData = await getUrlParams(window.location.search) as IRoster | null;
-    if (rosterData) roster = new Roster(rosterData);
+    const response = await getDataFromCode(window.location.search) as { data: IRoster };
+    if (response) { roster = new Roster(response.data); }
   });
 </script>
 
@@ -60,9 +54,7 @@
   </pre>
   {#if roster}
     <div class="button-group">
-      {#if false}
-        <button on:click={getUrl}>Share URL</button>
-      {/if}
+      <button on:click={share}>Share URL</button>
       <button on:click={downloadXml}>Download</button>
     </div>
   {/if}

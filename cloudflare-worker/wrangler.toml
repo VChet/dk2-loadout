@@ -1,0 +1,7 @@
+name = "dk2-loadout"
+main = "worker.js"
+compatibility_date = "2025-02-17"
+
+[[kv_namespaces]]
+binding = "CONFIG_STORE"
+id = "e7e0a9d053e64d86bc48878994b93e20"
