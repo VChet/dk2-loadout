@@ -8,6 +8,9 @@ export class Squad {
     this.data = squad;
   }
 
+  get id() {
+    return this.data.$id;
+  }
   get classMap(): Record<TrooperClassName, Trooper[]> {
     return this.data.Trooper.reduce((acc: Record<string, Trooper[]>, trooper) => {
       const newTrooper = new Trooper(trooper);

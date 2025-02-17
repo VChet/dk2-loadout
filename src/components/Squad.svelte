@@ -6,11 +6,7 @@
 
   export let selectedTrooper: Trooper | null = null;
   export let squad: Squad | null = null;
-
-  function deleteSquad() {
-    squad = null;
-    selectedTrooper = null;
-  }
+  export let deleteSquad: (squad: Squad["id"]) => void;
 </script>
 
 {#if squad}
@@ -21,7 +17,7 @@
     class:squad--nowheraki={squad.unit === "Nowheraki"}
   >
     <div class="squad__unit">
-      <button aria-label="Delete Squad" on:click={deleteSquad}></button>
+      <button aria-label="Delete Squad" on:click={() => deleteSquad(squad.id)}></button>
       {squad.unit}
     </div>
     <div class="squad__name">{squad.name}</div>
