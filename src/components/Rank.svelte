@@ -2,7 +2,11 @@
   import { Trooper } from "@/classes/Trooper";
   import type { ComputedLevel } from "@/types/parsed";
 
-  export let level: ComputedLevel;
+  interface Props {
+    level: ComputedLevel
+  }
+
+  let { level }: Props = $props();
 </script>
 
 {#if level}

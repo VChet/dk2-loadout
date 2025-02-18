@@ -4,9 +4,14 @@
   import type { Squad } from "@/classes/Squad";
   import type { Trooper } from "@/classes/Trooper";
 
-  export let selectedTrooper: Trooper | null = null;
-  export let squad: Squad | null = null;
-  export let deleteSquad: (squad: Squad["id"]) => void;
+  interface Props {
+    selectedTrooper: Trooper | null
+    squad: Squad | null
+    selectTrooper: (trooper: Trooper) => void
+    deleteSquad: (squad: Squad["id"]) => void
+  }
+
+  let { selectedTrooper = null, squad = null, selectTrooper, deleteSquad }: Props = $props();
 </script>
 
 {#if squad}
@@ -17,7 +22,7 @@
     class:squad--nowheraki={squad.unit === "Nowheraki"}
   >
     <div class="squad__unit">
-      <button aria-label="Delete Squad" on:click={() => deleteSquad(squad.id)}></button>
+      <button aria-label="Delete Squad" onclick={() => deleteSquad(squad.id)}></button>
       {squad.unit}
     </div>
     <div class="squad__name">{squad.name}</div>
@@ -34,7 +39,7 @@
                 <button
                   class="trooper"
                   class:selected={selectedTrooper?.id === trooper.id}
-                  on:click={() => (selectedTrooper = trooper)}
+                  onclick={() => selectTrooper(trooper)}
                 >
                   <img src={trooper.portraitSmall} alt={trooper.portraitFile} draggable="false" />
                 </button>

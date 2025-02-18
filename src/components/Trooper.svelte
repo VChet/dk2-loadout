@@ -4,7 +4,11 @@
   import Equipment from "@/components/Equipment.svelte";
   import Rank from "@/components/Rank.svelte";
 
-  export let selectedTrooper: Trooper;
+  interface Props {
+    selectedTrooper: Trooper
+  }
+
+  let { selectedTrooper }: Props = $props();
   const ABILITY_BARS = Array.from({ length: 10 }, (_, i) => i);
 </script>
 

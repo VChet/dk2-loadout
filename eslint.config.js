@@ -106,4 +106,10 @@ export default antfu({
     "unicorn/prefer-includes": "off",
     "yaml/quotes": ["error", { prefer: "double" }]
   }
+}, {
+  name: "svelte/ignores",
+  files: ["**/*.svelte"],
+  rules: {
+    "prefer-const": "off"
+  }
 });

@@ -4,8 +4,13 @@
   import type { Trooper } from "@/classes/Trooper";
   import SquadBlock from "@/components/Squad.svelte";
 
-  export let roster: Roster | null = null;
-  export let selectedTrooper: Trooper | null = null;
+  interface Props {
+    roster: Roster | null
+    selectedTrooper: Trooper | null
+    selectTrooper: (trooper: Trooper) => void
+  }
+
+  let { roster = $bindable(null), selectedTrooper = null, selectTrooper }: Props = $props();
 
   function deleteSquad(squadId: Squad["id"]) {
     if (!roster) { return; }
@@ -18,7 +23,7 @@
   <section class="roster">
     <ul>
       {#each roster.squads as squad}
-        <SquadBlock bind:squad bind:selectedTrooper {deleteSquad} />
+        <SquadBlock {squad} {deleteSquad} {selectedTrooper} {selectTrooper} />
       {/each}
     </ul>
   </section>

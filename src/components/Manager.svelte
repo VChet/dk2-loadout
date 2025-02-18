@@ -6,7 +6,11 @@
   import { createShortLink, getDataFromCode } from "@/helpers/share";
   import type { IRoster } from "@/types/roster";
 
-  export let roster: Roster | null = null;
+  interface Props {
+    roster?: Roster | null
+  }
+
+  let { roster = $bindable(null) }: Props = $props();
 
   async function onFileSelected(event: any) {
     const content = await readFile(event.target.files[0]);
@@ -46,7 +50,7 @@
 <section class="file-input-wrap">
   <label>
     Upload Roster
-    <input class="visually-hidden" type="file" accept=".xml" on:change={onFileSelected} on:click={handleSameFile} />
+    <input class="visually-hidden" type="file" accept=".xml" onchange={onFileSelected} onclick={handleSameFile} />
   </label>
   <pre>
     roster.xml at
@@ -54,8 +58,8 @@
   </pre>
   {#if roster}
     <div class="button-group">
-      <button on:click={share}>Share URL</button>
-      <button on:click={downloadXml}>Download</button>
+      <button onclick={share}>Share URL</button>
+      <button onclick={downloadXml}>Download</button>
     </div>
   {/if}
 </section>

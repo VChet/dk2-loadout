@@ -2,10 +2,14 @@
   import { Armor, Equipment, Helmet, Support, Utility, Weapon } from "@/classes/Equipment";
   import type { TrooperEquipment } from "@/types/roster";
 
-  export let className: string;
-  export let equipment: TrooperEquipment;
-  export let slot: keyof TrooperEquipment;
-  $: data = Equipment.init(slot, equipment);
+  interface Props {
+    className: string
+    equipment: TrooperEquipment
+    slot: keyof TrooperEquipment
+  }
+
+  let { className, equipment, slot }: Props = $props();
+  let data = $derived(Equipment.init(slot, equipment));
 </script>
 
 <li class={className}>

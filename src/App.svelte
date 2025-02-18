@@ -6,16 +6,18 @@
   import RosterBlock from "@/components/Roster.svelte";
   import TrooperBlock from "@/components/Trooper.svelte";
 
-  let roster: Roster;
-  let selectedTrooper: Trooper;
+  let roster: Roster | null = $state(null);
+  let selectedTrooper: Trooper | null = $state(null);
 </script>
 
 <main class="container">
   <div class="left-block">
     <ManagerBlock bind:roster />
-    <TrooperBlock {selectedTrooper} />
+    {#if selectedTrooper}
+      <TrooperBlock {selectedTrooper} />
+    {/if}
   </div>
-  <RosterBlock bind:roster bind:selectedTrooper />
+  <RosterBlock bind:roster {selectedTrooper} selectTrooper={(trooper) => { selectedTrooper = trooper; }} />
 </main>
 <footer class="footer">
   <div>
