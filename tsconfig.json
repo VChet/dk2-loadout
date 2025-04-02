@@ -6,7 +6,7 @@
     "moduleDetection": "force",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "paths": { "@/*": ["./src/*"] },
     "resolveJsonModule": true,
     "allowJs": true,
